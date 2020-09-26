@@ -3,14 +3,22 @@ import './css/App.css';
 
 import colors from './config/colors';
 
+import AboutBanner from './components/AboutBanner/AboutBanner';
+
 export default function App({ props }) {
   return (
     <div style={styles.container}>
-      <div style={{ color: colors.yellow }}>App</div>
+      <div>
+        <AboutBanner />
+      </div>
+      <div>left content</div>
     </div>
   );
 }
 
 const styles = {
-  container: {},
+  container: {
+    display: 'grid',
+    gridTemplateColumns: '40vw auto',
+  },
 };
