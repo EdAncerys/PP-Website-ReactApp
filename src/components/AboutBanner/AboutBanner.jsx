@@ -6,13 +6,15 @@ export default function AboutBanner({ props }) {
   return (
     <div className="teko" style={styles.container}>
       <div style={styles.about}>
-        DESIGNER. THINKER. HUSBAND & FATHER.Almost before we knew it, we had
-        left the
+        ENGINEER. <br />
+        THINKER. <br />
+        DEVELOPER <br />
+        & EXPLORER. <br />
       </div>
-      <div className="font">
-        Currently designing @Uber. Formerly Experience Design Director @GoPro
-        and Interactive Director @Focus Lab. Follow my work, words and photos
-        below.
+      <div style={styles.textSlide}>
+        Currently self employed @TC&D. Formerly Experience Manager with some of
+        the well known retail brands & CAD technician. Find out more about me,
+        follow my work, words and photos below.
       </div>
       <div>Links to Websites/git linkedin etc</div>
       <div>Btn</div>
@@ -27,9 +29,15 @@ const styles = {
     justifyItems: 'center',
     height: '100vh',
     backgroundColor: colors.yellow,
+    padding: 50,
   },
   about: {
-    fontSize: 24,
+    fontSize: 40,
     fontWeight: 600,
+    lineHeight: 1.2,
+  },
+  textSlide: {
+    maxWidth: 300,
+    fontSize: 20,
   },
 };
