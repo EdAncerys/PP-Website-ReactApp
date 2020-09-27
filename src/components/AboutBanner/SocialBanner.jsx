@@ -20,22 +20,20 @@ export default function SocialBanner({ props }) {
       <IconComponent
         icon={<AiFillGithub size={36} />}
         hoverColor={colors.blue}
-        onClick={() =>
-          window.open('https://www.linkedin.com/in/ancerys/', '_blank')
-        }
+        onClick={() => window.open('https://github.com/EdAncerys/', '_blank')}
       />
       <IconComponent
         icon={<AiOutlineInstagram size={36} />}
         hoverColor={colors.blue}
         onClick={() =>
-          window.open('https://www.linkedin.com/in/ancerys/', '_blank')
+          window.open('https://www.instagram.com/edtheanchor', '_blank')
         }
       />
       <IconComponent
         icon={<AiFillMediumSquare size={36} />}
         hoverColor={colors.blue}
         onClick={() =>
-          window.open('https://www.linkedin.com/in/ancerys/', '_blank')
+          window.open('https://medium.com/@lookatemail/', '_blank')
         }
       />
     </div>
