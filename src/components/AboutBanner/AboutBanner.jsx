@@ -32,6 +32,8 @@ const styles = {
     backgroundColor: colors.yellow,
     padding: 50,
     minWidth: 300,
+    userSelect: 'none',
+    cursor: 'default',
   },
   about: {
     fontSize: 40,

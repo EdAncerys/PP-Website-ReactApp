@@ -12,7 +12,7 @@ export default function SocialBanner({ props }) {
     <div style={styles.container}>
       <IconComponent
         icon={<AiFillLinkedin size={36} />}
-        hoverColor={colors.blue}
+        hoverColor={colors.darkBlue}
         onClick={() =>
           window.open('https://www.linkedin.com/in/ancerys/', '_blank')
         }
