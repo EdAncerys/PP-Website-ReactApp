@@ -1,4 +1,5 @@
 import React from 'react';
+import SocialBanner from './SocialBanner';
 
 import colors from '../../config/colors';
 
@@ -16,7 +17,7 @@ export default function AboutBanner({ props }) {
         the well known retail brands & CAD technician. Find out more about me,
         follow my work, words and photos below.
       </div>
-      <div>Links to Websites/git linkedin etc</div>
+      <SocialBanner />
       <div>Btn</div>
     </div>
   );
