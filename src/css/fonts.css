@@ -1,0 +1,8 @@
+@font-face {
+  src: url(../fonts/Teko-Regular.ttf);
+  font-family: Teko;
+}
+
+.teko {
+  font-family: Teko, sans-serif;
+}
