@@ -13,12 +13,31 @@ export default function SocialBanner({ props }) {
       <IconComponent
         icon={<AiFillLinkedin size={36} />}
         hoverColor={colors.blue}
-        onClick={() => console.log('click')}
+        onClick={() =>
+          window.open('https://www.linkedin.com/in/ancerys/', '_blank')
+        }
       />
-      <AiFillLinkedin size={36} />
-      <AiFillGithub size={36} />
-      <AiOutlineInstagram size={36} />
-      <AiFillMediumSquare size={36} />
+      <IconComponent
+        icon={<AiFillGithub size={36} />}
+        hoverColor={colors.blue}
+        onClick={() =>
+          window.open('https://www.linkedin.com/in/ancerys/', '_blank')
+        }
+      />
+      <IconComponent
+        icon={<AiOutlineInstagram size={36} />}
+        hoverColor={colors.blue}
+        onClick={() =>
+          window.open('https://www.linkedin.com/in/ancerys/', '_blank')
+        }
+      />
+      <IconComponent
+        icon={<AiFillMediumSquare size={36} />}
+        hoverColor={colors.blue}
+        onClick={() =>
+          window.open('https://www.linkedin.com/in/ancerys/', '_blank')
+        }
+      />
     </div>
   );
 }
