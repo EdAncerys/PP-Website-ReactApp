@@ -5,7 +5,7 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 import { AiFillMediumSquare } from 'react-icons/ai';
 
 import colors from '../../config/colors';
-import IconComponent from '../IconComponent';
+import IconComponent from './IconComponent';
 
 export default function SocialBanner({ props }) {
   return (
@@ -19,19 +19,19 @@ export default function SocialBanner({ props }) {
       />
       <IconComponent
         icon={<AiFillGithub size={36} />}
-        hoverColor={colors.blue}
+        hoverColor={colors.white}
         onClick={() => window.open('https://github.com/EdAncerys/', '_blank')}
       />
       <IconComponent
         icon={<AiOutlineInstagram size={36} />}
-        hoverColor={colors.blue}
+        hoverColor={colors.red}
         onClick={() =>
           window.open('https://www.instagram.com/edtheanchor', '_blank')
         }
       />
       <IconComponent
         icon={<AiFillMediumSquare size={36} />}
-        hoverColor={colors.blue}
+        hoverColor={colors.white}
         onClick={() =>
           window.open('https://medium.com/@lookatemail/', '_blank')
         }
@@ -47,5 +47,6 @@ const styles = {
     columnGap: 10,
     marginTop: 50,
     marginBottom: 50,
+    maxWidth: 200,
   },
 };

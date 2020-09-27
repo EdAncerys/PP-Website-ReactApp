@@ -2,6 +2,7 @@ import React from 'react';
 import SocialBanner from './SocialBanner';
 
 import colors from '../../config/colors';
+import MailMeButton from './MailMeButton';
 
 export default function AboutBanner({ props }) {
   return (
@@ -18,7 +19,7 @@ export default function AboutBanner({ props }) {
         follow my work, words and photos below.
       </div>
       <SocialBanner />
-      <div>Btn</div>
+      <MailMeButton text="Say Hello!" />
     </div>
   );
 }
@@ -27,10 +28,10 @@ const styles = {
   container: {
     display: 'grid',
     alignContent: 'center',
-    justifyItems: 'center',
     height: '100vh',
     backgroundColor: colors.yellow,
     padding: 50,
+    minWidth: 300,
   },
   about: {
     fontSize: 40,

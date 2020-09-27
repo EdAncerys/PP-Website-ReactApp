@@ -7,8 +7,10 @@ export default {
   mint: '#BCDCC1',
   cucumber: '#C8EAB6',
   lightBlue: '#C5E4F3',
+  darkBlue: '#255AA4',
   darkGrey: '#C5E4F3',
   lightGrey: '#F4F3F3',
   electric: '#80E4C9',
   pink: '#E2BCD6',
+  red: '#D95E5A',
 };
