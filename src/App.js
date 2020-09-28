@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/App.css';
+import RightBanner from './components/RightBanner.jsx';
 
 import colors from './config/colors';
 
@@ -11,7 +12,9 @@ export default function App({ props }) {
       <div>
         <AboutBanner />
       </div>
-      <div>left content</div>
+      <div>
+        <RightBanner />
+      </div>
     </div>
   );
 }
