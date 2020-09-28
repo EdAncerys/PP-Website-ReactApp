@@ -8,12 +8,19 @@ export default function MailMeButton({
   color = colors.black,
   backgroundColor = colors.white,
   hoverColor = colors.darkBlue,
-  onClick,
 }) {
   const [hover, setHover] = useState(false);
+  const [clickEffect, setClickEffect] = useState(false);
 
   const iconColor = hover ? hoverColor : backgroundColor;
   const textColor = hover ? backgroundColor : color;
+
+  const handleClick = () => {
+    setClickEffect(true);
+    setTimeout(() => {
+      setClickEffect(false);
+    }, 200);
+  };
 
   return (
     <div
@@ -29,10 +36,11 @@ export default function MailMeButton({
         padding: 10,
         cursor: 'pointer',
         fontSize: 20,
+        transform: clickEffect ? 'scale(0.99)' : 'scale(1)',
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      onClick={onClick}
+      onClick={() => handleClick()}
     >
       {text}
       <GiMailbox />

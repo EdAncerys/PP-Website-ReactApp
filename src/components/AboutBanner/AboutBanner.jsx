@@ -14,9 +14,10 @@ export default function AboutBanner({ props }) {
         & EXPLORER. <br />
       </div>
       <div style={styles.textSlide}>
-        Currently self employed @TC&D. Formerly Experience Manager with some of
-        the well known retail brands & CAD technician. Find out more about me,
-        follow my work, words and photos below.
+        Currently, self-employed @TC&D. Formerly Experience Manager for some of
+        the well known retail brands & as CAD technician at engineering &
+        architectural companies. Find out more about me, follow my work, words &
+        photos below.
       </div>
       <SocialBanner />
       <MailMeButton text="Say Hello!" />
