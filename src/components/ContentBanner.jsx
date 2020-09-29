@@ -1,8 +1,9 @@
 import React from 'react';
-import colors from '../config/colors';
 import TickTackToeBanner from './TickTackToeBanner/TickTackToeBanner';
 
-export default function RightBanner({ props }) {
+import colors from '../config/colors';
+
+export default function ContentBanner({ props }) {
   return (
     <div style={styles.container}>
       <TickTackToeBanner />
@@ -13,6 +14,7 @@ export default function RightBanner({ props }) {
 const styles = {
   container: {
     display: 'grid',
+    minWidth: 300,
     userSelect: 'none',
     cursor: 'default',
     overflow: 'auto',

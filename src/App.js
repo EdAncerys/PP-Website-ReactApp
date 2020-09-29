@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/App.css';
-import RightBanner from './components/RightBanner.jsx';
+import ContentBanner from './components/ContentBanner.jsx';
 
 import colors from './config/colors';
 
@@ -13,7 +13,7 @@ export default function App({ props }) {
         <AboutBanner />
       </div>
       <div>
-        <RightBanner />
+        <ContentBanner />
       </div>
     </div>
   );
@@ -22,6 +22,6 @@ export default function App({ props }) {
 const styles = {
   container: {
     display: 'grid',
-    gridTemplateColumns: '40vw auto',
+    gridTemplateColumns: 'auto auto',
   },
 };
