@@ -22,6 +22,6 @@ export default function App({ props }) {
 const styles = {
   container: {
     display: 'grid',
-    gridTemplateColumns: 'auto auto',
+    gridTemplateColumns: '400px auto',
   },
 };

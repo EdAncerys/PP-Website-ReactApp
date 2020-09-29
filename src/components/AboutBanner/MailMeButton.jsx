@@ -37,7 +37,6 @@ export default function MailMeButton({
         padding: 10,
         cursor: 'pointer',
         fontSize: 20,
-        maxWidth: 300,
         transform: clickEffect ? 'scale(0.99)' : 'scale(1)',
       }}
       onMouseOver={() => setHover(true)}

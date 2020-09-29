@@ -32,7 +32,6 @@ const styles = {
     height: '100vh',
     backgroundColor: colors.yellow,
     padding: 50,
-    minWidth: 300,
     userSelect: 'none',
     cursor: 'default',
   },
