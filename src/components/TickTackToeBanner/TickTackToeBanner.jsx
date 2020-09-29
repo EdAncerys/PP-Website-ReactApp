@@ -3,6 +3,7 @@ import { AiOutlineSetting } from 'react-icons/ai';
 import { FaPlay } from 'react-icons/fa';
 
 import colors from '../../config/colors';
+import GoToPageButton from '../GoToPageButton';
 
 export default function TickTackToeBanner({ props }) {
   return (
@@ -14,7 +15,7 @@ export default function TickTackToeBanner({ props }) {
       <div>Image /Content</div>
       <div style={styles.footer}>
         Tic-tac-toe game
-        <FaPlay />
+        <GoToPageButton icon={<FaPlay />} />
       </div>
     </div>
   );
@@ -29,7 +30,7 @@ const styles = {
     paddingRight: 20,
     paddingTop: 20,
     height: 400,
-    backgroundColor: colors.electric,
+    backgroundColor: colors.blue,
     color: colors.white,
   },
   header: {
