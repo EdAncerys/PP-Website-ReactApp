@@ -17,6 +17,7 @@ export default function MailMeButton({
 
   const handleClick = () => {
     setClickEffect(true);
+    document.location = 'mailto: lookatemail@gmail.com';
     setTimeout(() => {
       setClickEffect(false);
     }, 200);
