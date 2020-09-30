@@ -37,8 +37,9 @@ const styles = {
     color: colors.white,
   },
   image: {
-    alignSelf: 'center',
-    textAlign: 'center',
+    display: 'grid',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   header: {
     display: 'grid',
