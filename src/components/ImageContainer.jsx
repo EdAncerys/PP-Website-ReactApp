@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsPhone } from 'react-icons/bs';
 
 import colors from '../config/colors';
 
@@ -11,9 +12,10 @@ const styles = {
     display: 'grid',
     alignItems: 'center',
     textAlign: 'center',
-    height: 200,
-    width: 200,
+    height: 250,
+    width: 250,
     border: `1px solid ${colors.white}`,
-    borderRadius: 20,
+    borderRadius: '50% 50% 10% 50%',
+    boxShadow: '5px 2px',
   },
 };
