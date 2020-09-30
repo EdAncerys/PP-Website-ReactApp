@@ -6,3 +6,12 @@
 .teko {
   font-family: Teko, sans-serif;
 }
+
+@font-face {
+  src: url(../fonts/Bangers-Regular.ttf);
+  font-family: Bangers;
+}
+
+.bangers {
+  font-family: Bangers, sans-serif;
+}

@@ -1,18 +1,21 @@
 import React from 'react';
-import { AiOutlineSetting } from 'react-icons/ai';
+import { GiDwarfFace } from 'react-icons/gi';
 import { FaPlay } from 'react-icons/fa';
 
 import colors from '../../config/colors';
 import GoToPageButton from '../GoToPageButton';
+import ImageContainer from '../ImageContainer';
 
 export default function TickTackToeBanner({ props }) {
   return (
-    <div style={styles.container}>
+    <div className="bangers" style={styles.container}>
       <div style={styles.header}>
-        <AiOutlineSetting />
+        <GiDwarfFace />
         Tic-tac-toe
       </div>
-      <div>Image /Content</div>
+      <div style={styles.image}>
+        <ImageContainer>Image /Content</ImageContainer>
+      </div>
       <div style={styles.footer}>
         Tic-tac-toe game
         <GoToPageButton icon={<FaPlay />} />
@@ -33,9 +36,13 @@ const styles = {
     backgroundColor: colors.blue,
     color: colors.white,
   },
+  image: {
+    alignSelf: 'center',
+    textAlign: 'center',
+  },
   header: {
     display: 'grid',
-    gridTemplateColumns: '20px auto',
+    gridTemplateColumns: '15px auto',
     alignItems: 'center',
     fontSize: 12,
   },
