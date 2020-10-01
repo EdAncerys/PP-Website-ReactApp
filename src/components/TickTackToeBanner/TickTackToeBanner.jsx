@@ -15,9 +15,9 @@ export default function TickTackToeBanner({ props }) {
         <GiDwarfFace />:<div>001</div>
         <div>&#125;</div>
       </div>
-      <div style={styles.image}>
+      <div style={styles.imageContainer}>
         <ImageContainer>
-          <img src={TickTackToeImg} />
+          <img style={styles.image} src={TickTackToeImg} alt="Tick-Tack-Toe" />
         </ImageContainer>
       </div>
       <div style={styles.footer}>
@@ -40,10 +40,16 @@ const styles = {
     backgroundColor: colors.blue,
     color: colors.white,
   },
-  image: {
+  imageContainer: {
     display: 'grid',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  image: {
+    height: '100%',
+    // display: 'grid',
+    // marginRight: 'auto',
+    // borderRadius: '50%',
   },
   header: {
     display: 'grid',

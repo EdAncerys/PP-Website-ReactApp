@@ -10,12 +10,13 @@ export default function ImageContainer({ children }) {
 const styles = {
   container: {
     display: 'grid',
+    justifyContent: 'center',
     alignItems: 'center',
-    textAlign: 'center',
     height: 250,
     width: 250,
     border: `1px solid ${colors.white}`,
     borderRadius: '50% 50% 10% 50%',
     boxShadow: '5px 2px',
+    overflow: 'hidden',
   },
 };
