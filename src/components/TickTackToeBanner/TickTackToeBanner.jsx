@@ -1,10 +1,11 @@
 import React from 'react';
 import { GiDwarfFace } from 'react-icons/gi';
 import { FaPlay } from 'react-icons/fa';
-
-import colors from '../../config/colors';
 import GoToPageButton from '../GoToPageButton';
 import ImageContainer from '../ImageContainer';
+import TickTackToeImg from '../../img/Tick-Tack-Toe.png';
+
+import colors from '../../config/colors';
 
 export default function TickTackToeBanner({ props }) {
   return (
@@ -14,7 +15,9 @@ export default function TickTackToeBanner({ props }) {
         Tic-tac-toe
       </div>
       <div style={styles.image}>
-        <ImageContainer>Image /Content</ImageContainer>
+        <ImageContainer>
+          <img src={TickTackToeImg} />
+        </ImageContainer>
       </div>
       <div style={styles.footer}>
         Tic-tac-toe game
