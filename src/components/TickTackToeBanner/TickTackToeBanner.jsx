@@ -11,8 +11,9 @@ export default function TickTackToeBanner({ props }) {
   return (
     <div className="bangers" style={styles.container}>
       <div style={styles.header}>
-        <GiDwarfFace />
-        Tic-tac-toe
+        <div>&#123;</div>
+        <GiDwarfFace />:<div>001</div>
+        <div>&#125;</div>
       </div>
       <div style={styles.image}>
         <ImageContainer>
@@ -20,7 +21,7 @@ export default function TickTackToeBanner({ props }) {
         </ImageContainer>
       </div>
       <div style={styles.footer}>
-        Tic-tac-toe game
+        <div>Tic-tac-toe game</div>
         <GoToPageButton icon={<FaPlay />} />
       </div>
     </div>
@@ -46,7 +47,7 @@ const styles = {
   },
   header: {
     display: 'grid',
-    gridTemplateColumns: '15px auto',
+    gridTemplateColumns: '10px 20px 10px 25px 10px',
     alignItems: 'center',
     fontSize: 12,
   },
