@@ -23,7 +23,7 @@ export default function ImageContainer({ img, altText, text }) {
       onMouseLeave={() => setHover(false)}
     >
       {!hover && <img style={styles.img} src={img} alt={altText} />}
-      {hover && text}
+      {hover && <div style={styles.text}>{text}</div>}
     </div>
   );
 }
@@ -31,5 +31,9 @@ export default function ImageContainer({ img, altText, text }) {
 const styles = {
   img: {
     height: 250,
+  },
+  text: {
+    padding: 10,
+    overflow: 'hidden',
   },
 };
