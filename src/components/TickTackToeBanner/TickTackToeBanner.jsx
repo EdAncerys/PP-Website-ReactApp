@@ -4,6 +4,7 @@ import { FaPlay } from 'react-icons/fa';
 import GoToPageButton from '../GoToPageButton';
 import ImageContainer from '../ImageContainer';
 import TickTackToeImg from '../../img/Tick-Tack-Toe.png';
+import textDescription from '../../text/ProjectDescription';
 
 import colors from '../../config/colors';
 
@@ -19,7 +20,7 @@ export default function TickTackToeBanner({ props }) {
         <ImageContainer
           img={TickTackToeImg}
           altText="Tick-Tack-Toe"
-          text="text"
+          text={textDescription.TickTackToe}
         />
       </div>
       <div style={styles.footer}>

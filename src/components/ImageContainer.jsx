@@ -13,9 +13,9 @@ export default function ImageContainer({ img, altText, text }) {
         justifyContent: 'center',
         alignItems: 'center',
         height: 250,
-        width: 250,
+        width: hover ? 500 : 250,
         border: `1px solid ${colors.white}`,
-        borderRadius: '50% 50% 10% 50%',
+        borderRadius: hover ? '10% 10% 0% 10%' : '50% 50% 10% 50%',
         boxShadow: '5px 2px',
         overflow: 'hidden',
       }}
