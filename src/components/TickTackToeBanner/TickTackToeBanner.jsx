@@ -16,9 +16,11 @@ export default function TickTackToeBanner({ props }) {
         <div>&#125;</div>
       </div>
       <div style={styles.imageContainer}>
-        <ImageContainer>
-          <img style={styles.image} src={TickTackToeImg} alt="Tick-Tack-Toe" />
-        </ImageContainer>
+        <ImageContainer
+          img={TickTackToeImg}
+          altText="Tick-Tack-Toe"
+          text="text"
+        />
       </div>
       <div style={styles.footer}>
         <div style={styles.footerText}>
@@ -48,9 +50,6 @@ const styles = {
     display: 'grid',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  image: {
-    height: '100%',
   },
   header: {
     display: 'grid',

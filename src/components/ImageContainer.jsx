@@ -3,7 +3,7 @@ import { BsPhone } from 'react-icons/bs';
 
 import colors from '../config/colors';
 
-export default function ImageContainer({ children }) {
+export default function ImageContainer({ img, altText, text }) {
   const [hover, setHover] = useState(false);
 
   return (
@@ -22,7 +22,14 @@ export default function ImageContainer({ children }) {
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      {children}
+      {!hover && <img style={styles.img} src={img} alt={altText} />}
+      {hover && text}
     </div>
   );
 }
+
+const styles = {
+  img: {
+    height: 250,
+  },
+};
