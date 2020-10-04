@@ -6,6 +6,12 @@ import colors from '../config/colors';
 export default function ImageContainer({ img, altText, text }) {
   const [hover, setHover] = useState(false);
 
+  const handleChange = () => {
+    setTimeout(() => {
+      setHover(!hover);
+    }, 200);
+  };
+
   return (
     <div
       style={{
@@ -21,6 +27,7 @@ export default function ImageContainer({ img, altText, text }) {
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={() => handleChange()}
     >
       {!hover && <img style={styles.img} src={img} alt={altText} />}
       {hover && <div style={styles.text}>{text}</div>}
