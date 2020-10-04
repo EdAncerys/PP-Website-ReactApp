@@ -45,7 +45,7 @@ const styles = {
     paddingTop: 20,
     height: 400,
     backgroundColor: colors.blue,
-    color: colors.white,
+    color: colors.black,
   },
   imageContainer: {
     display: 'grid',
