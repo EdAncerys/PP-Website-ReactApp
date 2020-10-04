@@ -7,9 +7,7 @@ export default function ImageContainer({ img, altText, text }) {
   const [hover, setHover] = useState(false);
 
   const handleChange = () => {
-    setTimeout(() => {
-      setHover(!hover);
-    }, 200);
+    setHover(!hover);
   };
 
   return (
@@ -22,8 +20,9 @@ export default function ImageContainer({ img, altText, text }) {
         width: hover ? 500 : 250,
         border: hover ? `1px solid ${colors.black}` : '',
         borderRadius: hover ? '10% 10% 0% 10%' : '50% 50% 10% 50%',
-        boxShadow: `7px 7px 20px -5px ${colors.black}`,
+        boxShadow: `5px 10px 35px -10px ${colors.black}`,
         overflow: 'hidden',
+        transition: 'all 0.6s ease-in-out',
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
