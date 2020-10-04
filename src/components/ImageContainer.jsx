@@ -6,6 +6,11 @@ import colors from '../config/colors';
 export default function ImageContainer({ img, altText, text }) {
   const [hover, setHover] = useState(false);
 
+  const handleRadius = hover ? '10% 10% 0% 10%' : '50% 50% 10% 50%';
+  const handleShadow = hover ? `` : `5px 10px 35px -10px ${colors.black}`;
+  const handleTextColor = hover ? colors.white : colors.black;
+  const handleBorderColor = hover ? `1px solid ${colors.white}` : '';
+
   const handleChange = () => {
     setHover(!hover);
   };
@@ -18,9 +23,9 @@ export default function ImageContainer({ img, altText, text }) {
         alignItems: 'center',
         height: 250,
         width: hover ? 500 : 250,
-        border: hover ? `1px solid ${colors.black}` : '',
-        borderRadius: hover ? '10% 10% 0% 10%' : '50% 50% 10% 50%',
-        boxShadow: `5px 10px 35px -10px ${colors.black}`,
+        border: handleBorderColor,
+        borderRadius: handleRadius,
+        boxShadow: handleShadow,
         overflow: 'hidden',
         transition: 'all 0.6s ease-in-out',
       }}
@@ -29,7 +34,13 @@ export default function ImageContainer({ img, altText, text }) {
       onClick={() => handleChange()}
     >
       {!hover && <img style={styles.img} src={img} alt={altText} />}
-      {hover && <div style={styles.text}>{text}</div>}
+      {hover && (
+        <div
+          style={{ color: handleTextColor, padding: 10, overflow: 'hidden' }}
+        >
+          {text}
+        </div>
+      )}
     </div>
   );
 }
@@ -38,8 +49,5 @@ const styles = {
   img: {
     height: 250,
   },
-  text: {
-    padding: 10,
-    overflow: 'hidden',
-  },
+  text: {},
 };
