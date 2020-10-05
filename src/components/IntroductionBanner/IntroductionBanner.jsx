@@ -21,6 +21,7 @@ export default function TickTackToeBanner({ props }) {
           img={LegoManImg}
           altText="Tick-Tack-Toe"
           text={textDescription.About}
+          color={colors.black}
         />
       </div>
       <div style={styles.footer}>

@@ -29,7 +29,7 @@ const styles = {
   container: {
     display: 'grid',
     alignContent: 'center',
-    height: '100vh',
+    height: '100%',
     backgroundColor: colors.yellow,
     padding: 50,
     userSelect: 'none',

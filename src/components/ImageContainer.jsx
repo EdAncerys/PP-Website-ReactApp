@@ -3,13 +3,13 @@ import { BsPhone } from 'react-icons/bs';
 
 import colors from '../config/colors';
 
-export default function ImageContainer({ img, altText, text }) {
+export default function ImageContainer({ img, altText, text, color }) {
   const [hover, setHover] = useState(false);
 
   const handleRadius = hover ? '10% 10% 0% 10%' : '50% 50% 10% 50%';
   const handleShadow = hover ? `` : `5px 10px 35px -10px ${colors.black}`;
-  const handleTextColor = hover ? colors.white : colors.black;
-  const handleBorderColor = hover ? `1px solid ${colors.white}` : '';
+  const handleTextColor = hover ? color : colors.black;
+  const handleBorderColor = hover ? `1px solid ${color}` : '';
 
   const handleChange = () => {
     setHover(!hover);
@@ -49,5 +49,4 @@ const styles = {
   img: {
     height: 250,
   },
-  text: {},
 };
