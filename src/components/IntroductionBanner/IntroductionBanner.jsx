@@ -26,8 +26,8 @@ export default function TickTackToeBanner({ props }) {
       <div style={styles.footer}>
         <div style={styles.footerText}>
           <div>&#123;</div>
-          <div>Name : Tic-tac-toe ,</div>
-          <div>Type : Game</div>
+          <div>Name : About Me ,</div>
+          <div>Type : Informational</div>
           <div>&#125;</div>
         </div>
         <GoToPageButton icon={<FaPlay />} />
@@ -44,7 +44,7 @@ const styles = {
     paddingRight: 20,
     paddingTop: 20,
     height: 400,
-    backgroundColor: colors.blue,
+    backgroundColor: colors.cucumber,
     color: colors.black,
   },
   imageContainer: {
