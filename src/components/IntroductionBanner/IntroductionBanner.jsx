@@ -13,7 +13,7 @@ export default function TickTackToeBanner({ props }) {
     <div className="bangers" style={styles.container}>
       <div style={styles.header}>
         <div>&#123;</div>
-        <GiDwarfFace />:<div>002</div>
+        <GiDwarfFace />:<div>001</div>
         <div>&#125;</div>
       </div>
       <div style={styles.imageContainer}>
