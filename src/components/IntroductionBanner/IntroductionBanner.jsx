@@ -20,8 +20,8 @@ export default function TickTackToeBanner({ props }) {
         <ImageContainer
           img={LegoManImg}
           altText="Tick-Tack-Toe"
-          text={textDescription.About}
-          color={colors.black}
+          text={textDescription.AboutBanner}
+          color={colors.red}
         />
       </div>
       <div style={styles.footer}>
@@ -31,7 +31,7 @@ export default function TickTackToeBanner({ props }) {
           <div>Type : Informational</div>
           <div>&#125;</div>
         </div>
-        <GoToPageButton icon={<FaPlay />} />
+        <GoToPageButton icon={<FaPlay />} hoverColor={colors.red} />
       </div>
     </div>
   );

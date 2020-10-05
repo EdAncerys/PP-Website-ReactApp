@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 import colors from '../config/colors';
 
-export default function GoToPageButton({ icon }) {
+export default function GoToPageButton({ icon, hoverColor }) {
   const [hover, setHover] = useState(false);
   const [clickEffect, setClickEffect] = useState(false);
 
-  const iconColor = hover ? colors.white : colors.black;
+  const iconColor = hover ? hoverColor : colors.black;
 
   const handleClick = () => {
     setClickEffect(true);

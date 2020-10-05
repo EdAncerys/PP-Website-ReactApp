@@ -31,7 +31,7 @@ export default function TickTackToeBanner({ props }) {
           <div>Type : Game</div>
           <div>&#125;</div>
         </div>
-        <GoToPageButton icon={<FaPlay />} />
+        <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} />
       </div>
     </div>
   );
