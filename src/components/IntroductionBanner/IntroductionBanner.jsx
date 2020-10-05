@@ -20,7 +20,7 @@ export default function TickTackToeBanner({ props }) {
         <ImageContainer
           img={LegoManImg}
           altText="Tick-Tack-Toe"
-          text={textDescription.TickTackToe}
+          text={textDescription.About}
         />
       </div>
       <div style={styles.footer}>
