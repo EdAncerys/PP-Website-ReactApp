@@ -3,7 +3,7 @@ import { GiDwarfFace } from 'react-icons/gi';
 import { FaPlay } from 'react-icons/fa';
 import GoToPageButton from '../GoToPageButton';
 import ImageContainer from '../ImageContainer';
-import TickTackToeImg from '../../img/Tick-Tack-Toe.png';
+import LegoManImg from '../../img/Lego-Man.png';
 import textDescription from '../../text/ProjectDescription';
 
 import colors from '../../config/colors';
@@ -18,7 +18,7 @@ export default function TickTackToeBanner({ props }) {
       </div>
       <div style={styles.imageContainer}>
         <ImageContainer
-          img={TickTackToeImg}
+          img={LegoManImg}
           altText="Tick-Tack-Toe"
           text={textDescription.TickTackToe}
         />
