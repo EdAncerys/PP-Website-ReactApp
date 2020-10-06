@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../App';
 
 import colors from '../config/colors';
 
 export default function GoToPageButton({ icon, hoverColor }) {
+  const { setPage } = useContext(AppContext);
+
   const [hover, setHover] = useState(false);
   const [clickEffect, setClickEffect] = useState(false);
 
@@ -13,6 +16,7 @@ export default function GoToPageButton({ icon, hoverColor }) {
     setTimeout(() => {
       setClickEffect(false);
     }, 200);
+    setPage(1);
   };
 
   return (
