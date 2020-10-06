@@ -7,7 +7,7 @@ import PageOne from './pages/PageOne';
 export const AppContext = React.createContext();
 
 export default function App({ props }) {
-  const [page, setPage] = useState(false);
+  const [page, setPage] = useState(1);
 
   return (
     <AppContext.Provider

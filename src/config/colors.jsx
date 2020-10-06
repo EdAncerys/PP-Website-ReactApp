@@ -9,6 +9,7 @@ export default {
   lightBlue: '#C5E4F3',
   darkBlue: '#255AA4',
   darkGrey: '#C5E4F3',
+  mediumGrey: '#8592a6',
   lightGrey: '#F4F3F3',
   electric: '#80E4C9',
   pink: '#E2BCD6',
