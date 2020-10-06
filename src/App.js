@@ -17,12 +17,8 @@ export default function App({ props }) {
     >
       {!page && (
         <div style={styles.container}>
-          <div>
-            <AboutBanner />
-          </div>
-          <div>
-            <ContentBanner />
-          </div>
+          <AboutBanner />
+          <ContentBanner />
         </div>
       )}
       {page === 1 && <PageOne />}
