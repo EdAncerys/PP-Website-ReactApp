@@ -1,5 +1,6 @@
 import React from 'react';
 import IntroductionBanner from '../components/IntroductionBanner/IntroductionBanner';
+import Footer from './Footer';
 import TickTackToeBanner from './TickTackToeBanner/TickTackToeBanner';
 
 export default function ContentBanner({ props }) {
@@ -7,6 +8,7 @@ export default function ContentBanner({ props }) {
     <div style={styles.container}>
       <IntroductionBanner />
       <TickTackToeBanner />
+      <Footer />
     </div>
   );
 }

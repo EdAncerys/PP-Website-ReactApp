@@ -29,7 +29,6 @@ const styles = {
   container: {
     display: 'grid',
     alignContent: 'center',
-    height: '100%',
     backgroundColor: colors.yellow,
     padding: 50,
     userSelect: 'none',

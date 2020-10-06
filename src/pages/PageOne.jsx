@@ -15,6 +15,6 @@ export default function PageOne({ props }) {
 const styles = {
   container: {
     display: 'grid',
-    gridTemplateRows: 'auto 80vh auto',
+    gridTemplateRows: 'auto auto auto',
   },
 };
