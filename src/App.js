@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './css/App.css';
 import ContentBanner from './components/ContentBanner.jsx';
 import AboutBanner from './components/AboutBanner/AboutBanner';
+import PageOne from './pages/PageOne';
 
 export const AppContext = React.createContext();
 
@@ -14,18 +15,17 @@ export default function App({ props }) {
         setPage,
       }}
     >
-      <div style={styles.container}>
-        {!page && (
+      {!page && (
+        <div style={styles.container}>
           <div>
             <AboutBanner />
           </div>
-        )}
-        {!page && (
           <div>
             <ContentBanner />
           </div>
-        )}
-      </div>
+        </div>
+      )}
+      {page === 1 && <PageOne />}
     </AppContext.Provider>
   );
 }
