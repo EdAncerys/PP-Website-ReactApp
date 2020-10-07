@@ -1,4 +1,5 @@
 import React from 'react';
+import Text from '../text/ProjectDescription';
 import Footer from '../components/Footer';
 
 import colors from '../config/colors';
@@ -6,21 +7,28 @@ import colors from '../config/colors';
 export default function PageOne({ props }) {
   return (
     <div style={styles.container}>
-      <div style={styles.content}>page one</div>
-      <Footer color={colors.cucumber} />
+      <div style={styles.wrapper}>
+        <div style={styles.content}>{Text.AboutInfo}</div>
+      </div>
+      <Footer />
     </div>
   );
 }
 
 const styles = {
   container: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: 'grid',
     gridTemplateRows: 'auto auto auto',
   },
+  wrapper: {
+    display: 'grid',
+    justifyContent: 'center',
+  },
   content: {
-    height: 400,
-    flex: 1,
-    backgroundColor: 'tomato',
+    display: 'grid',
+    height: '95vh',
+    width: 600,
+    paddingTop: 50,
+    textAlign: 'justify',
   },
 };

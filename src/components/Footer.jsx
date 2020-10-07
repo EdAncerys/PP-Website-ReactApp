@@ -11,6 +11,8 @@ export default function Footer({ color }) {
     '-' +
     new Date().getDate()
   }`;
+  const backgroundColor = color ? color : colors.black;
+  const textColor = color ? colors.mediumGrey : colors.white;
 
   return (
     <div
@@ -20,11 +22,11 @@ export default function Footer({ color }) {
         gridTemplateColumns: 'auto auto',
         height: 50,
         borderTop: `1px solid ${color}`,
-        color: colors.mediumGrey,
+        color: textColor,
         fontSize: 14,
         paddingLeft: 30,
         paddingRight: 30,
-        backgroundColor: color,
+        backgroundColor: backgroundColor,
       }}
     >
       <div>&copy; Copyright {year}. All Rights Reserved</div>
