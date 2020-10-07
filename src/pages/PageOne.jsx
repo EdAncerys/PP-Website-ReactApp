@@ -14,7 +14,13 @@ export default function PageOne({ props }) {
 
 const styles = {
   container: {
-    display: 'grid',
+    display: 'flex',
+    flexDirection: 'column',
     gridTemplateRows: 'auto auto auto',
+  },
+  content: {
+    height: 400,
+    flex: 1,
+    backgroundColor: 'tomato',
   },
 };
