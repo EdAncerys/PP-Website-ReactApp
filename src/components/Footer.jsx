@@ -17,20 +17,25 @@ export default function Footer({ color }) {
   return (
     <div
       style={{
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
         display: 'grid',
         alignContent: 'center',
         gridTemplateColumns: 'auto auto',
-        height: 50,
+        height: 80,
         borderTop: `1px solid ${color}`,
         color: textColor,
         fontSize: 14,
-        paddingLeft: 30,
-        paddingRight: 30,
         backgroundColor: backgroundColor,
       }}
     >
-      <div>&copy; Copyright {year}. All Rights Reserved</div>
-      <div style={{ justifySelf: 'end' }}>{date}</div>
+      <div style={{ display: 'grid', justifyItems: 'start', paddingLeft: 30 }}>
+        &copy; Copyright {year}. All Rights Reserved
+      </div>
+      <div style={{ display: 'grid', justifyItems: 'end', paddingRight: 30 }}>
+        {date}
+      </div>
     </div>
   );
 }
