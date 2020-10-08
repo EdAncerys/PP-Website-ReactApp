@@ -4,6 +4,7 @@ import ContentBanner from './components/ContentBanner.jsx';
 import AboutBanner from './components/AboutBanner/AboutBanner';
 import PageOne from './pages/PageOne';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 export const AppContext = React.createContext();
 
@@ -16,6 +17,7 @@ export default function App({ props }) {
         setPage,
       }}
     >
+      {page && <Header />}
       {!page && (
         <div style={styles.container}>
           <AboutBanner />

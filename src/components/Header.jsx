@@ -2,15 +2,7 @@ import React from 'react';
 
 import colors from '../config/colors';
 
-export default function Footer({ color }) {
-  const year = new Date().getFullYear();
-  const date = `${
-    new Date().getFullYear() +
-    '-' +
-    (new Date().getMonth() + 1) +
-    '-' +
-    new Date().getDate()
-  }`;
+export default function Header({ color }) {
   const backgroundColor = color ? color : colors.black;
   const textColor = color ? colors.mediumGrey : colors.white;
 
@@ -18,7 +10,7 @@ export default function Footer({ color }) {
     <div
       style={{
         position: 'absolute',
-        top: 0,
+        bottom: 0,
         width: '100%',
         display: 'grid',
         alignContent: 'center',
@@ -31,10 +23,10 @@ export default function Footer({ color }) {
       }}
     >
       <div style={{ display: 'grid', justifyItems: 'start', paddingLeft: 30 }}>
-        &copy; Copyright {year}. All Rights Reserved
+        Logo Sign
       </div>
       <div style={{ display: 'grid', justifyItems: 'end', paddingRight: 30 }}>
-        {date}
+        Go Back Button
       </div>
     </div>
   );
