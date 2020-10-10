@@ -4,7 +4,7 @@ import { AppContext } from '../App';
 import GoToPageButton from './GoToPageButton';
 
 import colors from '../config/colors';
-import PageColors from '../config/PageColors';
+import PagePalette from '../config/PagePalette';
 
 export default function Header({ color }) {
   const { page } = useContext(AppContext);
@@ -44,8 +44,8 @@ export default function Header({ color }) {
       >
         <GoToPageButton
           icon={<TiBackspaceOutline size={30} />}
-          color={PageColors[page].primary}
-          hoverColor={PageColors[page].secondary}
+          color={PagePalette[page].primary}
+          hoverColor={PagePalette[page].secondary}
           page={false}
         />
       </div>

@@ -13,6 +13,11 @@ export const AppContext = React.createContext();
 export default function App({ props }) {
   const [page, setPage] = useState(1);
 
+  const manageContextState = {
+    page: page,
+    setPage: setPage,
+  };
+
   return (
     <AppContext.Provider
       value={{
