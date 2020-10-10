@@ -6,6 +6,8 @@ import PageOne from './pages/PageOne';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
+import colors from './config/colors';
+
 export const AppContext = React.createContext();
 
 export default function App({ props }) {
@@ -17,7 +19,7 @@ export default function App({ props }) {
         setPage,
       }}
     >
-      {page && <Header />}
+      {page && <Header color={colors.white} />}
       {!page && (
         <div style={styles.container}>
           <AboutBanner />

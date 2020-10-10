@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { TiBackspaceOutline } from 'react-icons/ti';
-
-import colors from '../config/colors';
+import { AppContext } from '../App';
 import GoToPageButton from './GoToPageButton';
 
+import colors from '../config/colors';
+
 export default function Header({ color }) {
+  const { page } = useContext(AppContext);
+
   const backgroundColor = color ? color : colors.black;
   const textColor = color ? colors.mediumGrey : colors.white;
 
@@ -37,7 +40,7 @@ export default function Header({ color }) {
       >
         <GoToPageButton
           icon={<TiBackspaceOutline size={30} />}
-          color={colors.cucumber}
+          color={colors.mint}
           hoverColor={colors.yellow}
           page={false}
         />
