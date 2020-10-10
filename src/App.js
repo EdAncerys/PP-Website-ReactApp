@@ -21,8 +21,7 @@ export default function App({ props }) {
   return (
     <AppContext.Provider
       value={{
-        page,
-        setPage,
+        manageContextState,
       }}
     >
       {page && <Header color={colors.white} />}

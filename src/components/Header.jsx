@@ -7,7 +7,7 @@ import colors from '../config/colors';
 import PagePalette from '../config/PagePalette';
 
 export default function Header({ color }) {
-  const { page } = useContext(AppContext);
+  const { manageContextState } = useContext(AppContext);
 
   const backgroundColor = color ? color : colors.black;
   const textColor = color ? colors.mediumGrey : colors.white;
@@ -30,7 +30,7 @@ export default function Header({ color }) {
     >
       <div
         style={{ display: 'grid', justifyItems: 'start', paddingLeft: 30 }}
-        onClick={() => console.log(page)}
+        onClick={() => console.log(manageContextState.page)}
       >
         Logo Sign
       </div>
@@ -44,8 +44,8 @@ export default function Header({ color }) {
       >
         <GoToPageButton
           icon={<TiBackspaceOutline size={30} />}
-          color={PagePalette[page].primary}
-          hoverColor={PagePalette[page].secondary}
+          color={PagePalette[manageContextState.page].primary}
+          hoverColor={PagePalette[manageContextState.page].secondary}
           page={false}
         />
       </div>
