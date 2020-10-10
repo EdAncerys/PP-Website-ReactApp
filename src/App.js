@@ -18,29 +18,21 @@ export default function App({ props }) {
   const manageContextState = {
     page: page,
     setPage: setPage,
+    'Test App Data': 'Data',
   };
 
   useEffect(() => {
-    // if (userSession) console.log(userSession);
-    // setPage(sessionStorage.page);
+    const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
+    const userSession = JSON.parse(data);
+    if (userSession) setPage(userSession.page);
+  }, []);
 
-    // const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
-    // const userSession = JSON.parse(data);
-    // // setPage(userSession.page);
-    // console.log('local storage', userSession);
-
+  useEffect(() => {
     sessionStorage.setItem(
       SESSION_STORAGE_KEY,
       JSON.stringify(manageContextState)
     );
   }, [manageContextState]);
-
-  // useEffect(() => {
-  //   const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
-  //   const userSession = JSON.parse(data);
-  //   setPage(userSession.page);
-  //   console.log('local storage', userSession);
-  // }, [page]);
 
   return (
     <AppContext.Provider
