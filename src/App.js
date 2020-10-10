@@ -16,6 +16,7 @@ export default function App({ props }) {
   return (
     <AppContext.Provider
       value={{
+        page,
         setPage,
       }}
     >

@@ -4,6 +4,7 @@ import { AppContext } from '../App';
 import GoToPageButton from './GoToPageButton';
 
 import colors from '../config/colors';
+import PageColors from '../config/PageColors';
 
 export default function Header({ color }) {
   const { page } = useContext(AppContext);
@@ -27,7 +28,10 @@ export default function Header({ color }) {
         backgroundColor: backgroundColor,
       }}
     >
-      <div style={{ display: 'grid', justifyItems: 'start', paddingLeft: 30 }}>
+      <div
+        style={{ display: 'grid', justifyItems: 'start', paddingLeft: 30 }}
+        onClick={() => console.log(page)}
+      >
         Logo Sign
       </div>
       <div
@@ -40,8 +44,8 @@ export default function Header({ color }) {
       >
         <GoToPageButton
           icon={<TiBackspaceOutline size={30} />}
-          color={colors.mint}
-          hoverColor={colors.yellow}
+          color={PageColors[page].primary}
+          hoverColor={PageColors[page].secondary}
           page={false}
         />
       </div>
