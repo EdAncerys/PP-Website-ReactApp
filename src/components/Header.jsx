@@ -36,7 +36,8 @@ export default function Header({ color }) {
         }}
       >
         <GoToPageButton
-          icon={<TiBackspaceOutline color={colors.cucumber} size={30} />}
+          icon={<TiBackspaceOutline size={30} />}
+          color={colors.cucumber}
           hoverColor={colors.yellow}
           page={false}
         />

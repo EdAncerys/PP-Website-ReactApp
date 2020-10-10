@@ -3,13 +3,13 @@ import { AppContext } from '../App';
 
 import colors from '../config/colors';
 
-export default function GoToPageButton({ icon, hoverColor, page }) {
+export default function GoToPageButton({ icon, color, hoverColor, page }) {
   const { setPage } = useContext(AppContext);
 
   const [hover, setHover] = useState(false);
   const [clickEffect, setClickEffect] = useState(false);
 
-  const iconColor = hover ? hoverColor : colors.black;
+  const iconColor = hover ? hoverColor : color;
 
   const handleClick = () => {
     setClickEffect(true);
