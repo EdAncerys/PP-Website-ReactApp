@@ -1,6 +1,4 @@
 import React from 'react';
-import Text from '../text/ProjectDescription';
-import Footer from '../components/Footer';
 
 import colors from '../config/colors';
 

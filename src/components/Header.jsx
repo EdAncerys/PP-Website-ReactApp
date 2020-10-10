@@ -1,6 +1,8 @@
 import React from 'react';
+import { TiBackspaceOutline } from 'react-icons/ti';
 
 import colors from '../config/colors';
+import GoToPageButton from './GoToPageButton';
 
 export default function Header({ color }) {
   const backgroundColor = color ? color : colors.black;
@@ -10,7 +12,7 @@ export default function Header({ color }) {
     <div
       style={{
         position: 'absolute',
-        bottom: 0,
+        top: 0,
         width: '100%',
         display: 'grid',
         alignContent: 'center',
@@ -25,8 +27,19 @@ export default function Header({ color }) {
       <div style={{ display: 'grid', justifyItems: 'start', paddingLeft: 30 }}>
         Logo Sign
       </div>
-      <div style={{ display: 'grid', justifyItems: 'end', paddingRight: 30 }}>
-        Go Back Button
+      <div
+        style={{
+          display: 'grid',
+          justifyItems: 'end',
+          paddingRight: 30,
+          cursor: 'pointer',
+        }}
+      >
+        <GoToPageButton
+          icon={<TiBackspaceOutline color={colors.cucumber} size={30} />}
+          hoverColor={colors.yellow}
+          page={false}
+        />
       </div>
     </div>
   );
