@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../App';
 
 import colors from '../config/colors';
 
 export default function Footer({ color }) {
+  const { manageContextState } = useContext(AppContext);
+
   const year = new Date().getFullYear();
   const date = `${
     new Date().getFullYear() +
@@ -17,7 +20,7 @@ export default function Footer({ color }) {
   return (
     <div
       style={{
-        position: 'absolute',
+        position: manageContextState.page ? 'absolute' : '',
         bottom: 0,
         width: '100%',
         display: 'grid',

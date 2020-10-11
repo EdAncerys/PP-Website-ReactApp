@@ -19,5 +19,6 @@ const styles = {
     userSelect: 'none',
     cursor: 'default',
     overflow: 'auto',
+    height: '100%',
   },
 };
