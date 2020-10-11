@@ -5,6 +5,7 @@ import GoToPageButton from '../GoToPageButton';
 import ImageContainer from '../ImageContainer';
 import LegoManImg from '../../img/Lego-Man.png';
 import textDescription from '../../text/ProjectDescription';
+import PagePalette from '../../config/PagePalette';
 
 import colors from '../../config/colors';
 
@@ -31,7 +32,7 @@ export default function TickTackToeBanner({ props }) {
           <div>Type : Informational</div>
           <div>&#125;</div>
         </div>
-        <GoToPageButton icon={<FaPlay />} hoverColor={colors.yellow} page={1} />
+        <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} page={1} />
       </div>
     </div>
   );
@@ -44,8 +45,8 @@ const styles = {
     paddingLeft: 50,
     paddingRight: 20,
     paddingTop: 20,
-    backgroundColor: colors.cucumber,
-    color: colors.black,
+    backgroundColor: PagePalette[1].primary,
+    color: PagePalette[1].secondary,
   },
   imageContainer: {
     display: 'grid',

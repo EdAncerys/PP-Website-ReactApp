@@ -7,6 +7,7 @@ import TickTackToeImg from '../../img/Tick-Tack-Toe.png';
 import textDescription from '../../text/ProjectDescription';
 
 import colors from '../../config/colors';
+import PagePalette from '../../config/PagePalette';
 
 export default function TickTackToeBanner({ props }) {
   return (
@@ -31,7 +32,7 @@ export default function TickTackToeBanner({ props }) {
           <div>Type : Game</div>
           <div>&#125;</div>
         </div>
-        <GoToPageButton icon={<FaPlay />} hoverColor={colors.yellow} page={2} />
+        <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} page={2} />
       </div>
     </div>
   );
@@ -44,8 +45,8 @@ const styles = {
     paddingLeft: 50,
     paddingRight: 20,
     paddingTop: 20,
-    backgroundColor: colors.blue,
-    color: colors.black,
+    backgroundColor: PagePalette[2].primary,
+    color: PagePalette[2].secondary,
   },
   imageContainer: {
     display: 'grid',
