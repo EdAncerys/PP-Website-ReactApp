@@ -5,6 +5,7 @@ import AboutBanner from './components/AboutBanner/AboutBanner';
 import AboutMePage from './pages/AboutMePage';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import TickTackToePage from './pages/TickTackToePage';
 
 import colors from './config/colors';
 
@@ -48,6 +49,7 @@ export default function App({ props }) {
         </div>
       )}
       {page === 1 && <AboutMePage />}
+      {page === 3 && <TickTackToePage />}
       {page && <Footer />}
     </AppContext.Provider>
   );
@@ -58,5 +60,6 @@ const styles = {
     display: 'grid',
     height: '100vh',
     gridTemplateColumns: '400px auto',
+    paddingLeft: '5vw',
   },
 };

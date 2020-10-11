@@ -14,7 +14,7 @@ export default function TickTackToeBanner({ props }) {
     <div className="bangers" style={styles.container}>
       <div style={styles.header}>
         <div>&#123;</div>
-        <GiDwarfFace />:<div>002</div>
+        <GiDwarfFace />:<div>003</div>
         <div>&#125;</div>
       </div>
       <div style={styles.imageContainer}>
@@ -32,7 +32,7 @@ export default function TickTackToeBanner({ props }) {
           <div>Type : Game</div>
           <div>&#125;</div>
         </div>
-        <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} page={2} />
+        <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} page={3} />
       </div>
     </div>
   );
@@ -45,8 +45,8 @@ const styles = {
     paddingLeft: 50,
     paddingRight: 20,
     paddingTop: 20,
-    backgroundColor: PagePalette[2].primary,
-    color: PagePalette[2].secondary,
+    backgroundColor: PagePalette[3].primary,
+    color: PagePalette[3].secondary,
   },
   imageContainer: {
     display: 'grid',
