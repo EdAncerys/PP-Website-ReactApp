@@ -44,7 +44,6 @@ const styles = {
     paddingLeft: 50,
     paddingRight: 20,
     paddingTop: 20,
-    height: 400,
     backgroundColor: colors.cucumber,
     color: colors.black,
   },

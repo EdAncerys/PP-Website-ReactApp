@@ -16,6 +16,7 @@ export default function ContentBanner({ props }) {
 const styles = {
   container: {
     display: 'grid',
+    alignItems: 'stretch',
     userSelect: 'none',
     cursor: 'default',
     overflow: 'auto',

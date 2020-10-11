@@ -56,6 +56,7 @@ export default function App({ props }) {
 const styles = {
   container: {
     display: 'grid',
+    height: '100vh',
     gridTemplateColumns: '400px auto',
   },
 };
