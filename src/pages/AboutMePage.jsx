@@ -2,7 +2,7 @@ import React from 'react';
 
 import colors from '../config/colors';
 
-export default function PageOne({ props }) {
+export default function AboutMePage({ props }) {
   return (
     <div className="teko" style={styles.container}>
       <div style={styles.content}>

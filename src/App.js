@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './css/App.css';
 import ContentBanner from './components/ContentBanner.jsx';
 import AboutBanner from './components/AboutBanner/AboutBanner';
-import PageOne from './pages/PageOne';
+import AboutMePage from './pages/AboutMePage';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -47,7 +47,7 @@ export default function App({ props }) {
           <ContentBanner />
         </div>
       )}
-      {page === 1 && <PageOne />}
+      {page === 1 && <AboutMePage />}
       {page && <Footer />}
     </AppContext.Provider>
   );
