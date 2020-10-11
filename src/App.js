@@ -59,7 +59,7 @@ const styles = {
   container: {
     display: 'grid',
     height: '100vh',
+    width: '100vw',
     gridTemplateColumns: '400px auto',
-    paddingLeft: '5vw',
   },
 };
