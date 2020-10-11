@@ -45,6 +45,8 @@ const styles = {
   container: {
     display: 'grid',
     justifyContent: 'center',
+    userSelect: 'none',
+    cursor: 'default',
   },
   content: {
     display: 'grid',

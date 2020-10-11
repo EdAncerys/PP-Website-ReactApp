@@ -15,3 +15,12 @@
 .bangers {
   font-family: Bangers, sans-serif;
 }
+
+@font-face {
+  src: url(../fonts/Comfortaa-VariableFont_wght.ttf);
+  font-family: Comfortaa;
+}
+
+.logo {
+  font-family: Comfortaa, sans-serif;
+}

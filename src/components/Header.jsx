@@ -10,7 +10,7 @@ export default function Header({ color }) {
   const { manageContextState } = useContext(AppContext);
 
   const backgroundColor = color ? color : colors.black;
-  const textColor = color ? colors.mediumGrey : colors.white;
+  const textColor = color ? colors.black : colors.white;
 
   return (
     <div
@@ -26,13 +26,22 @@ export default function Header({ color }) {
         color: textColor,
         fontSize: 14,
         backgroundColor: backgroundColor,
+        userSelect: 'none',
+        cursor: 'default',
       }}
     >
       <div
-        style={{ display: 'grid', justifyItems: 'start', paddingLeft: 30 }}
-        onClick={() => console.log(manageContextState.page)}
+        className="logo"
+        style={{
+          display: 'grid',
+          justifyItems: 'start',
+          paddingLeft: 30,
+          fontSize: 30,
+          cursor: 'pointer',
+        }}
+        onClick={() => manageContextState.setPage(false)}
       >
-        Logo Sign
+        Ed Ancerys
       </div>
       <div
         style={{

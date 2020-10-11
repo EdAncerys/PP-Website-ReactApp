@@ -32,6 +32,8 @@ export default function Footer({ color }) {
         color: textColor,
         fontSize: 14,
         backgroundColor: backgroundColor,
+        userSelect: 'none',
+        cursor: 'default',
       }}
     >
       <div style={{ display: 'grid', justifyItems: 'start', paddingLeft: 30 }}>
