@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TickTackToeContext } from '../../pages/TickTackToePage';
 
 export default function FamilyGuyCharacters({ props }) {
-  return (
-    <div style={styles.container}>
-      <div></div>
-    </div>
-  );
+  const { manageTickTackToeContext } = useContext(TickTackToeContext);
+
+  return <div style={styles.container}>{manageTickTackToeContext.test}</div>;
 }
 
 const styles = {
-  container: {}
+  container: {},
 };

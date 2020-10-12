@@ -1,22 +1,25 @@
-import React from 'react';
-import App, { AppContext } from '../App';
+import React, { useState } from 'react';
+import FamilyGuyCharacters from '../components/TickTackToeBanner/FamilyGuyCharacters';
 
-const TickTackToeContext = React.Component();
+export const TickTackToeContext = React.createContext();
 
 export default function TickTackToePage({ props }) {
-  const manageTickTackToeContext = {};
+  const [characters, setCharacters] = useState(['']);
+
+  const manageTickTackToeContext = { test: 'TickTackToe test context' };
+
   return (
-    <AppContext.Provider
+    <TickTackToeContext.Provider
       value={{
         manageTickTackToeContext,
       }}
     >
       <div style={styles.container}>
         <div style={styles.content}>
-          <div>TicTackToe Page</div>
+          <FamilyGuyCharacters />
         </div>
       </div>
-    </AppContext.Provider>
+    </TickTackToeContext.Provider>
   );
 }
 
