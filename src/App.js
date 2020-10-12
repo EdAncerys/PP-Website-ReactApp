@@ -16,7 +16,7 @@ export default function App({ props }) {
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.App';
 
-  const manageContextState = {
+  const manageAppContext = {
     page: page,
     setPage: setPage,
     'Test App Data': 'Data',
@@ -31,14 +31,14 @@ export default function App({ props }) {
   useEffect(() => {
     sessionStorage.setItem(
       SESSION_STORAGE_KEY,
-      JSON.stringify(manageContextState)
+      JSON.stringify(manageAppContext)
     );
-  }, [manageContextState]);
+  }, [manageAppContext]);
 
   return (
     <AppContext.Provider
       value={{
-        manageContextState,
+        manageAppContext,
       }}
     >
       {page && <Header color={colors.white} />}

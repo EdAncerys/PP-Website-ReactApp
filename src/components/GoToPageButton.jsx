@@ -4,7 +4,7 @@ import { AppContext } from '../App';
 import colors from '../config/colors';
 
 export default function GoToPageButton({ icon, color, hoverColor, page }) {
-  const { manageContextState } = useContext(AppContext);
+  const { manageAppContext } = useContext(AppContext);
 
   const [hover, setHover] = useState(false);
   const [clickEffect, setClickEffect] = useState(false);
@@ -16,7 +16,7 @@ export default function GoToPageButton({ icon, color, hoverColor, page }) {
     setTimeout(() => {
       setClickEffect(false);
     }, 200);
-    manageContextState.setPage(page);
+    manageAppContext.setPage(page);
   };
 
   return (

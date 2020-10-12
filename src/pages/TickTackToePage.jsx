@@ -1,12 +1,22 @@
 import React from 'react';
+import App, { AppContext } from '../App';
+
+const TickTackToeContext = React.Component();
 
 export default function TickTackToePage({ props }) {
+  const manageTickTackToeContext = {};
   return (
-    <div style={styles.container}>
-      <div style={styles.content}>
-        <div>TicTackToe Page</div>
+    <AppContext.Provider
+      value={{
+        manageTickTackToeContext,
+      }}
+    >
+      <div style={styles.container}>
+        <div style={styles.content}>
+          <div>TicTackToe Page</div>
+        </div>
       </div>
-    </div>
+    </AppContext.Provider>
   );
 }
 

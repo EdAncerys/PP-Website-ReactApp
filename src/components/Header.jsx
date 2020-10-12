@@ -7,7 +7,7 @@ import colors from '../config/colors';
 import PagePalette from '../config/PagePalette';
 
 export default function Header({ color }) {
-  const { manageContextState } = useContext(AppContext);
+  const { manageAppContext } = useContext(AppContext);
 
   const backgroundColor = color ? color : colors.black;
   const textColor = color ? colors.black : colors.white;
@@ -39,7 +39,7 @@ export default function Header({ color }) {
           fontSize: 30,
           cursor: 'pointer',
         }}
-        onClick={() => manageContextState.setPage(false)}
+        onClick={() => manageAppContext.setPage(false)}
       >
         Ed Ancerys
       </div>
@@ -53,8 +53,8 @@ export default function Header({ color }) {
       >
         <GoToPageButton
           icon={<TiBackspaceOutline size={30} />}
-          color={PagePalette[manageContextState.page].primary}
-          hoverColor={PagePalette[manageContextState.page].secondary}
+          color={PagePalette[manageAppContext.page].primary}
+          hoverColor={PagePalette[manageAppContext.page].secondary}
           page={false}
         />
       </div>
