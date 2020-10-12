@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Brian from '../img/TickTackToeImg/Brian.png';
 import Chris from '../img/TickTackToeImg/Chris.png';
 import Glenn from '../img/TickTackToeImg/Glenn.png';
@@ -17,18 +18,18 @@ export default function TickTackToePage({ props }) {
   const [playerTwo, setPlayerTwo] = useState();
 
   const characters = [
-    Brian,
-    Chris,
-    Glenn,
-    Herbert,
-    Joe,
-    Lois,
-    Meg,
-    Peter,
-    Stewie,
+    { img: Brian, id: uuidv4() },
+    { img: Chris, id: uuidv4() },
+    { img: Glenn, id: uuidv4() },
+    { img: Herbert, id: uuidv4() },
+    { img: Joe, id: uuidv4() },
+    { img: Lois, id: uuidv4() },
+    { img: Meg, id: uuidv4() },
+    { img: Peter, id: uuidv4() },
+    { img: Stewie, id: uuidv4() },
   ];
 
-  const manageTickTackToeContext = { test: 'TickTackToe test context' };
+  const manageTickTackToeContext = { characters: characters };
 
   return (
     <TickTackToeContext.Provider
