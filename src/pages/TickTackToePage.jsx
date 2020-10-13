@@ -26,7 +26,7 @@ export default function TickTackToePage({ props }) {
     { name: Lois, id: uuidv4() },
     { name: Meg, id: uuidv4() },
     { name: Peter, id: uuidv4() },
-    { name: Stewie, id: uuidv4() },
+    { name: Stewie, id: uuidv4(), lastChild: true },
   ];
 
   const manageTickTackToeContext = { characters: characters };

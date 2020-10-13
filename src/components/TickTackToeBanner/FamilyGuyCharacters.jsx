@@ -3,19 +3,21 @@ import { TickTackToeContext } from '../../pages/TickTackToePage';
 
 export default function FamilyGuyCharacters({ props }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
+  const numOfImg = manageTickTackToeContext.characters.length;
 
   return (
     <div style={styles.container}>
       <div style={styles.wrapper}>
-        {manageTickTackToeContext.characters.map((img) => (
-          <div key={img.id} style={styles.imgContainer}>
+        {manageTickTackToeContext.characters.map((img, i) => (
+          <div key={img.id} style={styles.none}>
             <img
-              style={styles.img}
+              style={numOfImg - i - 1 !== 0 ? styles.img : styles.lastChild}
               key={img.id}
               onClick={(e) => console.log(img.id)}
               alt={img.name}
               src={img.name}
             />
+            {(numOfImg, i)}
           </div>
         ))}
       </div>
@@ -37,11 +39,17 @@ const styles = {
     height: '60vh',
     overflow: 'auto',
   },
-  imgContainer: {
+  lastChild: {
+    height: 150,
+    // display: 'grid',
+    // gridTemplateColumns: 'repeat(4, 100px)',
+    alignItems: 'stretch',
     backgroundColor: 'tomato',
+    // width: 800,
+    // paddingLeft: 400,
     alignSelf: 'center',
   },
   img: {
-    width: 80,
+    height: 150,
   },
 };
