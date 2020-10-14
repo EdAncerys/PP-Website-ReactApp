@@ -40,7 +40,7 @@ const styles = {
     overflow: 'auto',
   },
   lastChild: {
-    height: 150,
+    height: '15vh',
     // display: 'grid',
     // gridTemplateColumns: 'repeat(4, 100px)',
     alignItems: 'stretch',
@@ -50,6 +50,6 @@ const styles = {
     alignSelf: 'center',
   },
   img: {
-    height: 150,
+    height: '15vh',
   },
 };
