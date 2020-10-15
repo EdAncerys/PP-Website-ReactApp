@@ -30,6 +30,7 @@ export default function TickTackToePage({ props }) {
   ];
 
   const manageTickTackToeContext = {
+    characters: characters,
     playerOne: playerOne,
     setPlayerOne: setPlayerOne,
     playerTwo: playerTwo,
