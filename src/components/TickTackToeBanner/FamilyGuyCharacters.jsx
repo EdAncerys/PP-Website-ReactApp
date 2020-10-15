@@ -6,7 +6,9 @@ export default function FamilyGuyCharacters({ props }) {
   const numOfImg = manageTickTackToeContext.characters.length;
 
   const handleImageClick = (data) => {
-    console.log(data.id);
+    if (!manageTickTackToeContext.playerOne)
+      manageTickTackToeContext.setPlayerOne(data.name);
+    else manageTickTackToeContext.setPlayerTwo(data.name);
   };
 
   return (
