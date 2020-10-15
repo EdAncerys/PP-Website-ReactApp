@@ -5,6 +5,10 @@ export default function FamilyGuyCharacters({ props }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
   const numOfImg = manageTickTackToeContext.characters.length;
 
+  const handleImageClick = (data) => {
+    console.log(data.id);
+  };
+
   return (
     <div style={styles.container}>
       <div style={styles.wrapper}>
@@ -19,7 +23,7 @@ export default function FamilyGuyCharacters({ props }) {
               onClick={(e) => console.log(img.id)}
               alt={img.name}
               src={img.name}
-              onClick={() => console.log(img.id)}
+              onClick={(data) => handleImageClick(img)}
             />
           </div>
         ))}
