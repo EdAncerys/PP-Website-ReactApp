@@ -29,7 +29,12 @@ export default function TickTackToePage({ props }) {
     { name: Stewie, id: uuidv4(), lastChild: true },
   ];
 
-  const manageTickTackToeContext = { characters: characters };
+  const manageTickTackToeContext = {
+    playerOne: playerOne,
+    setPlayerOne: setPlayerOne,
+    playerTwo: playerTwo,
+    setPlayerTwo: setPlayerTwo,
+  };
 
   return (
     <TickTackToeContext.Provider
