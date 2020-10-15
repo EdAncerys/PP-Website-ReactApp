@@ -19,6 +19,7 @@ export default function FamilyGuyCharacters({ props }) {
               onClick={(e) => console.log(img.id)}
               alt={img.name}
               src={img.name}
+              onClick={() => console.log(img.id)}
             />
           </div>
         ))}
