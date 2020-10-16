@@ -7,8 +7,8 @@ export default function FamilyGuyCharacters({ props }) {
 
   const handleImageClick = (data) => {
     if (!manageTickTackToeContext.playerOne)
-      manageTickTackToeContext.setPlayerOne(data.name);
-    else manageTickTackToeContext.setPlayerTwo(data.name);
+      manageTickTackToeContext.setPlayerOne(data);
+    else manageTickTackToeContext.setPlayerTwo(data);
   };
 
   return (
@@ -22,7 +22,6 @@ export default function FamilyGuyCharacters({ props }) {
             <img
               style={styles.img}
               key={img.id}
-              onClick={(e) => console.log(img.id)}
               alt={img.name}
               src={img.name}
               onClick={(data) => handleImageClick(img)}
