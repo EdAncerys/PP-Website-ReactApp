@@ -11,7 +11,9 @@ export default function PlayerVPlayerBanner({ props }) {
   return (
     <div style={styles.container}>
       <div>
-        manageTickTackToeContext.playerOne.name
+       { manageTickTackToeContext.playerOne.name}
+       v
+       { manageTickTackToeContext.playerTwo.name}
       </div>
        <div style={styles.wrapper}>
   
@@ -35,11 +37,18 @@ export default function PlayerVPlayerBanner({ props }) {
 }
 
 const styles = {
+  container: {
+    display: 'grid',
+    alignContent: 'center',
+    justifyItems: 'center',
+    rowGap: 50,
+  },
   wrapper: {
     display: 'grid',
     gridTemplateColumns: 'auto auto',
     alignContent: 'center',
     justifyItems: 'center',
+    columnGap: 100,
     backgroundColor: 'tomato',
   }
 };
