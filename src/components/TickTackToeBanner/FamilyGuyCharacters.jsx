@@ -14,7 +14,7 @@ export default function FamilyGuyCharacters({ props }) {
   return (
     <div style={styles.container}>
       <div style={styles.wrapper}>
-        {manageTickTackToeContext.characters.map((img, i) => (
+         { manageTickTackToeContext.characters.map((img, i) => (
           <div
             key={img.id}
             style={numOfImg - i - 1 !== 0 ? styles.img : styles.lastChild}
@@ -23,7 +23,7 @@ export default function FamilyGuyCharacters({ props }) {
               style={styles.img}
               key={img.id}
               alt={img.name}
-              src={img.name}
+              src={img.img}
               onClick={(data) => handleImageClick(img)}
             />
           </div>

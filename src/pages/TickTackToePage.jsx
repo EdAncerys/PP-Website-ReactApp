@@ -19,15 +19,15 @@ export default function TickTackToePage({ props }) {
   const [playerTwo, setPlayerTwo] = useState();
 
   const characters = [
-    { name: Brian, id: uuidv4() },
-    { name: Chris, id: uuidv4() },
-    { name: Glenn, id: uuidv4() },
-    { name: Herbert, id: uuidv4() },
-    { name: Joe, id: uuidv4() },
-    { name: Lois, id: uuidv4() },
-    { name: Meg, id: uuidv4() },
-    { name: Peter, id: uuidv4() },
-    { name: Stewie, id: uuidv4(), lastChild: true },
+    { name: 'Brian', img: Brian, id: uuidv4() },
+    { name: 'Chris', img: Chris, id: uuidv4() },
+    { name: 'Glenn', img: Glenn, id: uuidv4() },
+    { name: 'Herbert', img: Herbert, id: uuidv4() },
+    { name: 'Joe', img: Joe, id: uuidv4() },
+    { name: 'Lois', img: Lois, id: uuidv4() },
+    { name: 'Meg', img: Meg, id: uuidv4() },
+    { name: 'Peter', img: Peter, id: uuidv4() },
+    { name: 'Stewie', img: Stewie, id: uuidv4(), lastChild: true },
   ];
 
   const manageTickTackToeContext = {
