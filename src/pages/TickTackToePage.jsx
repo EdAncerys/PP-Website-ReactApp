@@ -46,8 +46,8 @@ export default function TickTackToePage({ props }) {
     >
       <div style={styles.container}>
         <div style={styles.content}>
-         {!playerTwo && <FamilyGuyCharacters />}
-         {playerTwo && <PlayerVPlayerBanner/>}
+          {!playerTwo && <FamilyGuyCharacters />}
+          {playerTwo && <PlayerVPlayerBanner />}
         </div>
       </div>
     </TickTackToeContext.Provider>

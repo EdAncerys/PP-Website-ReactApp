@@ -19,7 +19,6 @@ export default function App({ props }) {
   const manageAppContext = {
     page: page,
     setPage: setPage,
-    'Test App Data': 'Data',
   };
 
   useEffect(() => {
