@@ -19,7 +19,7 @@ export default function FamilyGuyCharacters({ props }) {
             key={img.id}
             style={numOfImg - i - 1 !== 0 ? styles.img : styles.lastChild}
           >
-            <div>{img.name}</div>
+            <div style={styles.name}>{img.name}</div>
             <img
               style={styles.img}
               key={img.id}
@@ -47,14 +47,22 @@ const styles = {
     width: '60vw',
     height: '60vh',
     overflow: 'auto',
+    cursor: 'pointer',
   },
   lastChild: {
-    height: '15vh',
     display: 'grid',
     gridColumn: '1 / 5',
     justifyContent: 'center',
+    height: '15vh',
   },
   img: {
+    display: 'grid',
+    justifyContent: 'center',
     height: '15vh',
+  },
+  name: {
+    display: 'grid',
+    justifyContent: 'center',
+    marginBottom: 10,
   },
 };
