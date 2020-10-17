@@ -10,14 +10,11 @@ export default function PlayerVPlayerBanner({ props }) {
 
   return (
     <div style={styles.container}>
-      <div>
-        {manageTickTackToeContext.playerOne.name}
-        <div>v</div>
-        {manageTickTackToeContext.playerTwo.name}
-      </div>
       <div style={styles.wrapper}>
         <div style={styles.img}>
-          {manageTickTackToeContext.playerOne.name}
+          <div style={styles.name}>
+            {manageTickTackToeContext.playerOne.name}
+          </div>
           <img
             style={{ height: '15vh' }}
             alt={manageTickTackToeContext.playerOne.id}
@@ -25,12 +22,18 @@ export default function PlayerVPlayerBanner({ props }) {
             onClick={(data) => handleImageClick()}
           />
         </div>
-        <img
-          style={{ height: '15vh' }}
-          alt={manageTickTackToeContext.playerOne.id}
-          src={manageTickTackToeContext.playerTwo.img}
-          onClick={(data) => handleImageClick()}
-        />
+        <div style={styles.vs}>v</div>
+        <div style={styles.img}>
+          <div style={styles.name}>
+            {manageTickTackToeContext.playerTwo.name}
+          </div>
+          <img
+            style={{ height: '15vh' }}
+            alt={manageTickTackToeContext.playerTwo.id}
+            src={manageTickTackToeContext.playerTwo.img}
+            onClick={(data) => handleImageClick()}
+          />
+        </div>
       </div>
     </div>
   );
@@ -45,10 +48,20 @@ const styles = {
   },
   wrapper: {
     display: 'grid',
-    gridTemplateColumns: 'auto auto',
+    gridTemplateColumns: 'auto auto auto',
     alignContent: 'center',
     justifyItems: 'center',
     columnGap: 100,
-    backgroundColor: 'tomato',
+  },
+  name: {
+    display: 'grid',
+    justifyContent: 'center',
+    marginBottom: 10,
+  },
+  vs: {
+    display: 'grid',
+    justifyContent: 'center',
+    alignContent: 'center',
+    fontSize: 30,
   },
 };
