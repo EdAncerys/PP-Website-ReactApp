@@ -62,7 +62,7 @@ export default function TickTackToePage({ props }) {
         manageTickTackToeContext,
       }}
     >
-      <div style={styles.container}>
+      <div className="family" style={styles.container}>
         <div style={styles.content}>
           {!playerTwo && <FamilyGuyCharacters />}
           {playerTwo && <PlayerVPlayerBanner />}

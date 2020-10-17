@@ -24,3 +24,12 @@
 .logo {
   font-family: Comfortaa, sans-serif;
 }
+
+@font-face {
+  src: url(../fonts/Family-Guy-Font.ttf);
+  font-family: FamilyGuy;
+}
+
+.family {
+  font-family: FamilyGuy, sans-serif;
+}
