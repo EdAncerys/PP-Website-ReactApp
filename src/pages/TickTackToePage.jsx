@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Brian from '../img/TickTackToeImg/Brian.png';
 import Chris from '../img/TickTackToeImg/Chris.png';
@@ -37,6 +37,24 @@ export default function TickTackToePage({ props }) {
     playerTwo: playerTwo,
     setPlayerTwo: setPlayerTwo,
   };
+
+  const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.TickTackToe';
+
+  useEffect(() => {
+    const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
+    const userSession = JSON.parse(data);
+    if (userSession) {
+      setPlayerOne(userSession.playerOne);
+      setPlayerTwo(userSession.playerTwo);
+    }
+  }, []);
+
+  useEffect(() => {
+    sessionStorage.setItem(
+      SESSION_STORAGE_KEY,
+      JSON.stringify(manageTickTackToeContext)
+    );
+  }, [manageTickTackToeContext]);
 
   return (
     <TickTackToeContext.Provider
