@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PagePalette from '../../config/PagePalette';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
 
 export default function PlayerVPlayerBanner({ props }) {
@@ -45,6 +46,7 @@ const styles = {
     alignContent: 'center',
     justifyItems: 'center',
     rowGap: 50,
+    color: PagePalette[3].primary,
   },
   wrapper: {
     display: 'grid',
