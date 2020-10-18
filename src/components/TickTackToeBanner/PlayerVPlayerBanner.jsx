@@ -37,7 +37,7 @@ export default function PlayerVPlayerBanner({ props }) {
             onClick={(data) => handleImageClick()}
           />
         </div>
-        <div style={styles.vs}>v</div>
+        <div style={styles.vs}>vs</div>
         <div style={styles.img}>
           <div style={styles.name}>
             {manageTickTackToeContext.playerTwo.name}
@@ -49,24 +49,13 @@ export default function PlayerVPlayerBanner({ props }) {
             onClick={(data) => handleImageClick()}
           />
         </div>
-        {/* <div style={{ ...styles.wrapper, ...{ gridTemplateColumns: 'auto auto auto' }}> */}
+      </div>
         <div
-          style={{
-            // ...styles.wrapper,
-            ...{
-              display: 'grid',
-              // gridTemplateColumns: 'auto auto',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginLeft: 100,
-              // backgroundColor: 'tomato',
-            },
-          }}
+          style={styles.buttonComponent}
         >
           <Button title="Play Again" onClick={() => handlePlayAgain()} />
-          <div>Button2</div>
+          <Button title="New Game" solid={false} onClick={() => handlePlayAgain()} />
         </div>
-      </div>
     </div>
   );
 }
@@ -74,9 +63,7 @@ export default function PlayerVPlayerBanner({ props }) {
 const styles = {
   container: {
     display: 'grid',
-    alignContent: 'center',
-    justifyItems: 'center',
-    rowGap: 50,
+    rowGap: 100,
   },
   wrapper: {
     display: 'grid',
@@ -96,4 +83,10 @@ const styles = {
     alignContent: 'center',
     fontSize: 30,
   },
+  buttonComponent: {
+    display: 'grid',
+    gridTemplateColumns: 'auto auto',
+    justifyItems: 'center',
+    alignContent: 'center',
+  }
 };

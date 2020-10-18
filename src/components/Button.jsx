@@ -6,7 +6,6 @@ import colors from '../config/colors';
 
 export default function Button({
   title = 'Title',
-  color,
   solid = true,
   onClick,
 }) {
