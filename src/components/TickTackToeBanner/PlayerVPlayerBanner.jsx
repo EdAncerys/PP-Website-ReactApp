@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
-import PagePalette from '../../config/PagePalette';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
+import { AppContext } from '../../App';
 import Button from '../Button';
+
+import PagePalette from '../../config/PagePalette';
 
 export default function PlayerVPlayerBanner({ props }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
+  const { manageAppContext } = useContext(AppContext);
 
   const handleImageClick = () => {
     console.log('click');
@@ -16,7 +19,12 @@ export default function PlayerVPlayerBanner({ props }) {
   };
 
   return (
-    <div style={styles.container}>
+    <div
+      style={{
+        ...styles.container,
+        ...{ color: PagePalette[manageAppContext.page].primary },
+      }}
+    >
       <div style={styles.wrapper}>
         <div style={styles.img}>
           <div style={styles.name}>
@@ -51,7 +59,7 @@ export default function PlayerVPlayerBanner({ props }) {
               justifyContent: 'center',
               alignItems: 'center',
               marginLeft: 100,
-              backgroundColor: 'tomato',
+              // backgroundColor: 'tomato',
             },
           }}
         >
@@ -69,8 +77,6 @@ const styles = {
     alignContent: 'center',
     justifyItems: 'center',
     rowGap: 50,
-    color: PagePalette[3].primary,
-    backgroundColor: 'red',
   },
   wrapper: {
     display: 'grid',
