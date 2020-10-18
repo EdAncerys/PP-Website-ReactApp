@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../App';
 
 import pagePalette from '../config/PagePalette';
 import colors from '../config/colors';
 
 export default function Button({
   title = 'Title',
-  color = colors.primary,
+  color,
   solid = true,
   onClick,
 }) {
   const [hover, setHover] = useState(false);
+  const { manageAppContext } = useContext(AppContext);
 
-  const btnTextColor = solid ? pagePalette[1].secondary : colors.white;
-  const btnBackgroundColor = solid ? pagePalette[1].primary : colors.cucumber;
-  const hoverColor = pagePalette[1].secondary;
+  const btnTextColor = solid
+    ? pagePalette[manageAppContext.page].secondary
+    : pagePalette[manageAppContext.page].primary;
+  const btnBackgroundColor = solid
+    ? pagePalette[manageAppContext.page].primary
+    : colors.cucumber;
+  const hoverColor = pagePalette[manageAppContext.page].secondary;
 
   return (
     <div
