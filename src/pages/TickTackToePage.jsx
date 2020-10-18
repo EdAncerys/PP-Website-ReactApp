@@ -15,8 +15,8 @@ import PlayerVPlayerBanner from '../components/TickTackToeBanner/PlayerVPlayerBa
 export const TickTackToeContext = React.createContext();
 
 export default function TickTackToePage({ props }) {
-  const [playerOne, setPlayerOne] = useState();
-  const [playerTwo, setPlayerTwo] = useState();
+  const [playerOne, setPlayerOne] = useState(false);
+  const [playerTwo, setPlayerTwo] = useState(false);
 
   const characters = [
     { name: 'Brian', img: Brian, id: uuidv4() },

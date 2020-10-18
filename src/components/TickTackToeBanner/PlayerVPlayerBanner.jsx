@@ -10,9 +10,14 @@ export default function PlayerVPlayerBanner({ props }) {
     console.log('click');
   };
 
+  const handlePlayAgain = () => {
+    manageTickTackToeContext.setPlayerOne(false);
+    manageTickTackToeContext.setPlayerTwo(false);
+  };
+
   return (
     <div style={styles.container}>
-      <div style={styles.wrapperOne}>
+      <div style={styles.wrapper}>
         <div style={styles.img}>
           <div style={styles.name}>
             {manageTickTackToeContext.playerOne.name}
@@ -36,9 +41,23 @@ export default function PlayerVPlayerBanner({ props }) {
             onClick={(data) => handleImageClick()}
           />
         </div>
-      </div>
-      <div>
-        <Button />
+        {/* <div style={{ ...styles.wrapper, ...{ gridTemplateColumns: 'auto auto auto' }}> */}
+        <div
+          style={{
+            // ...styles.wrapper,
+            ...{
+              display: 'grid',
+              // gridTemplateColumns: 'auto auto',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginLeft: 100,
+              backgroundColor: 'tomato',
+            },
+          }}
+        >
+          <Button title="Play Again" onClick={() => handlePlayAgain()} />
+          <div>Button2</div>
+        </div>
       </div>
     </div>
   );
@@ -51,8 +70,9 @@ const styles = {
     justifyItems: 'center',
     rowGap: 50,
     color: PagePalette[3].primary,
+    backgroundColor: 'red',
   },
-  wrapperOne: {
+  wrapper: {
     display: 'grid',
     gridTemplateColumns: 'auto auto auto',
     alignContent: 'center',
