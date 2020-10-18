@@ -1,8 +1,12 @@
 import React, { useContext } from 'react';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
+import { AppContext } from '../../App';
+
+import PagePalette from '../../config/PagePalette';
 
 export default function FamilyGuyCharacters({ props }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
+  const { manageAppContext } = useContext(AppContext);
   const numOfImg = manageTickTackToeContext.characters.length;
 
   const handleImageClick = (data) => {
@@ -12,7 +16,10 @@ export default function FamilyGuyCharacters({ props }) {
   };
 
   return (
-    <div style={styles.container}>
+    <div   style={{
+      ...styles.container,
+      ...{ color: PagePalette[manageAppContext.page].primary },
+    }}>
       <div style={styles.wrapper}>
         {manageTickTackToeContext.characters.map((img, i) => (
           <div

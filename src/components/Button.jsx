@@ -18,7 +18,7 @@ export default function Button({
     : pagePalette[manageAppContext.page].primary;
   const btnBackgroundColor = solid
     ? pagePalette[manageAppContext.page].primary
-    : colors.cucumber;
+    : pagePalette[manageAppContext.page].secondary;
   const hoverColor = pagePalette[manageAppContext.page].secondary;
 
   return (
@@ -29,7 +29,7 @@ export default function Button({
         alignItems: 'center',
         color: hover ? colors.white : btnTextColor,
         backgroundColor: hover ? hoverColor : btnBackgroundColor,
-        border: `1px solid ${hover ? hoverColor : color}`,
+        border: `1px solid ${btnBackgroundColor}`,
         borderRadius: 20,
         fontWeight: 'bold',
         fontSize: 'inherit',
