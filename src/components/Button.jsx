@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import pagePalette from '../config/PagePalette';
 import colors from '../config/colors';
 
 export default function Button({
@@ -10,9 +11,9 @@ export default function Button({
 }) {
   const [hover, setHover] = useState(false);
 
-  const btnTextColor = solid ? colors.white : color;
-  const btnBackgroundColor = solid ? color : '';
-  const hoverColor = colors.hover[color];
+  const btnTextColor = solid ? pagePalette[1].secondary : colors.white;
+  const btnBackgroundColor = solid ? pagePalette[1].primary : colors.cucumber;
+  const hoverColor = pagePalette[1].secondary;
 
   return (
     <div

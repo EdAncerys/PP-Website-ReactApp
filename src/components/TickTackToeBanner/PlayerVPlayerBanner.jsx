@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import PagePalette from '../../config/PagePalette';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
+import Button from '../Button';
 
 export default function PlayerVPlayerBanner({ props }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
@@ -11,7 +12,7 @@ export default function PlayerVPlayerBanner({ props }) {
 
   return (
     <div style={styles.container}>
-      <div style={styles.wrapper}>
+      <div style={styles.wrapperOne}>
         <div style={styles.img}>
           <div style={styles.name}>
             {manageTickTackToeContext.playerOne.name}
@@ -36,6 +37,9 @@ export default function PlayerVPlayerBanner({ props }) {
           />
         </div>
       </div>
+      <div>
+        <Button />
+      </div>
     </div>
   );
 }
@@ -48,7 +52,7 @@ const styles = {
     rowGap: 50,
     color: PagePalette[3].primary,
   },
-  wrapper: {
+  wrapperOne: {
     display: 'grid',
     gridTemplateColumns: 'auto auto auto',
     alignContent: 'center',
