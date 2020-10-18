@@ -28,6 +28,7 @@ export default function ImageContainer({ img, altText, text, color }) {
         boxShadow: handleShadow,
         overflow: 'hidden',
         transition: 'all 0.6s ease-in-out',
+        cursor: 'pointer'
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}

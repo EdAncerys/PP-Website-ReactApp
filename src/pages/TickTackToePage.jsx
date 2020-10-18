@@ -14,23 +14,27 @@ import PlayerVPlayerBanner from '../components/TickTackToeBanner/PlayerVPlayerBa
 
 export const TickTackToeContext = React.createContext();
 
+const characters = [
+  { name: 'Brian', img: Brian, id: uuidv4() },
+  { name: 'Chris', img: Chris, id: uuidv4() },
+  { name: 'Glenn', img: Glenn, id: uuidv4() },
+  { name: 'Herbert', img: Herbert, id: uuidv4() },
+  { name: 'Joe', img: Joe, id: uuidv4() },
+  { name: 'Lois', img: Lois, id: uuidv4() },
+  { name: 'Meg', img: Meg, id: uuidv4() },
+  { name: 'Peter', img: Peter, id: uuidv4() },
+  { name: 'Stewie', img: Stewie, id: uuidv4(), lastChild: true },
+];
+
 export default function TickTackToePage({ props }) {
   const [playerOne, setPlayerOne] = useState(false);
   const [playerTwo, setPlayerTwo] = useState(false);
+  const [familyCharacters, setFamilyCharacters] = useState(characters)
 
-  const characters = [
-    { name: 'Brian', img: Brian, id: uuidv4() },
-    { name: 'Chris', img: Chris, id: uuidv4() },
-    { name: 'Glenn', img: Glenn, id: uuidv4() },
-    { name: 'Herbert', img: Herbert, id: uuidv4() },
-    { name: 'Joe', img: Joe, id: uuidv4() },
-    { name: 'Lois', img: Lois, id: uuidv4() },
-    { name: 'Meg', img: Meg, id: uuidv4() },
-    { name: 'Peter', img: Peter, id: uuidv4() },
-    { name: 'Stewie', img: Stewie, id: uuidv4(), lastChild: true },
-  ];
 
   const manageTickTackToeContext = {
+    familyCharacters: familyCharacters,
+    setFamilyCharacters: setFamilyCharacters,
     characters: characters,
     playerOne: playerOne,
     setPlayerOne: setPlayerOne,

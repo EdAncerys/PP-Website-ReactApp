@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
 import { AppContext } from '../../App';
 
@@ -7,13 +7,24 @@ import PagePalette from '../../config/PagePalette';
 export default function FamilyGuyCharacters({ props }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
   const { manageAppContext } = useContext(AppContext);
-  const numOfImg = manageTickTackToeContext.characters.length;
+
+  const numOfImg = manageTickTackToeContext.familyCharacters.length - 1;
+
+  useEffect(() => {
+    manageTickTackToeContext.setFamilyCharacters(manageTickTackToeContext.characters)
+  }, [])
 
   const handleImageClick = (data) => {
-    if (!manageTickTackToeContext.playerOne)
+    if (!manageTickTackToeContext.playerOne) {
       manageTickTackToeContext.setPlayerOne(data);
+
+      const characters = manageTickTackToeContext.characters.filter((img, i) => img.name !== manageTickTackToeContext.playerOne.name)
+      manageTickTackToeContext.setFamilyCharacters(characters)
+      console.log(characters)
+    }
     else manageTickTackToeContext.setPlayerTwo(data);
   };
+
 
   return (
     <div   style={{
@@ -21,10 +32,10 @@ export default function FamilyGuyCharacters({ props }) {
       ...{ color: PagePalette[manageAppContext.page].primary },
     }}>
       <div style={styles.wrapper}>
-        {manageTickTackToeContext.characters.map((img, i) => (
+        {manageTickTackToeContext.familyCharacters.map((img, i) => (
           <div
             key={img.id}
-            style={numOfImg - i - 1 !== 0 ? styles.img : styles.lastChild}
+            style={numOfImg !== i ? styles.img : styles.lastChild}
           >
             <div style={styles.name}>{img.name}</div>
             <img
