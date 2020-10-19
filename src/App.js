@@ -61,11 +61,10 @@ const styles = {
 	container: {
 		display: 'grid',
 		height: '100vh',
-		width: '100vw',
-		gridTemplateColumns: '400px auto'
+    gridTemplateColumns: '400px auto',
+    overflow: 'auto'
 	},
 	pageContent: {
-    height: '90vh',
     overflow: 'auto'
   }
 };
