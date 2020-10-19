@@ -9,8 +9,6 @@ export default function FamilyGuyCharacters({ props }) {
 	const { manageTickTackToeContext } = useContext(TickTackToeContext);
 	const { manageAppContext } = useContext(AppContext);
 
-	const numOfImg = manageTickTackToeContext.familyCharacters.length - 1;
-
 	useEffect(() => {
 		manageTickTackToeContext.setFamilyCharacters(manageTickTackToeContext.characters);
 	}, []);
@@ -36,7 +34,7 @@ export default function FamilyGuyCharacters({ props }) {
 				{manageTickTackToeContext.familyCharacters.map((img, i) => (
 					<div
 						key={img.id}
-						style={numOfImg !== i ? styles.img : styles.lastChild}
+						style={8 !== i ? styles.img : styles.lastChild}
 						onClick={() => handleImageClick(img)}
 					>
 						<Character src={img.img} name={img.name} />
