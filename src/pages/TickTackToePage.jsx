@@ -11,7 +11,6 @@ import Peter from '../img/TickTackToeImg/Peter.png';
 import Stewie from '../img/TickTackToeImg/Stewie.png';
 import FamilyGuyCharacters from '../components/TickTackToeBanner/FamilyGuyCharacters';
 import PlayerVPlayerBanner from '../components/TickTackToeBanner/PlayerVPlayerBanner';
-import Footer from '../components/Footer';
 
 export const TickTackToeContext = React.createContext();
 
@@ -70,7 +69,6 @@ export default function TickTackToePage({ props }) {
 				<div style={styles.content}>
 					{!playerTwo && <FamilyGuyCharacters />}
 					{playerTwo && <PlayerVPlayerBanner />}
-          {/* <Footer/> */}
 				</div>
 			</div>
 		</TickTackToeContext.Provider>
@@ -90,6 +88,6 @@ const styles = {
 		marginTop: 100,
 		marginBottom: 100,
 		gridGap: 10,
-		textAlign: 'justify'
+    textAlign: 'justify',
 	}
 };
