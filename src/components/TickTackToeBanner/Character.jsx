@@ -1,23 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-export default function Character({ props }) {
+export default function Character({ src, name }) {
+  const [clickEffect, setClickEffect] = useState(false);
+
+  const handleImageClick = () => {
+    setClickEffect(true);
+    setTimeout(() => {
+      setClickEffect(false);
+    }, 200);
+  };
+
   return (
-    <div style={styles.container}>
-        <div style={{...styles.img, ...{ transform: clickEffect ? 'scale(0.90)' : 'scale(1)'}}}>
+        <div style={{ transform: clickEffect ? 'scale(0.95)' : 'scale(1)'}}>
           <div style={styles.name}>
-            {manageTickTackToeContext.playerOne.name}
+            {name}
           </div>
           <img
             style={{ height: '15vh' }}
-            alt={manageTickTackToeContext.playerOne.id}
-            src={manageTickTackToeContext.playerOne.img}
-            onClick={(data) => handleImageClick()}
+            alt={name}
+            src={src}
+            onClick={() => handleImageClick()}
           />
         </div>
-    </div>
   );
 }
 
 const styles = {
-  container: {}
+  name: {
+    display: 'grid',
+    justifyContent: 'center',
+    marginBottom: 10,
+  }
 };

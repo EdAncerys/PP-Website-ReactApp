@@ -4,6 +4,7 @@ import { AppContext } from '../../App';
 import Button from '../Button';
 
 import PagePalette from '../../config/PagePalette';
+import Character from './Character';
 
 export default function PlayerVPlayerBanner({ props }) {
   const [clickEffect, setClickEffect] = useState(false);
@@ -30,29 +31,15 @@ export default function PlayerVPlayerBanner({ props }) {
       }}
     >
       <div style={styles.wrapper}>
-        <div style={{...styles.img, ...{ transform: clickEffect ? 'scale(0.90)' : 'scale(1)'}}}>
-          <div style={styles.name}>
-            {manageTickTackToeContext.playerOne.name}
-          </div>
-          <img
-            style={{ height: '15vh' }}
-            alt={manageTickTackToeContext.playerOne.id}
+        <Character 
             src={manageTickTackToeContext.playerOne.img}
-            onClick={(data) => handleImageClick()}
-          />
-        </div>
+            name={manageTickTackToeContext.playerOne.name}
+        />
         <div style={styles.vs}>vs</div>
-        <div style={styles.img}>
-          <div style={styles.name}>
-            {manageTickTackToeContext.playerTwo.name}
-          </div>
-          <img
-            style={{ height: '15vh' }}
-            alt={manageTickTackToeContext.playerTwo.id}
+        <Character 
             src={manageTickTackToeContext.playerTwo.img}
-            onClick={(data) => handleImageClick()}
-          />
-        </div>
+            name={manageTickTackToeContext.playerTwo.name}
+        />
       </div>
         <div
           style={styles.buttonComponent}
@@ -76,11 +63,11 @@ const styles = {
     justifyItems: 'center',
     columnGap: 100,
   },
-  name: {
-    display: 'grid',
-    justifyContent: 'center',
-    marginBottom: 10,
-  },
+  // name: {
+  //   display: 'grid',
+  //   justifyContent: 'center',
+  //   marginBottom: 10,
+  // },
   vs: {
     display: 'grid',
     justifyContent: 'center',
