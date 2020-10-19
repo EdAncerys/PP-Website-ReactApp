@@ -19,11 +19,9 @@ export default function FamilyGuyCharacters({ props }) {
 		if (!manageTickTackToeContext.playerOne) {
 			manageTickTackToeContext.setPlayerOne(data);
 
-			const characters = manageTickTackToeContext.characters.filter(
-				(img, i) => img.name !== manageTickTackToeContext.playerOne.name
-			);
+			const playerOne = data.name;
+			const characters = manageTickTackToeContext.characters.filter((img, i) => img.name !== playerOne);
 			manageTickTackToeContext.setFamilyCharacters(characters);
-			console.log(characters);
 		} else manageTickTackToeContext.setPlayerTwo(data);
 	};
 
