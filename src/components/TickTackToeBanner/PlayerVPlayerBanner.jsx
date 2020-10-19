@@ -48,7 +48,7 @@ export default function PlayerVPlayerBanner({ props }) {
 const styles = {
 	container: {
 		display: 'grid',
-		rowGap: 100
+		rowGap: 50
 	},
 	wrapper: {
 		display: 'grid',
