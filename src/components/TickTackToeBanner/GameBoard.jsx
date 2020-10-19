@@ -5,20 +5,26 @@ import colors from '../../config/colors';
 export default function GameBoard({ props }) {
 	return (
 		<div style={styles.container}>
-			<div style={styles.lineOne}>
+			<div style={styles.line}>
 				<div style={styles.horizontal}>s</div>
+				<div style={styles.vertical} />
 				<div style={styles.horizontal}>s</div>
-				<div style={styles.horizontal}>s</div>
-			</div>
-			<div style={styles.lineOne}>
-				<div style={styles.horizontal}>s</div>
-				<div style={styles.horizontal}>s</div>
+				<div style={styles.vertical} />
 				<div style={styles.horizontal}>s</div>
 			</div>
-			<div style={styles.lineTwo}>
-				<div style={styles.vertical}>s</div>
-				<div style={styles.vertical}>s</div>
-				<div style={styles.vertical}>s</div>
+			<div style={styles.line}>
+				<div style={styles.horizontal}>s</div>
+				<div style={styles.vertical} />
+				<div style={styles.horizontal}>s</div>
+				<div style={styles.vertical} />
+				<div style={styles.horizontal}>s</div>
+			</div>
+			<div style={styles.line}>
+				<div />
+				<div style={styles.vertical} />
+				<div style={{ ...styles.horizontal, ...{ borderBottom: 'none' } }}>s</div>
+				<div style={styles.vertical} />
+				<div />
 			</div>
 		</div>
 	);
@@ -27,15 +33,15 @@ export default function GameBoard({ props }) {
 const styles = {
 	container: {
 		display: 'grid',
-		rowGap: 30
+		justifyContent: 'center'
 	},
 	vertical: {
 		display: 'grid',
 		justifyContent: 'center',
 		alignContent: 'center',
 		borderRight: `2px solid ${colors.red}`,
-		borderRadius: '0 0 640px 20%/20px',
-		width: 80
+		borderRadius: '20%/20px 540px 0 0 ',
+		height: 80
 	},
 	horizontal: {
 		display: 'grid',
@@ -45,8 +51,8 @@ const styles = {
 		borderRadius: '0 0 640px 20%/20px',
 		width: 80
 	},
-	lineOne: {
+	line: {
 		display: 'grid',
-		gridTemplateColumns: 'auto auto auto'
+		gridTemplateColumns: 'repeat(5, 40px)'
 	}
 };
