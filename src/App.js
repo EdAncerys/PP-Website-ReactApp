@@ -64,5 +64,8 @@ const styles = {
 		width: '100vw',
 		gridTemplateColumns: '400px auto'
 	},
-	pageContent: {}
+	pageContent: {
+    height: '90vh',
+    overflow: 'auto'
+  }
 };
