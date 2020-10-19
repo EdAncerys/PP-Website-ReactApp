@@ -5,6 +5,7 @@ import Button from '../Button';
 
 import PagePalette from '../../config/PagePalette';
 import Character from './Character';
+import GameBoard from './GameBoard';
 
 export default function PlayerVPlayerBanner({ props }) {
 	const { manageTickTackToeContext } = useContext(TickTackToeContext);
@@ -32,6 +33,9 @@ export default function PlayerVPlayerBanner({ props }) {
 					src={manageTickTackToeContext.playerTwo.img}
 					name={manageTickTackToeContext.playerTwo.name}
 				/>
+			</div>
+			<div style={styles.gameBoard}>
+				<GameBoard />
 			</div>
 			<div style={styles.buttonComponent}>
 				<Button title="Play Again" onClick={() => handlePlayAgain()} />
