@@ -12,53 +12,57 @@ import colors from './config/colors';
 export const AppContext = React.createContext();
 
 export default function App({ props }) {
-  const [page, setPage] = useState(false);
+	const [ page, setPage ] = useState(false);
 
-  const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.App';
+	const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.App';
 
-  const manageAppContext = {
-    page: page,
-    setPage: setPage,
-  };
+	const manageAppContext = {
+		page: page,
+		setPage: setPage
+	};
 
-  useEffect(() => {
-    const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
-    const userSession = JSON.parse(data);
-    if (userSession) setPage(userSession.page);
-  }, []);
+	useEffect(() => {
+		const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
+		const userSession = JSON.parse(data);
+		if (userSession) setPage(userSession.page);
+	}, []);
 
-  useEffect(() => {
-    sessionStorage.setItem(
-      SESSION_STORAGE_KEY,
-      JSON.stringify(manageAppContext)
-    );
-  }, [manageAppContext]);
+	useEffect(
+		() => {
+			sessionStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(manageAppContext));
+		},
+		[ manageAppContext ]
+	);
 
-  return (
-    <AppContext.Provider
-      value={{
-        manageAppContext,
-      }}
-    >
-      {page && <Header color={colors.white} />}
-      {!page && (
-        <div style={styles.container}>
-          <AboutBanner />
-          <ContentBanner />
-        </div>
-      )}
-      {page === 1 && <AboutMePage />}
-      {page === 3 && <TickTackToePage />}
-      {page && <Footer />}
-    </AppContext.Provider>
-  );
+	return (
+		<AppContext.Provider
+			value={{
+				manageAppContext
+			}}
+		>
+			{page && <Header color={colors.white} />}
+			{!page && (
+				<div style={styles.container}>
+					<AboutBanner />
+					<ContentBanner />
+				</div>
+			)}
+			<div style={styles.pageContent}>
+				{page === 1 && <AboutMePage />}
+				{page === 3 && <TickTackToePage />}
+			</div>
+
+			{page && <Footer />}
+		</AppContext.Provider>
+	);
 }
 
 const styles = {
-  container: {
-    display: 'grid',
-    height: '100vh',
-    width: '100vw',
-    gridTemplateColumns: '400px auto',
-  },
+	container: {
+		display: 'grid',
+		height: '100vh',
+		width: '100vw',
+		gridTemplateColumns: '400px auto'
+	},
+	pageContent: {}
 };

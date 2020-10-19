@@ -15,80 +15,79 @@ import PlayerVPlayerBanner from '../components/TickTackToeBanner/PlayerVPlayerBa
 export const TickTackToeContext = React.createContext();
 
 const characters = [
-  { name: 'Brian', img: Brian, id: uuidv4() },
-  { name: 'Chris', img: Chris, id: uuidv4() },
-  { name: 'Glenn', img: Glenn, id: uuidv4() },
-  { name: 'Herbert', img: Herbert, id: uuidv4() },
-  { name: 'Joe', img: Joe, id: uuidv4() },
-  { name: 'Lois', img: Lois, id: uuidv4() },
-  { name: 'Meg', img: Meg, id: uuidv4() },
-  { name: 'Peter', img: Peter, id: uuidv4() },
-  { name: 'Stewie', img: Stewie, id: uuidv4(), lastChild: true },
+	{ name: 'Brian', img: Brian, id: uuidv4() },
+	{ name: 'Chris', img: Chris, id: uuidv4() },
+	{ name: 'Glenn', img: Glenn, id: uuidv4() },
+	{ name: 'Herbert', img: Herbert, id: uuidv4() },
+	{ name: 'Joe', img: Joe, id: uuidv4() },
+	{ name: 'Lois', img: Lois, id: uuidv4() },
+	{ name: 'Meg', img: Meg, id: uuidv4() },
+	{ name: 'Peter', img: Peter, id: uuidv4() },
+	{ name: 'Stewie', img: Stewie, id: uuidv4(), lastChild: true }
 ];
 
 export default function TickTackToePage({ props }) {
-  const [playerOne, setPlayerOne] = useState(false);
-  const [playerTwo, setPlayerTwo] = useState(false);
-  const [familyCharacters, setFamilyCharacters] = useState(characters)
+	const [ playerOne, setPlayerOne ] = useState(false);
+	const [ playerTwo, setPlayerTwo ] = useState(false);
+	const [ familyCharacters, setFamilyCharacters ] = useState(characters);
 
+	const manageTickTackToeContext = {
+		familyCharacters: familyCharacters,
+		setFamilyCharacters: setFamilyCharacters,
+		characters: characters,
+		playerOne: playerOne,
+		setPlayerOne: setPlayerOne,
+		playerTwo: playerTwo,
+		setPlayerTwo: setPlayerTwo
+	};
 
-  const manageTickTackToeContext = {
-    familyCharacters: familyCharacters,
-    setFamilyCharacters: setFamilyCharacters,
-    characters: characters,
-    playerOne: playerOne,
-    setPlayerOne: setPlayerOne,
-    playerTwo: playerTwo,
-    setPlayerTwo: setPlayerTwo,
-  };
+	const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.TickTackToe';
 
-  const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.TickTackToe';
+	useEffect(() => {
+		const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
+		const userSession = JSON.parse(data);
+		if (userSession) {
+			setPlayerOne(userSession.playerOne);
+			setPlayerTwo(userSession.playerTwo);
+		}
+	}, []);
 
-  useEffect(() => {
-    const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
-    const userSession = JSON.parse(data);
-    if (userSession) {
-      setPlayerOne(userSession.playerOne);
-      setPlayerTwo(userSession.playerTwo);
-    }
-  }, []);
+	useEffect(
+		() => {
+			sessionStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(manageTickTackToeContext));
+		},
+		[ manageTickTackToeContext ]
+	);
 
-  useEffect(() => {
-    sessionStorage.setItem(
-      SESSION_STORAGE_KEY,
-      JSON.stringify(manageTickTackToeContext)
-    );
-  }, [manageTickTackToeContext]);
-
-  return (
-    <TickTackToeContext.Provider
-      value={{
-        manageTickTackToeContext,
-      }}
-    >
-      <div className="family" style={styles.container}>
-        <div style={styles.content}>
-          {!playerTwo && <FamilyGuyCharacters />}
-          {playerTwo && <PlayerVPlayerBanner />}
-        </div>
-      </div>
-    </TickTackToeContext.Provider>
-  );
+	return (
+		<TickTackToeContext.Provider
+			value={{
+				manageTickTackToeContext
+			}}
+		>
+			<div className="family" style={styles.container}>
+				<div style={styles.content}>
+					{!playerTwo && <FamilyGuyCharacters />}
+					{playerTwo && <PlayerVPlayerBanner />}
+				</div>
+			</div>
+		</TickTackToeContext.Provider>
+	);
 }
 
 const styles = {
-  container: {
-    display: 'grid',
-    justifyContent: 'center',
-    userSelect: 'none',
-    cursor: 'default',
-  },
-  content: {
-    display: 'grid',
-    width: 600,
-    marginTop: 100,
-    marginBottom: 100,
-    gridGap: 10,
-    textAlign: 'justify',
-  },
+	container: {
+		display: 'grid',
+		justifyContent: 'center',
+		userSelect: 'none',
+		cursor: 'default'
+	},
+	content: {
+		display: 'grid',
+		width: 600,
+		marginTop: 100,
+		marginBottom: 100,
+		gridGap: 10,
+		textAlign: 'justify'
+	}
 };
