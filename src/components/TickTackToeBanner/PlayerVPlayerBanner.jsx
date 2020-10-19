@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
 import { AppContext } from '../../App';
 import Button from '../Button';
@@ -6,11 +6,15 @@ import Button from '../Button';
 import PagePalette from '../../config/PagePalette';
 
 export default function PlayerVPlayerBanner({ props }) {
+  const [clickEffect, setClickEffect] = useState(false);
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
   const { manageAppContext } = useContext(AppContext);
 
   const handleImageClick = () => {
-    console.log('click');
+    setClickEffect(true);
+    setTimeout(() => {
+      setClickEffect(false);
+    }, 200);
   };
 
   const handlePlayAgain = () => {
@@ -26,7 +30,7 @@ export default function PlayerVPlayerBanner({ props }) {
       }}
     >
       <div style={styles.wrapper}>
-        <div style={styles.img}>
+        <div style={{...styles.img, ...{ transform: clickEffect ? 'scale(0.90)' : 'scale(1)'}}}>
           <div style={styles.name}>
             {manageTickTackToeContext.playerOne.name}
           </div>
