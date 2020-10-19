@@ -63,6 +63,11 @@ const styles = {
 		alignContent: 'center',
 		fontSize: 30
 	},
+	gameBoard: {
+		display: 'grid',
+		justifyItems: 'center',
+		alignContent: 'center'
+	},
 	buttonComponent: {
 		display: 'grid',
 		gridTemplateColumns: 'auto auto',
