@@ -9,5 +9,7 @@ export default function BoardCell({ props }) {
 }
 
 const styles = {
-  container: {}
+  container: {
+    cursor: 'pointer'
+  }
 };

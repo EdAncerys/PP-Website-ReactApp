@@ -21,11 +21,11 @@ export default function GameBoard({ props }) {
 				<div style={styles.horizontal}><BoardCell/></div>
 			</div>
 			<div style={styles.line}>
-				<div />
+			<div style={{ ...styles.horizontal, ...{ borderBottom: 'none' } }}><BoardCell/></div>
 				<div style={styles.vertical} />
 				<div style={{ ...styles.horizontal, ...{ borderBottom: 'none' } }}><BoardCell/></div>
 				<div style={styles.vertical} />
-				<div />
+				<div style={{ ...styles.horizontal, ...{ borderBottom: 'none' } }}><BoardCell/></div>
 			</div>
 		</div>
 	);
