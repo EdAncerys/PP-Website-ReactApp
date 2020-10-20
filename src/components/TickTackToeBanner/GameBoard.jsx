@@ -1,4 +1,5 @@
 import React from 'react';
+import BoardCell from './BoardCell';
 
 import colors from '../../config/colors';
 
@@ -6,23 +7,23 @@ export default function GameBoard({ props }) {
 	return (
 		<div style={styles.container}>
 			<div style={styles.line}>
-				<div style={styles.horizontal}>s</div>
+				<div style={styles.horizontal}><BoardCell/></div>
 				<div style={styles.vertical} />
-				<div style={styles.horizontal}>s</div>
+				<div style={styles.horizontal}><BoardCell/></div>
 				<div style={styles.vertical} />
-				<div style={styles.horizontal}>s</div>
+				<div style={styles.horizontal}><BoardCell/></div>
 			</div>
 			<div style={styles.line}>
-				<div style={styles.horizontal}>s</div>
+				<div style={styles.horizontal}><BoardCell/></div>
 				<div style={styles.vertical} />
-				<div style={styles.horizontal}>s</div>
+				<div style={styles.horizontal}><BoardCell/></div>
 				<div style={styles.vertical} />
-				<div style={styles.horizontal}>s</div>
+				<div style={styles.horizontal}><BoardCell/></div>
 			</div>
 			<div style={styles.line}>
 				<div />
 				<div style={styles.vertical} />
-				<div style={{ ...styles.horizontal, ...{ borderBottom: 'none' } }}>s</div>
+				<div style={{ ...styles.horizontal, ...{ borderBottom: 'none' } }}><BoardCell/></div>
 				<div style={styles.vertical} />
 				<div />
 			</div>
