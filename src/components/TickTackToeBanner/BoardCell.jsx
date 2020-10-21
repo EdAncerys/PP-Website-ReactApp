@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../App';
 
-export default function BoardCell({ props }) {
+export default function BoardCell({ id }) {
   const { manageAppContext } = useContext(AppContext);
 
   const handleClick = (data) => {
@@ -14,8 +14,8 @@ export default function BoardCell({ props }) {
   }
 
   return (
-    <div id='1' style={styles.container} onClick={(e) => handleClick(e)}>
-      <div>hello</div>
+    <div className='bangers' id='1' style={styles.container} onClick={(e) => handleClick(e)}>
+      <div>{id}</div>
     </div>
   );
 }
