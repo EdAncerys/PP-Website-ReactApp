@@ -23,8 +23,14 @@ export default function App({ props }) {
     page: page,
     setPage: setPage,
     playerOneMove: playerOneMove,
-    setPlayerOneMove: setPlayerOneMove
+    setPlayerOneMove: setPlayerOneMove,
+    setPlayerOne: setPlayerOne,
+    setPlayerTwo: setPlayerTwo,
   };
+
+  useEffect(() => {
+    console.log(playerOne, playerTwo);
+  }, [playerOne, playerTwo]);
 
   useEffect(() => {
     const data = sessionStorage.getItem(SESSION_STORAGE_KEY);

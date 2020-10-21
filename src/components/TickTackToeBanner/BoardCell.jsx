@@ -5,23 +5,28 @@ export default function BoardCell({ id }) {
   const { manageAppContext } = useContext(AppContext);
 
   const handleClick = (data) => {
-    const moveOne = manageAppContext.playOneMove
-    const id = data.target.id
+    const moveOne = manageAppContext.playOneMove;
+    const id = data.target.id;
 
-    if(moveOne) console.log(id)
-    if(!moveOne) console.log(id)
-    manageAppContext.setPlayerOneMove(!moveOne)
-  }
+    // if(moveOne) manageAppContext.setPlayerOne(id)
+    // if(!moveOne) manageAppContext.setPlayerTwo(id)
+    console.log(id);
+    manageAppContext.setPlayerOneMove(!moveOne);
+  };
 
   return (
-    <div className='bangers' id='1' style={styles.container} onClick={(e) => handleClick(e)}>
-      <div>{id}</div>
+    <div
+      className="bangers"
+      style={styles.container}
+      onClick={(data) => handleClick(data)}
+    >
+      <div id={id}>{id}</div>
     </div>
   );
 }
 
 const styles = {
   container: {
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };
