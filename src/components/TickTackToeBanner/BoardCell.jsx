@@ -5,13 +5,15 @@ export default function BoardCell({ id }) {
   const { manageAppContext } = useContext(AppContext);
 
   const handleClick = (data) => {
-    const moveOne = manageAppContext.playOneMove;
+    const player = manageAppContext.playOneMove;
     const id = data.target.id;
 
-    // if(moveOne) manageAppContext.setPlayerOne(id)
-    // if(!moveOne) manageAppContext.setPlayerTwo(id)
+    if (player)
+      manageAppContext.setPlayerOne([...manageAppContext.playerOne, id]);
+    if (!player)
+      manageAppContext.setPlayerTwo([...manageAppContext.playerTwo, id]);
+    manageAppContext.setPlayerOneMove(!player);
     console.log(id);
-    manageAppContext.setPlayerOneMove(!moveOne);
   };
 
   return (
