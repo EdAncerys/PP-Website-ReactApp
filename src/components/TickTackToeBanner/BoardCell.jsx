@@ -3,10 +3,10 @@ import { AppContext } from '../../App';
 
 export default function BoardCell({ id }) {
   const { manageAppContext } = useContext(AppContext);
-  const player = manageAppContext.playOneMove;
 
   const handleClick = (data) => {
     const id = data.target.id;
+    const player = manageAppContext.playerOneMove;
 
     if (player) {
       manageAppContext.setPlayerOne([...manageAppContext.playerOne, id]);
@@ -16,7 +16,6 @@ export default function BoardCell({ id }) {
       manageAppContext.setPlayerTwo([...manageAppContext.playerTwo, id]);
       manageAppContext.setPlayerOneMove(!player);
     }
-    console.log(manageAppContext.playOneMove);
   };
 
   return (

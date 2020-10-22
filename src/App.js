@@ -31,7 +31,7 @@ export default function App({ props }) {
   };
 
   useEffect(() => {
-    console.log(playerOne, playerTwo);
+    console.log(playerOne, playerTwo, playerOneMove);
   }, [playerOne, playerTwo]);
 
   useEffect(() => {
