@@ -14,6 +14,7 @@ export const AppContext = React.createContext();
 export default function App({ props }) {
   const [page, setPage] = useState(false);
   const [playerOneMove, setPlayerOneMove] = useState(true);
+  const [takenTiles, setTakenTiles] = useState([]);
   const [playerOne, setPlayerOne] = useState([]);
   const [playerTwo, setPlayerTwo] = useState([]);
 
@@ -24,6 +25,8 @@ export default function App({ props }) {
     setPage: setPage,
     playerOneMove: playerOneMove,
     setPlayerOneMove: setPlayerOneMove,
+    takenTiles: takenTiles,
+    setTakenTiles: setTakenTiles,
     playerOne: playerOne,
     setPlayerOne: setPlayerOne,
     playerTwo: playerTwo,
@@ -31,7 +34,7 @@ export default function App({ props }) {
   };
 
   useEffect(() => {
-    console.log(playerOne, playerTwo, playerOneMove);
+    console.log(playerOne, playerTwo, takenTiles);
   }, [playerOne, playerTwo]);
 
   useEffect(() => {

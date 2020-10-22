@@ -12,6 +12,7 @@ export default function BoardCell({ id }) {
       manageAppContext.setPlayerOne([...manageAppContext.playerOne, id]);
     if (!player)
       manageAppContext.setPlayerTwo([...manageAppContext.playerTwo, id]);
+    manageAppContext.setTakenTiles([...manageAppContext.takenTiles, id]);
     manageAppContext.setPlayerOneMove(!player);
   };
 
