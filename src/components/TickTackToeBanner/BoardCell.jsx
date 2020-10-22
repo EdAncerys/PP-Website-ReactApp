@@ -8,14 +8,11 @@ export default function BoardCell({ id }) {
     const id = data.target.id;
     const player = manageAppContext.playerOneMove;
 
-    if (player) {
+    if (player)
       manageAppContext.setPlayerOne([...manageAppContext.playerOne, id]);
-      manageAppContext.setPlayerOneMove(!player);
-    }
-    if (!player) {
+    if (!player)
       manageAppContext.setPlayerTwo([...manageAppContext.playerTwo, id]);
-      manageAppContext.setPlayerOneMove(!player);
-    }
+    manageAppContext.setPlayerOneMove(!player);
   };
 
   return (
