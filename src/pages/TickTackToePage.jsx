@@ -25,7 +25,12 @@ import { GiGoat } from 'react-icons/gi';
 export const TickTackToeContext = React.createContext();
 
 const characters = [
-  { name: 'Brian', img: Brian, id: uuidv4(), icon: GiAmericanFootballHelmet },
+  {
+    name: 'Brian',
+    img: Brian,
+    id: uuidv4(),
+    icon: <GiAmericanFootballHelmet />,
+  },
   { name: 'Chris', img: Chris, id: uuidv4(), icon: GiAquarium },
   { name: 'Glenn', img: Glenn, id: uuidv4(), icon: GiCatapult },
   { name: 'Herbert', img: Herbert, id: uuidv4(), icon: GiGaulsHelm },
@@ -79,6 +84,7 @@ export default function TickTackToePage({ props }) {
         <div style={styles.content}>
           {!playerTwo && <FamilyGuyCharacters />}
           {playerTwo && <PlayerVPlayerBanner />}
+          {characters[0].icon}
         </div>
       </div>
     </TickTackToeContext.Provider>

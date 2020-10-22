@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../App';
+import { TickTackToeContext } from '../../pages/TickTackToePage';
 
 export default function BoardCell({ id }) {
   const { manageAppContext } = useContext(AppContext);
-  const playerOneAvatar 
+  const { manageTickTackToeContext } = useContext(TickTackToeContext);
+
+  const playerOneAvatar = manageTickTackToeContext.playerOne.name;
 
   const handleClick = (data) => {
     const id = data.target.id;
@@ -23,7 +26,7 @@ export default function BoardCell({ id }) {
       style={styles.container}
       onClick={(data) => handleClick(data)}
     >
-      <div id={id}>{id}</div>
+      <div id={id}>{playerOneAvatar}</div>
     </div>
   );
 }
