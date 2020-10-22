@@ -3,6 +3,7 @@ import { AppContext } from '../../App';
 
 export default function BoardCell({ id }) {
   const { manageAppContext } = useContext(AppContext);
+  const playerOneAvatar 
 
   const handleClick = (data) => {
     const id = data.target.id;
