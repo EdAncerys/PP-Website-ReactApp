@@ -13,7 +13,7 @@ export default function BoardCell({ id }) {
     const player = manageAppContext.playerOneMove;
 
     if (player) {
-      setAvatar(manageTickTackToeContext.playerOne.icon);
+      setAvatar(manageTickTackToeContext.playerOne.name);
       manageAppContext.setPlayerOne([...manageAppContext.playerOne, id]);
     }
     if (!player) {
@@ -22,6 +22,7 @@ export default function BoardCell({ id }) {
     }
     manageAppContext.setTakenTiles([...manageAppContext.takenTiles, id]);
     manageAppContext.setPlayerOneMove(!player);
+    console.log(id);
   };
 
   return (
@@ -30,18 +31,22 @@ export default function BoardCell({ id }) {
       style={styles.container}
       onClick={(data) => handleClick(data)}
     >
-      <div id={id}>{avatar}</div>
+      <div id={id} style={styles.avatar}>
+        {avatar}
+      </div>
     </div>
   );
 }
 
 const styles = {
   container: {
+    cursor: 'pointer',
+  },
+  avatar: {
     display: 'grid',
     justifyContent: 'center',
     alignItems: 'center',
     width: 80,
     height: 80,
-    cursor: 'pointer',
   },
 };
