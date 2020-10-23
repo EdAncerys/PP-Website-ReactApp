@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { AppContext } from '../../App';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
 
@@ -6,16 +6,20 @@ export default function BoardCell({ id }) {
   const { manageAppContext } = useContext(AppContext);
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
 
-  const playerOneAvatar = manageTickTackToeContext.playerOne.name;
+  const [avatar, setAvatar] = useState();
 
   const handleClick = (data) => {
     const id = data.target.id;
     const player = manageAppContext.playerOneMove;
 
-    if (player)
+    if (player) {
+      setAvatar(manageTickTackToeContext.playerOne.icon);
       manageAppContext.setPlayerOne([...manageAppContext.playerOne, id]);
-    if (!player)
+    }
+    if (!player) {
+      setAvatar(manageTickTackToeContext.playerTwo.name);
       manageAppContext.setPlayerTwo([...manageAppContext.playerTwo, id]);
+    }
     manageAppContext.setTakenTiles([...manageAppContext.takenTiles, id]);
     manageAppContext.setPlayerOneMove(!player);
   };
@@ -26,13 +30,18 @@ export default function BoardCell({ id }) {
       style={styles.container}
       onClick={(data) => handleClick(data)}
     >
-      <div id={id}>{playerOneAvatar}</div>
+      <div id={id}>{avatar}</div>
     </div>
   );
 }
 
 const styles = {
   container: {
+    display: 'grid',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 80,
+    height: 80,
     cursor: 'pointer',
   },
 };
