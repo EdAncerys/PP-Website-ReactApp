@@ -22,7 +22,6 @@ export default function BoardCell({ id }) {
     }
     manageAppContext.setTakenTiles([...manageAppContext.takenTiles, id]);
     manageAppContext.setPlayerOneMove(!player);
-    console.log(id);
   };
 
   return (
@@ -34,7 +33,6 @@ export default function BoardCell({ id }) {
       <div id={id} style={styles.avatar}>
         {avatar}
       </div>
-      {manageTickTackToeContext.characters[1].icon}
     </div>
   );
 }
