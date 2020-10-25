@@ -13,11 +13,11 @@ export default function BoardCell({ id }) {
     const player = manageAppContext.playerOneMove;
 
     if (player) {
-      setAvatar(manageTickTackToeContext.playerOne.name);
+      setAvatar(manageTickTackToeContext.playerOne.icon);
       manageAppContext.setPlayerOne([...manageAppContext.playerOne, id]);
     }
     if (!player) {
-      setAvatar(manageTickTackToeContext.playerTwo.name);
+      setAvatar(manageTickTackToeContext.playerTwo.icon);
       manageAppContext.setPlayerTwo([...manageAppContext.playerTwo, id]);
     }
     manageAppContext.setTakenTiles([...manageAppContext.takenTiles, id]);
@@ -34,6 +34,7 @@ export default function BoardCell({ id }) {
       <div id={id} style={styles.avatar}>
         {avatar}
       </div>
+      {manageTickTackToeContext.characters[1].icon}
     </div>
   );
 }

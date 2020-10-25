@@ -31,14 +31,14 @@ const characters = [
     id: uuidv4(),
     icon: <GiAmericanFootballHelmet />,
   },
-  { name: 'Chris', img: Chris, id: uuidv4(), icon: GiAquarium },
-  { name: 'Glenn', img: Glenn, id: uuidv4(), icon: GiCatapult },
-  { name: 'Herbert', img: Herbert, id: uuidv4(), icon: GiGaulsHelm },
-  { name: 'Joe', img: Joe, id: uuidv4(), icon: GiHamburger },
-  { name: 'Lois', img: Lois, id: uuidv4(), icon: GiHelicoprion },
-  { name: 'Meg', img: Meg, id: uuidv4(), icon: GiAmmonite },
-  { name: 'Peter', img: Peter, id: uuidv4(), icon: GiAnglerFish },
-  { name: 'Stewie', img: Stewie, id: uuidv4(), icon: GiGoat },
+  { name: 'Chris', img: Chris, id: uuidv4(), icon: <GiAquarium /> },
+  { name: 'Glenn', img: Glenn, id: uuidv4(), icon: <GiCatapult /> },
+  { name: 'Herbert', img: Herbert, id: uuidv4(), icon: <GiGaulsHelm /> },
+  { name: 'Joe', img: Joe, id: uuidv4(), icon: <GiHamburger /> },
+  { name: 'Lois', img: Lois, id: uuidv4(), icon: <GiHelicoprion /> },
+  { name: 'Meg', img: Meg, id: uuidv4(), icon: <GiAmmonite /> },
+  { name: 'Peter', img: Peter, id: uuidv4(), icon: <GiAnglerFish /> },
+  { name: 'Stewie', img: Stewie, id: uuidv4(), icon: <GiGoat /> },
 ];
 
 export default function TickTackToePage({ props }) {
