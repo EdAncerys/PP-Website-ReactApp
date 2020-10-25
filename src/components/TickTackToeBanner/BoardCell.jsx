@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { AppContext } from '../../App';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
 
@@ -7,6 +7,12 @@ export default function BoardCell({ id }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
 
   const [avatar, setAvatar] = useState();
+
+  useEffect(() => {
+    // const playerOneAvatar = setAvatar(manageTickTackToeContext.playerOne.icon);
+    // const playerTwoAvatar = manageTickTackToeContext.playerTwo.icon;
+    console.log(manageTickTackToeContext.playerOne.icon);
+  }, []);
 
   const handleClick = (data) => {
     const id = data.target.id;

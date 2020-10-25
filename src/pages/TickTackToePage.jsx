@@ -41,7 +41,12 @@ const characters = [
   },
   { name: 'Joe', img: Joe, id: uuidv4(), icon: <GiHamburger size={35} /> },
   { name: 'Lois', img: Lois, id: uuidv4(), icon: <GiHelicoprion size={35} /> },
-  { name: 'Meg', img: Meg, id: uuidv4(), icon: <GiAmmonite size={35} /> },
+  {
+    name: 'Meg',
+    img: Meg,
+    id: uuidv4(),
+    icon: <GiAmmonite size={35} />,
+  },
   { name: 'Peter', img: Peter, id: uuidv4(), icon: <GiAnglerFish size={35} /> },
   { name: 'Stewie', img: Stewie, id: uuidv4(), icon: <GiGoat size={35} /> },
 ];
