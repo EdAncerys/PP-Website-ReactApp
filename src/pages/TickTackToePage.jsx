@@ -12,16 +12,6 @@ import Stewie from '../img/TickTackToeImg/Stewie.png';
 import FamilyGuyCharacters from '../components/TickTackToeBanner/FamilyGuyCharacters';
 import PlayerVPlayerBanner from '../components/TickTackToeBanner/PlayerVPlayerBanner';
 
-import { GiAmericanFootballHelmet } from 'react-icons/gi';
-import { GiAquarium } from 'react-icons/gi';
-import { GiCatapult } from 'react-icons/gi';
-import { GiGaulsHelm } from 'react-icons/gi';
-import { GiHamburger } from 'react-icons/gi';
-import { GiHelicoprion } from 'react-icons/gi';
-import { GiAmmonite } from 'react-icons/gi';
-import { GiAnglerFish } from 'react-icons/gi';
-import { GiGoat } from 'react-icons/gi';
-
 export const TickTackToeContext = React.createContext();
 
 const characters = [
@@ -29,26 +19,23 @@ const characters = [
     name: 'Brian',
     img: Brian,
     id: uuidv4(),
-    icon: <GiAmericanFootballHelmet size={35} />,
   },
-  { name: 'Chris', img: Chris, id: uuidv4(), icon: <GiAquarium size={35} /> },
-  { name: 'Glenn', img: Glenn, id: uuidv4(), icon: <GiCatapult size={35} /> },
+  { name: 'Chris', img: Chris, id: uuidv4() },
+  { name: 'Glenn', img: Glenn, id: uuidv4() },
   {
     name: 'Herbert',
     img: Herbert,
     id: uuidv4(),
-    icon: <GiGaulsHelm size={35} />,
   },
-  { name: 'Joe', img: Joe, id: uuidv4(), icon: <GiHamburger size={35} /> },
-  { name: 'Lois', img: Lois, id: uuidv4(), icon: <GiHelicoprion size={35} /> },
+  { name: 'Joe', img: Joe, id: uuidv4() },
+  { name: 'Lois', img: Lois, id: uuidv4() },
   {
     name: 'Meg',
     img: Meg,
     id: uuidv4(),
-    icon: <GiAmmonite size={35} />,
   },
-  { name: 'Peter', img: Peter, id: uuidv4(), icon: <GiAnglerFish size={35} /> },
-  { name: 'Stewie', img: Stewie, id: uuidv4(), icon: <GiGoat size={35} /> },
+  { name: 'Peter', img: Peter, id: uuidv4() },
+  { name: 'Stewie', img: Stewie, id: uuidv4() },
 ];
 
 export default function TickTackToePage({ props }) {
