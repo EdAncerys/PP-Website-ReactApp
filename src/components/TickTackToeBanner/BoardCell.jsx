@@ -47,5 +47,6 @@ const styles = {
     alignItems: 'center',
     width: 80,
     height: 80,
+    size: 30,
   },
 };

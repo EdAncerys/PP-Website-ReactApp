@@ -34,7 +34,7 @@ export default function App({ props }) {
   };
 
   useEffect(() => {
-    console.log(playerOne, playerTwo, takenTiles);
+    // console.log(playerOne, playerTwo, takenTiles);
   }, [playerOne, playerTwo]);
 
   useEffect(() => {
