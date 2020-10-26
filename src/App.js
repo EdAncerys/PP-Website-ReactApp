@@ -13,29 +13,16 @@ export const AppContext = React.createContext();
 
 export default function App({ props }) {
   const [page, setPage] = useState(false);
-  const [playerOneMove, setPlayerOneMove] = useState(true);
-  const [takenTiles, setTakenTiles] = useState([]);
-  const [playerOne, setPlayerOne] = useState([]);
-  const [playerTwo, setPlayerTwo] = useState([]);
-
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.App';
 
   const manageAppContext = {
     page: page,
     setPage: setPage,
-    playerOneMove: playerOneMove,
-    setPlayerOneMove: setPlayerOneMove,
-    takenTiles: takenTiles,
-    setTakenTiles: setTakenTiles,
-    playerOne: playerOne,
-    setPlayerOne: setPlayerOne,
-    playerTwo: playerTwo,
-    setPlayerTwo: setPlayerTwo,
   };
 
   useEffect(() => {
     // console.log(playerOne, playerTwo, takenTiles);
-  }, [playerOne, playerTwo]);
+  }, []);
 
   useEffect(() => {
     const data = sessionStorage.getItem(SESSION_STORAGE_KEY);

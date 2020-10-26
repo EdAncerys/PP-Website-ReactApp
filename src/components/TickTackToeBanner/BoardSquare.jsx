@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { AppContext } from '../../App';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
 
 import { GiAmericanFootballHelmet } from 'react-icons/gi';
@@ -13,7 +12,6 @@ import { GiAnglerFish } from 'react-icons/gi';
 import { GiGoat } from 'react-icons/gi';
 
 export default function BoardSquare({ id }) {
-  const { manageAppContext } = useContext(AppContext);
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
 
   const [avatar, setAvatar] = useState();
@@ -32,18 +30,27 @@ export default function BoardSquare({ id }) {
 
   const handleClick = (data) => {
     const id = data.target.id;
-    const player = manageAppContext.playerOneMove;
+    const player = manageTickTackToeContext.playerOneMove;
 
     if (player) {
       setAvatar(avatarIcon[manageTickTackToeContext.playerOne.name]);
-      manageAppContext.setPlayerOne([...manageAppContext.playerOne, id]);
+      manageTickTackToeContext.setPlayerOneSquares([
+        ...manageTickTackToeContext.playerOneSquares,
+        id,
+      ]);
     }
     if (!player) {
       setAvatar(avatarIcon[manageTickTackToeContext.playerTwo.name]);
-      manageAppContext.setPlayerTwo([...manageAppContext.playerTwo, id]);
+      manageTickTackToeContext.setPlayerTwoSquares([
+        ...manageTickTackToeContext.playerTwoSquares,
+        id,
+      ]);
     }
-    manageAppContext.setTakenTiles([...manageAppContext.takenTiles, id]);
-    manageAppContext.setPlayerOneMove(!player);
+    manageTickTackToeContext.setTakenTiles([
+      ...manageTickTackToeContext.takenTiles,
+      id,
+    ]);
+    manageTickTackToeContext.setPlayerOneMove(!player);
   };
 
   return (

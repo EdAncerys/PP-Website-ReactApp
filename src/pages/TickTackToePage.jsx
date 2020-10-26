@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+
 import Brian from '../img/TickTackToeImg/Brian.png';
 import Chris from '../img/TickTackToeImg/Chris.png';
 import Glenn from '../img/TickTackToeImg/Glenn.png';
@@ -9,6 +10,7 @@ import Lois from '../img/TickTackToeImg/Lois.png';
 import Meg from '../img/TickTackToeImg/Meg.png';
 import Peter from '../img/TickTackToeImg/Peter.png';
 import Stewie from '../img/TickTackToeImg/Stewie.png';
+
 import FamilyGuyCharacters from '../components/TickTackToeBanner/FamilyGuyCharacters';
 import PlayerVPlayerBanner from '../components/TickTackToeBanner/PlayerVPlayerBanner';
 
@@ -39,19 +41,33 @@ const characters = [
 ];
 
 export default function TickTackToePage({ props }) {
+  const [familyCharacters, setFamilyCharacters] = useState(characters);
   const [playerOne, setPlayerOne] = useState(false);
   const [playerTwo, setPlayerTwo] = useState(false);
-  const [familyCharacters, setFamilyCharacters] = useState(characters);
+  const [playerOneMove, setPlayerOneMove] = useState(true);
+  const [takenTiles, setTakenTiles] = useState([]);
+  const [boardSquares, setBoardSquares] = useState({});
+  const [playerOneSquares, setPlayerOneSquares] = useState([]);
   const [playerTwoSquares, setPlayerTwoSquares] = useState([]);
 
   const manageTickTackToeContext = {
+    characters: characters,
     familyCharacters: familyCharacters,
     setFamilyCharacters: setFamilyCharacters,
-    characters: characters,
     playerOne: playerOne,
     setPlayerOne: setPlayerOne,
     playerTwo: playerTwo,
     setPlayerTwo: setPlayerTwo,
+    playerOneMove: playerOneMove,
+    setPlayerOneMove: setPlayerOneMove,
+    takenTiles: takenTiles,
+    setTakenTiles: setTakenTiles,
+    boardSquares: boardSquares,
+    setBoardSquares: setBoardSquares,
+    playerOneSquares: playerOneSquares,
+    setPlayerOneSquares: setPlayerOneSquares,
+    playerTwoSquares: playerTwoSquares,
+    setPlayerTwoSquares: setPlayerTwoSquares,
   };
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.TickTackToe';
