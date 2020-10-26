@@ -12,7 +12,7 @@ import { GiAmmonite } from 'react-icons/gi';
 import { GiAnglerFish } from 'react-icons/gi';
 import { GiGoat } from 'react-icons/gi';
 
-export default function BoardCell({ id }) {
+export default function BoardSquare({ id }) {
   const { manageAppContext } = useContext(AppContext);
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
 

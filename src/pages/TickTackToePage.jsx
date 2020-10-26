@@ -42,6 +42,7 @@ export default function TickTackToePage({ props }) {
   const [playerOne, setPlayerOne] = useState(false);
   const [playerTwo, setPlayerTwo] = useState(false);
   const [familyCharacters, setFamilyCharacters] = useState(characters);
+  const [playerTwoSquares, setPlayerTwoSquares] = useState([]);
 
   const manageTickTackToeContext = {
     familyCharacters: familyCharacters,
