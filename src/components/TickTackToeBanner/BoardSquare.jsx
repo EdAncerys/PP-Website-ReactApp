@@ -34,6 +34,10 @@ export default function BoardSquare({ id }) {
 
     if (player) {
       setAvatar(avatarIcon[manageTickTackToeContext.playerOne.name]);
+      // manageTickTackToeContext.setBoardSquares(
+      //   (manageTickTackToeContext.boardSquares[id] =
+      //     manageTickTackToeContext.playerOne.name)
+      // );
       manageTickTackToeContext.setPlayerOneSquares([
         ...manageTickTackToeContext.playerOneSquares,
         id,
@@ -41,6 +45,10 @@ export default function BoardSquare({ id }) {
     }
     if (!player) {
       setAvatar(avatarIcon[manageTickTackToeContext.playerTwo.name]);
+      // manageTickTackToeContext.setBoardSquares(
+      //   (manageTickTackToeContext.boardSquares[id] =
+      //     manageTickTackToeContext.playerTwo.name)
+      // );
       manageTickTackToeContext.setPlayerTwoSquares([
         ...manageTickTackToeContext.playerTwoSquares,
         id,
@@ -51,6 +59,7 @@ export default function BoardSquare({ id }) {
       id,
     ]);
     manageTickTackToeContext.setPlayerOneMove(!player);
+    console.log(manageTickTackToeContext.boardSquares);
   };
 
   return (
