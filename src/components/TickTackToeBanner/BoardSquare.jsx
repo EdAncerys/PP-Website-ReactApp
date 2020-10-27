@@ -31,13 +31,13 @@ export default function BoardSquare({ id }) {
   const handleClick = (data) => {
     const id = data.target.id;
     const player = manageTickTackToeContext.playerOneMove;
+    let hash = {};
 
     if (player) {
-      let hash = { ...manageTickTackToeContext.playerOneSquares };
-      manageTickTackToeContext.setPlayerOneSquares(
+      manageTickTackToeContext.setBoardSquares(
         (hash[id] = manageTickTackToeContext.playerOne.name)
       );
-      console.log(hash);
+      console.log('click');
       // console.log(manageTickTackToeContext.playerOne.name);
       // setAvatar(avatarIcon[manageTickTackToeContext.playerOne.name]);
       // manageTickTackToeContext.setPlayerOneSquares([
@@ -46,8 +46,8 @@ export default function BoardSquare({ id }) {
       // ]);
     }
     if (!player) {
-      let hash = manageTickTackToeContext.playerTwoSquares;
-      console.log(hash);
+      // let hash = manageTickTackToeContext.playerTwoSquares;
+      // console.log(hash);
       // manageTickTackToeContext.setPlayerOneSquares(
       //   (manageTickTackToeContext.playerTwoSquares =
       //     manageTickTackToeContext.playerTwo.name)

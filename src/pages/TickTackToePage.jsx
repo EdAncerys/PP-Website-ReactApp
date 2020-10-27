@@ -47,8 +47,8 @@ export default function TickTackToePage({ props }) {
   const [playerOneMove, setPlayerOneMove] = useState(true);
   const [takenTiles, setTakenTiles] = useState([]);
   const [boardSquares, setBoardSquares] = useState({});
-  const [playerOneSquares, setPlayerOneSquares] = useState({ 4: 'peter' });
-  const [playerTwoSquares, setPlayerTwoSquares] = useState({});
+  // const [playerOneSquares, setPlayerOneSquares] = useState({ 4: 'peter' });
+  // const [playerTwoSquares, setPlayerTwoSquares] = useState({});
 
   const manageTickTackToeContext = {
     characters: characters,
@@ -64,15 +64,15 @@ export default function TickTackToePage({ props }) {
     setTakenTiles: setTakenTiles,
     boardSquares: boardSquares,
     setBoardSquares: setBoardSquares,
-    playerOneSquares: playerOneSquares,
-    setPlayerOneSquares: setPlayerOneSquares,
-    playerTwoSquares: playerTwoSquares,
-    setPlayerTwoSquares: setPlayerTwoSquares,
+    // playerOneSquares: playerOneSquares,
+    // setPlayerOneSquares: setPlayerOneSquares,
+    // playerTwoSquares: playerTwoSquares,
+    // setPlayerTwoSquares: setPlayerTwoSquares,
   };
 
   useEffect(() => {
-    console.log(playerOneSquares, playerTwoSquares);
-  }, [playerOneSquares, playerTwoSquares]);
+    console.log(boardSquares);
+  }, [boardSquares]);
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.TickTackToe';
 
