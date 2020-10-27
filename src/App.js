@@ -21,10 +21,6 @@ export default function App({ props }) {
   };
 
   useEffect(() => {
-    // console.log(playerOne, playerTwo, takenTiles);
-  }, []);
-
-  useEffect(() => {
     const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
     const userSession = JSON.parse(data);
     if (userSession) setPage(userSession.page);
