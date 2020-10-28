@@ -14,7 +14,7 @@ export default function TickTackToeBanner({ props }) {
     <div className="bangers" style={styles.container}>
       <div style={styles.header}>
         <div>&#123;</div>
-        <GiDwarfFace />:<div>001</div>
+        <GiDwarfFace />:<div>002</div>
         <div>&#125;</div>
       </div>
       <div style={styles.imageContainer}>
@@ -28,8 +28,8 @@ export default function TickTackToeBanner({ props }) {
       <div style={styles.footer}>
         <div style={styles.footerText}>
           <div>&#123;</div>
-          <div>Name : About Me ,</div>
-          <div>Type : Informational</div>
+          <div>Name : Personal Projects ,</div>
+          <div>Type : See What I Can Do</div>
           <div>&#125;</div>
         </div>
         <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} page={1} />

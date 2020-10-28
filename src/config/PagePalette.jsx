@@ -6,8 +6,8 @@ export default {
     secondary: colors.red,
   },
   2: {
-    primary: colors.pink,
-    secondary: colors.pink,
+    primary: colors.darkGrey,
+    secondary: colors.electric,
   },
   3: {
     primary: colors.blue,
