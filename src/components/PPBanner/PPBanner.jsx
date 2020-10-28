@@ -45,8 +45,8 @@ const styles = {
     paddingLeft: 50,
     paddingRight: 20,
     paddingTop: 20,
-    backgroundColor: PagePalette[1].primary,
-    color: PagePalette[1].secondary,
+    backgroundColor: PagePalette[2].primary,
+    color: PagePalette[2].secondary,
   },
   imageContainer: {
     display: 'grid',

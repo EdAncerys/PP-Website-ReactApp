@@ -7,7 +7,7 @@ export default {
   },
   2: {
     primary: colors.darkGrey,
-    secondary: colors.electric,
+    secondary: colors.darkBlue,
   },
   3: {
     primary: colors.blue,
