@@ -31,6 +31,8 @@ export default function BoardSquare({ id }) {
   const handleClick = (data) => {
     const id = data.target.id;
     const player = manageTickTackToeContext.playerOneMove;
+    let takenSquares = manageTickTackToeContext.takenTiles;
+    // takenSquares.push(id);
     let hash = {};
 
     if (player) {
@@ -66,7 +68,7 @@ export default function BoardSquare({ id }) {
     //   ...manageTickTackToeContext.takenTiles,
     //   id,
     // ]);
-
+    manageTickTackToeContext.setTakenTiles([...takenSquares, id]);
     manageTickTackToeContext.setPlayerOneMove(!player);
   };
 
