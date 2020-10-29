@@ -32,7 +32,7 @@ export default function TickTackToeBanner({ props }) {
           <div>Type : See What I Can Do</div>
           <div>&#125;</div>
         </div>
-        <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} page={1} />
+        <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} page={2} />
       </div>
     </div>
   );
