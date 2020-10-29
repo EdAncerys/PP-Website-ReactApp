@@ -28,18 +28,18 @@ export default function BoardSquare({ id }) {
     Stewie: <GiGoat size={35} />,
   };
 
+  let avatar = manageTickTackToeContext.tileAvatar;
   const handleClick = (data) => {
     const id = data.target.id;
     const player = manageTickTackToeContext.playerOneMove;
     let takenSquares = manageTickTackToeContext.takenTiles;
-    // takenSquares.push(id);
-    let hash = {};
 
     if (player) {
-      manageTickTackToeContext.setBoardSquares(
-        (hash[id] = manageTickTackToeContext.playerOne.name)
-      );
-      console.log('click');
+      let avatar1 = { ...avatar, ...{ 1: 'a' } };
+      manageTickTackToeContext.setTileAvatar(avatar1);
+      // manageTickTackToeContext.setTileAvatar({
+      //   ...avatar,
+      // });
       // console.log(manageTickTackToeContext.playerOne.name);
       // setAvatar(avatarIcon[manageTickTackToeContext.playerOne.name]);
       // manageTickTackToeContext.setPlayerOneSquares([
@@ -48,26 +48,10 @@ export default function BoardSquare({ id }) {
       // ]);
     }
     if (!player) {
-      // let hash = manageTickTackToeContext.playerTwoSquares;
-      // console.log(hash);
-      // manageTickTackToeContext.setPlayerOneSquares(
-      //   (manageTickTackToeContext.playerTwoSquares =
-      //     manageTickTackToeContext.playerTwo.name)
-      // );
-      // setAvatar(avatarIcon[manageTickTackToeContext.playerTwo.name]);
-      // manageTickTackToeContext.setBoardSquares(
-      //   (manageTickTackToeContext.boardSquares[id] =
-      //     manageTickTackToeContext.playerTwo.name)
-      // );
-      // manageTickTackToeContext.setPlayerTwoSquares([
-      //   ...manageTickTackToeContext.playerTwoSquares,
-      //   id,
-      // ]);
+      let avatar1 = { ...avatar, ...{ 1: 'a' } };
+      manageTickTackToeContext.setTileAvatar(avatar1);
     }
-    // manageTickTackToeContext.setTakenTiles([
-    //   ...manageTickTackToeContext.takenTiles,
-    //   id,
-    // ]);
+    // manageTickTackToeContext.setTileAvatar({ ...avatar, ...{ 1: 'b' } });
     manageTickTackToeContext.setTakenTiles([...takenSquares, id]);
     manageTickTackToeContext.setPlayerOneMove(!player);
   };
