@@ -14,8 +14,6 @@ import { GiGoat } from 'react-icons/gi';
 export default function BoardSquare({ id }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
 
-  const [avatar, setAvatar] = useState();
-
   const avatarIcon = {
     Brian: <GiAmericanFootballHelmet size={35} />,
     Chris: <GiAquarium size={35} />,
@@ -28,31 +26,19 @@ export default function BoardSquare({ id }) {
     Stewie: <GiGoat size={35} />,
   };
 
-  let avatar = manageTickTackToeContext.tileAvatar;
-  const handleClick = (data) => {
-    const id = data.target.id;
-    const player = manageTickTackToeContext.playerOneMove;
-    let takenSquares = manageTickTackToeContext.takenTiles;
+  let takenTiles = manageTickTackToeContext.takenTiles;
+  let playerOneTiles = manageTickTackToeContext.playerOneTiles;
+  let playerTwoTiles = manageTickTackToeContext.playerTwoTiles;
 
+  const handleClick = () => {
+    const player = manageTickTackToeContext.playerOneMove;
     if (player) {
-      let avatar1 = { ...avatar, ...{ 1: 'a' } };
-      manageTickTackToeContext.setTileAvatar(avatar1);
-      // manageTickTackToeContext.setTileAvatar({
-      //   ...avatar,
-      // });
-      // console.log(manageTickTackToeContext.playerOne.name);
-      // setAvatar(avatarIcon[manageTickTackToeContext.playerOne.name]);
-      // manageTickTackToeContext.setPlayerOneSquares([
-      //   ...manageTickTackToeContext.playerOneSquares,
-      //   id,
-      // ]);
+      manageTickTackToeContext.setPlayerOneTiles([...playerOneTiles, id]);
     }
     if (!player) {
-      let avatar1 = { ...avatar, ...{ 1: 'a' } };
-      manageTickTackToeContext.setTileAvatar(avatar1);
+      manageTickTackToeContext.setPlayerTwoTiles([...playerTwoTiles, id]);
     }
-    // manageTickTackToeContext.setTileAvatar({ ...avatar, ...{ 1: 'b' } });
-    manageTickTackToeContext.setTakenTiles([...takenSquares, id]);
+    manageTickTackToeContext.setTakenTiles([...takenTiles, id]);
     manageTickTackToeContext.setPlayerOneMove(!player);
   };
 
@@ -60,10 +46,10 @@ export default function BoardSquare({ id }) {
     <div
       className="bangers"
       style={styles.container}
-      onClick={(data) => handleClick(data)}
+      onClick={() => handleClick()}
     >
       <div id={id} style={styles.avatar}>
-        {avatar}
+        {/* {playerOneTiles.includes(id) && manageTickTackToeContext.character.name} */}
       </div>
     </div>
   );

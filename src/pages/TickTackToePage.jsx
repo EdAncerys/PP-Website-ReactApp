@@ -45,10 +45,10 @@ export default function TickTackToePage({ props }) {
   const [playerOne, setPlayerOne] = useState(false);
   const [playerTwo, setPlayerTwo] = useState(false);
   const [playerOneMove, setPlayerOneMove] = useState(true);
+
   const [takenTiles, setTakenTiles] = useState([]);
-  const [tileAvatar, setTileAvatar] = useState({});
-  // const [playerOneSquares, setPlayerOneSquares] = useState({ 4: 'peter' });
-  // const [playerTwoSquares, setPlayerTwoSquares] = useState({});
+  const [playerOneTiles, setPlayerOneTiles] = useState([]);
+  const [playerTwoTiles, setPlayerTwoTiles] = useState([]);
 
   const manageTickTackToeContext = {
     characters: characters,
@@ -60,19 +60,18 @@ export default function TickTackToePage({ props }) {
     setPlayerTwo: setPlayerTwo,
     playerOneMove: playerOneMove,
     setPlayerOneMove: setPlayerOneMove,
+
     takenTiles: takenTiles,
     setTakenTiles: setTakenTiles,
-    tileAvatar: tileAvatar,
-    setTileAvatar: setTileAvatar,
-    // playerOneSquares: playerOneSquares,
-    // setPlayerOneSquares: setPlayerOneSquares,
-    // playerTwoSquares: playerTwoSquares,
-    // setPlayerTwoSquares: setPlayerTwoSquares,
+    playerOneTiles: playerOneTiles,
+    setPlayerOneTiles: setPlayerOneTiles,
+    playerTwoTiles: playerTwoTiles,
+    setPlayerTwoTiles: setPlayerTwoTiles,
   };
 
   useEffect(() => {
-    console.log(tileAvatar);
-  }, [tileAvatar]);
+    console.log(takenTiles);
+  }, [takenTiles]);
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.TickTackToe';
 
