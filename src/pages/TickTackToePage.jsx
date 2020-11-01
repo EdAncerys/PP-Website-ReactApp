@@ -73,8 +73,30 @@ export default function TickTackToePage({ props }) {
     setGameOn: setGameOn,
   };
 
+  const winningCombo = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [1, 5, 9],
+    [7, 5, 3],
+    [1, 4, 7],
+    [2, 5, 8],
+    [3, 6, 9],
+  ];
+
+  const handleWinner = () => {
+    winningCombo.forEach((combo) => {
+      if (combo.every((tiles) => playerOneTiles.includes(tiles))) {
+        setGameOn(false);
+        // setWinnerName(playerName);
+        // incrementWins(winner);
+      }
+    });
+  };
+
   useEffect(() => {
-    // console.log(playerOneTiles, playerTwoTiles);
+    handleWinner();
+    console.log(playerOneTiles, playerTwoTiles);
   }, [takenTiles]);
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.TickTackToe';
