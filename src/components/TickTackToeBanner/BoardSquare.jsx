@@ -35,7 +35,7 @@ export default function BoardSquare({ id }) {
   let playerTwoAvatar = avatarIcon[manageTickTackToeContext.playerTwo.name];
 
   const handleClick = () => {
-    if (!takenTiles.includes(id)) {
+    if (!takenTiles.includes(id) && manageTickTackToeContext.gameOn) {
       if (player) {
         manageTickTackToeContext.setPlayerOneTiles([...playerOneTiles, id]);
       }

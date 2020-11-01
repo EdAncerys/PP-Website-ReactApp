@@ -15,6 +15,7 @@ export default function PlayerVPlayerBanner({ props }) {
     manageTickTackToeContext.setTakenTiles([]);
     manageTickTackToeContext.setPlayerOneTiles([]);
     manageTickTackToeContext.setPlayerTwoTiles([]);
+    manageTickTackToeContext.setGameOn(true);
   };
 
   const handleNewGame = () => {
@@ -23,6 +24,7 @@ export default function PlayerVPlayerBanner({ props }) {
     manageTickTackToeContext.setTakenTiles([]);
     manageTickTackToeContext.setPlayerOneTiles([]);
     manageTickTackToeContext.setPlayerTwoTiles([]);
+    manageTickTackToeContext.setGameOn(true);
   };
 
   return (
@@ -37,7 +39,10 @@ export default function PlayerVPlayerBanner({ props }) {
           src={manageTickTackToeContext.playerOne.img}
           name={manageTickTackToeContext.playerOne.name}
         />
-        <div style={styles.vs}>vs</div>
+        <div style={styles.vs}>
+          {manageTickTackToeContext.gameOn && 'vs'}{' '}
+          {!manageTickTackToeContext.gameOn && 'Game Over'}
+        </div>
         <Character
           src={manageTickTackToeContext.playerTwo.img}
           name={manageTickTackToeContext.playerTwo.name}
