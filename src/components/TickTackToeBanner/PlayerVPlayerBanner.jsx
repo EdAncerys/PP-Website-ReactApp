@@ -39,7 +39,7 @@ export default function PlayerVPlayerBanner({ props }) {
           src={manageTickTackToeContext.playerOne.img}
           name={manageTickTackToeContext.playerOne.name}
         />
-        <div style={styles.vs}>
+        <div style={styles.message}>
           {manageTickTackToeContext.gameOn && 'vs'}{' '}
           {!manageTickTackToeContext.gameOn && 'Game Over'}
         </div>
@@ -75,11 +75,12 @@ const styles = {
     justifyItems: 'center',
     columnGap: 100,
   },
-  vs: {
+  message: {
     display: 'grid',
     justifyContent: 'center',
     alignContent: 'center',
     fontSize: 30,
+    minWidth: 50,
   },
   gameBoard: {
     display: 'grid',

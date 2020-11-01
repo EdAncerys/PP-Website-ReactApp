@@ -88,6 +88,7 @@ export default function TickTackToePage({ props }) {
       setTakenTiles(userSession.takenTiles);
       setPlayerOneTiles(userSession.playerOneTiles);
       setPlayerTwoTiles(userSession.playerTwoTiles);
+      setGameOn(userSession.gameOn);
     }
   }, []);
 
