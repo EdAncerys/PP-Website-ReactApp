@@ -46,6 +46,7 @@ export default function TickTackToePage({ props }) {
   const [playerTwo, setPlayerTwo] = useState(false);
   const [playerOneMove, setPlayerOneMove] = useState(true);
   const [gameOn, setGameOn] = useState(true);
+  const [winner, setWinner] = useState(false);
 
   const [takenTiles, setTakenTiles] = useState([]);
   const [playerOneTiles, setPlayerOneTiles] = useState([]);
@@ -71,6 +72,8 @@ export default function TickTackToePage({ props }) {
 
     gameOn: gameOn,
     setGameOn: setGameOn,
+    winner: winner,
+    setWinner: setWinner,
   };
 
   const winningCombo = [
@@ -88,11 +91,11 @@ export default function TickTackToePage({ props }) {
     winningCombo.forEach((combo) => {
       if (combo.every((tiles) => playerOneTiles.includes(tiles))) {
         setGameOn(false);
-        // setWinnerName(playerName);
-        // incrementWins(winner);
+        setWinner(playerOne);
       }
       if (combo.every((tiles) => playerTwoTiles.includes(tiles))) {
         setGameOn(false);
+        setWinner(playerTwo);
       }
     });
   };
@@ -114,6 +117,7 @@ export default function TickTackToePage({ props }) {
       setPlayerOneTiles(userSession.playerOneTiles);
       setPlayerTwoTiles(userSession.playerTwoTiles);
       setGameOn(userSession.gameOn);
+      setWinner(userSession.winner);
     }
   }, []);
 
