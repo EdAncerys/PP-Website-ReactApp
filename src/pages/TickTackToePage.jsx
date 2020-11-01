@@ -70,7 +70,7 @@ export default function TickTackToePage({ props }) {
   };
 
   useEffect(() => {
-    console.log(playerOneTiles, playerTwoTiles);
+    // console.log(playerOneTiles, playerTwoTiles);
   }, [takenTiles]);
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.TickTackToe';
@@ -81,6 +81,9 @@ export default function TickTackToePage({ props }) {
     if (userSession) {
       setPlayerOne(userSession.playerOne);
       setPlayerTwo(userSession.playerTwo);
+      setTakenTiles(userSession.takenTiles);
+      setPlayerOneTiles(userSession.playerOneTiles);
+      setPlayerTwoTiles(userSession.playerTwoTiles);
     }
   }, []);
 
