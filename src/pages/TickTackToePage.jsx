@@ -91,6 +91,9 @@ export default function TickTackToePage({ props }) {
         // setWinnerName(playerName);
         // incrementWins(winner);
       }
+      if (combo.every((tiles) => playerTwoTiles.includes(tiles))) {
+        setGameOn(false);
+      }
     });
   };
 
