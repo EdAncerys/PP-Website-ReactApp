@@ -29,7 +29,7 @@ export default function GameBoard({ props }) {
         </div>
         <div style={styles.vertical} />
         <div style={styles.horizontal}>
-          <BoardSquare id={7} />
+          <BoardSquare id={6} />
         </div>
       </div>
       <div style={styles.line}>
