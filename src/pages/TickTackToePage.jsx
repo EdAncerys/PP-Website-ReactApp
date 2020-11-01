@@ -92,6 +92,7 @@ export default function TickTackToePage({ props }) {
       if (combo.every((tiles) => playerOneTiles.includes(tiles))) {
         setGameOn(false);
         setWinner(playerOne);
+        console.log(combo);
       }
       if (combo.every((tiles) => playerTwoTiles.includes(tiles))) {
         setGameOn(false);
@@ -102,7 +103,7 @@ export default function TickTackToePage({ props }) {
 
   useEffect(() => {
     handleWinner();
-    console.log(playerOneTiles, playerTwoTiles);
+    // console.log(playerOneTiles, playerTwoTiles);
   }, [takenTiles]);
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.TickTackToe';

@@ -16,15 +16,13 @@ export default function PlayerVPlayerBanner({ props }) {
     manageTickTackToeContext.setPlayerOneTiles([]);
     manageTickTackToeContext.setPlayerTwoTiles([]);
     manageTickTackToeContext.setGameOn(true);
+    manageTickTackToeContext.setWinner(false);
   };
 
   const handleNewGame = () => {
     manageTickTackToeContext.setPlayerOne(false);
     manageTickTackToeContext.setPlayerTwo(false);
-    manageTickTackToeContext.setTakenTiles([]);
-    manageTickTackToeContext.setPlayerOneTiles([]);
-    manageTickTackToeContext.setPlayerTwoTiles([]);
-    manageTickTackToeContext.setGameOn(true);
+    handlePlayAgain();
   };
 
   return (
@@ -41,8 +39,8 @@ export default function PlayerVPlayerBanner({ props }) {
         />
         <div style={styles.message}>
           {manageTickTackToeContext.gameOn && 'vs'}
-          {!manageTickTackToeContext.gameOn &&
-            !manageTickTackToeContext.winner &&
+          {!manageTickTackToeContext.winner &&
+            !manageTickTackToeContext.gameOn &&
             'Game Over'}
           {manageTickTackToeContext.winner &&
             `${manageTickTackToeContext.winner.name} won this round`}
