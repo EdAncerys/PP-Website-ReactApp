@@ -14,6 +14,9 @@ export default function PlayerVPlayerBanner({ props }) {
   const handlePlayAgain = () => {
     manageTickTackToeContext.setPlayerOne(false);
     manageTickTackToeContext.setPlayerTwo(false);
+    manageTickTackToeContext.setTakenTiles([]);
+    manageTickTackToeContext.setPlayerOneTiles([]);
+    manageTickTackToeContext.setPlayerTwoTiles([]);
   };
 
   return (
