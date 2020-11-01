@@ -29,22 +29,23 @@ export default function BoardSquare({ id }) {
   let takenTiles = manageTickTackToeContext.takenTiles;
   let playerOneTiles = manageTickTackToeContext.playerOneTiles;
   let playerTwoTiles = manageTickTackToeContext.playerTwoTiles;
+  let player = manageTickTackToeContext.playerOneMove;
 
   let playerOneAvatar = avatarIcon[manageTickTackToeContext.playerOne.name];
   let playerTwoAvatar = avatarIcon[manageTickTackToeContext.playerTwo.name];
 
-  if (takenTiles.length === 8) manageTickTackToeContext.setGameOn(false);
-
   const handleClick = () => {
-    const player = manageTickTackToeContext.playerOneMove;
-    if (player) {
-      manageTickTackToeContext.setPlayerOneTiles([...playerOneTiles, id]);
+    if (!takenTiles.includes(id)) {
+      if (player) {
+        manageTickTackToeContext.setPlayerOneTiles([...playerOneTiles, id]);
+      }
+      if (!player) {
+        manageTickTackToeContext.setPlayerTwoTiles([...playerTwoTiles, id]);
+      }
+      manageTickTackToeContext.setTakenTiles([...takenTiles, id]);
+      manageTickTackToeContext.setPlayerOneMove(!player);
+      if (takenTiles.length === 8) manageTickTackToeContext.setGameOn(false);
     }
-    if (!player) {
-      manageTickTackToeContext.setPlayerTwoTiles([...playerTwoTiles, id]);
-    }
-    manageTickTackToeContext.setTakenTiles([...takenTiles, id]);
-    manageTickTackToeContext.setPlayerOneMove(!player);
   };
 
   return (
