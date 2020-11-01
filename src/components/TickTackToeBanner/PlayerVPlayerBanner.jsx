@@ -12,6 +12,12 @@ export default function PlayerVPlayerBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
 
   const handlePlayAgain = () => {
+    manageTickTackToeContext.setTakenTiles([]);
+    manageTickTackToeContext.setPlayerOneTiles([]);
+    manageTickTackToeContext.setPlayerTwoTiles([]);
+  };
+
+  const handleNewGame = () => {
     manageTickTackToeContext.setPlayerOne(false);
     manageTickTackToeContext.setPlayerTwo(false);
     manageTickTackToeContext.setTakenTiles([]);
@@ -45,7 +51,7 @@ export default function PlayerVPlayerBanner({ props }) {
         <Button
           title="New Game"
           solid={false}
-          onClick={() => handlePlayAgain()}
+          onClick={() => handleNewGame()}
         />
       </div>
     </div>

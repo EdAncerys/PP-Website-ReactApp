@@ -45,6 +45,7 @@ export default function TickTackToePage({ props }) {
   const [playerOne, setPlayerOne] = useState(false);
   const [playerTwo, setPlayerTwo] = useState(false);
   const [playerOneMove, setPlayerOneMove] = useState(true);
+  const [gameOn, setGameOn] = useState(true);
 
   const [takenTiles, setTakenTiles] = useState([]);
   const [playerOneTiles, setPlayerOneTiles] = useState([]);
@@ -67,6 +68,9 @@ export default function TickTackToePage({ props }) {
     setPlayerOneTiles: setPlayerOneTiles,
     playerTwoTiles: playerTwoTiles,
     setPlayerTwoTiles: setPlayerTwoTiles,
+
+    gameOn: gameOn,
+    setGameOn: setGameOn,
   };
 
   useEffect(() => {

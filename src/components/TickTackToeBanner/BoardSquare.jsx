@@ -33,6 +33,8 @@ export default function BoardSquare({ id }) {
   let playerOneAvatar = avatarIcon[manageTickTackToeContext.playerOne.name];
   let playerTwoAvatar = avatarIcon[manageTickTackToeContext.playerTwo.name];
 
+  if (takenTiles.length === 8) manageTickTackToeContext.setGameOn(false);
+
   const handleClick = () => {
     const player = manageTickTackToeContext.playerOneMove;
     if (player) {
@@ -43,8 +45,6 @@ export default function BoardSquare({ id }) {
     }
     manageTickTackToeContext.setTakenTiles([...takenTiles, id]);
     manageTickTackToeContext.setPlayerOneMove(!player);
-
-    console.log(playerOneAvatar);
   };
 
   return (
