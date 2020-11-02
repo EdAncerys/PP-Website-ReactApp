@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { TickTackToeContext } from '../../pages/TickTackToePage';
 
 import colors from '../../config/colors';
 
 export default function Character({ src, name }) {
+  const { manageTickTackToeContext } = useContext(TickTackToeContext);
+
   const [clickEffect, setClickEffect] = useState(false);
+  const [fade, setFade] = useState(false);
+
+  useEffect(() => {
+    const winner = manageTickTackToeContext.winner.name;
+
+    if (winner === name) {
+      setClickEffect(!clickEffect);
+      setFade(!fade);
+    }
+    console.log(winner, name);
+  }, [manageTickTackToeContext.winner]);
 
   const handleImageClick = () => {
     setClickEffect(true);
@@ -14,7 +28,10 @@ export default function Character({ src, name }) {
 
   return (
     <div
-      style={{ transform: clickEffect ? 'scale(0.95)' : 'scale(1)' }}
+      style={{
+        transform: clickEffect ? 'scale(0.95)' : 'scale(1)',
+        opacity: fade ? 1 : 0.2,
+      }}
       key={name}
     >
       <div
