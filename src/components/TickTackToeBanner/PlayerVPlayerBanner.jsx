@@ -37,8 +37,9 @@ export default function PlayerVPlayerBanner({ props }) {
           src={manageTickTackToeContext.playerOne.img}
           name={manageTickTackToeContext.playerOne.name}
         />
-        <div style={styles.message}>
-          {manageTickTackToeContext.gameOn && 'vs'}
+        <div className="teko" style={styles.message}>
+          {manageTickTackToeContext.gameOn &&
+            `${manageTickTackToeContext.playerOneScore} vs ${manageTickTackToeContext.playerTwoScore}`}
           {!manageTickTackToeContext.winner &&
             !manageTickTackToeContext.gameOn &&
             'Game Over'}
