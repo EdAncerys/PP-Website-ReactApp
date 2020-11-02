@@ -37,9 +37,18 @@ export default function PlayerVPlayerBanner({ props }) {
           src={manageTickTackToeContext.playerOne.img}
           name={manageTickTackToeContext.playerOne.name}
         />
-        <div className="teko" style={styles.message}>
-          {manageTickTackToeContext.gameOn &&
-            `${manageTickTackToeContext.playerOneScore} vs ${manageTickTackToeContext.playerTwoScore}`}
+        <div style={styles.messageContainer}>
+          {manageTickTackToeContext.gameOn && (
+            <div style={styles.message}>
+              <div className="teko" style={styles.scoreNumber}>
+                {manageTickTackToeContext.playerOneScore}
+              </div>
+              <div style={styles.scoreText}>vs</div>
+              <div className="teko" style={styles.scoreNumber}>
+                {manageTickTackToeContext.playerTwoScore}
+              </div>
+            </div>
+          )}
           {!manageTickTackToeContext.winner &&
             !manageTickTackToeContext.gameOn &&
             'Game Over'}
@@ -78,13 +87,31 @@ const styles = {
     justifyItems: 'center',
     columnGap: 100,
   },
-  message: {
+  messageContainer: {
     display: 'grid',
-    justifyContent: 'center',
     alignContent: 'center',
+    justifyItems: 'center',
     textAlign: 'center',
     fontSize: 30,
     minWidth: 350,
+    minHeight: 100,
+  },
+  message: {
+    display: 'grid',
+    gridTemplateColumns: 'auto auto auto',
+    textAlign: 'center',
+    minWidth: 350,
+  },
+  scoreNumber: {
+    display: 'grid',
+    alignContent: 'center',
+    justifyItems: 'center',
+    fontSize: 60,
+  },
+  scoreText: {
+    display: 'grid',
+    alignContent: 'center',
+    justifyItems: 'center',
   },
   gameBoard: {
     display: 'grid',
