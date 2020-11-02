@@ -125,6 +125,8 @@ export default function TickTackToePage({ props }) {
       setPlayerTwoTiles(userSession.playerTwoTiles);
       setGameOn(userSession.gameOn);
       setWinner(userSession.winner);
+      setPlayerOneScore(userSession.playerOneScore);
+      setPlayerTwoScore(userSession.playerTwoScore);
     }
   }, []);
 
