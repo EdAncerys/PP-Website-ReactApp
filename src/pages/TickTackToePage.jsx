@@ -64,6 +64,8 @@ export default function TickTackToePage({ props }) {
     playerTwo: playerTwo,
     setPlayerTwo: setPlayerTwo,
     playerOneScore: playerOneScore,
+    setPlayerOneScore: setPlayerOneScore,
+    setPlayerTwoScore: setPlayerTwoScore,
     playerTwoScore: playerTwoScore,
     playerOneMove: playerOneMove,
     setPlayerOneMove: setPlayerOneMove,
