@@ -10,12 +10,14 @@ export default function Character({ src, name }) {
   const [fade, setFade] = useState(false);
 
   useEffect(() => {
+    setFade(!fade);
+  }, []);
+
+  useEffect(() => {
     const winner = manageTickTackToeContext.winner.name;
 
     if (winner !== name) {
-      // setClickEffect(!clickEffect);
       setFade(!fade);
-      console.log(winner === name);
     }
   }, [manageTickTackToeContext.winner]);
 
