@@ -100,13 +100,11 @@ export default function TickTackToePage({ props }) {
         setGameOn(false);
         setWinner(playerOne);
         setPlayerOneScore(playerOneScore + 1);
-        setWinner(true);
       }
       if (combo.every((tiles) => playerTwoTiles.includes(tiles))) {
         setGameOn(false);
         setWinner(playerTwo);
         setPlayerTwoScore(playerTwoScore + 1);
-        setWinner(true);
       }
     });
   };

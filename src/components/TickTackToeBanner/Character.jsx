@@ -12,11 +12,11 @@ export default function Character({ src, name }) {
   useEffect(() => {
     const winner = manageTickTackToeContext.winner.name;
 
-    if (winner === name) {
+    if (winner !== name) {
       // setClickEffect(!clickEffect);
       setFade(!fade);
+      console.log(winner === name);
     }
-    console.log(winner, name);
   }, [manageTickTackToeContext.winner]);
 
   const handleImageClick = () => {
@@ -30,7 +30,7 @@ export default function Character({ src, name }) {
     <div
       style={{
         transform: clickEffect ? 'scale(0.95)' : 'scale(1)',
-        opacity: fade ? 0.2 : 1,
+        opacity: fade ? 1 : 0.2,
       }}
       key={name}
     >
