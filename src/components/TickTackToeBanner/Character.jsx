@@ -15,9 +15,9 @@ export default function Character({ src, name }) {
 
   useEffect(() => {
     const winner = manageTickTackToeContext.winner.name;
-
     if (winner !== name) {
       setFade(!fade);
+      console.log('hey');
     }
   }, [manageTickTackToeContext.winner]);
 
