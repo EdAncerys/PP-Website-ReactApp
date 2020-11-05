@@ -52,7 +52,6 @@ export default function GameBoard({ props }) {
 const styles = {
   container: {
     display: 'grid',
-    justifyContent: 'center',
   },
   vertical: {
     display: 'grid',

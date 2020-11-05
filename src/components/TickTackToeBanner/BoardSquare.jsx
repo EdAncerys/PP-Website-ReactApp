@@ -67,14 +67,18 @@ export default function BoardSquare({ id }) {
 
 const styles = {
   container: {
+    display: 'grid',
+    justifyContent: 'center',
+    alignItems: 'center',
     cursor: 'pointer',
+    width: 60,
+    height: 60,
   },
   avatar: {
     display: 'grid',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 80,
-    height: 80,
-    size: 30,
+    color: 'red',
+    fontSize: 40,
   },
 };
