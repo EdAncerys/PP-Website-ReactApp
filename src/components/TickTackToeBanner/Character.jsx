@@ -49,7 +49,12 @@ export default function Character({ src, name }) {
           color: clickEffect ? colors.red : '',
         }}
       >
-        {name} {manageTickTackToeContext.playerTwo && avatar}
+        <div style={styles.avatarName}>
+          <div>{name}</div>
+          <div style={styles.avatar}>
+            {manageTickTackToeContext.playerTwo && avatar}
+          </div>
+        </div>
       </div>
       <img
         style={{ height: '15vh' }}
@@ -60,3 +65,16 @@ export default function Character({ src, name }) {
     </div>
   );
 }
+const styles = {
+  avatarName: {
+    display: 'grid',
+    alignItems: 'center',
+    gridTemplateColumns: 'auto auto',
+    gridGap: 10,
+    fontSize: 20,
+  },
+  avatar: {
+    color: colors.red,
+    fontSize: 25,
+  },
+};

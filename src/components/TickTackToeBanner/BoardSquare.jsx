@@ -57,6 +57,6 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     color: colors.red,
-    fontSize: 60,
+    fontSize: 55,
   },
 };
