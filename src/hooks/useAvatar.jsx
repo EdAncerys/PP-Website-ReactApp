@@ -13,18 +13,6 @@ import { GiGoat } from 'react-icons/gi';
 export const useAvatar = (name) => {
   const [avatar, setAvatar] = useState(false);
 
-  // const avatarIcon = {
-  //   Brian: <GiAmericanFootballHelmet size={35} />,
-  //   Chris: <GiAquarium size={35} />,
-  //   Glenn: <GiCatapult size={35} />,
-  //   Herbert: <GiGaulsHelm size={35} />,
-  //   Joe: <GiHamburger size={35} />,
-  //   Lois: <GiHelicoprion size={35} />,
-  //   Meg: <GiAmmonite size={35} />,
-  //   Peter: <GiAnglerFish size={35} />,
-  //   Stewie: <GiGoat size={35} />,
-  // };
-
   const avatarIcon = {
     Brian: GiAmericanFootballHelmet,
     Chris: GiAquarium,

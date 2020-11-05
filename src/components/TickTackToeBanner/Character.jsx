@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
+import { useAvatar } from '../../hooks/useAvatar';
 
 import colors from '../../config/colors';
 
@@ -8,6 +9,7 @@ export default function Character({ src, name }) {
 
   const [clickEffect, setClickEffect] = useState(false);
   const [fade, setFade] = useState(false);
+  const avatar = useAvatar(name);
 
   useEffect(() => {
     setFade(!fade);
@@ -47,7 +49,7 @@ export default function Character({ src, name }) {
           color: clickEffect ? colors.red : '',
         }}
       >
-        {name}
+        {name} {manageTickTackToeContext.playerTwo && avatar}
       </div>
       <img
         style={{ height: '15vh' }}
