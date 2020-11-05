@@ -2,15 +2,6 @@ import React, { useState, useContext } from 'react';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
 import { useAvatar } from '../../hooks/useAvatar';
 
-import { GiAmericanFootballHelmet } from 'react-icons/gi';
-import { GiAquarium } from 'react-icons/gi';
-import { GiCatapult } from 'react-icons/gi';
-import { GiGaulsHelm } from 'react-icons/gi';
-import { GiHamburger } from 'react-icons/gi';
-import { GiHelicoprion } from 'react-icons/gi';
-import { GiAmmonite } from 'react-icons/gi';
-import { GiAnglerFish } from 'react-icons/gi';
-import { GiGoat } from 'react-icons/gi';
 import colors from '../../config/colors';
 
 export default function BoardSquare({ id }) {

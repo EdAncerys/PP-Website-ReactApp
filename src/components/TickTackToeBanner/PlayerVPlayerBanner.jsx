@@ -53,7 +53,7 @@ export default function PlayerVPlayerBanner({ props }) {
           )}
           {!manageTickTackToeContext.winner &&
             !manageTickTackToeContext.gameOn &&
-            'Game Over'}
+            'Game Over: Even Steven'}
           {manageTickTackToeContext.winner &&
             `${manageTickTackToeContext.winner.name} won this round`}
         </div>
