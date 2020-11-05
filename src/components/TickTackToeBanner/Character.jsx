@@ -18,6 +18,9 @@ export default function Character({ src, name }) {
     if (winner !== name && manageTickTackToeContext.winner) {
       setFade(!fade);
     }
+    if (winner !== name && !manageTickTackToeContext.winner) {
+      setFade(true);
+    }
   }, [manageTickTackToeContext.winner]);
 
   const handleImageClick = () => {
