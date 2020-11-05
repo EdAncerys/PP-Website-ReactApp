@@ -164,7 +164,6 @@ const styles = {
   },
   content: {
     display: 'grid',
-    width: 600,
     marginTop: 100,
     marginBottom: 100,
     gridGap: 10,
