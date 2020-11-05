@@ -71,6 +71,6 @@ const styles = {
   },
   line: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(5, 40px)',
+    gridTemplateColumns: 'repeat(5, auto)',
   },
 };
