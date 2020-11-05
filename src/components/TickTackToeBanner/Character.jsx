@@ -15,9 +15,8 @@ export default function Character({ src, name }) {
 
   useEffect(() => {
     const winner = manageTickTackToeContext.winner.name;
-    if (winner !== name) {
+    if (winner !== name && manageTickTackToeContext.winner) {
       setFade(!fade);
-      console.log('hey');
     }
   }, [manageTickTackToeContext.winner]);
 
@@ -33,6 +32,7 @@ export default function Character({ src, name }) {
       style={{
         transform: clickEffect ? 'scale(0.95)' : 'scale(1)',
         opacity: fade ? 1 : 0.2,
+        cursor: 'pointer',
       }}
       key={name}
     >
