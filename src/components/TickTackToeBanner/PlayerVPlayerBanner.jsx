@@ -95,7 +95,7 @@ const styles = {
     justifyItems: 'center',
     textAlign: 'center',
     fontSize: 30,
-    minWidth: 350,
+    width: 400,
     minHeight: 100,
   },
   message: {
