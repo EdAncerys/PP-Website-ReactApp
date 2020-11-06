@@ -1,13 +1,12 @@
 import React from 'react';
 import { GiDwarfFace } from 'react-icons/gi';
-import { FaPlay } from 'react-icons/fa';
-import GoToPageButton from '../GoToPageButton';
 import ImageContainer from '../ImageContainer';
 import LegoManImg from '../../img/Lego-Man.png';
 import textDescription from '../../text/ProjectDescription';
 import PagePalette from '../../config/PagePalette';
 
 import colors from '../../config/colors';
+import FooterForBanner from '../FooterForBanner';
 
 export default function TickTackToeBanner({ props }) {
   return (
@@ -25,15 +24,7 @@ export default function TickTackToeBanner({ props }) {
           color={colors.black}
         />
       </div>
-      <div style={styles.footer}>
-        <div style={styles.footerText}>
-          <div>&#123;</div>
-          <div>Name : Personal Projects ,</div>
-          <div>Type : See What I Can Do</div>
-          <div>&#125;</div>
-        </div>
-        <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} page={2} />
-      </div>
+      <FooterForBanner color={PagePalette[2].secondary} />
     </div>
   );
 }
@@ -58,14 +49,5 @@ const styles = {
     gridTemplateColumns: '10px 20px 10px 25px 10px',
     alignItems: 'center',
     fontSize: 12,
-  },
-  footer: {
-    display: 'grid',
-    gridTemplateColumns: '95% auto',
-    alignItems: 'center',
-    fontSize: 18,
-  },
-  footerText: {
-    display: 'grid',
   },
 };

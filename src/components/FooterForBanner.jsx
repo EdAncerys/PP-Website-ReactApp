@@ -11,7 +11,7 @@ export default function FooterForBanner({ color }) {
         display: 'grid',
         gridTemplateColumns: '95% auto',
         alignItems: 'center',
-        fontSize: 18,
+        fontSize: 20,
         color: color,
       }}
     >
