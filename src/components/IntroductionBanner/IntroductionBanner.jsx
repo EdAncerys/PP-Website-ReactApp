@@ -1,5 +1,4 @@
 import React from 'react';
-import { GiDwarfFace } from 'react-icons/gi';
 import ImageContainer from '../ImageContainer';
 import LegoManImg from '../../img/Lego-Man.png';
 import textDescription from '../../text/ProjectDescription';
@@ -7,15 +6,12 @@ import FooterForBanner from '../FooterForBanner';
 
 import colors from '../../config/colors';
 import PagePalette from '../../config/PagePalette';
+import HeaderForBanner from '../HeaderForBanner';
 
 export default function TickTackToeBanner({ props }) {
   return (
     <div className="bangers" style={styles.container}>
-      <div style={styles.header}>
-        <div>&#123;</div>
-        <GiDwarfFace />:<div>001</div>
-        <div>&#125;</div>
-      </div>
+      <HeaderForBanner />
       <div style={styles.imageContainer}>
         <ImageContainer
           img={LegoManImg}
@@ -43,11 +39,5 @@ const styles = {
     display: 'grid',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  header: {
-    display: 'grid',
-    gridTemplateColumns: '10px 20px 10px 25px 10px',
-    alignItems: 'center',
-    fontSize: 12,
   },
 };
