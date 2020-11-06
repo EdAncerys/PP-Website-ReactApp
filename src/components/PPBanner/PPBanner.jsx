@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageContainer from '../ImageContainer';
-import LegoManImg from '../../img/Lego-Man.png';
+import Coding from '../../img/Coding.png';
 import textDescription from '../../text/ProjectDescription';
 import PagePalette from '../../config/PagePalette';
 import HeaderForBanner from '../HeaderForBanner';
@@ -15,7 +15,7 @@ export default function TickTackToeBanner({ props }) {
         <HeaderForBanner color={PagePalette[2].secondary} />
         <div style={styles.imageContainer}>
           <ImageContainer
-            img={LegoManImg}
+            img={Coding}
             altText="Tick-Tack-Toe"
             text={textDescription.AboutInfoBanner}
             color={PagePalette[2].secondary}
