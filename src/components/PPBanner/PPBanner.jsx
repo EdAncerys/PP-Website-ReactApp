@@ -20,7 +20,7 @@ export default function TickTackToeBanner({ props }) {
           color={colors.black}
         />
       </div>
-      <FooterForBanner color={PagePalette[2].secondary} />
+      <FooterForBanner color={PagePalette[2].secondary} page={2} />
     </div>
   );
 }
