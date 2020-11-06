@@ -8,7 +8,6 @@ export default function ImageContainer({ img, altText, text, color }) {
 
   const handleRadius = hover ? '10% 10% 0% 10%' : '50% 50% 10% 50%';
   const handleShadow = hover ? `` : `5px 10px 35px -10px ${colors.black}`;
-  const handleTextColor = hover ? color : colors.black;
   const handleBorderColor = hover ? `1px solid ${color}` : '';
 
   const handleChange = () => {
@@ -28,7 +27,7 @@ export default function ImageContainer({ img, altText, text, color }) {
         boxShadow: handleShadow,
         overflow: 'hidden',
         transition: 'all 0.6s ease-in-out',
-        cursor: 'pointer'
+        cursor: 'pointer',
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -36,9 +35,7 @@ export default function ImageContainer({ img, altText, text, color }) {
     >
       {!hover && <img style={styles.img} src={img} alt={altText} />}
       {hover && (
-        <div
-          style={{ color: handleTextColor, padding: 10, overflow: 'hidden' }}
-        >
+        <div style={{ color: color, padding: 10, overflow: 'hidden' }}>
           {text}
         </div>
       )}

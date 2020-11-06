@@ -18,7 +18,7 @@ export default function TickTackToeBanner({ props }) {
             img={TickTackToeImg}
             altText="Tick-Tack-Toe"
             text={textDescription.TickTackToe}
-            color={colors.black}
+            color={PagePalette[3].secondary}
           />
         </div>
         <FooterForBanner
