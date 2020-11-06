@@ -1,11 +1,20 @@
 import React from 'react';
 import { FaPlay } from 'react-icons/fa';
-import colors from '../config/colors';
 import GoToPageButton from '../components/GoToPageButton';
 
-export default function FooterForBanner({ props }) {
+import colors from '../config/colors';
+
+export default function FooterForBanner({ color }) {
   return (
-    <div style={styles.container}>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '95% auto',
+        alignItems: 'center',
+        fontSize: 18,
+        color: color,
+      }}
+    >
       <div style={styles.footerText}>
         <div>&#123;</div>
         <div>Name : About Me ,</div>
@@ -18,10 +27,7 @@ export default function FooterForBanner({ props }) {
 }
 
 const styles = {
-  container: {
+  footerText: {
     display: 'grid',
-    gridTemplateColumns: '95% auto',
-    alignItems: 'center',
-    fontSize: 18,
   },
 };
