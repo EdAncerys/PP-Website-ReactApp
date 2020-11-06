@@ -11,7 +11,7 @@ import PagePalette from '../../config/PagePalette';
 export default function TickTackToeBanner({ props }) {
   return (
     <div className="bangers" style={styles.container}>
-      <HeaderForBanner color={PagePalette[1].secondary} />
+      <HeaderForBanner color={PagePalette[3].secondary} />
       <div style={styles.imageContainer}>
         <ImageContainer
           img={TickTackToeImg}
@@ -20,7 +20,12 @@ export default function TickTackToeBanner({ props }) {
           color={colors.black}
         />
       </div>
-      <FooterForBanner color={PagePalette[3].secondary} page={3} />
+      <FooterForBanner
+        name="Game"
+        type="Board Game: Tic Tack Toe"
+        color={PagePalette[3].secondary}
+        page={3}
+      />
     </div>
   );
 }

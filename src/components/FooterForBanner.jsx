@@ -4,7 +4,7 @@ import GoToPageButton from '../components/GoToPageButton';
 
 import colors from '../config/colors';
 
-export default function FooterForBanner({ color, page }) {
+export default function FooterForBanner({ color, page, name, type }) {
   return (
     <div
       style={{
@@ -17,8 +17,8 @@ export default function FooterForBanner({ color, page }) {
     >
       <div style={styles.footerText}>
         <div>&#123;</div>
-        <div>Name : About Me ,</div>
-        <div>Type : Informational</div>
+        <div>Name : {name} ,</div>
+        <div>Type : {type}</div>
         <div>&#125;</div>
       </div>
       <GoToPageButton icon={<FaPlay />} hoverColor={colors.white} page={page} />
