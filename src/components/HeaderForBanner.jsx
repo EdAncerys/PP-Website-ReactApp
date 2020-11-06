@@ -8,7 +8,7 @@ export default function HeaderForBanner({ color }) {
         display: 'grid',
         gridTemplateColumns: '10px 20px 10px 25px 10px',
         alignItems: 'center',
-        fontSize: 12,
+        fontSize: 18,
         color: color,
       }}
     >

@@ -11,7 +11,7 @@ import HeaderForBanner from '../HeaderForBanner';
 export default function TickTackToeBanner({ props }) {
   return (
     <div className="bangers" style={styles.container}>
-      <HeaderForBanner />
+      <HeaderForBanner color={PagePalette[1].secondary} />
       <div style={styles.imageContainer}>
         <ImageContainer
           img={LegoManImg}
@@ -33,7 +33,6 @@ const styles = {
     paddingRight: 20,
     paddingTop: 20,
     backgroundColor: PagePalette[1].primary,
-    color: PagePalette[1].secondary,
   },
   imageContainer: {
     display: 'grid',
