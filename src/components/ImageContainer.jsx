@@ -18,9 +18,6 @@ export default function ImageContainer({ img, altText, text, color }) {
     <div
       style={{
         display: 'grid',
-        // justifyContent: 'center',
-        // alignItems: 'center',
-        // height: 375,
         width: 200,
         border: `4px solid ${color}`,
         borderRadius: '30px 30px 30px 30px',
@@ -28,7 +25,7 @@ export default function ImageContainer({ img, altText, text, color }) {
         overflow: 'hidden',
         transition: 'all 0.6s ease-in-out',
         cursor: 'pointer',
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -37,12 +34,17 @@ export default function ImageContainer({ img, altText, text, color }) {
       <div style={styles.wrapper}>
         <div
           style={{
+            display: 'grid',
+            justifyContent: 'center',
+            alignItems: 'center',
             width: 100,
             height: 20,
             borderRadius: '0px 0px 20px 20px',
             backgroundColor: color,
           }}
-        ></div>
+        >
+          <div style={styles.microphone}></div>
+        </div>
       </div>
       <div style={styles.content}>
         {!hover && <img style={styles.img} src={img} alt={altText} />}
@@ -83,5 +85,11 @@ const styles = {
   },
   img: {
     height: 200,
+  },
+  microphone: {
+    width: 50,
+    height: 5,
+    borderRadius: '5px 5px 5px 5px',
+    backgroundColor: colors.white,
   },
 };
