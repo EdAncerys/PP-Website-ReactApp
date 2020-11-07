@@ -34,6 +34,8 @@ export default function TickTackToeBanner({ props }) {
 
 const styles = {
   container: {
+    display: 'grid',
+    justifyContent: 'center',
     backgroundColor: PagePalette[3].primary,
   },
   wrapper: {
@@ -42,8 +44,8 @@ const styles = {
     paddingLeft: 50,
     paddingRight: 20,
     paddingTop: 20,
-    maxWidth: 600,
     height: 450,
+    width: 600,
   },
   imageContainer: {
     display: 'grid',
