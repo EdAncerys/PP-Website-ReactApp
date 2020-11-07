@@ -34,7 +34,7 @@ export default function ImageContainer({ img, altText, text, color }) {
       onMouseLeave={() => setHover(false)}
       onClick={() => handleChange()}
     >
-      <div style={styles.header}>
+      <div style={styles.wrapper}>
         <div
           style={{
             width: 100,
@@ -59,22 +59,23 @@ export default function ImageContainer({ img, altText, text, color }) {
           </div>
         )}
       </div>
-      <div
-        style={{
-          display: 'grid',
-          justifyContent: 'center',
-          width: 100,
-          height: 10,
-          alignSelf: 'bottom',
-          backgroundColor: color,
-        }}
-      ></div>
+      <div style={styles.wrapper}>
+        <div
+          style={{
+            width: 100,
+            height: 10,
+            borderRadius: '5px 5px 5px 5px',
+            marginBottom: 5,
+            backgroundColor: color,
+          }}
+        ></div>
+      </div>
     </div>
   );
 }
 
 const styles = {
-  header: {
+  wrapper: {
     display: 'grid',
     justifyContent: 'center',
     alignItems: 'center',
