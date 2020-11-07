@@ -18,9 +18,9 @@ export default function ImageContainer({ img, altText, text, color }) {
     <div
       style={{
         display: 'grid',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         // alignItems: 'center',
-        height: 375,
+        // height: 375,
         width: 200,
         border: `4px solid ${color}`,
         borderRadius: '30px 30px 30px 30px',
@@ -28,31 +28,57 @@ export default function ImageContainer({ img, altText, text, color }) {
         overflow: 'hidden',
         transition: 'all 0.6s ease-in-out',
         cursor: 'pointer',
+        backgroundColor: 'white',
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => handleChange()}
     >
+      <div style={styles.header}>
+        <div
+          style={{
+            width: 100,
+            height: 20,
+            borderRadius: '0px 0px 20px 20px',
+            backgroundColor: color,
+          }}
+        ></div>
+      </div>
+      <div
+        style={{
+          display: 'grid',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: 330,
+        }}
+      >
+        {!hover && <img style={styles.img} src={img} alt={altText} />}
+        {hover && (
+          <div style={{ color: color, padding: 10, overflow: 'hidden' }}>
+            {text}
+          </div>
+        )}
+      </div>
       <div
         style={{
           display: 'grid',
           justifyContent: 'center',
           width: 100,
-          height: 50,
+          height: 10,
+          alignSelf: 'bottom',
           backgroundColor: color,
         }}
       ></div>
-      {!hover && <img style={styles.img} src={img} alt={altText} />}
-      {hover && (
-        <div style={{ color: color, padding: 10, overflow: 'hidden' }}>
-          {text}
-        </div>
-      )}
     </div>
   );
 }
 
 const styles = {
+  header: {
+    display: 'grid',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   img: {
     height: 200,
   },
