@@ -44,14 +44,7 @@ export default function ImageContainer({ img, altText, text, color }) {
           }}
         ></div>
       </div>
-      <div
-        style={{
-          display: 'grid',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: 330,
-        }}
-      >
+      <div style={styles.content}>
         {!hover && <img style={styles.img} src={img} alt={altText} />}
         {hover && (
           <div style={{ color: color, padding: 10, overflow: 'hidden' }}>
@@ -75,6 +68,14 @@ export default function ImageContainer({ img, altText, text, color }) {
 }
 
 const styles = {
+  content: {
+    display: 'grid',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 330,
+    width: 200,
+    overflow: 'hidden',
+  },
   wrapper: {
     display: 'grid',
     justifyContent: 'center',
