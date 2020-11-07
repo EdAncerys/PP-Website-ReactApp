@@ -44,7 +44,7 @@ const styles = {
     paddingLeft: 50,
     paddingRight: 20,
     paddingTop: 20,
-    height: 450,
+    height: 550,
     width: 600,
   },
   imageContainer: {

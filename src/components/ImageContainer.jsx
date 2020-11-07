@@ -6,6 +6,8 @@ import colors from '../config/colors';
 export default function ImageContainer({ img, altText, text, color }) {
   const [hover, setHover] = useState(false);
 
+  const phoneBackgroundColor = colors.lightBlue;
+
   const handleRadius = hover ? '10% 10% 0% 10%' : '50% 50% 10% 50%';
   const handleShadow = hover ? `` : `5px 10px 35px -10px ${colors.black}`;
   const handleBorder = hover ? `1px solid ${color}` : '';
@@ -25,7 +27,7 @@ export default function ImageContainer({ img, altText, text, color }) {
         overflow: 'hidden',
         transition: 'all 0.6s ease-in-out',
         cursor: 'pointer',
-        backgroundColor: colors.white,
+        backgroundColor: phoneBackgroundColor,
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -43,7 +45,14 @@ export default function ImageContainer({ img, altText, text, color }) {
             backgroundColor: color,
           }}
         >
-          <div style={styles.microphone}></div>
+          <div
+            style={{
+              width: 50,
+              height: 5,
+              borderRadius: '5px 5px 5px 5px',
+              backgroundColor: phoneBackgroundColor,
+            }}
+          ></div>
         </div>
       </div>
       <div style={styles.content}>
@@ -85,11 +94,5 @@ const styles = {
   },
   img: {
     height: 200,
-  },
-  microphone: {
-    width: 50,
-    height: 5,
-    borderRadius: '5px 5px 5px 5px',
-    backgroundColor: colors.white,
   },
 };
