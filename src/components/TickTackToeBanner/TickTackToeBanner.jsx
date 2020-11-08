@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../../App';
 import ImageContainer from '../ImageContainer';
 import TickTackToeImg from '../../img/Tick-Tack-Toe.png';
 import textDescription from '../../text/ProjectDescription';
@@ -8,9 +9,19 @@ import FooterForBanner from '../FooterForBanner';
 import PagePalette from '../../config/PagePalette';
 
 export default function TickTackToeBanner({ props }) {
+  const { manageAppContext } = useContext(AppContext);
+  const mediaQuery = manageAppContext.mediaQuery;
+
   return (
     <div className="bangers" style={styles.container}>
-      <div style={styles.wrapper}>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateRows: '50px auto 100px',
+          height: 550,
+          width: mediaQuery ? '95vw' : 600,
+        }}
+      >
         <HeaderForBanner color={PagePalette[3].secondary} />
         <div style={styles.imageContainer}>
           <ImageContainer
@@ -35,16 +46,8 @@ const styles = {
   container: {
     display: 'grid',
     justifyContent: 'center',
-    backgroundColor: PagePalette[3].primary,
-  },
-  wrapper: {
-    display: 'grid',
-    gridTemplateRows: '50px auto 100px',
-    paddingLeft: 50,
-    paddingRight: 20,
-    paddingTop: 20,
-    height: 550,
-    width: 600,
+    backgroundColor: PagePalette[1].primary,
+    width: '100%',
   },
   imageContainer: {
     display: 'grid',
