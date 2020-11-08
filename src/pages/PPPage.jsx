@@ -4,6 +4,26 @@ import colors from '../config/colors';
 export default function PPPage({ props }) {
   return (
     <div className="teko" style={styles.container}>
+      <div style={styles.title}>About</div>
+      <div style={styles.content}>
+        <div>
+          I've detailed some of my favorite projects bellow, things I'm proud
+          of, and all the skills I've developed since beginning to code. I'm
+          always learning and evolving, faster than I can update my portfolio on
+          the WebSite, so the best place to ﬁnd out what I'm currently working
+          on is my GitHub. I'm always Improving my projects, and it's the best
+          place to see what I'm learning day by day.
+        </div>
+        <div style={styles.content}>
+          <a
+            style={styles.link}
+            target="blank"
+            href="https://github.com/EdAncerys"
+          >
+            Follow this link to the project on GitHub
+          </a>
+        </div>
+      </div>
       <div style={styles.content}>
         <div style={styles.title}>ThereAndBack</div>
         <div>
