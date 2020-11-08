@@ -59,7 +59,8 @@ export default function ImageContainer({ img, altText, text, color }) {
           alignItems: 'center',
           textAlign: 'center',
           height: hover ? 220 : 330,
-          width: hover ? 400 : 200,
+          width: hover ? 'auto' : 200,
+          maxWidth: 400,
           overflow: 'hidden',
           transition: 'all 0.8s ease-in-out',
         }}
