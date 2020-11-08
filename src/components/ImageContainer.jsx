@@ -29,8 +29,8 @@ export default function ImageContainer({ img, altText, text, color }) {
         cursor: 'pointer',
         backgroundColor: phoneBackgroundColor,
       }}
-      onMouseOver={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
+      // onMouseOver={() => setHover(true)}
+      // onMouseLeave={() => setHover(false)}
       onClick={() => handleChange()}
     >
       <div style={styles.wrapper}>
