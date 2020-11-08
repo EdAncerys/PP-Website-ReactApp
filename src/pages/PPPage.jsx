@@ -179,6 +179,36 @@ export default function PPPage({ props }) {
           </a>
         </div>
       </div>
+      <div style={styles.content}>
+        <div style={styles.title}>Bank tech test</div>
+        <div>
+          Producing the best code quality when there is a minimal time pressure.
+          Practice OO design and TDD skills. Work alone, and review your own
+          code to practice reflecting on and improving your own work.
+        </div>
+        <div>Requirements:</div>
+        <div>
+          Able to interact with your code via a REPL like IRB or the JavaScript
+          console. (No need to implement a command line interface that takes
+          input from STDIN.) Deposits, withdrawal. Account statement (date,
+          amount, balance) printing. Data can be kept in memory (it doesn't need
+          to be stored to a database or anything).
+        </div>
+        <div>Acceptance criteria:</div>
+        <diiv>
+          Given a client makes a deposit of 1000 on 10-01-2012 And a deposit of
+          2000 on 13-01-2012 and a withdrawal of 500 on 14-01-2012.
+        </diiv>
+        <div style={styles.content}>
+          <a
+            style={styles.link}
+            target="blank"
+            href="https://github.com/EdAncerys/bank_tech_test"
+          >
+            Follow this link to the project on GitHub
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
