@@ -24,7 +24,7 @@ export default function ImageContainer({ img, altText, text, color }) {
         borderRadius: '30px 30px 30px 30px',
         boxShadow: handleShadow,
         overflow: 'hidden',
-        transition: 'all 1.8s ease-in-out',
+        transition: 'all 1.2s ease-in-out',
         cursor: 'pointer',
         backgroundColor: phoneBackgroundColor,
       }}
