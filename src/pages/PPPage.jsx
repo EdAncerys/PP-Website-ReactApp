@@ -105,17 +105,17 @@ export default function PPPage({ props }) {
         <div>User Stories:</div>
         <div>
           As an air traffic controller, So I can get passengers to a
-          destination, I want to instruct a plane to land at an airport
+          destination, I want to instruct a plane to land at an airport.
         </div>
         <div>
           As an air traffic controller, So I can get passengers on the way to
           their destination, I want to instruct a plane to take off from an
-          airport and confirm that it is no longer in the airport
+          airport and confirm that it is no longer in the airport.
         </div>
         <div>
           As the system designer So that the software can be used for many
           different airports I would like a default airport capacity that can be
-          overridden as appropriate
+          overridden as appropriate.
         </div>
         <div>
           Task is to test drive the creation of a set of classes/modules to
@@ -153,16 +153,16 @@ export default function PPPage({ props }) {
         <div>User Stories:</div>
         <div>
           As a customer, So that I can check if, I want to order something I
-          would like to see a list of dishes with prices
+          would like to see a list of dishes with prices.
         </div>
         <div>
           As a customer, So that I can order the meal, I want I would like to be
-          able to select some number of several available dishes
+          able to select some number of several available dishes.
         </div>
         <diiv>
           As a customer, So that I can verify that my order is correct, I would
           like to check that the total I have been given matches the sum of the
-          various dishes in my order
+          various dishes in my order.
         </diiv>
         <div>
           Task is to test drive the creation of a set of classes/modules to
@@ -204,6 +204,57 @@ export default function PPPage({ props }) {
             style={styles.link}
             target="blank"
             href="https://github.com/EdAncerys/bank_tech_test"
+          >
+            Follow this link to the project on GitHub
+          </a>
+        </div>
+      </div>
+      <div style={styles.content}>
+        <div style={styles.title}>Gilded Rose Refactoring Kata</div>
+        <div>
+          Hi and welcome to team Gilded Rose. As you know, we are a small inn
+          with a prime location in a prominent city ran by a friendly innkeeper
+          named Allison. We also buy and sell only the finest goods.
+          Unfortunately, our goods are constantly degrading in quality as they
+          approach their sell by date. We have a system in place that updates
+          our inventory for us. It was developed by a no-nonsense type named
+          Leeroy, who has moved on to new adventures. Your task is to add the
+          new feature to our system so that we can begin selling a new category
+          of items.
+        </div>
+        <div>First an introduction to our system:</div>
+        <div>
+          All items have a SellIn value which denotes the number of days we have
+          to sell the item.
+        </div>
+        <div>
+          All items have a Quality value which denotes how valuable the item is.
+        </div>
+        <diiv>
+          At the end of each day our system lowers both values for every item.
+        </diiv>
+        <div>
+          Once the sell by date has passed, Quality degrades twice as fast.
+        </div>
+        <div>The Quality of an item is never negative.</div>
+        <div>"Aged Brie" actually increases in Quality the older it gets.</div>
+        <div>The Quality of an item is never more than 50.</div>
+        <div>
+          "Sulfuras", being a legendary item, never has to be sold or decreases
+          in Quality.
+        </div>
+        <div>
+          "Backstage passes", like aged brie, increases in Quality as it's
+          SellIn value approaches; Quality increases by 2 when there are 10 days
+          or less and by 3 when there are 5 days or less but Quality drops to 0
+          after the concert "Conjured" items degrade in Quality twice as fast as
+          normal items.
+        </div>
+        <div style={styles.content}>
+          <a
+            style={styles.link}
+            target="blank"
+            href="https://github.com/EdAncerys/GildedRose-Refactoring-Kata"
           >
             Follow this link to the project on GitHub
           </a>
