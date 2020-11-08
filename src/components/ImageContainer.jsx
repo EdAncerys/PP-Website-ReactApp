@@ -4,11 +4,11 @@ import { BsPhone } from 'react-icons/bs';
 import colors from '../config/colors';
 
 export default function ImageContainer({ img, altText, text, color }) {
-  const [hover, setHover] = useState(true);
+  const [hover, setHover] = useState(false);
 
-  const phoneBackgroundColor = colors.lightBlue;
+  const phoneBackgroundColor = colors.lightGrey;
 
-  const handleShadow = hover ? `` : `5px 10px 35px -10px ${colors.black}`;
+  const handleShadow = hover ? `` : `5px 10px 45px -10px ${colors.black}`;
 
   const handleChange = () => {
     setHover(!hover);
@@ -18,7 +18,6 @@ export default function ImageContainer({ img, altText, text, color }) {
     <div
       style={{
         display: 'grid',
-        // alignContent: 'center',
         gridTemplateColumns: hover ? 'auto auto auto' : '',
         width: hover ? '' : 200,
         border: `4px solid ${color}`,
@@ -29,8 +28,6 @@ export default function ImageContainer({ img, altText, text, color }) {
         cursor: 'pointer',
         backgroundColor: phoneBackgroundColor,
       }}
-      // onMouseOver={() => setHover(true)}
-      // onMouseLeave={() => setHover(false)}
       onClick={() => handleChange()}
     >
       <div style={styles.wrapper}>

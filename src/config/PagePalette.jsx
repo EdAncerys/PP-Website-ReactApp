@@ -2,15 +2,15 @@ import colors from './colors';
 
 export default {
   1: {
-    primary: colors.mint,
-    secondary: colors.red,
-  },
-  2: {
     primary: colors.darkGrey,
     secondary: colors.darkBlue,
   },
+  2: {
+    primary: colors.cucumber,
+    secondary: colors.green,
+  },
   3: {
-    primary: colors.blue,
-    secondary: colors.yellow,
+    primary: colors.pink,
+    secondary: colors.black,
   },
 };

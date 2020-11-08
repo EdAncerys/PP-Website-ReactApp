@@ -6,6 +6,7 @@ export default {
   blue: '#469BDB',
   mint: '#BCDCC1',
   cucumber: '#C8EAB6',
+  green: '#597945',
   lightBlue: '#C5E4F3',
   darkBlue: '#255AA4',
   darkGrey: '#C5E4F3',
