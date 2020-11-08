@@ -300,6 +300,7 @@ const styles = {
   content: {
     display: 'grid',
     width: 600,
+    maxWidth: '95vw',
     gridGap: 10,
     textAlign: 'justify',
   },
