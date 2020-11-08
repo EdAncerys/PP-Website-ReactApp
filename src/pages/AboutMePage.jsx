@@ -55,6 +55,7 @@ const styles = {
     marginBottom: 100,
     gridGap: 10,
     textAlign: 'justify',
+    maxWidth: '95vw',
   },
   link: {
     color: colors.darkBlue,
