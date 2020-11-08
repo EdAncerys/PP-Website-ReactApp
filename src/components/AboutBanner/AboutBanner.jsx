@@ -15,7 +15,7 @@ export default function AboutBanner({ props }) {
       </div>
       <div style={styles.textSlide}>
         Currently, self-employed @TC&D. Formerly Experience Manager for some of
-        the well known retail brands & as CAD technician at engineering &
+        the well known retail brands & as architect at engineering &
         architectural companies. Find out more about me, follow my work, words &
         photos below.
       </div>
