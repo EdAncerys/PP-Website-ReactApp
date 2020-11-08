@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageContainer from '../ImageContainer';
-import Coding from '../../img/Coding.png';
+import Coding from '../../img/PPPhoto.jpg';
 import textDescription from '../../text/ProjectDescription';
 import PagePalette from '../../config/PagePalette';
 import HeaderForBanner from '../HeaderForBanner';
