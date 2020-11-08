@@ -25,7 +25,7 @@ export default function ImageContainer({ img, altText, text, color }) {
         borderRadius: '30px 30px 30px 30px',
         boxShadow: handleShadow,
         overflow: 'hidden',
-        transition: 'all 2.8s ease-in-out',
+        transition: 'all 1.8s ease-in-out',
         cursor: 'pointer',
         backgroundColor: phoneBackgroundColor,
       }}
@@ -61,9 +61,10 @@ export default function ImageContainer({ img, altText, text, color }) {
           justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'center',
-          height: hover ? 200 : 330,
+          height: hover ? 220 : 330,
           width: hover ? 400 : 200,
           overflow: 'hidden',
+          transition: 'all 0.8s ease-in-out',
         }}
       >
         {!hover && <img style={styles.img} src={img} alt={altText} />}
@@ -80,6 +81,7 @@ export default function ImageContainer({ img, altText, text, color }) {
             height: hover ? 100 : 6,
             borderRadius: '5px 5px 5px 5px',
             marginBottom: 5,
+            marginRight: 5,
             backgroundColor: color,
           }}
         ></div>
