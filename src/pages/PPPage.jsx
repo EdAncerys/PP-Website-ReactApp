@@ -32,7 +32,36 @@ export default function PPPage({ props }) {
             target="blank"
             href="https://github.com/AndrewHulme/route_planner"
           >
-            Follow this link to GitHub
+            Follow this link to the project on GitHub
+          </a>
+        </div>
+      </div>
+      <div style={styles.content}>
+        <div style={styles.title}>AceBook</div>
+        <div>
+          Project created by the team: (Ed Ancerys, Catriona Bennett, Gareth
+          Woodman, Marius Brad, Paula Darias, Asifur Rahman) at Makers Academy.
+        </div>
+        <div>
+          Create a clone app of Facebook in Ruby on Rails. This is a group
+          project focused on pair programming and delivering MVP, utilizing XP
+          principles.
+        </div>
+        <div>
+          The app aims to imitate similar user experience and have similar
+          features as per its 'big brother'. User able to do the following on a
+          web app: signup, sign in, delete the profile, add a profile picture up
+          on sign up or add it later on, make a post, share pictures and post
+          them one at a time or multiple ones, like a post, add friends, update
+          a user profile, change password, username, etc.
+        </div>
+        <div style={styles.content}>
+          <a
+            style={styles.link}
+            target="blank"
+            href="https://github.com/EdAncerys/acebook-HoneyBunnies"
+          >
+            Follow this link to the project on GitHub
           </a>
         </div>
       </div>
@@ -51,6 +80,7 @@ const styles = {
   },
   title: {
     fontSize: 30,
+    marginTop: 30,
   },
   content: {
     display: 'grid',
