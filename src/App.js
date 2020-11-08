@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './css/App.css';
+import { useMediaQuery } from '../src/hooks/useMediaQuery.jsx';
 import ContentBanner from './components/ContentBanner.jsx';
 import AboutBanner from './components/AboutBanner/AboutBanner';
 import AboutMePage from './pages/AboutMePage';
@@ -16,9 +17,12 @@ export default function App({ props }) {
   const [page, setPage] = useState(false);
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.App';
 
+  const mediaQuery = useMediaQuery('(min-width: 800px)');
+
   const manageAppContext = {
     page: page,
     setPage: setPage,
+    mediaQuery: mediaQuery,
   };
 
   useEffect(() => {
