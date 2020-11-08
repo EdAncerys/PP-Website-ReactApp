@@ -46,7 +46,14 @@ export default function App({ props }) {
     >
       {page && <Header color={colors.white} />}
       {!page && (
-        <div style={styles.container}>
+        <div
+          style={{
+            display: 'grid',
+            height: mediaQuery ? '' : '100vh',
+            gridTemplateColumns: mediaQuery ? '' : '400px auto',
+            overflow: 'auto',
+          }}
+        >
           <AboutBanner />
           <ContentBanner />
         </div>
@@ -60,12 +67,3 @@ export default function App({ props }) {
     </AppContext.Provider>
   );
 }
-
-const styles = {
-  container: {
-    display: 'grid',
-    height: '100vh',
-    gridTemplateColumns: '400px auto',
-    overflow: 'auto',
-  },
-};

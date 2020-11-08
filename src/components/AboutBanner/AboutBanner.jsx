@@ -7,6 +7,7 @@ import MailMeButton from './MailMeButton';
 
 export default function AboutBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
+  const mediaQuery = manageAppContext.mediaQuery;
 
   return (
     <div className="teko" style={styles.container}>
