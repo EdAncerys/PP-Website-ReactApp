@@ -4,13 +4,11 @@ import { BsPhone } from 'react-icons/bs';
 import colors from '../config/colors';
 
 export default function ImageContainer({ img, altText, text, color }) {
-  const [hover, setHover] = useState(false);
+  const [hover, setHover] = useState(true);
 
   const phoneBackgroundColor = colors.lightBlue;
 
-  const handleRadius = hover ? '10% 10% 0% 10%' : '50% 50% 10% 50%';
   const handleShadow = hover ? `` : `5px 10px 35px -10px ${colors.black}`;
-  const handleBorder = hover ? `1px solid ${color}` : '';
 
   const handleChange = () => {
     setHover(!hover);
@@ -20,12 +18,14 @@ export default function ImageContainer({ img, altText, text, color }) {
     <div
       style={{
         display: 'grid',
-        width: 200,
+        // alignContent: 'center',
+        gridTemplateColumns: hover ? 'auto auto auto' : '',
+        width: hover ? '' : 200,
         border: `4px solid ${color}`,
         borderRadius: '30px 30px 30px 30px',
         boxShadow: handleShadow,
         overflow: 'hidden',
-        transition: 'all 0.6s ease-in-out',
+        transition: 'all 2.8s ease-in-out',
         cursor: 'pointer',
         backgroundColor: phoneBackgroundColor,
       }}
@@ -39,23 +39,33 @@ export default function ImageContainer({ img, altText, text, color }) {
             display: 'grid',
             justifyContent: 'center',
             alignItems: 'center',
-            width: 100,
-            height: 20,
-            borderRadius: '0px 0px 20px 20px',
+            width: hover ? 20 : 100,
+            height: hover ? 100 : 20,
+            borderRadius: hover ? '0px 20px 20px 0px' : '0px 0px 20px 20px',
             backgroundColor: color,
           }}
         >
           <div
             style={{
-              width: 50,
-              height: 5,
+              width: hover ? 5 : 50,
+              height: hover ? 50 : 5,
               borderRadius: '5px 5px 5px 5px',
               backgroundColor: phoneBackgroundColor,
             }}
           ></div>
         </div>
       </div>
-      <div style={styles.content}>
+      <div
+        style={{
+          display: 'grid',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          height: hover ? 200 : 330,
+          width: hover ? 400 : 200,
+          overflow: 'hidden',
+        }}
+      >
         {!hover && <img style={styles.img} src={img} alt={altText} />}
         {hover && (
           <div style={{ color: color, padding: 10, overflow: 'hidden' }}>
@@ -66,8 +76,8 @@ export default function ImageContainer({ img, altText, text, color }) {
       <div style={styles.wrapper}>
         <div
           style={{
-            width: 100,
-            height: 10,
+            width: hover ? 6 : 100,
+            height: hover ? 100 : 6,
             borderRadius: '5px 5px 5px 5px',
             marginBottom: 5,
             backgroundColor: color,
@@ -79,14 +89,6 @@ export default function ImageContainer({ img, altText, text, color }) {
 }
 
 const styles = {
-  content: {
-    display: 'grid',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 330,
-    width: 200,
-    overflow: 'hidden',
-  },
   wrapper: {
     display: 'grid',
     justifyContent: 'center',
