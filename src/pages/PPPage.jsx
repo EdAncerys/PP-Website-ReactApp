@@ -65,6 +65,34 @@ export default function PPPage({ props }) {
           </a>
         </div>
       </div>
+      <div style={styles.content}>
+        <div style={styles.title}>MakersBnB</div>
+        <div>
+          Project created by the team: (Ed Ancerys, Andrew Hulme, Ellis
+          Trickett, Colin Muir, ) at Makers Academy.
+        </div>
+        <div>
+          Create a clone app of Airbnb in Ruby on Rails. This is a group project
+          focused on pair programming and delivering MVP and utilizing XP
+          principles.
+        </div>
+        <div>
+          The app is a clone of the AirBnB website and aims to imitate a similar
+          user experience. User able to do the following on a web app: signup,
+          sign in, Once we are identified by the system we can create a space or
+          book one. As part of our implementation, we can add a name to renting
+          space, a price, and a description.
+        </div>
+        <div style={styles.content}>
+          <a
+            style={styles.link}
+            target="blank"
+            href="https://github.com/EdAncerys/MakersBnB"
+          >
+            Follow this link to the project on GitHub
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
