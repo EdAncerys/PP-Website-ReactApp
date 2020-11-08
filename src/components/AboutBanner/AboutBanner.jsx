@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SocialBanner from './SocialBanner';
+import { AppContext } from '../../App';
 
 import colors from '../../config/colors';
 import MailMeButton from './MailMeButton';
 
 export default function AboutBanner({ props }) {
+  const { manageAppContext } = useContext(AppContext);
+
   return (
     <div className="teko" style={styles.container}>
       <div style={styles.about}>

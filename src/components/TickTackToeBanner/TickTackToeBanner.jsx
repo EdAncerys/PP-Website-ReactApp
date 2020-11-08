@@ -5,7 +5,6 @@ import textDescription from '../../text/ProjectDescription';
 import HeaderForBanner from '../HeaderForBanner';
 import FooterForBanner from '../FooterForBanner';
 
-import colors from '../../config/colors';
 import PagePalette from '../../config/PagePalette';
 
 export default function TickTackToeBanner({ props }) {

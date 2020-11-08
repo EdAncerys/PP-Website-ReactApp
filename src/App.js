@@ -17,7 +17,7 @@ export default function App({ props }) {
   const [page, setPage] = useState(false);
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSite.App';
 
-  const mediaQuery = useMediaQuery('(min-width: 800px)');
+  const mediaQuery = !useMediaQuery('(min-width: 800px)');
 
   const manageAppContext = {
     page: page,
