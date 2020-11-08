@@ -141,6 +141,44 @@ export default function PPPage({ props }) {
           </a>
         </div>
       </div>
+      <div style={styles.content}>
+        <div style={styles.title}>Takeaway Challenge</div>
+        <div>
+          We have a request from a client to write the software for the takeaway
+          business. The takeaway shop should be able to accept customer orders,
+          check availability, calculate the total of the order, and confirm the
+          estimated time. Here are some of the user stories that we worked out
+          in collaboration with the client:
+        </div>
+        <div>User Stories:</div>
+        <div>
+          As a customer, So that I can check if, I want to order something I
+          would like to see a list of dishes with prices
+        </div>
+        <div>
+          As a customer, So that I can order the meal, I want I would like to be
+          able to select some number of several available dishes
+        </div>
+        <diiv>
+          As a customer, So that I can verify that my order is correct, I would
+          like to check that the total I have been given matches the sum of the
+          various dishes in my order
+        </diiv>
+        <div>
+          Task is to test drive the creation of a set of classes/modules to
+          satisfy all the user stories above and deliver working product to the
+          client.
+        </div>
+        <div style={styles.content}>
+          <a
+            style={styles.link}
+            target="blank"
+            href="https://github.com/EdAncerys/takeaway-challenge"
+          >
+            Follow this link to the project on GitHub
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
