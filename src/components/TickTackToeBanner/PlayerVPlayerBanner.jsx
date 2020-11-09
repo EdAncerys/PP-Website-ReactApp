@@ -31,7 +31,7 @@ export default function PlayerVPlayerBanner({ props }) {
     <div
       style={{
         ...styles.container,
-        ...{ color: PagePalette[manageAppContext.page].primary },
+        ...{ color: PagePalette[manageAppContext.page].secondary },
       }}
     >
       <div style={styles.wrapper}>
@@ -80,29 +80,29 @@ export default function PlayerVPlayerBanner({ props }) {
 const styles = {
   container: {
     display: 'grid',
-    rowGap: 50,
+    rowGap: '5vh',
   },
   wrapper: {
     display: 'grid',
     gridTemplateColumns: 'auto auto auto',
     alignContent: 'center',
     justifyItems: 'center',
-    columnGap: 100,
+    columnGap: '5vh',
   },
   messageContainer: {
     display: 'grid',
     alignContent: 'center',
     justifyItems: 'center',
     textAlign: 'center',
-    fontSize: 30,
-    width: 400,
-    minHeight: 100,
+    fontSize: '3vh',
+    minHeight: '5vh',
   },
   message: {
     display: 'grid',
     gridTemplateColumns: 'auto auto auto',
+    gridGap: 30,
     textAlign: 'center',
-    minWidth: 350,
+    minWidth: '15vh',
   },
   scoreNumber: {
     display: 'grid',
