@@ -34,6 +34,7 @@ export default function FamilyGuyCharacters({ props }) {
         ...{ color: PagePalette[manageAppContext.page].secondary },
       }}
     >
+      <div style={styles.title}>Pick Your Player</div>
       <div style={styles.wrapper}>
         {manageTickTackToeContext.familyCharacters.map((img, i) => (
           <div
@@ -52,7 +53,9 @@ export default function FamilyGuyCharacters({ props }) {
 const styles = {
   container: {
     display: 'grid',
+    alignContent: 'center',
     justifyContent: 'center',
+    textAlign: 'center',
   },
   wrapper: {
     display: 'grid',
@@ -77,5 +80,9 @@ const styles = {
   name: {
     display: 'grid',
     justifyContent: 'center',
+  },
+  title: {
+    fontSize: '4vh',
+    marginBottom: '4vh',
   },
 };
