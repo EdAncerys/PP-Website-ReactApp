@@ -38,10 +38,10 @@ export default function Character({ src, name }) {
         display: 'grid',
         justifyContent: 'center',
         alignItems: 'center',
+        textAlign: 'center',
         transform: clickEffect ? 'scale(0.95)' : 'scale(1)',
         opacity: fade ? 1 : 0.2,
         cursor: 'pointer',
-        backgroundColor: 'red',
       }}
       key={name}
     >
@@ -67,7 +67,6 @@ export default function Character({ src, name }) {
         src={src}
         onClick={() => handleImageClick()}
       />
-      <div>hello</div>
     </div>
   );
 }
@@ -79,7 +78,6 @@ const styles = {
     gridTemplateColumns: 'auto auto',
     gridGap: 10,
     fontSize: '2vh',
-    backgroundColor: 'pink',
   },
   avatar: {
     color: colors.red,
