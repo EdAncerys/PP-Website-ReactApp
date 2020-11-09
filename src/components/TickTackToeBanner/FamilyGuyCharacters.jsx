@@ -57,11 +57,10 @@ const styles = {
   wrapper: {
     display: 'grid',
     gridTemplateColumns: 'repeat(4, auto)',
-    gridGap: '5vh',
+    rowGap: '8vh',
     justifyContent: 'space-around',
+    width: 600,
     maxWidth: '95vw',
-    // height: '50vh',
-    overflow: 'auto',
     cursor: 'pointer',
   },
   lastChild: {
@@ -78,6 +77,5 @@ const styles = {
   name: {
     display: 'grid',
     justifyContent: 'center',
-    // marginBottom: 5,
   },
 };

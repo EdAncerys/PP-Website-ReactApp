@@ -35,9 +35,13 @@ export default function Character({ src, name }) {
   return (
     <div
       style={{
+        display: 'grid',
+        justifyContent: 'center',
+        alignItems: 'center',
         transform: clickEffect ? 'scale(0.95)' : 'scale(1)',
         opacity: fade ? 1 : 0.2,
         cursor: 'pointer',
+        backgroundColor: 'red',
       }}
       key={name}
     >
@@ -45,6 +49,7 @@ export default function Character({ src, name }) {
         style={{
           display: 'grid',
           justifyContent: 'center',
+          alignItems: 'center',
           marginBottom: 10,
           color: clickEffect ? colors.red : '',
         }}
@@ -57,11 +62,12 @@ export default function Character({ src, name }) {
         </div>
       </div>
       <img
-        style={{ height: '15vh' }}
+        style={styles.img}
         alt={name}
         src={src}
         onClick={() => handleImageClick()}
       />
+      <div>hello</div>
     </div>
   );
 }
@@ -73,9 +79,13 @@ const styles = {
     gridTemplateColumns: 'auto auto',
     gridGap: 10,
     fontSize: '2vh',
+    backgroundColor: 'pink',
   },
   avatar: {
     color: colors.red,
     fontSize: '2vh',
+  },
+  img: {
+    height: '15vh',
   },
 };
