@@ -68,13 +68,14 @@ export default function Character({ src, name }) {
 const styles = {
   avatarName: {
     display: 'grid',
+    justifyContent: 'center',
     alignItems: 'center',
     gridTemplateColumns: 'auto auto',
     gridGap: 10,
-    fontSize: 20,
+    fontSize: '2vh',
   },
   avatar: {
     color: colors.red,
-    fontSize: 25,
+    fontSize: '2vh',
   },
 };

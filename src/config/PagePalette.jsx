@@ -11,6 +11,6 @@ export default {
   },
   3: {
     primary: colors.pink,
-    secondary: colors.black,
+    secondary: colors.darkBlue,
   },
 };

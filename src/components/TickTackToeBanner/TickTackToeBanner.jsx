@@ -46,7 +46,7 @@ const styles = {
   container: {
     display: 'grid',
     justifyContent: 'center',
-    backgroundColor: PagePalette[1].primary,
+    backgroundColor: PagePalette[3].primary,
     width: '100%',
   },
   imageContainer: {
