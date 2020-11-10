@@ -24,19 +24,22 @@ export default function TickTackToeBanner({ props }) {
           width: mediaQuery ? '95vw' : 600,
         }}
       >
-        <HeaderForBanner color={PagePalette[1].secondary} page={pageNumber} />
+        <HeaderForBanner
+          color={PagePalette[pageNumber].secondary}
+          page={pageNumber}
+        />
         <div style={styles.imageContainer}>
           <ImageContainer
             img={LegoManImg}
             altText="Tick-Tack-Toe"
             text={textDescription.AboutInfoBanner}
-            color={PagePalette[1].secondary}
+            color={PagePalette[pageNumber].secondary}
           />
         </div>
         <FooterForBanner
           name="About"
           type="Informational"
-          color={PagePalette[1].secondary}
+          color={PagePalette[pageNumber].secondary}
           page={pageNumber}
         />
       </div>
