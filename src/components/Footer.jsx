@@ -19,6 +19,7 @@ export default function Footer({ color }) {
 
   return (
     <div
+      className="teko"
       style={{
         width: '100%',
         display: 'grid',
