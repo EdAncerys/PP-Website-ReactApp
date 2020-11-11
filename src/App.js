@@ -44,7 +44,6 @@ export default function App({ props }) {
         manageAppContext,
       }}
     >
-      {page && <Header color={colors.white} />}
       {!page && (
         <div
           style={{
@@ -58,12 +57,11 @@ export default function App({ props }) {
           <ContentBanner />
         </div>
       )}
-      <div style={{ height: page ? '90vh' : '', overflow: 'auto' }}>
+      <div style={{ overflow: 'auto' }}>
         {page === 1 && <AboutMePage />}
         {page === 2 && <PPPage />}
         {page === 3 && <TickTackToePage />}
       </div>
-      {page && <Footer />}
     </AppContext.Provider>
   );
 }

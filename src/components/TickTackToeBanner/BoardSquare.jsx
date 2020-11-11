@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { TickTackToeContext } from '../../pages/TickTackToePage';
 import { useAvatar } from '../../hooks/useAvatar';
 

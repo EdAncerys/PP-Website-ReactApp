@@ -13,6 +13,9 @@ import Stewie from '../img/TickTackToeImg/Stewie.png';
 
 import FamilyGuyCharacters from '../components/TickTackToeBanner/FamilyGuyCharacters';
 import PlayerVPlayerBanner from '../components/TickTackToeBanner/PlayerVPlayerBanner';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import colors from '../config/colors';
 
 export const TickTackToeContext = React.createContext();
 
@@ -145,10 +148,16 @@ export default function TickTackToePage({ props }) {
         manageTickTackToeContext,
       }}
     >
-      <div className="family" style={styles.container}>
-        <div style={styles.content}>
+      <div style={styles.container}>
+        <div>
+          <Header color={colors.white} />
+        </div>
+        <div className="family" style={styles.content}>
           {!playerTwo && <FamilyGuyCharacters />}
           {playerTwo && <PlayerVPlayerBanner />}
+        </div>
+        <div style={styles.footer}>
+          <Footer />
         </div>
       </div>
     </TickTackToeContext.Provider>
@@ -158,15 +167,23 @@ export default function TickTackToePage({ props }) {
 const styles = {
   container: {
     display: 'grid',
-    justifyContent: 'center',
+    width: '100vw',
+    height: '100vh',
+    gridTemplateColumns: 'repeat(5, 1fr)',
+    gridTemplateRows: 'repeat(5, 1fr)',
+
     userSelect: 'none',
     cursor: 'default',
   },
   content: {
     display: 'grid',
-    marginTop: 100,
-    marginBottom: 100,
+    gridColumn: 'span 6',
+    gridRow: '1 / 6',
+    marginTop: 80,
     gridGap: 10,
     textAlign: 'justify',
+  },
+  footer: {
+    gridColumn: 'span 6',
   },
 };

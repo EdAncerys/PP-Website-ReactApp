@@ -28,7 +28,7 @@ export default function Header({ color }) {
         backgroundColor: backgroundColor,
         userSelect: 'none',
         cursor: 'default',
-        zIndex: 1
+        zIndex: 1,
       }}
     >
       <div
