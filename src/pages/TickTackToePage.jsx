@@ -178,12 +178,13 @@ const styles = {
   content: {
     display: 'grid',
     gridColumn: 'span 6',
-    gridRow: '1 / 6',
-    marginTop: 80,
+    gridRow: '1 / 4',
+    marginTop: '12vh',
     gridGap: 10,
     textAlign: 'justify',
   },
   footer: {
+    gridRow: '6 / 6',
     gridColumn: 'span 6',
   },
 };
