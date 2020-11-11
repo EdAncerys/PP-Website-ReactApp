@@ -1,10 +1,12 @@
 import React from 'react';
+import Header from '../components/Header';
 
 import colors from '../config/colors';
 
 export default function AboutMePage({ props }) {
   return (
     <div className="teko" style={styles.container}>
+      <Header />
       <div style={styles.content}>
         <div>
           I am a Retail Manager turned Software Engineer. My new-found passion

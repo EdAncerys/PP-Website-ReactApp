@@ -21,10 +21,10 @@ export default function Header({ color }) {
         display: 'grid',
         alignContent: 'center',
         gridTemplateColumns: 'auto auto',
-        height: 80,
+        height: '10vh',
         borderTop: `1px solid ${color}`,
         color: textColor,
-        fontSize: 14,
+        fontSize: '4vh',
         backgroundColor: backgroundColor,
         userSelect: 'none',
         cursor: 'default',
@@ -36,8 +36,8 @@ export default function Header({ color }) {
         style={{
           display: 'grid',
           justifyItems: 'start',
-          paddingLeft: 30,
-          fontSize: 30,
+          paddingLeft: '2vh',
+          fontSize: '4vh',
           cursor: 'pointer',
         }}
         onClick={() => manageAppContext.setPage(false)}
@@ -48,12 +48,12 @@ export default function Header({ color }) {
         style={{
           display: 'grid',
           justifyItems: 'end',
-          paddingRight: 30,
+          paddingRight: '2vh',
           cursor: 'pointer',
         }}
       >
         <GoToPageButton
-          icon={<TiBackspaceOutline size={30} />}
+          icon={<TiBackspaceOutline size="4vh" />}
           color={PagePalette[manageAppContext.page].primary}
           hoverColor={PagePalette[manageAppContext.page].secondary}
           page={false}

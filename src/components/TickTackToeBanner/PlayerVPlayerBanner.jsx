@@ -80,7 +80,9 @@ export default function PlayerVPlayerBanner({ props }) {
 const styles = {
   container: {
     display: 'grid',
+    justifyItems: 'center',
     rowGap: '5vh',
+    maxWidth: 800,
   },
   wrapper: {
     display: 'grid',
