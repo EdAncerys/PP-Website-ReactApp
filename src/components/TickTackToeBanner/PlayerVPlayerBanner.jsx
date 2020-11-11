@@ -82,7 +82,6 @@ const styles = {
     display: 'grid',
     justifyItems: 'center',
     rowGap: '5vh',
-    maxWidth: 800,
   },
   wrapper: {
     display: 'grid',
