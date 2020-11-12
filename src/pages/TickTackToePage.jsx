@@ -171,7 +171,6 @@ const styles = {
     height: '100vh',
     gridTemplateColumns: 'repeat(5, 1fr)',
     gridTemplateRows: 'repeat(5, 1fr)',
-
     userSelect: 'none',
     cursor: 'default',
   },
@@ -180,7 +179,7 @@ const styles = {
     gridColumn: 'span 6',
     gridRow: '1 / 4',
     marginTop: '12vh',
-    gridGap: 10,
+    gridGap: '1vh',
     textAlign: 'justify',
   },
   footer: {
