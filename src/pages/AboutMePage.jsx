@@ -11,7 +11,15 @@ export default function AboutMePage({ props }) {
         <Header color={colors.white} />
       </div>
       <div style={styles.content}>
-        <div>
+        <div
+          style={{
+            display: 'grid',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: 600,
+            backgroundColor: 'white',
+          }}
+        >
           <div>
             I am a Retail Manager turned Software Engineer. My new-found passion
             for programming has stemmed from a desire to turn ideas into reality
@@ -58,22 +66,24 @@ const styles = {
     height: '100vh',
     gridTemplateColumns: 'repeat(5, 1fr)',
     gridTemplateRows: 'repeat(5, 1fr)',
-    backgroundColor: 'tomato',
 
     userSelect: 'none',
     cursor: 'default',
   },
   content: {
     display: 'grid',
-    alignItems: 'center',
     justifyContent: 'center',
-    // gridColumn: 'span 6',
-    // gridRow: '1 / 4',
-    marginTop: '12vh',
-    // gridGap: '1vh',
-    textAlign: 'justify',
-    width: 600,
-    maxWidth: '95vw',
+    alignItems: 'center',
+    gridColumn: 'span 6',
+    gridRow: 'span 2',
+    // marginTop: '10vh',
+    // // gridGap: '1vh',
+    // textAlign: 'justify',
+    // padding: '5vw',
+    // height: '100%',
+    // width: 600,
+    // maxWidth: '95vw',
+    backgroundColor: 'tomato',
   },
   footer: {
     gridRow: '6 / 6',
