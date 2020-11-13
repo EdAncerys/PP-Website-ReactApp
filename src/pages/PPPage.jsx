@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 import colors from '../config/colors';
 
 export default function PPPage({ props }) {
   return (
     <div className="teko" style={styles.container}>
+      <Header />
       <div style={styles.title}>About</div>
       <div style={styles.content}>
         <div>

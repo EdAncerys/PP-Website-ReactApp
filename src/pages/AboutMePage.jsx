@@ -11,16 +11,8 @@ export default function AboutMePage({ props }) {
         <Header color={colors.white} />
       </div>
       <div style={styles.content}>
-        <div
-          style={{
-            display: 'grid',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: 600,
-            backgroundColor: 'white',
-          }}
-        >
-          <div>
+        <div style={styles.wrapper}>
+          <div style={styles.paragraph}>
             I am a Retail Manager turned Software Engineer. My new-found passion
             for programming has stemmed from a desire to turn ideas into reality
             and to contribute to building great products. Much of my work
@@ -28,7 +20,7 @@ export default function AboutMePage({ props }) {
             thrive collaborating with others. Coding allows me to be constantly
             learning, creating, and problem-solving.
           </div>
-          <div>
+          <div style={styles.paragraph}>
             I am a fast learner and extremely enthusiastic about technology and
             digital products. Enjoying challenges and don't shy away from
             time-consuming challenges that can deliver better results and
@@ -36,16 +28,16 @@ export default function AboutMePage({ props }) {
             opportunities to continue to learn, challenge myself, and work with
             great people.
           </div>
-          <div>
+          <div style={styles.paragraph}>
             I am a strong believer in the use of agile methodologies that helps
             to drive and manage team projects. Enjoying challenges and don't shy
             away from time-consuming challenges that can deliver better results
             and continuous learning process it involves.
           </div>
-          <div>
+          <div style={styles.paragraph}>
             <a style={styles.link} target="blank" href="https://makers.tech/">
               Makers Academy
-            </a>{' '}
+            </a>
             graduate where I have grown as a person and as a developer. Learned
             best practices and methodologies: TDD, Agile development, XP values,
             team projects, code reviews, pair programming.
@@ -73,17 +65,17 @@ const styles = {
   content: {
     display: 'grid',
     justifyContent: 'center',
-    alignItems: 'center',
     gridColumn: 'span 6',
-    gridRow: 'span 2',
-    // marginTop: '10vh',
-    // // gridGap: '1vh',
-    // textAlign: 'justify',
-    // padding: '5vw',
-    // height: '100%',
-    // width: 600,
-    // maxWidth: '95vw',
-    backgroundColor: 'tomato',
+    gridRow: '1 / 6',
+    marginTop: '10vh',
+    textAlign: 'justify',
+  },
+  wrapper: {
+    width: 600,
+    maxWidth: '95vw',
+  },
+  paragraph: {
+    marginTop: '2vh',
   },
   footer: {
     gridRow: '6 / 6',
