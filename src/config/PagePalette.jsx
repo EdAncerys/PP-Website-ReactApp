@@ -14,7 +14,7 @@ export default {
     secondary: colors.red,
   },
   4: {
-    primary: colors.darkGrey,
-    secondary: colors.black,
+    primary: colors.gold,
+    secondary: colors.blueGreen,
   },
 };

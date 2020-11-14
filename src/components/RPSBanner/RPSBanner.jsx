@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../App';
 import ImageContainer from '../ImageContainer';
-import Coding from '../../img/PPPhoto.jpg';
+import RPS from '../../img/RPS.png';
 import textDescription from '../../text/ProjectDescription';
 import HeaderForBanner from '../HeaderForBanner';
 import FooterForBanner from '../FooterForBanner';
@@ -36,9 +36,9 @@ export default function TickTackToeBanner({ props }) {
         />
         <div style={styles.imageContainer}>
           <ImageContainer
-            img={Coding}
-            altText="Tick-Tack-Toe"
-            text={textDescription.AboutInfoBanner}
+            img={RPS}
+            altText="RPS"
+            text={textDescription.RPSInfoBanner}
             color={PagePalette[pageNumber].secondary}
           />
         </div>
