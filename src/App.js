@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import TickTackToePage from './pages/TickTackToePage';
 import PPPage from './pages/PPPage';
+import RPSPage from './pages/RPSPage';
 
 import colors from './config/colors';
 
@@ -61,6 +62,7 @@ export default function App({ props }) {
         {page === 1 && <AboutMePage />}
         {page === 2 && <PPPage />}
         {page === 3 && <TickTackToePage />}
+        {page === 4 && <RPSPage />}
       </div>
     </AppContext.Provider>
   );
