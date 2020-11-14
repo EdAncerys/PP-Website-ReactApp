@@ -2,7 +2,7 @@ import colors from './colors';
 
 export default {
   1: {
-    primary: colors.darkGrey,
+    primary: colors.mediumGrey,
     secondary: colors.darkBlue,
   },
   2: {
@@ -11,6 +11,10 @@ export default {
   },
   3: {
     primary: colors.pink,
-    secondary: colors.darkBlue,
+    secondary: colors.red,
+  },
+  4: {
+    primary: colors.darkGrey,
+    secondary: colors.black,
   },
 };

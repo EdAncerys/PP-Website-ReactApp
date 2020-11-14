@@ -12,7 +12,7 @@ export default function TickTackToeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
   const mediaQuery = manageAppContext.mediaQuery;
 
-  const pageNumber = 1;
+  const pageNumber = 4;
 
   return (
     <div
