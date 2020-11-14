@@ -20,7 +20,7 @@ export default function RPSPage({ props }) {
           <Header color={colors.white} />
         </div>
         <div className="family" style={styles.content}>
-          RPS
+          <div style={styles.wrapper}>RPS</div>
         </div>
         <div style={styles.footer}>
           <Footer />
@@ -37,16 +37,26 @@ const styles = {
     height: '100vh',
     gridTemplateColumns: 'repeat(5, 1fr)',
     gridTemplateRows: 'repeat(5, 1fr)',
+
     userSelect: 'none',
     cursor: 'default',
   },
   content: {
     display: 'grid',
+    justifyContent: 'center',
     gridColumn: 'span 6',
-    gridRow: '1 / 4',
-    marginTop: '12vh',
-    gridGap: '1vh',
+    marginBottom: 50,
+    // gridRow: '1 / 6',
+    marginTop: '10vh',
     textAlign: 'justify',
+  },
+  wrapper: {
+    // width: 600,
+    maxWidth: '95vw',
+  },
+  title: {
+    fontSize: 30,
+    marginTop: 30,
   },
   footer: {
     gridRow: '6 / 6',
