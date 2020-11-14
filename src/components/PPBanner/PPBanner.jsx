@@ -38,7 +38,7 @@ export default function TickTackToeBanner({ props }) {
           <ImageContainer
             img={Coding}
             altText="Tick-Tack-Toe"
-            text={textDescription.AboutInfoBanner}
+            text={textDescription.PP}
             color={PagePalette[pageNumber].secondary}
           />
         </div>
