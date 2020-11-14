@@ -38,7 +38,7 @@ export default function TickTackToeBanner({ props }) {
           <ImageContainer
             img={RPS}
             altText="RPS"
-            text={textDescription.RPSInfoBanner}
+            text={textDescription.RPS}
             color={PagePalette[pageNumber].secondary}
           />
         </div>
