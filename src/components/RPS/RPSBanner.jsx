@@ -12,7 +12,7 @@ export default function TickTackToeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
   const mediaQuery = manageAppContext.mediaQuery;
 
-  const pageNumber = 4;
+  const pageNumber = 1;
 
   return (
     <div
@@ -43,7 +43,7 @@ export default function TickTackToeBanner({ props }) {
           />
         </div>
         <FooterForBanner
-          name="RPS"
+          name="Board Game: RPS"
           type="Game"
           color={PagePalette[pageNumber].secondary}
           page={pageNumber}

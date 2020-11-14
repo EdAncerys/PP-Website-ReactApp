@@ -43,8 +43,8 @@ export default function TickTackToeBanner({ props }) {
           />
         </div>
         <FooterForBanner
-          name="Game"
-          type="Board Game: Tic Tack Toe"
+          name="Board Game: Tic Tack Toe"
+          type="Game"
           color={PagePalette[pageNumber].secondary}
           page={3}
         />
