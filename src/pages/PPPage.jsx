@@ -56,6 +56,8 @@ export default function PPPage({ props }) {
               >
                 Follow this link to ThereAndBack WebSite
               </a>
+            </div>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
@@ -163,6 +165,8 @@ export default function PPPage({ props }) {
               >
                 Follow this link to the project on GitHub. Coded with Ruby.
               </a>
+            </div>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
