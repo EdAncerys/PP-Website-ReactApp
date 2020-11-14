@@ -4,9 +4,9 @@ import ImageContainer from '../ImageContainer';
 import LegoManImg from '../../img/Lego-Man.png';
 import textDescription from '../../text/ProjectDescription';
 import FooterForBanner from '../FooterForBanner';
+import HeaderForBanner from '../HeaderForBanner';
 
 import PagePalette from '../../config/PagePalette';
-import HeaderForBanner from '../HeaderForBanner';
 
 export default function TickTackToeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
@@ -15,7 +15,13 @@ export default function TickTackToeBanner({ props }) {
   const pageNumber = 1;
 
   return (
-    <div className="bangers" style={styles.container}>
+    <div
+      className="bangers"
+      style={{
+        ...styles.container,
+        ...{ backgroundColor: PagePalette[pageNumber].primary },
+      }}
+    >
       <div
         style={{
           display: 'grid',
@@ -51,7 +57,6 @@ const styles = {
   container: {
     display: 'grid',
     justifyContent: 'center',
-    backgroundColor: PagePalette[1].primary,
     width: '100%',
   },
   imageContainer: {

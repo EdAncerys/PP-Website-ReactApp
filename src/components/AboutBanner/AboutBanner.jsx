@@ -1,8 +1,8 @@
 import React from 'react';
 import SocialBanner from './SocialBanner';
+import MailMeButton from './MailMeButton';
 
 import colors from '../../config/colors';
-import MailMeButton from './MailMeButton';
 
 export default function AboutBanner({ props }) {
   return (

@@ -3,10 +3,10 @@ import { AppContext } from '../../App';
 import ImageContainer from '../ImageContainer';
 import Coding from '../../img/PPPhoto.jpg';
 import textDescription from '../../text/ProjectDescription';
-import PagePalette from '../../config/PagePalette';
 import HeaderForBanner from '../HeaderForBanner';
-
 import FooterForBanner from '../FooterForBanner';
+
+import PagePalette from '../../config/PagePalette';
 
 export default function TickTackToeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
