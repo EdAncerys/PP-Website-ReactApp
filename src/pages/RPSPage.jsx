@@ -49,7 +49,7 @@ const styles = {
     justifyContent: 'center',
     gridColumn: 'span 6',
     marginBottom: 50,
-    // gridRow: '1 / 6',
+    gridRow: '1 / 6',
     marginTop: '10vh',
     textAlign: 'justify',
   },
