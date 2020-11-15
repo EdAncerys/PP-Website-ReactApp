@@ -19,7 +19,7 @@ export default function RPSPage({ props }) {
         <div>
           <Header color={colors.white} />
         </div>
-        <div className="family" style={styles.content}>
+        <div className="teko" style={styles.content}>
           <div style={styles.wrapper}>RPS</div>
         </div>
         <div style={styles.footer}>
