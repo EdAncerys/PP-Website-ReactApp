@@ -14,7 +14,7 @@ export default function WelcomeBanner({ props }) {
       <div style={styles.title}>Hi and Welcome To The RPS Game</div>
       <div style={styles.content}>
         <GiGingerbreadMan size="10vh" />
-        <div>vs</div>
+        <div style={styles.vs}>vs</div>
         <FaRobot size="10vh" />
       </div>
     </div>
@@ -23,6 +23,17 @@ export default function WelcomeBanner({ props }) {
 
 const styles = {
   title: {
-    fontSize: 38,
+    fontSize: '5vh',
+  },
+  content: {
+    display: 'grid',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gridGap: 30,
+    gridTemplateColumns: 'auto auto auto',
+    marginTop: '2vh',
+  },
+  vs: {
+    fontSize: '5vh',
   },
 };
