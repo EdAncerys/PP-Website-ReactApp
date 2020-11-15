@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Brian from '../img/TickTackToeImg/Brian.png';
 
 import colors from '../config/colors';
+import WelcomeBanner from '../components/RPSBanner/WelcomeBanner';
 
 export const RPSContext = React.createContext();
 
@@ -20,7 +21,9 @@ export default function RPSPage({ props }) {
           <Header color={colors.white} />
         </div>
         <div className="teko" style={styles.content}>
-          <div style={styles.wrapper}>RPS</div>
+          <div style={styles.wrapper}>
+            <WelcomeBanner />
+          </div>
         </div>
         <div style={styles.footer}>
           <Footer />
