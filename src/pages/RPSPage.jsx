@@ -2,18 +2,23 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-import Brian from '../img/TickTackToeImg/Brian.png';
-
 import colors from '../config/colors';
 import WelcomeBanner from '../components/RPSBanner/WelcomeBanner';
 
 export const RPSContext = React.createContext();
 
 export default function RPSPage({ props }) {
+  const [game, setGame] = useState(false);
+
+  const manageRPSContext = {
+    game: game,
+    setGame: setGame,
+  };
+
   return (
     <RPSContext.Provider
       value={{
-        RPSContext,
+        manageRPSContext,
       }}
     >
       <div style={styles.container}>
