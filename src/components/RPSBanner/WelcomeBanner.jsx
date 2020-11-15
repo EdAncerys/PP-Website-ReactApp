@@ -12,15 +12,15 @@ export default function WelcomeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
   const { manageRPSContext } = useContext(RPSContext);
 
+  const game = manageRPSContext.game;
+
   const handlePlayClick = () => {
-    manageRPSContext.setGame(!manageRPSContext.game);
+    manageRPSContext.setGame(!game);
   };
 
   return (
     <div style={{ color: PagePalette[manageAppContext.page].secondary }}>
-      {!manageRPSContext.game && (
-        <div style={styles.title}>Hi and Welcome To The RPS Game</div>
-      )}
+      {!game && <div style={styles.title}>Hi and Welcome To The RPS Game</div>}
       <div style={styles.content}>
         <GiGingerbreadMan size="10vh" />
         <div style={styles.vs}>vs</div>
