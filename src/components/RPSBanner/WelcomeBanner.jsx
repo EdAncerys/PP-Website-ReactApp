@@ -3,6 +3,7 @@ import { AppContext } from '../../App';
 
 import { GiGingerbreadMan } from 'react-icons/gi';
 import { FaRobot } from 'react-icons/fa';
+import { BsPlayFill } from 'react-icons/bs';
 
 import PagePalette from '../../config/PagePalette';
 
@@ -17,6 +18,10 @@ export default function WelcomeBanner({ props }) {
         <div style={styles.vs}>vs</div>
         <FaRobot size="10vh" />
       </div>
+      <div style={styles.footer}>
+        <div style={styles.play}>Play</div>
+        <BsPlayFill size="5vh" />
+      </div>
     </div>
   );
 }
@@ -29,11 +34,21 @@ const styles = {
     display: 'grid',
     justifyContent: 'center',
     alignItems: 'center',
-    gridGap: 30,
+    gridGap: '5vh',
     gridTemplateColumns: 'auto auto auto',
-    marginTop: '2vh',
+    margin: '2vh',
   },
   vs: {
     fontSize: '5vh',
+  },
+  play: {
+    fontSize: '3vh',
+  },
+  footer: {
+    display: 'grid',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gridTemplateColumns: 'auto auto auto',
+    cursor: 'pointer',
   },
 };
