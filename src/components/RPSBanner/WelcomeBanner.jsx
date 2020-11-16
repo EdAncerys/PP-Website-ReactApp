@@ -28,7 +28,7 @@ export default function WelcomeBanner({ props }) {
         <FaRobot size="10vh" />
       </div>
       <div style={styles.footer} onClick={() => handlePlayClick()}>
-        <div style={styles.play}>Play</div>
+        <div style={styles.playBtn}>Play</div>
         <BsPlayFill size="5vh" />
       </div>
     </div>
@@ -50,7 +50,7 @@ const styles = {
   vs: {
     fontSize: '5vh',
   },
-  play: {
+  playBtn: {
     fontSize: '3vh',
   },
   footer: {
