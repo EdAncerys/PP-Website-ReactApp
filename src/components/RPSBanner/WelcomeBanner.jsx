@@ -7,6 +7,7 @@ import { FaRobot } from 'react-icons/fa';
 import { BsPlayFill } from 'react-icons/bs';
 
 import PagePalette from '../../config/PagePalette';
+import RPSPlayer from './RPSPlayer';
 
 export default function WelcomeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
@@ -22,7 +23,7 @@ export default function WelcomeBanner({ props }) {
     <div style={{ color: PagePalette[manageAppContext.page].secondary }}>
       {!game && <div style={styles.title}>Hi and Welcome To The RPS Game</div>}
       <div style={styles.content}>
-        <GiGingerbreadMan size="10vh" />
+        <RPSPlayer />
         <div style={styles.vs}>vs</div>
         <FaRobot size="10vh" />
       </div>
