@@ -20,7 +20,15 @@ export default function WelcomeBanner({ props }) {
   };
 
   return (
-    <div style={{ color: PagePalette[manageAppContext.page].secondary }}>
+    <div
+      style={{
+        display: 'grid',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        color: PagePalette[manageAppContext.page].secondary,
+      }}
+    >
       <div style={styles.title}>
         {!game && <div>Hi and Welcome To The RPS Game</div>}
         {game && <div>Rock Paper Scissors</div>}
