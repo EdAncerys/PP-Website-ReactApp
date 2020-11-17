@@ -21,7 +21,10 @@ export default function WelcomeBanner({ props }) {
 
   return (
     <div style={{ color: PagePalette[manageAppContext.page].secondary }}>
-      {!game && <div style={styles.title}>Hi and Welcome To The RPS Game</div>}
+      <div style={styles.title}>
+        {!game && <div>Hi and Welcome To The RPS Game</div>}
+        {game && <div>Rock Paper Scissors</div>}
+      </div>
       <div style={styles.content}>
         <RPSPlayer name="Player" avatar={<GiGingerbreadMan size="10vh" />} />
         <div style={styles.vs}>vs</div>
