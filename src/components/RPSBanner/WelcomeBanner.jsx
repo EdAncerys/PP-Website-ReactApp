@@ -34,7 +34,7 @@ export default function WelcomeBanner({ props }) {
         <div style={styles.vs}>vs</div>
         <RPSPlayer name="R2-D2 The Robot" avatar={<FaRobot size="10vh" />} />
       </div>
-      <PlayButton />
+      {!game && <PlayButton />}
     </div>
   );
 }
