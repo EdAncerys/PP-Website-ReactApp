@@ -36,7 +36,7 @@ export default function WelcomeBanner({ props }) {
       <div style={styles.content}>
         <RPSPlayer name="Player" avatar={<GiGingerbreadMan size="10vh" />} />
         <div style={styles.vs}>vs</div>
-        <RPSPlayer name="Ralf The Robot" avatar={<FaRobot size="10vh" />} />
+        <RPSPlayer name="R2-D2 The Robot" avatar={<FaRobot size="10vh" />} />
       </div>
       <div style={styles.footer} onClick={() => handlePlayClick()}>
         <div style={styles.playBtn}>Play</div>
