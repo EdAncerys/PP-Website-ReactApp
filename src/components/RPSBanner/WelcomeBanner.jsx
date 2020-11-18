@@ -4,20 +4,16 @@ import { RPSContext } from '../../pages/RPSPage';
 
 import { GiGingerbreadMan } from 'react-icons/gi';
 import { FaRobot } from 'react-icons/fa';
-import { BsPlayFill } from 'react-icons/bs';
 
 import PagePalette from '../../config/PagePalette';
 import RPSPlayer from './RPSPlayer';
+import PlayButton from './PlayButton';
 
 export default function WelcomeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
   const { manageRPSContext } = useContext(RPSContext);
 
   const game = manageRPSContext.game;
-
-  const handlePlayClick = () => {
-    manageRPSContext.setGame(!game);
-  };
 
   return (
     <div
@@ -38,10 +34,7 @@ export default function WelcomeBanner({ props }) {
         <div style={styles.vs}>vs</div>
         <RPSPlayer name="R2-D2 The Robot" avatar={<FaRobot size="10vh" />} />
       </div>
-      <div style={styles.footer} onClick={() => handlePlayClick()}>
-        <div style={styles.playBtn}>Play</div>
-        <BsPlayFill size="5vh" />
-      </div>
+      <PlayButton />
     </div>
   );
 }
@@ -60,15 +53,5 @@ const styles = {
   },
   vs: {
     fontSize: '5vh',
-  },
-  playBtn: {
-    fontSize: '3vh',
-  },
-  footer: {
-    display: 'grid',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gridTemplateColumns: 'auto auto auto',
-    cursor: 'pointer',
   },
 };
