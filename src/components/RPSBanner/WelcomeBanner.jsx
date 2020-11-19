@@ -14,6 +14,8 @@ export default function WelcomeBanner({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
 
   const game = manageRPSContext.game;
+  const playerScore = manageRPSContext.playerScore;
+  const robotScore = manageRPSContext.robotScore;
 
   return (
     <div
@@ -31,7 +33,16 @@ export default function WelcomeBanner({ props }) {
       </div>
       <div style={styles.content}>
         <RPSPlayer name="Player" avatar={<GiGingerbreadMan size="10vh" />} />
-        <div style={styles.vs}>vs</div>
+        <div>
+          {!game && <div style={styles.vs}>vs</div>}
+          {game && (
+            <div>
+              <div style={styles.score}>{playerScore}</div>
+              <div style={styles.vs}>vs</div>
+              <div style={styles.score}>{robotScore}</div>
+            </div>
+          )}
+        </div>
         <RPSPlayer name="R2-D2 The Robot" avatar={<FaRobot size="10vh" />} />
       </div>
       {!game && <PlayButton />}

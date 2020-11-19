@@ -9,10 +9,16 @@ export const RPSContext = React.createContext();
 
 export default function RPSPage({ props }) {
   const [game, setGame] = useState(false);
+  const [playerScore, setPlayerScore] = useState(0);
+  const [robotScore, setRobotScore] = useState(0);
 
   const manageRPSContext = {
     game: game,
     setGame: setGame,
+    playerScore: playerScore,
+    setPlayerScore: setPlayerScore,
+    robotScore: robotScore,
+    setRobotScore: setRobotScore,
   };
 
   return (
