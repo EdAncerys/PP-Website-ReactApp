@@ -36,7 +36,7 @@ export default function WelcomeBanner({ props }) {
         <div>
           {!game && <div style={styles.vs}>vs</div>}
           {game && (
-            <div>
+            <div style={styles.wrapper}>
               <div style={styles.score}>{playerScore}</div>
               <div style={styles.vs}>vs</div>
               <div style={styles.score}>{robotScore}</div>
@@ -62,7 +62,18 @@ const styles = {
     gridTemplateColumns: 'auto auto auto',
     margin: '2vh',
   },
+  wrapper: {
+    display: 'grid',
+    gridTemplateColumns: 'auto auto auto',
+    gridGap: '3vh',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+  },
   vs: {
     fontSize: '5vh',
+  },
+  score: {
+    fontSize: '7vh',
   },
 };
