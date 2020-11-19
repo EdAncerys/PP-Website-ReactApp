@@ -8,6 +8,8 @@ import { FaRobot } from 'react-icons/fa';
 import PagePalette from '../../config/PagePalette';
 import RPSPlayer from './RPSPlayer';
 import PlayButton from './PlayButton';
+import colors from '../../config/colors';
+import RPSComponent from './RPSComponent';
 
 export default function WelcomeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
@@ -45,7 +47,10 @@ export default function WelcomeBanner({ props }) {
         </div>
         <RPSPlayer name="R2-D2 The Robot" avatar={<FaRobot size="10vh" />} />
       </div>
-      {!game && <PlayButton />}
+      <div>
+        {game && <RPSComponent />}
+        {!game && <PlayButton />}
+      </div>
     </div>
   );
 }
@@ -75,5 +80,6 @@ const styles = {
   },
   score: {
     fontSize: '7vh',
+    color: colors.red,
   },
 };
