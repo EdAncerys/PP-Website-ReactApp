@@ -36,14 +36,14 @@ export default function WelcomeBanner({ props }) {
       <div style={styles.content}>
         <RPSPlayer name="Player" avatar={<GiGingerbreadMan size="10vh" />} />
         <div>
-          {!game && <div style={styles.vs}>vs</div>}
+          {/* {!game && <div style={styles.vs}>vs</div>}
           {game && (
             <div style={styles.wrapper}>
               <div style={styles.score}>{playerScore}</div>
               <div style={styles.vs}>vs</div>
               <div style={styles.score}>{robotScore}</div>
             </div>
-          )}
+          )} */}
         </div>
         <RPSPlayer name="R2-D2 The Robot" avatar={<FaRobot size="10vh" />} />
       </div>
