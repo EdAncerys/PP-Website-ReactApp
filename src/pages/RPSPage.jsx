@@ -12,6 +12,8 @@ export default function RPSPage({ props }) {
   const [playerScore, setPlayerScore] = useState(0);
   const [robotScore, setRobotScore] = useState(0);
 
+  const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSiteRPS.App';
+
   const manageRPSContext = {
     game: game,
     setGame: setGame,
@@ -20,6 +22,19 @@ export default function RPSPage({ props }) {
     robotScore: robotScore,
     setRobotScore: setRobotScore,
   };
+
+  useEffect(() => {
+    const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
+    const userSession = JSON.parse(data);
+    if (userSession) setGame(userSession.game);
+  }, []);
+
+  useEffect(() => {
+    sessionStorage.setItem(
+      SESSION_STORAGE_KEY,
+      JSON.stringify(manageRPSContext)
+    );
+  }, [manageRPSContext]);
 
   return (
     <RPSContext.Provider
