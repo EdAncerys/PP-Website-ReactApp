@@ -11,21 +11,27 @@ export default function ScoreBoard({ props }) {
   const robotScore = manageRPSContext.robotScore;
 
   return (
-    <div style={styles.container}>
+    <div>
       {!game && <div style={styles.vs}>vs</div>}
       {game && (
-        <div style={styles.wrapper}>
-          <div style={styles.board}>
-            <div style={styles.title}>Wins</div>
-            <div style={styles.score}>{playerScore}</div>
+        <div>
+          <div style={styles.roundNo}>
+            <div style={styles.title}>Round</div>
+            <div style={styles.title}>{playerScore}</div>
           </div>
-          <div style={{ display: 'grid', color: colors.red }}>
-            <div style={styles.title}>Ties</div>
-            <div style={styles.score}>{robotScore}</div>
-          </div>
-          <div style={styles.board}>
-            <div style={styles.title}>Wins</div>
-            <div style={styles.score}>{robotScore}</div>
+          <div style={styles.wrapper}>
+            <div style={styles.board}>
+              <div style={styles.title}>Wins</div>
+              <div style={styles.score}>{playerScore}</div>
+            </div>
+            <div style={{ display: 'grid', color: colors.red }}>
+              <div style={styles.title}>Ties</div>
+              <div style={styles.score}>{robotScore}</div>
+            </div>
+            <div style={styles.board}>
+              <div style={styles.title}>Wins</div>
+              <div style={styles.score}>{robotScore}</div>
+            </div>
           </div>
         </div>
       )}
@@ -34,7 +40,11 @@ export default function ScoreBoard({ props }) {
 }
 
 const styles = {
-  container: {},
+  roundNo: {
+    display: 'grid',
+    alignItems: 'center',
+    gridTemplateColumns: 'auto auto',
+  },
   wrapper: {
     display: 'grid',
     gridTemplateColumns: 'auto auto auto',
