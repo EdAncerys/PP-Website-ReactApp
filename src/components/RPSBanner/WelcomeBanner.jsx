@@ -49,7 +49,11 @@ export default function WelcomeBanner({ props }) {
       </div>
       <div>
         {game && <RPSComponent />}
-        {!game && <PlayButton />}
+        {!game && (
+          <div style={styles.playButton}>
+            <PlayButton />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -81,5 +85,9 @@ const styles = {
   score: {
     fontSize: '7vh',
     color: colors.red,
+  },
+  playButton: {
+    display: 'grid',
+    justifyContent: 'center',
   },
 };

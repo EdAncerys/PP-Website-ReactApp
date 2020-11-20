@@ -32,5 +32,6 @@ const styles = {
   },
   btnText: {
     fontSize: '3vh',
+    marginLeft: '2vh',
   },
 };
