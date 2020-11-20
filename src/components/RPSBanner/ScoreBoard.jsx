@@ -19,7 +19,10 @@ export default function ScoreBoard({ props }) {
             <div style={styles.title}>Wins</div>
             <div style={styles.score}>{playerScore}</div>
           </div>
-          <div style={styles.vs}>vs</div>
+          <div style={{ display: 'grid', color: colors.red }}>
+            <div style={styles.title}>Ties</div>
+            <div style={styles.score}>{robotScore}</div>
+          </div>
           <div style={styles.board}>
             <div style={styles.title}>Wins</div>
             <div style={styles.score}>{robotScore}</div>
@@ -36,22 +39,19 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: 'auto auto auto',
     gridGap: '3vh',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
   },
   vs: {
     fontSize: '5vh',
   },
   board: {
     display: 'grid',
-    justifyContent: 'center',
     color: colors.red,
   },
   title: {
     fontSize: '4vh',
   },
   score: {
+    alignSelf: 'start',
     fontSize: '7vh',
   },
 };
