@@ -27,6 +27,8 @@ const styles = {
     alignItems: 'center',
     gridTemplateColumns: 'auto auto auto',
     cursor: 'pointer',
+    border: '1px solid',
+    borderRadius: 20,
   },
   btnText: {
     fontSize: '3vh',
