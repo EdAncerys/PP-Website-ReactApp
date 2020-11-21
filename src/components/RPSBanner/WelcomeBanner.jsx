@@ -6,7 +6,7 @@ import { GiGingerbreadMan } from 'react-icons/gi';
 import { FaRobot } from 'react-icons/fa';
 
 import PagePalette from '../../config/PagePalette';
-import RPSPlayer from './RPSPlayer';
+import RPSAvatar from './RPSAvatar';
 import PlayButton from './PlayButton';
 import RPSComponent from './RPSComponent';
 import ScoreBoard from './ScoreBoard';
@@ -32,9 +32,9 @@ export default function WelcomeBanner({ props }) {
         {game && <div>Rock Paper Scissors</div>}
       </div>
       <div style={styles.content}>
-        <RPSPlayer name="Player" avatar={<GiGingerbreadMan size="10vh" />} />
+        <RPSAvatar name="Player" avatar={<GiGingerbreadMan size="10vh" />} />
         <ScoreBoard />
-        <RPSPlayer name="R2-D2 The Robot" avatar={<FaRobot size="10vh" />} />
+        <RPSAvatar name="R2-D2 The Robot" avatar={<FaRobot size="10vh" />} />
       </div>
       <div>
         {game && <RPSComponent />}
