@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import WelcomeBanner from '../components/RPSBanner/WelcomeBanner';
 
 import colors from '../config/colors';
-import WelcomeBanner from '../components/RPSBanner/WelcomeBanner';
 
 export const RPSContext = React.createContext();
 
 export default function RPSPage({ props }) {
   const [game, setGame] = useState(false);
-  const [playerScore, setPlayerScore] = useState(0);
-  const [robotScore, setRobotScore] = useState(0);
-  const [tiesScore, setTiesScore] = useState(0);
+  const [playerScore, setPlayerScore] = useState(1);
+  const [robotScore, setRobotScore] = useState(2);
+  const [tiesScore, setTiesScore] = useState(3);
   const [round, setRound] = useState(0);
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSiteRPS.App';

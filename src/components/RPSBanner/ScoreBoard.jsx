@@ -9,6 +9,8 @@ export default function Scorewrapper({ props }) {
   const game = manageRPSContext.game;
   const playerScore = manageRPSContext.playerScore;
   const robotScore = manageRPSContext.robotScore;
+  const ties = manageRPSContext.tiesScore;
+  const round = manageRPSContext.round;
 
   return (
     <div>
@@ -17,7 +19,7 @@ export default function Scorewrapper({ props }) {
         <div>
           <div style={styles.roundScore}>
             <div style={styles.title}>Round</div>
-            <div style={styles.title}>{playerScore}</div>
+            <div style={styles.title}>{round}</div>
           </div>
           <div style={styles.container}>
             <div style={styles.wrapper}>
@@ -26,7 +28,7 @@ export default function Scorewrapper({ props }) {
             </div>
             <div style={{ display: 'grid', color: colors.red }}>
               <div style={styles.title}>Ties</div>
-              <div style={styles.score}>{robotScore}</div>
+              <div style={styles.score}>{ties}</div>
             </div>
             <div style={styles.wrapper}>
               <div style={styles.title}>Wins</div>
