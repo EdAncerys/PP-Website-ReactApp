@@ -15,6 +15,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
+    cursor: 'pointer',
   },
   name: {
     fontSize: '2.5vh',
