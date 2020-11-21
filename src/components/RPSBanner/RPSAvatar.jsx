@@ -1,5 +1,4 @@
 import React from 'react';
-import { GiGingerbreadMan } from 'react-icons/gi';
 
 export default function RPSAvatar({ name, avatar }) {
   return (
