@@ -24,6 +24,6 @@ const styles = {
     gridTemplateColumns: 'auto auto auto',
     justifyContent: 'center',
     alignItems: 'center',
-    gridGap: '2vw',
+    gridGap: '5vw',
   },
 };
