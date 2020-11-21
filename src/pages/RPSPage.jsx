@@ -9,9 +9,9 @@ export const RPSContext = React.createContext();
 
 export default function RPSPage({ props }) {
   const [game, setGame] = useState(false);
-  const [playerScore, setPlayerScore] = useState(1);
-  const [robotScore, setRobotScore] = useState(2);
-  const [tiesScore, setTiesScore] = useState(3);
+  const [playerScore, setPlayerScore] = useState(0);
+  const [robotScore, setRobotScore] = useState(0);
+  const [tiesScore, setTiesScore] = useState(0);
   const [round, setRound] = useState(0);
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSiteRPS.App';

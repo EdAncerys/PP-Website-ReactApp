@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { RPSContext } from '../../pages/RPSPage';
 
 export default function RPSComponent({ props }) {
+  const { manageRPSContext } = useContext(RPSContext);
+
   return (
     <div style={styles.container}>
-      <div>Make A Choice</div>
+      <div>{manageRPSContext.round}</div>
     </div>
   );
 }
