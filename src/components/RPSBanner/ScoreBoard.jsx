@@ -3,7 +3,7 @@ import { RPSContext } from '../../pages/RPSPage';
 
 import colors from '../../config/colors';
 
-export default function ScoreBoard({ props }) {
+export default function Scorewrapper({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
 
   const game = manageRPSContext.game;
@@ -15,12 +15,12 @@ export default function ScoreBoard({ props }) {
       {!game && <div style={styles.vs}>vs</div>}
       {game && (
         <div>
-          <div style={styles.roundNo}>
+          <div style={styles.roundScore}>
             <div style={styles.title}>Round</div>
             <div style={styles.title}>{playerScore}</div>
           </div>
-          <div style={styles.wrapper}>
-            <div style={styles.board}>
+          <div style={styles.container}>
+            <div style={styles.wrapper}>
               <div style={styles.title}>Wins</div>
               <div style={styles.score}>{playerScore}</div>
             </div>
@@ -28,7 +28,7 @@ export default function ScoreBoard({ props }) {
               <div style={styles.title}>Ties</div>
               <div style={styles.score}>{robotScore}</div>
             </div>
-            <div style={styles.board}>
+            <div style={styles.wrapper}>
               <div style={styles.title}>Wins</div>
               <div style={styles.score}>{robotScore}</div>
             </div>
@@ -40,12 +40,12 @@ export default function ScoreBoard({ props }) {
 }
 
 const styles = {
-  roundNo: {
+  roundScore: {
     display: 'grid',
     alignItems: 'center',
     gridTemplateColumns: 'auto auto',
   },
-  wrapper: {
+  container: {
     display: 'grid',
     gridTemplateColumns: 'auto auto auto',
     gridGap: '3vh',
@@ -53,15 +53,18 @@ const styles = {
   vs: {
     fontSize: '5vh',
   },
-  board: {
+  wrapper: {
     display: 'grid',
     color: colors.red,
   },
   title: {
-    fontSize: '4vh',
+    // gridColumn: '1 / 2',
+    alignSelf: 'end',
+    fontSize: '3vh',
   },
   score: {
-    alignSelf: 'start',
-    fontSize: '7vh',
+    display: 'grid',
+    alignContent: 'start',
+    fontSize: '5vh',
   },
 };
