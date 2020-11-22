@@ -13,7 +13,7 @@ export default function RPSComponent({ props }) {
   const fade = playerChoice ? 0.2 : 1;
 
   const handleClick = (name) => {
-    manageRPSContext.setPlayerChoice(name);
+    if (!playerChoice) manageRPSContext.setPlayerChoice(name);
   };
 
   return (
