@@ -14,6 +14,7 @@ export default function RPSPage({ props }) {
   const [tiesScore, setTiesScore] = useState(0);
   const [round, setRound] = useState(0);
   const [playerChoice, setPlayerChoice] = useState();
+  const [R2D2Choice, setR2D2Choice] = useState();
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSiteRPS.App';
 
@@ -30,6 +31,8 @@ export default function RPSPage({ props }) {
     setRound: setRound,
     playerChoice: playerChoice,
     setPlayerChoice: setPlayerChoice,
+    R2D2Choice: R2D2Choice,
+    setR2D2Choice: setR2D2Choice,
   };
 
   useEffect(() => console.log(playerChoice), []);

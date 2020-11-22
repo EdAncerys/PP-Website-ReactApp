@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { AppContext } from '../../App';
 import { RPSContext } from '../../pages/RPSPage';
 
@@ -15,7 +15,20 @@ export default function WelcomeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
   const { manageRPSContext } = useContext(RPSContext);
 
+  const [timer, setTimer] = useState(false);
+
   const game = manageRPSContext.game;
+  const playerChoice = manageRPSContext.playerChoice;
+
+  const handleR2D2Colors = () => {
+    console.log('bang');
+  };
+
+  useEffect(() => {
+    if (playerChoice) setInterval(() => handleR2D2Colors(), 500);
+    if (playerChoice) setTimer(!timer);
+    if (playerChoice) setTimeout(() => setTimer(false), 2000);
+  }, [playerChoice]);
 
   return (
     <div
@@ -34,7 +47,7 @@ export default function WelcomeBanner({ props }) {
       <div style={styles.content}>
         <RPSAvatar name="Player" avatar={<GiGingerbreadMan size="10vh" />} />
         <ScoreBoard />
-        <RPSAvatar name="R2-D2 The Robot" avatar={<FaRobot size="10vh" />} />
+        <RPSAvatar name="R2-D2" avatar={<FaRobot size="10vh" />} />
       </div>
       <div>
         {game && <RPSComponent />}
