@@ -11,7 +11,7 @@ export default function RPSAvatar({ name, avatar }) {
     setClick(!click);
     setTimeout(() => {
       setClick(false);
-    }, 300);
+    }, 200);
   };
 
   return (
@@ -32,7 +32,7 @@ const styles = {
     alignItems: 'center',
     textAlign: 'center',
     cursor: 'pointer',
-    transition: '0.2s',
+    transition: '0.15s',
   },
   name: {
     fontSize: '2.5vh',

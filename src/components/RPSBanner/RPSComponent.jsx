@@ -9,33 +9,32 @@ import { FaRegHandScissors } from 'react-icons/fa';
 export default function RPSComponent({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
 
+  const playerChoice = manageRPSContext.playerChoice;
+
   const handleClick = (name) => {
     manageRPSContext.setPlayerChoice(name);
   };
 
   return (
     <div style={styles.container}>
-      <RPSAvatar
-        name="Rock"
-        avatar={
-          <FaRegHandRock size="6vh" onClick={() => console.log('Rock')} />
-        }
-      />
-      <RPSAvatar
-        name="Paper"
-        avatar={
-          <FaRegHandPaper size="6vh" onClick={() => console.log('Paper')} />
-        }
-      />
-      <RPSAvatar
-        name="Scissors"
-        avatar={
-          <FaRegHandScissors
-            size="6vh"
-            onClick={() => console.log('Scissors')}
-          />
-        }
-      />
+      <div
+        style={{ opacity: playerChoice !== 'Rock' ? 1 : 0.2 }}
+        onClick={() => console.log('Rock')}
+      >
+        <RPSAvatar name="Rock" avatar={<FaRegHandRock size="6vh" />} />
+      </div>
+      <div
+        style={{ opacity: playerChoice !== 'Paper' ? 1 : 0.2 }}
+        onClick={() => console.log('Paper')}
+      >
+        <RPSAvatar name="Paper" avatar={<FaRegHandPaper size="6vh" />} />
+      </div>
+      <div
+        style={{ opacity: playerChoice !== 'Scissors' ? 1 : 0.2 }}
+        onClick={() => console.log('Scissors')}
+      >
+        <RPSAvatar name="Scissors" avatar={<FaRegHandScissors size="6vh" />} />
+      </div>
     </div>
   );
 }
