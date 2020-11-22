@@ -10,6 +10,7 @@ export default function RPSComponent({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
 
   const playerChoice = manageRPSContext.playerChoice;
+  const fade = playerChoice ? 0.2 : 1;
 
   const handleClick = (name) => {
     manageRPSContext.setPlayerChoice(name);
@@ -18,20 +19,20 @@ export default function RPSComponent({ props }) {
   return (
     <div style={styles.container}>
       <div
-        style={{ opacity: playerChoice !== 'Rock' ? 1 : 0.2 }}
-        onClick={() => console.log('Rock')}
+        style={{ opacity: playerChoice === 'Rock' ? 1 : fade }}
+        onClick={() => handleClick('Rock')}
       >
         <RPSAvatar name="Rock" avatar={<FaRegHandRock size="6vh" />} />
       </div>
       <div
-        style={{ opacity: playerChoice !== 'Paper' ? 1 : 0.2 }}
-        onClick={() => console.log('Paper')}
+        style={{ opacity: playerChoice === 'Paper' ? 1 : fade }}
+        onClick={() => handleClick('Paper')}
       >
         <RPSAvatar name="Paper" avatar={<FaRegHandPaper size="6vh" />} />
       </div>
       <div
-        style={{ opacity: playerChoice !== 'Scissors' ? 1 : 0.2 }}
-        onClick={() => console.log('Scissors')}
+        style={{ opacity: playerChoice === 'Scissors' ? 1 : fade }}
+        onClick={() => handleClick('Scissors')}
       >
         <RPSAvatar name="Scissors" avatar={<FaRegHandScissors size="6vh" />} />
       </div>
