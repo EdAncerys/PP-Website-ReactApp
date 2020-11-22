@@ -5,17 +5,18 @@ export default function RPSAvatar({ name, avatar }) {
   const [click, setClick] = useState(false);
 
   const color = click ? colors.red : '';
+  const transform = click ? 'scale(0.95)' : 'scale(1)';
 
   const handleClick = () => {
     setClick(!click);
     setTimeout(() => {
       setClick(false);
-    }, 500);
+    }, 300);
   };
 
   return (
     <div
-      style={{ ...styles.container, ...{ color: color } }}
+      style={{ ...styles.container, ...{ color: color, transform: transform } }}
       onClick={() => handleClick()}
     >
       <div style={styles.name}>{name}</div>
@@ -31,6 +32,7 @@ const styles = {
     alignItems: 'center',
     textAlign: 'center',
     cursor: 'pointer',
+    transition: '0.2s',
   },
   name: {
     fontSize: '2.5vh',
