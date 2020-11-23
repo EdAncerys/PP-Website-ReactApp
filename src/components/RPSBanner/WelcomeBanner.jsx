@@ -21,13 +21,22 @@ export default function WelcomeBanner({ props }) {
   const playerChoice = manageRPSContext.playerChoice;
 
   const handleR2D2Colors = () => {
-    console.log('bang');
+    if (timer) console.log('bang');
+    setTimeout(() => console.log('test'), 2000);
+    // console.log(timer);
   };
 
+  // useEffect(() => {
+  //   if (playerChoice) {
+  //     setInterval(() => handleR2D2Colors(), 500);
+  //     setTimeout(() => setTimer(false), 2000);
+  //   }
+  // }, [timer]);
+
   useEffect(() => {
+    console.log(timer);
+    setTimer(true);
     if (playerChoice) setInterval(() => handleR2D2Colors(), 500);
-    if (playerChoice) setTimer(!timer);
-    if (playerChoice) setTimeout(() => setTimer(false), 2000);
   }, [playerChoice]);
 
   return (
