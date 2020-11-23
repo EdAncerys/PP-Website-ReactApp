@@ -102,7 +102,7 @@ const styles = {
     justifyItems: 'center',
     textAlign: 'center',
     fontSize: '3vh',
-    minHeight: '5vh',
+    maxWidth: 200,
   },
   message: {
     display: 'grid',
