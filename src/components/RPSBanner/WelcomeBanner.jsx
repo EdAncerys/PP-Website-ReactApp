@@ -20,23 +20,33 @@ export default function WelcomeBanner({ props }) {
   const game = manageRPSContext.game;
   const playerChoice = manageRPSContext.playerChoice;
 
-  const handleR2D2Colors = () => {
-    if (timer) console.log('bang');
-    setTimeout(() => console.log('test'), 2000);
-    // console.log(timer);
+  var myVar;
+
+  function myFunction() {
+    myVar = setInterval(alertFunc, 500);
+  }
+
+  function alertFunc() {
+    console.log('Hello!');
+  }
+
+  const stopFunc = () => {
+    clearInterval(myVar);
   };
 
-  // useEffect(() => {
-  //   if (playerChoice) {
-  //     setInterval(() => handleR2D2Colors(), 500);
-  //     setTimeout(() => setTimer(false), 2000);
-  //   }
-  // }, [timer]);
+  const handleRainbowColors = () => {
+    setInterval(() => console.log('logger'), 500);
+  };
 
   useEffect(() => {
-    console.log(timer);
-    setTimer(true);
-    if (playerChoice) setInterval(() => handleR2D2Colors(), 500);
+    if (playerChoice) {
+      // setInterval(handleR2D2Colors, 500);
+      myFunction();
+      setTimeout(() => {
+        stopFunc();
+        console.log('stop');
+      }, 2000);
+    }
   }, [playerChoice]);
 
   return (
