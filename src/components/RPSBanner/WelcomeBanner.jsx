@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AppContext } from '../../App';
 import { RPSContext } from '../../pages/RPSPage';
 
@@ -15,36 +15,28 @@ export default function WelcomeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
   const { manageRPSContext } = useContext(RPSContext);
 
-  const [timer, setTimer] = useState(false);
-
   const game = manageRPSContext.game;
   const playerChoice = manageRPSContext.playerChoice;
 
-  var myVar;
+  let rainbowColors;
 
-  function myFunction() {
-    myVar = setInterval(alertFunc, 500);
-  }
-
-  function alertFunc() {
-    console.log('Hello!');
-  }
-
-  const stopFunc = () => {
-    clearInterval(myVar);
+  const handleTimer = () => {
+    rainbowColors = setInterval(handleRainbowColors, 500);
   };
 
   const handleRainbowColors = () => {
-    setInterval(() => console.log('logger'), 500);
+    console.log('Hello!');
+  };
+
+  const stopTimer = () => {
+    clearInterval(rainbowColors);
   };
 
   useEffect(() => {
     if (playerChoice) {
-      // setInterval(handleR2D2Colors, 500);
-      myFunction();
+      handleTimer();
       setTimeout(() => {
-        stopFunc();
-        console.log('stop');
+        stopTimer();
       }, 2000);
     }
   }, [playerChoice]);
