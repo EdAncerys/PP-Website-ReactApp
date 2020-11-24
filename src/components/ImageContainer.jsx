@@ -95,6 +95,6 @@ const styles = {
     alignItems: 'center',
   },
   img: {
-    height: 200,
+    width: 200,
   },
 };

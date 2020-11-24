@@ -3,10 +3,10 @@ import { AppContext } from '../../App';
 import ImageContainer from '../ImageContainer';
 import Coding from '../../img/PPPhoto.jpg';
 import textDescription from '../../text/ProjectDescription';
-import PagePalette from '../../config/PagePalette';
 import HeaderForBanner from '../HeaderForBanner';
-
 import FooterForBanner from '../FooterForBanner';
+
+import PagePalette from '../../config/PagePalette';
 
 export default function TickTackToeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
@@ -38,12 +38,12 @@ export default function TickTackToeBanner({ props }) {
           <ImageContainer
             img={Coding}
             altText="Tick-Tack-Toe"
-            text={textDescription.AboutInfoBanner}
+            text={textDescription.PP}
             color={PagePalette[pageNumber].secondary}
           />
         </div>
         <FooterForBanner
-          name="See What I Can Do"
+          name="Personal Portfolio. See What I Can Do"
           type="Informational"
           color={PagePalette[pageNumber].secondary}
           page={pageNumber}

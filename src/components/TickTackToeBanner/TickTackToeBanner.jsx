@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../App';
 import ImageContainer from '../ImageContainer';
-import TickTackToeImg from '../../img/Tick-Tack-Toe.png';
+import TickTackToeImg from '../../img/TicTackToe.png';
 import textDescription from '../../text/ProjectDescription';
 import HeaderForBanner from '../HeaderForBanner';
 import FooterForBanner from '../FooterForBanner';
@@ -43,8 +43,8 @@ export default function TickTackToeBanner({ props }) {
           />
         </div>
         <FooterForBanner
-          name="Game"
-          type="Board Game: Tic Tack Toe"
+          name="Board Game: Tic Tack Toe"
+          type="Game"
           color={PagePalette[pageNumber].secondary}
           page={3}
         />

@@ -43,11 +43,17 @@ export default function PlayerVPlayerBanner({ props }) {
           {manageTickTackToeContext.gameOn && (
             <div style={styles.message}>
               <div className="teko" style={styles.scoreNumber}>
-                {manageTickTackToeContext.playerOneScore}
+                <div style={styles.title}>Wins</div>
+                <div style={styles.score}>
+                  {manageTickTackToeContext.playerOneScore}
+                </div>
               </div>
               <div style={styles.scoreText}>vs</div>
               <div className="teko" style={styles.scoreNumber}>
-                {manageTickTackToeContext.playerTwoScore}
+                <div style={styles.title}>Wins</div>
+                <div style={styles.score}>
+                  {manageTickTackToeContext.playerTwoScore}
+                </div>
               </div>
             </div>
           )}
@@ -96,7 +102,7 @@ const styles = {
     justifyItems: 'center',
     textAlign: 'center',
     fontSize: '3vh',
-    minHeight: '5vh',
+    maxWidth: 200,
   },
   message: {
     display: 'grid',
@@ -109,7 +115,6 @@ const styles = {
     display: 'grid',
     alignContent: 'center',
     justifyItems: 'center',
-    fontSize: 60,
   },
   scoreText: {
     display: 'grid',
@@ -126,5 +131,14 @@ const styles = {
     gridTemplateColumns: 'auto auto',
     justifyItems: 'center',
     alignContent: 'center',
+  },
+  title: {
+    alignSelf: 'end',
+    fontSize: '3vh',
+  },
+  score: {
+    display: 'grid',
+    alignContent: 'start',
+    fontSize: '5vh',
   },
 };

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../App';
 import ImageContainer from '../ImageContainer';
-import LegoManImg from '../../img/Lego-Man.png';
+import RPS from '../../img/RPS.png';
 import textDescription from '../../text/ProjectDescription';
-import FooterForBanner from '../FooterForBanner';
 import HeaderForBanner from '../HeaderForBanner';
+import FooterForBanner from '../FooterForBanner';
 
 import PagePalette from '../../config/PagePalette';
 
@@ -12,7 +12,7 @@ export default function TickTackToeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
   const mediaQuery = manageAppContext.mediaQuery;
 
-  const pageNumber = 1;
+  const pageNumber = 4;
 
   return (
     <div
@@ -36,15 +36,15 @@ export default function TickTackToeBanner({ props }) {
         />
         <div style={styles.imageContainer}>
           <ImageContainer
-            img={LegoManImg}
-            altText="Tick-Tack-Toe"
-            text={textDescription.AboutInfoBanner}
+            img={RPS}
+            altText="RPS"
+            text={textDescription.RPS}
             color={PagePalette[pageNumber].secondary}
           />
         </div>
         <FooterForBanner
-          name="About"
-          type="Informational"
+          name="Board Game: RPS"
+          type="Game"
           color={PagePalette[pageNumber].secondary}
           page={pageNumber}
         />
