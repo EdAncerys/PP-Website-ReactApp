@@ -11,7 +11,7 @@ export default function ContentBanner({ props }) {
       <IntroductionBanner />
       <PPBanner />
       <TickTackToeBanner />
-      <RPSBanner />
+      {/* <RPSBanner /> */}
       <Footer />
     </div>
   );
