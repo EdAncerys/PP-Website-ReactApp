@@ -36,6 +36,10 @@ export default function RPSPage({ props }) {
   };
 
   useEffect(() => {
+    console.log(playerChoice, R2D2Choice);
+  }, [playerChoice, R2D2Choice]);
+
+  useEffect(() => {
     const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
     const userSession = JSON.parse(data);
     if (userSession) {

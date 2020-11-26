@@ -55,7 +55,9 @@ export default function WelcomeBanner({ props }) {
   };
 
   const stopTimer = () => {
+    const robotChoice = ['Rock', 'Paper', 'Scissors'];
     clearInterval(rainbowColors);
+    manageRPSContext.setR2D2Choice(robotChoice[Math.floor(Math.random() * 3)]);
   };
 
   useEffect(() => {
