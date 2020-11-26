@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AppContext } from '../App';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import WelcomeBanner from '../components/RPSBanner/WelcomeBanner';
 
 import colors from '../config/colors';
+import PagePalette from '../config/PagePalette';
 
 export const RPSContext = React.createContext();
 
 export default function RPSPage({ props }) {
+  const { manageAppContext } = useContext(AppContext);
+
   const [game, setGame] = useState(false);
   const [playerScore, setPlayerScore] = useState(0);
   const [robotScore, setRobotScore] = useState(0);
@@ -15,6 +19,9 @@ export default function RPSPage({ props }) {
   const [round, setRound] = useState(0);
   const [playerChoice, setPlayerChoice] = useState();
   const [R2D2Choice, setR2D2Choice] = useState();
+  const [robotColor, setRobotColor] = useState(
+    PagePalette[manageAppContext.page].secondary
+  );
 
   const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSiteRPS.App';
 
@@ -33,6 +40,8 @@ export default function RPSPage({ props }) {
     setPlayerChoice: setPlayerChoice,
     R2D2Choice: R2D2Choice,
     setR2D2Choice: setR2D2Choice,
+    robotColor: robotColor,
+    setRobotColor: setRobotColor,
   };
 
   useEffect(() => {

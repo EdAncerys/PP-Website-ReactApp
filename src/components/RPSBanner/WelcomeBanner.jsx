@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AppContext } from '../../App';
 import { RPSContext } from '../../pages/RPSPage';
 
@@ -16,10 +16,6 @@ import colors from '../../config/colors';
 export default function WelcomeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
   const { manageRPSContext } = useContext(RPSContext);
-
-  const [color, setColor] = useState(
-    PagePalette[manageAppContext.page].secondary
-  );
 
   const game = manageRPSContext.game;
   const playerChoice = manageRPSContext.playerChoice;
@@ -50,8 +46,9 @@ export default function WelcomeBanner({ props }) {
   const handleRainbowColors = () => {
     const totalColors = colorPalate.length;
 
-    setColor(colorPalate[Math.floor(Math.random() * totalColors)]);
-    console.log(totalColors);
+    manageRPSContext.setRobotColor(
+      colorPalate[Math.floor(Math.random() * totalColors)]
+    );
   };
 
   const stopTimer = () => {
@@ -86,7 +83,7 @@ export default function WelcomeBanner({ props }) {
       <div style={styles.content}>
         <RPSAvatar name="Player" avatar={<GiGingerbreadMan size="10vh" />} />
         <ScoreBoard />
-        <div style={{ color: color }}>
+        <div style={{ color: manageRPSContext.robotColor }}>
           <RPSAvatar name="R2-D2" avatar={<FaRobot size="10vh" />} />
         </div>
       </div>

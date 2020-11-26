@@ -4,13 +4,9 @@ import { useMediaQuery } from '../src/hooks/useMediaQuery.jsx';
 import ContentBanner from './components/ContentBanner.jsx';
 import AboutBanner from './components/AboutBanner/AboutBanner';
 import AboutMePage from './pages/AboutMePage';
-import Footer from './components/Footer';
-import Header from './components/Header';
 import TickTackToePage from './pages/TickTackToePage';
 import PPPage from './pages/PPPage';
 import RPSPage from './pages/RPSPage';
-
-import colors from './config/colors';
 
 export const AppContext = React.createContext();
 
