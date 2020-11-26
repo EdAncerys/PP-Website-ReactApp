@@ -11,6 +11,8 @@ import PlayButton from './PlayButton';
 import RPSComponent from './RPSComponent';
 import ScoreBoard from './ScoreBoard';
 
+import colors from '../../config/colors';
+
 export default function WelcomeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
   const { manageRPSContext } = useContext(RPSContext);
@@ -21,6 +23,23 @@ export default function WelcomeBanner({ props }) {
 
   const game = manageRPSContext.game;
   const playerChoice = manageRPSContext.playerChoice;
+  const colorPalate = [
+    colors.yellow,
+    colors.gold,
+    colors.darkBlue,
+    colors.blue,
+    colors.mint,
+    colors.cucumber,
+    colors.green,
+    colors.blueGreen,
+    colors.lightBlue,
+    colors.darkGrey,
+    colors.mediumGrey,
+    colors.lightGrey,
+    colors.electric,
+    colors.pink,
+    colors.red,
+  ];
 
   let rainbowColors;
 
