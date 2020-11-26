@@ -35,8 +35,6 @@ export default function RPSPage({ props }) {
     setR2D2Choice: setR2D2Choice,
   };
 
-  useEffect(() => console.log(playerChoice), []);
-
   useEffect(() => {
     const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
     const userSession = JSON.parse(data);
