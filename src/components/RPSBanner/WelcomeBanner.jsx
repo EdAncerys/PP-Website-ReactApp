@@ -18,7 +18,7 @@ export default function WelcomeBanner({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
 
   const [color, setColor] = useState(
-    PagePalette[manageAppContext.page].primary
+    PagePalette[manageAppContext.page].secondary
   );
 
   const game = manageRPSContext.game;
@@ -35,7 +35,7 @@ export default function WelcomeBanner({ props }) {
     colors.lightBlue,
     colors.darkGrey,
     colors.mediumGrey,
-    colors.lightGrey,
+    // colors.lightGrey,
     colors.electric,
     colors.pink,
     colors.red,
@@ -44,11 +44,14 @@ export default function WelcomeBanner({ props }) {
   let rainbowColors;
 
   const handleTimer = () => {
-    rainbowColors = setInterval(handleRainbowColors, 500);
+    rainbowColors = setInterval(handleRainbowColors, 250);
   };
 
   const handleRainbowColors = () => {
-    console.log('Hello!');
+    const totalColors = colorPalate.length;
+
+    setColor(colorPalate[Math.floor(Math.random() * totalColors)]);
+    console.log(totalColors);
   };
 
   const stopTimer = () => {
