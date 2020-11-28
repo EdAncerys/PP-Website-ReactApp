@@ -67,6 +67,14 @@ export default function RPSPage({ props }) {
     );
   }, [manageRPSContext]);
 
+  const handleGameWinner = () => {
+    console.log('winner');
+  };
+
+  useEffect(() => {
+    handleGameWinner();
+  }, [R2D2Choice]);
+
   return (
     <RPSContext.Provider
       value={{
