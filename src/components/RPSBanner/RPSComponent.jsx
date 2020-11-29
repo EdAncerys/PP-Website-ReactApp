@@ -7,6 +7,8 @@ import { FaRegHandPaper } from 'react-icons/fa';
 import { FaRegHandScissors } from 'react-icons/fa';
 import PlayButton from './PlayButton';
 
+import colors from '../../config/colors';
+
 export default function RPSComponent({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
 
@@ -44,6 +46,7 @@ export default function RPSComponent({ props }) {
       </div>
       <PlayButton
         title="Play Again"
+        btnColor={colors.yellow}
         onClick={() => {
           if (manageRPSContext.R2D2Choice) {
             manageRPSContext.setPlayerChoice();
@@ -53,6 +56,7 @@ export default function RPSComponent({ props }) {
       />
       <PlayButton
         title="New Game"
+        btnColor={colors.darkBlue}
         onClick={() => {
           if (manageRPSContext.R2D2Choice) {
             manageRPSContext.setPlayerChoice();

@@ -4,10 +4,10 @@ import colors from '../../config/colors';
 
 import { BsPlayFill } from 'react-icons/bs';
 
-export default function PlayButton({ title = 'title', onClick }) {
+export default function PlayButton({ title = 'title', onClick, btnColor }) {
   const [click, setClick] = useState(false);
 
-  const color = click ? colors.red : '';
+  const color = click ? colors.red : btnColor;
   const transform = click ? 'scale(0.95)' : 'scale(1)';
 
   const handleClick = () => {
