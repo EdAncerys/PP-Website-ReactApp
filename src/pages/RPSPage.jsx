@@ -13,9 +13,9 @@ export default function RPSPage({ props }) {
   const { manageAppContext } = useContext(AppContext);
 
   const [game, setGame] = useState(false);
-  const [playerScore, setPlayerScore] = useState(0);
-  const [robotScore, setRobotScore] = useState(0);
-  const [tiesScore, setTiesScore] = useState(0);
+  let [playerScore, setPlayerScore] = useState(0);
+  let [robotScore, setRobotScore] = useState(0);
+  let [tiesScore, setTiesScore] = useState(0);
   const [round, setRound] = useState(0);
   const [playerChoice, setPlayerChoice] = useState();
   const [R2D2Choice, setR2D2Choice] = useState();
@@ -68,11 +68,24 @@ export default function RPSPage({ props }) {
   }, [manageRPSContext]);
 
   const handleGameWinner = () => {
-    console.log('winner');
+    // setTiesScore((tiesScore += 1));
   };
 
   useEffect(() => {
-    handleGameWinner();
+    const evenGame = playerChoice === R2D2Choice;
+
+    if (evenGame) {
+      console.log('even');
+      setTiesScore((tiesScore += 1));
+    }
+    if (
+      (playerChoice === 'Rock' && R2D2Choice !== 'Paper') ||
+      (playerChoice === 'Paper' && R2D2Choice !== 'Scissors') ||
+      (playerChoice === 'Scissors' && R2D2Choice !== 'Rock')
+    ) {
+      console.log('player');
+      setPlayerScore((playerScore += 1));
+    }
   }, [R2D2Choice]);
 
   return (
