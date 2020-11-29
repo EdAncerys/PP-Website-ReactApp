@@ -67,12 +67,8 @@ export default function RPSPage({ props }) {
     );
   }, [manageRPSContext]);
 
-  const handleGameWinner = () => {
-    // setTiesScore((tiesScore += 1));
-  };
-
   useEffect(() => {
-    const evenGame = playerChoice === R2D2Choice;
+    const evenGame = playerChoice === R2D2Choice && playerChoice;
 
     if (evenGame) {
       console.log('even');
