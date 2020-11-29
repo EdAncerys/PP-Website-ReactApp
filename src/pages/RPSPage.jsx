@@ -69,23 +69,24 @@ export default function RPSPage({ props }) {
 
   useEffect(() => {
     const playerCall = playerChoice ? playerChoice['name'] : false;
-    const evenGame = playerCall === R2D2Choice && playerChoice;
+    const R2D2Call = R2D2Choice ? R2D2Choice['name'] : false;
+    const evenGame = playerCall === R2D2Call && playerChoice;
 
     if (evenGame) {
       setTiesScore((tiesScore += 1));
     }
     if (
-      (playerCall === 'Rock' && R2D2Choice !== 'Paper' && !evenGame) ||
-      (playerCall === 'Paper' && R2D2Choice !== 'Scissors' && !evenGame) ||
-      (playerCall === 'Scissors' && R2D2Choice !== 'Rock' && !evenGame)
+      (playerCall === 'Rock' && R2D2Call !== 'Paper' && !evenGame) ||
+      (playerCall === 'Paper' && R2D2Call !== 'Scissors' && !evenGame) ||
+      (playerCall === 'Scissors' && R2D2Call !== 'Rock' && !evenGame)
     ) {
       setPlayerScore((playerScore += 1));
     }
 
     if (
-      (R2D2Choice === 'Rock' && playerCall !== 'Paper' && !evenGame) ||
-      (R2D2Choice === 'Paper' && playerCall !== 'Scissors' && !evenGame) ||
-      (R2D2Choice === 'Scissors' && playerCall !== 'Rock' && !evenGame)
+      (R2D2Call === 'Rock' && playerCall !== 'Paper' && !evenGame) ||
+      (R2D2Call === 'Paper' && playerCall !== 'Scissors' && !evenGame) ||
+      (R2D2Call === 'Scissors' && playerCall !== 'Rock' && !evenGame)
     ) {
       setRobotScore((robotScore += 1));
     }
