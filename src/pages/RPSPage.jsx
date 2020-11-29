@@ -79,9 +79,9 @@ export default function RPSPage({ props }) {
       setTiesScore((tiesScore += 1));
     }
     if (
-      (playerChoice === 'Rock' && R2D2Choice !== 'Paper') ||
-      (playerChoice === 'Paper' && R2D2Choice !== 'Scissors') ||
-      (playerChoice === 'Scissors' && R2D2Choice !== 'Rock')
+      (playerChoice === 'Rock' && R2D2Choice !== 'Paper' && !evenGame) ||
+      (playerChoice === 'Paper' && R2D2Choice !== 'Scissors' && !evenGame) ||
+      (playerChoice === 'Scissors' && R2D2Choice !== 'Rock' && !evenGame)
     ) {
       console.log('player');
       setPlayerScore((playerScore += 1));

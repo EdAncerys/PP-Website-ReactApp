@@ -91,7 +91,7 @@ export default function WelcomeBanner({ props }) {
         {game && <RPSComponent />}
         {!game && (
           <div style={styles.playButton}>
-            <PlayButton />
+            <PlayButton title="Play" />
           </div>
         )}
       </div>
