@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import colors from '../../config/colors';
 
 export default function RPSAvatar({ name, avatar }) {
