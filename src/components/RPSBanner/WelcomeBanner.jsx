@@ -91,7 +91,10 @@ export default function WelcomeBanner({ props }) {
         {game && <RPSComponent />}
         {!game && (
           <div style={styles.playButton}>
-            <PlayButton title="Play" />
+            <PlayButton
+              title="Play"
+              onClick={() => manageRPSContext.setGame(!manageRPSContext.game)}
+            />
           </div>
         )}
       </div>

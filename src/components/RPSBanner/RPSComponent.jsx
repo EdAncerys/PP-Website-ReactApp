@@ -42,7 +42,10 @@ export default function RPSComponent({ props }) {
           />
         </div>
       </div>
-      <PlayButton title="Play Again" />
+      <PlayButton
+        title="Play Again"
+        onClick={() => manageRPSContext.setGame(!manageRPSContext.game)}
+      />
     </div>
   );
 }

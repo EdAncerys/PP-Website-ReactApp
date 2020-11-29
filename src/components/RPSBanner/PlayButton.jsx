@@ -1,19 +1,10 @@
-import React, { useContext } from 'react';
-import { RPSContext } from '../../pages/RPSPage';
+import React from 'react';
 
 import { BsPlayFill } from 'react-icons/bs';
 
-export default function PlayButton({ title = 'title' }) {
-  const { manageRPSContext } = useContext(RPSContext);
-
-  const game = manageRPSContext.game;
-
-  const handlePlayClick = () => {
-    manageRPSContext.setGame(!game);
-  };
-
+export default function PlayButton({ title = 'title', onClick }) {
   return (
-    <div style={styles.container} onClick={() => handlePlayClick()}>
+    <div style={styles.container} onClick={onClick}>
       <div style={styles.btnText}>{title}</div>
       <BsPlayFill size="5vh" />
     </div>
