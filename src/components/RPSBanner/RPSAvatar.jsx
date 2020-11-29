@@ -22,7 +22,7 @@ export default function RPSAvatar({ name, avatar, RPS }) {
     >
       <div style={styles.name}>{name}</div>
       <div>{avatar}</div>
-      <div>{RPS}</div>
+      <div style={styles.RPS}>{RPS}</div>
     </div>
   );
 }
@@ -38,5 +38,9 @@ const styles = {
   },
   name: {
     fontSize: '2.5vh',
+  },
+  RPS: {
+    height: '4vh',
+    fontSize: '3vh',
   },
 };
