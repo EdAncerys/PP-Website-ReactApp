@@ -12,7 +12,9 @@ import colors from '../../config/colors';
 export default function RPSComponent({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
 
-  const playerChoice = manageRPSContext.playerChoice;
+  const playerChoice = manageRPSContext.playerChoice
+    ? manageRPSContext.playerChoice['name']
+    : false;
   const fade = playerChoice ? 0.2 : 1;
 
   const handleClick = (name) => {
@@ -32,13 +34,17 @@ export default function RPSComponent({ props }) {
         </div>
         <div
           style={{ opacity: playerChoice === 'Paper' ? 1 : fade }}
-          onClick={() => handleClick('Paper')}
+          onClick={() =>
+            handleClick({ name: 'Paper', avatar: <FaRegHandPaper /> })
+          }
         >
           <RPSAvatar name="Paper" avatar={<FaRegHandPaper size="6vh" />} />
         </div>
         <div
           style={{ opacity: playerChoice === 'Scissors' ? 1 : fade }}
-          onClick={() => handleClick('Scissors')}
+          onClick={() =>
+            handleClick({ name: 'Scissors', avatar: <FaRegHandScissors /> })
+          }
         >
           <RPSAvatar
             name="Scissors"
@@ -71,9 +77,6 @@ export default function RPSComponent({ props }) {
           }
         }}
       />
-      {manageRPSContext.playerChoice && (
-        <div>{manageRPSContext.playerChoice['avatar']}</div>
-      )}
     </div>
   );
 }
