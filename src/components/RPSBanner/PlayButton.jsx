@@ -20,7 +20,10 @@ export default function PlayButton({ title = 'title', onClick }) {
   return (
     <div
       style={{ ...styles.container, ...{ color: color, transform: transform } }}
-      onClick={() => handleClick()}
+      onClick={() => {
+        handleClick();
+        onClick();
+      }}
     >
       <div style={styles.btnText}>{title}</div>
       <BsPlayFill size="5vh" />
