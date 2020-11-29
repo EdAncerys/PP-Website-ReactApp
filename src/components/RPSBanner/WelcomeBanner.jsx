@@ -10,6 +10,9 @@ import RPSAvatar from './RPSAvatar';
 import PlayButton from './PlayButton';
 import RPSComponent from './RPSComponent';
 import ScoreBoard from './ScoreBoard';
+import { FaRegHandRock } from 'react-icons/fa';
+import { FaRegHandPaper } from 'react-icons/fa';
+import { FaRegHandScissors } from 'react-icons/fa';
 
 import colors from '../../config/colors';
 
@@ -52,7 +55,11 @@ export default function WelcomeBanner({ props }) {
   };
 
   const stopTimer = () => {
-    const robotChoice = ['Rock', 'Paper', 'Scissors'];
+    const robotChoice = [
+      { name: 'Rock', avatar: <FaRegHandRock /> },
+      { name: 'Paper', avatar: <FaRegHandPaper /> },
+      { name: 'Scissors', avatar: <FaRegHandScissors /> },
+    ];
     clearInterval(rainbowColors);
     manageRPSContext.setR2D2Choice(robotChoice[Math.floor(Math.random() * 3)]);
   };
