@@ -51,6 +51,20 @@ export default function RPSComponent({ props }) {
           }
         }}
       />
+      <PlayButton
+        title="New Game"
+        onClick={() => {
+          if (manageRPSContext.R2D2Choice) {
+            manageRPSContext.setPlayerChoice();
+            manageRPSContext.setR2D2Choice();
+            manageRPSContext.setRound(0);
+            manageRPSContext.setPlayerScore(0);
+            manageRPSContext.setTiesScore(0);
+            manageRPSContext.setRobotScore(0);
+            manageRPSContext.setR2D2Choice(false);
+          }
+        }}
+      />
     </div>
   );
 }
