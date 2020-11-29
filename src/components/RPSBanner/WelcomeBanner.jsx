@@ -21,7 +21,13 @@ export default function WelcomeBanner({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
 
   const game = manageRPSContext.game;
-  const playerChoice = manageRPSContext.playerChoice;
+  const playerChoice = manageRPSContext.playerChoice
+    ? manageRPSContext.playerChoice
+    : false;
+  const R2D2Choice = manageRPSContext.R2D2Choice
+    ? manageRPSContext.R2D2Choice
+    : false;
+
   const colorPalate = [
     colors.yellow,
     colors.gold,
@@ -88,10 +94,18 @@ export default function WelcomeBanner({ props }) {
         {game && <div>Rock Paper Scissors</div>}
       </div>
       <div style={styles.content}>
-        <RPSAvatar name="Player" avatar={<GiGingerbreadMan size="10vh" />} />
+        <RPSAvatar
+          name="Player"
+          avatar={<GiGingerbreadMan size="10vh" />}
+          RPS={playerChoice['avatar']}
+        />
         <ScoreBoard />
         <div style={{ color: manageRPSContext.robotColor }}>
-          <RPSAvatar name="R2-D2" avatar={<FaRobot size="10vh" />} />
+          <RPSAvatar
+            name="R2-D2"
+            avatar={<FaRobot size="10vh" />}
+            RPS={R2D2Choice['avatar']}
+          />
         </div>
       </div>
       <div>
