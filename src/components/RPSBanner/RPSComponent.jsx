@@ -24,7 +24,9 @@ export default function RPSComponent({ props }) {
       <div style={styles.wrapper}>
         <div
           style={{ opacity: playerChoice === 'Rock' ? 1 : fade }}
-          onClick={() => handleClick('Rock')}
+          onClick={() =>
+            handleClick({ name: 'Rock', avatar: <FaRegHandRock /> })
+          }
         >
           <RPSAvatar name="Rock" avatar={<FaRegHandRock size="6vh" />} />
         </div>
@@ -58,7 +60,7 @@ export default function RPSComponent({ props }) {
         title="New Game"
         btnColor={colors.darkBlue}
         onClick={() => {
-          if (manageRPSContext.R2D2Choice) {
+          if (manageRPSContext.R2D2Choice || !manageRPSContext.playerChoice) {
             manageRPSContext.setPlayerChoice();
             manageRPSContext.setR2D2Choice();
             manageRPSContext.setRound(0);
@@ -69,6 +71,9 @@ export default function RPSComponent({ props }) {
           }
         }}
       />
+      {manageRPSContext.playerChoice && (
+        <div>{manageRPSContext.playerChoice['avatar']}</div>
+      )}
     </div>
   );
 }
