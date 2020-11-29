@@ -16,7 +16,7 @@ export default function RPSPage({ props }) {
   let [playerScore, setPlayerScore] = useState(0);
   let [robotScore, setRobotScore] = useState(0);
   let [tiesScore, setTiesScore] = useState(0);
-  const [round, setRound] = useState(0);
+  let [round, setRound] = useState(0);
   const [playerChoice, setPlayerChoice] = useState();
   const [R2D2Choice, setR2D2Choice] = useState();
   const [robotColor, setRobotColor] = useState(
@@ -82,6 +82,7 @@ export default function RPSPage({ props }) {
       console.log('player');
       setPlayerScore((playerScore += 1));
     }
+    if (playerChoice) setRound((round += 1));
   }, [R2D2Choice]);
 
   return (
