@@ -71,7 +71,6 @@ export default function RPSPage({ props }) {
     const evenGame = playerChoice === R2D2Choice && playerChoice;
 
     if (evenGame) {
-      console.log('even');
       setTiesScore((tiesScore += 1));
     }
     if (
@@ -79,9 +78,17 @@ export default function RPSPage({ props }) {
       (playerChoice === 'Paper' && R2D2Choice !== 'Scissors' && !evenGame) ||
       (playerChoice === 'Scissors' && R2D2Choice !== 'Rock' && !evenGame)
     ) {
-      console.log('player');
       setPlayerScore((playerScore += 1));
     }
+
+    if (
+      (R2D2Choice === 'Rock' && playerChoice !== 'Paper' && !evenGame) ||
+      (R2D2Choice === 'Paper' && playerChoice !== 'Scissors' && !evenGame) ||
+      (R2D2Choice === 'Scissors' && playerChoice !== 'Rock' && !evenGame)
+    ) {
+      setRobotScore((robotScore += 1));
+    }
+
     if (playerChoice) setRound((round += 1));
   }, [R2D2Choice]);
 
