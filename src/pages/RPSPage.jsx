@@ -53,6 +53,7 @@ export default function RPSPage({ props }) {
       setRobotScore(userSession.robotScore);
       setTiesScore(userSession.tiesScore);
       setRound(userSession.round);
+      setRobotColor(userSession.robotColor);
     }
   }, []);
 
