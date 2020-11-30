@@ -7,6 +7,7 @@ import HeaderForBanner from '../HeaderForBanner';
 import FooterForBanner from '../FooterForBanner';
 
 import PagePalette from '../../config/PagePalette';
+import colors from '../../config/colors';
 
 export default function TickTackToeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
@@ -40,10 +41,11 @@ export default function TickTackToeBanner({ props }) {
             altText="RPS"
             text={textDescription.RPS}
             color={PagePalette[pageNumber].secondary}
+            backgroundColor={colors.white}
           />
         </div>
         <FooterForBanner
-          name="Board Game: RPS"
+          name="Rock Paper Scissors"
           type="Game"
           color={PagePalette[pageNumber].secondary}
           page={pageNumber}
