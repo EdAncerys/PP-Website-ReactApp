@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+
 import colors from '../../config/colors';
 
-export default function RPSAvatar({ name, avatar }) {
+export default function RPSAvatar({ name, avatar, RPS }) {
   const [click, setClick] = useState(false);
 
   const color = click ? colors.red : '';
@@ -21,6 +22,7 @@ export default function RPSAvatar({ name, avatar }) {
     >
       <div style={styles.name}>{name}</div>
       <div>{avatar}</div>
+      <div style={styles.RPS}>{RPS}</div>
     </div>
   );
 }
@@ -36,5 +38,9 @@ const styles = {
   },
   name: {
     fontSize: '2.5vh',
+  },
+  RPS: {
+    height: '4vh',
+    fontSize: '3vh',
   },
 };

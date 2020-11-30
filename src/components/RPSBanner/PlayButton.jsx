@@ -1,20 +1,31 @@
-import React, { useContext } from 'react';
-import { RPSContext } from '../../pages/RPSPage';
+import React, { useState } from 'react';
+
+import colors from '../../config/colors';
 
 import { BsPlayFill } from 'react-icons/bs';
 
-export default function PlayButton({ props }) {
-  const { manageRPSContext } = useContext(RPSContext);
+export default function PlayButton({ title = 'title', onClick, btnColor }) {
+  const [click, setClick] = useState(false);
 
-  const game = manageRPSContext.game;
+  const color = click ? colors.red : btnColor;
+  const transform = click ? 'scale(0.95)' : 'scale(1)';
 
-  const handlePlayClick = () => {
-    manageRPSContext.setGame(!game);
+  const handleClick = () => {
+    setClick(!click);
+    setTimeout(() => {
+      setClick(false);
+    }, 200);
   };
 
   return (
-    <div style={styles.container} onClick={() => handlePlayClick()}>
-      <div style={styles.btnText}>Play</div>
+    <div
+      style={{ ...styles.container, ...{ color: color, transform: transform } }}
+      onClick={() => {
+        handleClick();
+        onClick();
+      }}
+    >
+      <div style={styles.btnText}>{title}</div>
       <BsPlayFill size="5vh" />
     </div>
   );
@@ -29,6 +40,8 @@ const styles = {
     cursor: 'pointer',
     border: '1px solid',
     borderRadius: 20,
+    marginTop: 20,
+    transition: '0.15s',
   },
   btnText: {
     fontSize: '3vh',
