@@ -78,20 +78,21 @@ export default function RPSPage({ props }) {
     return addScore;
   };
 
-  useEffect(() => {
-    if (evenGame) {
-      setTiesScore((tiesScore += 1));
-    }
-    if (_handlePlayerScore()) setPlayerScore((playerScore += 1));
-
+  const _handleR2D2Score = () => {
+    let addScore;
     if (
       (R2D2Call === 'Rock' && playerCall !== 'Paper' && !evenGame) ||
       (R2D2Call === 'Paper' && playerCall !== 'Scissors' && !evenGame) ||
       (R2D2Call === 'Scissors' && playerCall !== 'Rock' && !evenGame)
-    ) {
-      setRobotScore((robotScore += 1));
-    }
+    )
+      addScore = true;
+    return addScore;
+  };
 
+  useEffect(() => {
+    if (evenGame) setTiesScore((tiesScore += 1));
+    if (_handlePlayerScore()) setPlayerScore((playerScore += 1));
+    if (_handleR2D2Score()) setRobotScore((robotScore += 1));
     if (playerChoice) setRound((round += 1));
   }, [R2D2Choice]);
 
