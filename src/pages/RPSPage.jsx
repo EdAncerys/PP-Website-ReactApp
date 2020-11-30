@@ -45,10 +45,6 @@ export default function RPSPage({ props }) {
   };
 
   useEffect(() => {
-    console.log(playerChoice, R2D2Choice);
-  }, [playerChoice, R2D2Choice]);
-
-  useEffect(() => {
     const data = sessionStorage.getItem(SESSION_STORAGE_KEY);
     const userSession = JSON.parse(data);
     if (userSession) {
@@ -67,21 +63,26 @@ export default function RPSPage({ props }) {
     );
   }, [manageRPSContext]);
 
-  useEffect(() => {
-    const playerCall = playerChoice ? playerChoice['name'] : false;
-    const R2D2Call = R2D2Choice ? R2D2Choice['name'] : false;
-    const evenGame = playerCall === R2D2Call && playerChoice;
+  const playerCall = playerChoice ? playerChoice['name'] : false;
+  const R2D2Call = R2D2Choice ? R2D2Choice['name'] : false;
+  const evenGame = playerCall === R2D2Call && playerChoice;
 
-    if (evenGame) {
-      setTiesScore((tiesScore += 1));
-    }
+  const _handlePlayerScore = () => {
+    let addScore;
     if (
       (playerCall === 'Rock' && R2D2Call !== 'Paper' && !evenGame) ||
       (playerCall === 'Paper' && R2D2Call !== 'Scissors' && !evenGame) ||
       (playerCall === 'Scissors' && R2D2Call !== 'Rock' && !evenGame)
-    ) {
-      setPlayerScore((playerScore += 1));
+    )
+      addScore = true;
+    return addScore;
+  };
+
+  useEffect(() => {
+    if (evenGame) {
+      setTiesScore((tiesScore += 1));
     }
+    if (_handlePlayerScore()) setPlayerScore((playerScore += 1));
 
     if (
       (R2D2Call === 'Rock' && playerCall !== 'Paper' && !evenGame) ||
