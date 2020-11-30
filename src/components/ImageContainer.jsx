@@ -3,10 +3,16 @@ import { BsPhone } from 'react-icons/bs';
 
 import colors from '../config/colors';
 
-export default function ImageContainer({ img, altText, text, color }) {
+export default function ImageContainer({
+  img,
+  altText,
+  text,
+  color,
+  backgroundColor,
+}) {
   const [hover, setHover] = useState(false);
 
-  const phoneBackgroundColor = colors.lightGrey;
+  const phoneBackgroundColor = backgroundColor;
 
   const handleShadow = hover ? `` : `5px 10px 45px -10px ${colors.black}`;
 
