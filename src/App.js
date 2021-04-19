@@ -54,7 +54,8 @@ export default function App({ props }) {
           <ContentBanner />
         </div>
       )}
-      <div style={{ overflow: 'auto' }}>
+      <div 
+        style={{ overflow: 'auto' }}>
         {page === 1 && <AboutMePage />}
         {page === 2 && <PPPage />}
         {page === 3 && <TickTackToePage />}

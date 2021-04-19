@@ -7,7 +7,9 @@ import Footer from './Footer';
 
 export default function ContentBanner({ props }) {
   return (
-    <div style={styles.container}>
+    <div 
+      className="bangers"
+      style={styles.container}>
       <div className="features">
         <div className="flex-container-100">
           <IntroductionBanner />

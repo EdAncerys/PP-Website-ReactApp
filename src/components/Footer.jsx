@@ -23,7 +23,7 @@ export default function Footer({ color }) {
       style={{
         position: 'relative',
         width: '100%',
-        display: 'grid',
+        display: 'grid', 
         alignContent: 'center',
         gridTemplateColumns: 'auto auto',
         paddingTop: '2vh',
