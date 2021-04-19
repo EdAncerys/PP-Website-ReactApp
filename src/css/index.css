@@ -18,8 +18,8 @@ code {
   justify-content: space-evenly;
 }
 .flex-container-50 {
-  overflow: auto;
   flex-basis: 50%;
+  overflow: auto;
 }
 .flex-container-100 {
   flex-basis: 100%;

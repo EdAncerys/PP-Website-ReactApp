@@ -37,14 +37,14 @@ export default function TickTackToeBanner({ props }) {
         <div style={styles.imageContainer}>
           <ImageContainer
             img={LegoManImg}
-            altText="Tick-Tack-Toe"
+            altText="Personal-Portfolio"
             text={textDescription.AboutInfoBanner}
             color={PagePalette[pageNumber].secondary}
           />
         </div>
         <FooterForBanner
           name="About"
-          type="Informational"
+          type="Introduction"
           color={PagePalette[pageNumber].secondary}
           page={pageNumber}
         />

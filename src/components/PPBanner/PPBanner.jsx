@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../App';
 import ImageContainer from '../ImageContainer';
-import Coding from '../../img/PPPhoto.jpg';
+import LegoManImg from '../../img/Lego-Man.png';
 import textDescription from '../../text/ProjectDescription';
 import HeaderForBanner from '../HeaderForBanner';
 import FooterForBanner from '../FooterForBanner';
@@ -27,7 +27,7 @@ export default function TickTackToeBanner({ props }) {
           display: 'grid',
           gridTemplateRows: '50px auto 100px',
           height: 550,
-          width: mediaQuery ? '95vw' : 600,
+          width: mediaQuery ? '95vw' : 'auto',
         }}
       >
         <HeaderForBanner
@@ -36,8 +36,8 @@ export default function TickTackToeBanner({ props }) {
         />
         <div style={styles.imageContainer}>
           <ImageContainer
-            img={Coding}
-            altText="Tick-Tack-Toe"
+            img={LegoManImg}
+            altText="Personal-Portfolio"
             text={textDescription.PP}
             color={PagePalette[pageNumber].secondary}
           />
