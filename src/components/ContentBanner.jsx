@@ -8,19 +8,37 @@ import Footer from './Footer';
 export default function ContentBanner({ props }) {
   return (
     <div style={styles.container}>
-      <IntroductionBanner />
-      <PPBanner />
-      <TickTackToeBanner />
-      <RPSBanner />
-      <Footer />
+      <div className="features">
+        <div className="flex-container-100">
+          <IntroductionBanner />
+        </div>
+      </div>
+      <div className="features">
+        <div className="flex-container-100">
+          <PPBanner />
+        </div>
+      </div>
+
+      <div className="features">
+        <div className="flex-container-50">
+          <TickTackToeBanner />
+        </div>
+        <div className="flex-container-50">
+          <RPSBanner />
+        </div>
+      </div>
+
+      <div className="features">
+        <div className="flex-container-100">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
 
 const styles = {
   container: {
-    display: 'grid',
-    alignItems: 'stretch',
     userSelect: 'none',
     cursor: 'default',
     overflow: 'auto',
