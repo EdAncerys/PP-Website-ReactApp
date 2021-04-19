@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import colors from '../../config/colors';
+import colors from "../../config/colors";
 
-import { BsPlayFill } from 'react-icons/bs';
+import { BsPlayFill } from "react-icons/bs";
 
-export default function PlayButton({ title = 'title', onClick, btnColor }) {
+export default function PlayButton({ title = "title", onClick, btnColor }) {
   const [click, setClick] = useState(false);
 
   const color = click ? colors.red : btnColor;
-  const transform = click ? 'scale(0.95)' : 'scale(1)';
+  const transform = click ? "scale(0.95)" : "scale(1)";
 
   const handleClick = () => {
     setClick(!click);
@@ -33,18 +33,18 @@ export default function PlayButton({ title = 'title', onClick, btnColor }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gridTemplateColumns: 'auto auto auto',
-    cursor: 'pointer',
-    border: '1px solid',
+    display: "grid",
+    justifyContent: "center",
+    alignItems: "center",
+    gridTemplateColumns: "auto auto auto",
+    cursor: "pointer",
+    border: "1px solid",
     borderRadius: 20,
     marginTop: 20,
-    transition: '0.15s',
+    transition: "0.15s",
   },
   btnText: {
-    fontSize: '3vh',
-    marginLeft: '2vh',
+    fontSize: "3vh",
+    marginLeft: "2vh",
   },
 };

@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
-import { AppContext } from '../App';
+import React, { useState, useContext } from "react";
+import { AppContext } from "../App";
 
-import colors from '../config/colors';
+import colors from "../config/colors";
 
 export default function GoToPageButton({ icon, color, hoverColor, page }) {
   const { manageAppContext } = useContext(AppContext);
@@ -22,18 +22,29 @@ export default function GoToPageButton({ icon, color, hoverColor, page }) {
   return (
     <div
       style={{
-        display: 'grid',
-        alignContent: 'center',
-        justifyContent: 'center',
+        display: "grid",
+        alignContent: "center",
+        justifyContent: "center",
         color: iconColor,
-        cursor: 'pointer',
-        transform: clickEffect ? 'scale(0.90)' : 'scale(1)',
+        cursor: "pointer",
+        transform: clickEffect ? "scale(0.90)" : "scale(1)",
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => handleClick()}
     >
-      {icon}
+      <div style={styles.goToIcon}>
+        <div>go</div>
+        <div>{icon}</div>
+      </div>
     </div>
   );
 }
+
+const styles = {
+  goToIcon: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "5px",
+  },
+};

@@ -1,7 +1,7 @@
-import React from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import colors from '../config/colors';
+import React from "react";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import colors from "../config/colors";
 
 export default function PPPage({ props }) {
   return (
@@ -312,30 +312,30 @@ export default function PPPage({ props }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    width: '100vw',
-    height: '100vh',
-    gridTemplateColumns: 'repeat(5, 1fr)',
-    gridTemplateRows: 'repeat(5, 1fr)',
+    display: "grid",
+    width: "100vw",
+    height: "100vh",
+    gridTemplateColumns: "repeat(5, 1fr)",
+    gridTemplateRows: "repeat(5, 1fr)",
 
-    userSelect: 'none',
-    cursor: 'default',
+    userSelect: "none",
+    cursor: "default",
   },
   content: {
-    display: 'grid',
-    justifyContent: 'center',
-    gridColumn: 'span 6',
+    display: "grid",
+    justifyContent: "center",
+    gridColumn: "span 6",
     marginBottom: 50,
     // gridRow: '1 / 6',
-    marginTop: '10vh',
-    textAlign: 'justify',
+    marginTop: "10vh",
+    textAlign: "justify",
   },
   paragraph: {
-    marginTop: '1.5vh',
+    marginTop: "1.5vh",
   },
   wrapper: {
     width: 600,
-    maxWidth: '95vw',
+    maxWidth: "95vw",
   },
   title: {
     fontSize: 30,
@@ -343,10 +343,10 @@ const styles = {
   },
   link: {
     color: colors.darkBlue,
-    textDecoration: 'none',
+    textDecoration: "none",
   },
   footer: {
-    gridRow: '6 / 6',
-    gridColumn: 'span 6',
+    gridRow: "6 / 6",
+    gridColumn: "span 6",
   },
 };

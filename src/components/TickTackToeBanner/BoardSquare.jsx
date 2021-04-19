@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { TickTackToeContext } from '../../pages/TickTackToePage';
-import { useAvatar } from '../../hooks/useAvatar';
+import React, { useContext } from "react";
+import { TickTackToeContext } from "../../pages/TickTackToePage";
+import { useAvatar } from "../../hooks/useAvatar";
 
-import colors from '../../config/colors';
+import colors from "../../config/colors";
 
 export default function BoardSquare({ id }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
@@ -45,17 +45,17 @@ export default function BoardSquare({ id }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    justifyContent: 'center',
-    alignItems: 'center',
-    cursor: 'pointer',
+    display: "grid",
+    justifyContent: "center",
+    alignItems: "center",
+    cursor: "pointer",
     width: 60,
     height: 60,
   },
   avatar: {
-    display: 'grid',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "grid",
+    justifyContent: "center",
+    alignItems: "center",
     color: colors.red,
     fontSize: 55,
   },

@@ -1,66 +1,65 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../../App';
-import ImageContainer from '../ImageContainer';
-import LegoManImg from '../../img/Lego-Man.png';
-import textDescription from '../../text/ProjectDescription';
-import FooterForBanner from '../FooterForBanner';
-import HeaderForBanner from '../HeaderForBanner';
+import React, { useContext } from "react";
+import { AppContext } from "../../App";
 
-import PagePalette from '../../config/PagePalette';
+import colors from "../../config/colors";
+import FooterForBanner from "../FooterForBanner";
+import HeaderForBanner from "../HeaderForBanner";
+
+import PagePalette from "../../config/PagePalette";
 
 export default function TickTackToeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
-  const mediaQuery = manageAppContext.mediaQuery;
 
   const pageNumber = 1;
+  const lineOne = "Hello.";
+  const lineTwo = "I'm Ed";
+  const lineThree = "And This is My Personal Portfolio Website!";
 
   return (
     <div
-    style={{
-      backgroundColor: PagePalette[pageNumber].primary
-   }}
+      style={{
+        backgroundColor: PagePalette[pageNumber].primary,
+      }}
     >
-  <div
-    className="features"
-    >
-    <div
-    className="flex-container-80"
-    >
-      <div
-          className="banner"
-          style={{
-             backgroundColor: PagePalette[pageNumber].primary
-          }}
-      >
-        <HeaderForBanner
-          color={PagePalette[pageNumber].secondary}
-          page={pageNumber}
-        />
-        <div style={styles.imageContainer}>
-          <ImageContainer
-            img={LegoManImg}
-            altText="Personal-Portfolio"
-            text={textDescription.AboutInfoBanner}
-            color={PagePalette[pageNumber].secondary}
-          />
+      <div className="features">
+        <div className="flex-container-80">
+          <div
+            className="banner"
+            style={{
+              backgroundColor: PagePalette[pageNumber].primary,
+            }}
+          >
+            <HeaderForBanner
+              color={PagePalette[pageNumber].secondary}
+              page={pageNumber}
+            />
+            <div style={styles.textWrapper}>
+              <div>Text To Change</div>
+              <div>Text To Change</div>
+              <div>Text To Change</div>
+            </div>
+            <FooterForBanner
+              name="About"
+              type="Introduction"
+              color={PagePalette[pageNumber].secondary}
+              page={pageNumber}
+            />
+          </div>
         </div>
-        <FooterForBanner
-          name="About"
-          type="Introduction"
-          color={PagePalette[pageNumber].secondary}
-          page={pageNumber}
-        />
       </div>
     </div>
-    </div> 
-    </div> 
   );
 }
 
 const styles = {
-  imageContainer: {
-    display: 'grid',
-    alignItems: 'center',
-    justifyContent: 'center',
+  textWrapper: {
+    display: "grid",
+    gridTemplateRows: "60px 60px 60px",
+    gap: "5px",
+    alignItems: "center",
+    justifyContent: "start",
+    fontSize: "60px",
+    color: colors.white,
+    cursor: "pointer",
   },
 };

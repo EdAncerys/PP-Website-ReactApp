@@ -1,8 +1,8 @@
-import React from 'react';
-import SocialBanner from './SocialBanner';
-import MailMeButton from './MailMeButton';
+import React from "react";
+import SocialBanner from "./SocialBanner";
+import MailMeButton from "./MailMeButton";
 
-import colors from '../../config/colors';
+import colors from "../../config/colors";
 
 export default function AboutBanner({ props }) {
   return (
@@ -27,12 +27,12 @@ export default function AboutBanner({ props }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    alignContent: 'center',
+    display: "grid",
+    alignContent: "center",
     backgroundColor: colors.yellow,
     padding: 50,
-    userSelect: 'none',
-    cursor: 'default',
+    userSelect: "none",
+    cursor: "default",
   },
   about: {
     fontSize: 40,

@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import { TickTackToeContext } from '../../pages/TickTackToePage';
-import { AppContext } from '../../App';
-import Button from '../Button';
+import React, { useContext } from "react";
+import { TickTackToeContext } from "../../pages/TickTackToePage";
+import { AppContext } from "../../App";
+import Button from "../Button";
 
-import PagePalette from '../../config/PagePalette';
-import Character from './Character';
-import GameBoard from './GameBoard';
+import PagePalette from "../../config/PagePalette";
+import Character from "./Character";
+import GameBoard from "./GameBoard";
 
 export default function PlayerVPlayerBanner({ props }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
@@ -59,7 +59,7 @@ export default function PlayerVPlayerBanner({ props }) {
           )}
           {!manageTickTackToeContext.winner &&
             !manageTickTackToeContext.gameOn &&
-            'Game Over: Even Steven'}
+            "Game Over: Even Steven"}
           {manageTickTackToeContext.winner &&
             `${manageTickTackToeContext.winner.name} won this round`}
         </div>
@@ -85,60 +85,60 @@ export default function PlayerVPlayerBanner({ props }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    justifyItems: 'center',
-    rowGap: '5vh',
+    display: "grid",
+    justifyItems: "center",
+    rowGap: "5vh",
   },
   wrapper: {
-    display: 'grid',
-    gridTemplateColumns: 'auto auto auto',
-    alignContent: 'center',
-    justifyItems: 'center',
-    columnGap: '5vh',
+    display: "grid",
+    gridTemplateColumns: "auto auto auto",
+    alignContent: "center",
+    justifyItems: "center",
+    columnGap: "5vh",
   },
   messageContainer: {
-    display: 'grid',
-    alignContent: 'center',
-    justifyItems: 'center',
-    textAlign: 'center',
-    fontSize: '3vh',
+    display: "grid",
+    alignContent: "center",
+    justifyItems: "center",
+    textAlign: "center",
+    fontSize: "3vh",
     maxWidth: 200,
   },
   message: {
-    display: 'grid',
-    gridTemplateColumns: 'auto auto auto',
+    display: "grid",
+    gridTemplateColumns: "auto auto auto",
     gridGap: 30,
-    textAlign: 'center',
-    minWidth: '15vh',
+    textAlign: "center",
+    minWidth: "15vh",
   },
   scoreNumber: {
-    display: 'grid',
-    alignContent: 'center',
-    justifyItems: 'center',
+    display: "grid",
+    alignContent: "center",
+    justifyItems: "center",
   },
   scoreText: {
-    display: 'grid',
-    alignContent: 'center',
-    justifyItems: 'center',
+    display: "grid",
+    alignContent: "center",
+    justifyItems: "center",
   },
   gameBoard: {
-    display: 'grid',
-    justifyItems: 'center',
-    alignContent: 'center',
+    display: "grid",
+    justifyItems: "center",
+    alignContent: "center",
   },
   buttonComponent: {
-    display: 'grid',
-    gridTemplateColumns: 'auto auto',
-    justifyItems: 'center',
-    alignContent: 'center',
+    display: "grid",
+    gridTemplateColumns: "auto auto",
+    justifyItems: "center",
+    alignContent: "center",
   },
   title: {
-    alignSelf: 'end',
-    fontSize: '3vh',
+    alignSelf: "end",
+    fontSize: "3vh",
   },
   score: {
-    display: 'grid',
-    alignContent: 'start',
-    fontSize: '5vh',
+    display: "grid",
+    alignContent: "start",
+    fontSize: "5vh",
   },
 };

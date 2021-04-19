@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import colors from '../../config/colors';
+import colors from "../../config/colors";
 
 export default function RPSAvatar({ name, avatar, RPS }) {
   const [click, setClick] = useState(false);
 
-  const color = click ? colors.red : '';
-  const transform = click ? 'scale(0.95)' : 'scale(1)';
+  const color = click ? colors.red : "";
+  const transform = click ? "scale(0.95)" : "scale(1)";
 
   const handleClick = () => {
     setClick(!click);
@@ -29,18 +29,18 @@ export default function RPSAvatar({ name, avatar, RPS }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-    cursor: 'pointer',
-    transition: '0.15s',
+    display: "grid",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    cursor: "pointer",
+    transition: "0.15s",
   },
   name: {
-    fontSize: '2.5vh',
+    fontSize: "2.5vh",
   },
   RPS: {
-    height: '4vh',
-    fontSize: '3vh',
+    height: "4vh",
+    fontSize: "3vh",
   },
 };

@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { GiAmericanFootballHelmet } from 'react-icons/gi';
-import { GiAquarium } from 'react-icons/gi';
-import { GiCatapult } from 'react-icons/gi';
-import { GiGaulsHelm } from 'react-icons/gi';
-import { GiHamburger } from 'react-icons/gi';
-import { GiHelicoprion } from 'react-icons/gi';
-import { GiAmmonite } from 'react-icons/gi';
-import { GiAnglerFish } from 'react-icons/gi';
-import { GiGoat } from 'react-icons/gi';
+import { GiAmericanFootballHelmet } from "react-icons/gi";
+import { GiAquarium } from "react-icons/gi";
+import { GiCatapult } from "react-icons/gi";
+import { GiGaulsHelm } from "react-icons/gi";
+import { GiHamburger } from "react-icons/gi";
+import { GiHelicoprion } from "react-icons/gi";
+import { GiAmmonite } from "react-icons/gi";
+import { GiAnglerFish } from "react-icons/gi";
+import { GiGoat } from "react-icons/gi";
 
 export const useAvatar = (name) => {
   const [avatar, setAvatar] = useState(false);

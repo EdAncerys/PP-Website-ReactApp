@@ -1,4 +1,4 @@
-@import './fonts.css';
+@import "./fonts.css";
 
 body {
   margin: 0;
@@ -6,7 +6,9 @@ body {
 }
 .banner {
   display: grid;
+  align-items: center;
   grid-template-rows: 50px 400px 100px;
+  padding: 20px 0;
 }
 .features {
   width: 100%;
@@ -20,16 +22,10 @@ body {
 }
 .flex-container-80 {
   flex-basis: 80%;
+  max-width: 500px;
   overflow: auto;
 }
 .flex-container-100 {
   flex-basis: 100%;
   overflow: auto;
-}
-
-/* Media Queries */
-@media only screen and (max-width: 800px) {
-  .features {
-    flex-direction: column;
-  }
 }

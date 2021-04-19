@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../../App';
-import ImageContainer from '../ImageContainer';
-import RPS from '../../img/RPS.png';
-import textDescription from '../../text/ProjectDescription';
-import HeaderForBanner from '../HeaderForBanner';
-import FooterForBanner from '../FooterForBanner';
+import React, { useContext } from "react";
+import { AppContext } from "../../App";
+import ImageContainer from "../ImageContainer";
+import RPS from "../../img/RPS.png";
+import textDescription from "../../text/ProjectDescription";
+import HeaderForBanner from "../HeaderForBanner";
+import FooterForBanner from "../FooterForBanner";
 
-import PagePalette from '../../config/PagePalette';
-import colors from '../../config/colors';
+import PagePalette from "../../config/PagePalette";
+import colors from "../../config/colors";
 
 export default function TickTackToeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
@@ -25,10 +25,10 @@ export default function TickTackToeBanner({ props }) {
     >
       <div
         style={{
-          display: 'grid',
-          gridTemplateRows: '50px auto 100px',
+          display: "grid",
+          gridTemplateRows: "50px auto 100px",
           height: 550,
-          width: mediaQuery ? '95vw' : 600,
+          width: mediaQuery ? "95vw" : 600,
         }}
       >
         <HeaderForBanner
@@ -57,13 +57,13 @@ export default function TickTackToeBanner({ props }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    justifyContent: 'center',
-    width: '100%',
+    display: "grid",
+    justifyContent: "center",
+    width: "100%",
   },
   imageContainer: {
-    display: 'grid',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "grid",
+    alignItems: "center",
+    justifyContent: "center",
   },
 };

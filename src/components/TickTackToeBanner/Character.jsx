@@ -1,8 +1,8 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { TickTackToeContext } from '../../pages/TickTackToePage';
-import { useAvatar } from '../../hooks/useAvatar';
+import React, { useState, useContext, useEffect } from "react";
+import { TickTackToeContext } from "../../pages/TickTackToePage";
+import { useAvatar } from "../../hooks/useAvatar";
 
-import colors from '../../config/colors';
+import colors from "../../config/colors";
 
 export default function Character({ src, name }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
@@ -35,23 +35,23 @@ export default function Character({ src, name }) {
   return (
     <div
       style={{
-        display: 'grid',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        transform: clickEffect ? 'scale(0.95)' : 'scale(1)',
+        display: "grid",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        transform: clickEffect ? "scale(0.95)" : "scale(1)",
         opacity: fade ? 1 : 0.2,
-        cursor: 'pointer',
+        cursor: "pointer",
       }}
       key={name}
     >
       <div
         style={{
-          display: 'grid',
-          justifyContent: 'center',
-          alignItems: 'center',
+          display: "grid",
+          justifyContent: "center",
+          alignItems: "center",
           marginBottom: 10,
-          color: clickEffect ? colors.red : '',
+          color: clickEffect ? colors.red : "",
         }}
       >
         <div style={styles.avatarName}>
@@ -72,18 +72,18 @@ export default function Character({ src, name }) {
 }
 const styles = {
   avatarName: {
-    display: 'grid',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gridTemplateColumns: 'auto auto',
+    display: "grid",
+    justifyContent: "center",
+    alignItems: "center",
+    gridTemplateColumns: "auto auto",
     gridGap: 10,
-    fontSize: '2vh',
+    fontSize: "2vh",
   },
   avatar: {
     color: colors.red,
-    fontSize: '2vh',
+    fontSize: "2vh",
   },
   img: {
-    height: '15vh',
+    height: "15vh",
   },
 };

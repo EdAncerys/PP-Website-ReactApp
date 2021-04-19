@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function IconComponent({ icon, color, hoverColor, onClick }) {
   const [hover, setHover] = useState(false);
@@ -8,10 +8,10 @@ export default function IconComponent({ icon, color, hoverColor, onClick }) {
   return (
     <div
       style={{
-        display: 'grid',
-        alignContent: 'center',
-        alignItems: 'center',
-        cursor: 'pointer',
+        display: "grid",
+        alignContent: "center",
+        alignItems: "center",
+        cursor: "pointer",
         color: iconColor,
       }}
       onMouseOver={() => setHover(true)}

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { GiMailbox } from 'react-icons/gi';
+import React, { useState } from "react";
+import { GiMailbox } from "react-icons/gi";
 
-import colors from '../../config/colors';
+import colors from "../../config/colors";
 
 export default function MailMeButton({
   text,
@@ -17,7 +17,7 @@ export default function MailMeButton({
 
   const handleClick = () => {
     setClickEffect(true);
-    document.location = 'mailto: lookatemail@gmail.com';
+    document.location = "mailto: lookatemail@gmail.com";
     setTimeout(() => {
       setClickEffect(false);
     }, 200);
@@ -26,18 +26,18 @@ export default function MailMeButton({
   return (
     <div
       style={{
-        display: 'grid',
-        gridTemplateColumns: 'auto auto',
+        display: "grid",
+        gridTemplateColumns: "auto auto",
         columnGap: 10,
-        alignContent: 'center',
-        justifyContent: 'center',
+        alignContent: "center",
+        justifyContent: "center",
         color: textColor,
         backgroundColor: iconColor,
         borderRadius: 10,
         padding: 10,
-        cursor: 'pointer',
+        cursor: "pointer",
         fontSize: 20,
-        transform: clickEffect ? 'scale(0.99)' : 'scale(1)',
+        transform: clickEffect ? "scale(0.99)" : "scale(1)",
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}

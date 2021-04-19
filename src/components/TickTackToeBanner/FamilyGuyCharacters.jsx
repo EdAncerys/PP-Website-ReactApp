@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from 'react';
-import { TickTackToeContext } from '../../pages/TickTackToePage';
-import { AppContext } from '../../App';
+import React, { useContext, useEffect } from "react";
+import { TickTackToeContext } from "../../pages/TickTackToePage";
+import { AppContext } from "../../App";
 
-import PagePalette from '../../config/PagePalette';
-import Character from './Character';
+import PagePalette from "../../config/PagePalette";
+import Character from "./Character";
 
 export default function FamilyGuyCharacters({ props }) {
   const { manageTickTackToeContext } = useContext(TickTackToeContext);
@@ -52,37 +52,37 @@ export default function FamilyGuyCharacters({ props }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    alignContent: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
+    display: "grid",
+    alignContent: "center",
+    justifyContent: "center",
+    textAlign: "center",
   },
   wrapper: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4, auto)',
-    rowGap: '8vh',
-    justifyContent: 'space-around',
+    display: "grid",
+    gridTemplateColumns: "repeat(4, auto)",
+    rowGap: "8vh",
+    justifyContent: "space-around",
     width: 600,
-    maxWidth: '95vw',
-    cursor: 'pointer',
+    maxWidth: "95vw",
+    cursor: "pointer",
   },
   lastChild: {
-    display: 'grid',
-    gridColumn: '1 / 5',
-    justifyContent: 'center',
-    height: '15vh',
+    display: "grid",
+    gridColumn: "1 / 5",
+    justifyContent: "center",
+    height: "15vh",
   },
   img: {
-    display: 'grid',
-    justifyContent: 'center',
-    height: '15vh',
+    display: "grid",
+    justifyContent: "center",
+    height: "15vh",
   },
   name: {
-    display: 'grid',
-    justifyContent: 'center',
+    display: "grid",
+    justifyContent: "center",
   },
   title: {
-    fontSize: '4vh',
-    marginBottom: '4vh',
+    fontSize: "4vh",
+    marginBottom: "4vh",
   },
 };

@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import { RPSContext } from '../../pages/RPSPage';
+import React, { useContext } from "react";
+import { RPSContext } from "../../pages/RPSPage";
 
-import colors from '../../config/colors';
+import colors from "../../config/colors";
 
 export default function Scorewrapper({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
@@ -26,7 +26,7 @@ export default function Scorewrapper({ props }) {
               <div style={styles.title}>Wins</div>
               <div style={styles.score}>{playerScore}</div>
             </div>
-            <div style={{ display: 'grid', color: colors.red }}>
+            <div style={{ display: "grid", color: colors.red }}>
               <div style={styles.title}>Ties</div>
               <div style={styles.score}>{ties}</div>
             </div>
@@ -43,30 +43,30 @@ export default function Scorewrapper({ props }) {
 
 const styles = {
   roundScore: {
-    display: 'grid',
-    alignItems: 'center',
-    gridTemplateColumns: 'auto auto',
+    display: "grid",
+    alignItems: "center",
+    gridTemplateColumns: "auto auto",
   },
   container: {
-    display: 'grid',
-    gridTemplateColumns: 'auto auto auto',
-    gridGap: '3vh',
+    display: "grid",
+    gridTemplateColumns: "auto auto auto",
+    gridGap: "3vh",
   },
   vs: {
-    fontSize: '5vh',
+    fontSize: "5vh",
   },
   wrapper: {
-    display: 'grid',
+    display: "grid",
     color: colors.red,
   },
   title: {
     // gridColumn: '1 / 2',
-    alignSelf: 'end',
-    fontSize: '3vh',
+    alignSelf: "end",
+    fontSize: "3vh",
   },
   score: {
-    display: 'grid',
-    alignContent: 'start',
-    fontSize: '5vh',
+    display: "grid",
+    alignContent: "start",
+    fontSize: "5vh",
   },
 };

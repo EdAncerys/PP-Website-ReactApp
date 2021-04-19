@@ -1,20 +1,20 @@
-import React, { useContext, useEffect } from 'react';
-import { AppContext } from '../../App';
-import { RPSContext } from '../../pages/RPSPage';
+import React, { useContext, useEffect } from "react";
+import { AppContext } from "../../App";
+import { RPSContext } from "../../pages/RPSPage";
 
-import { GiGingerbreadMan } from 'react-icons/gi';
-import { FaRobot } from 'react-icons/fa';
+import { GiGingerbreadMan } from "react-icons/gi";
+import { FaRobot } from "react-icons/fa";
 
-import PagePalette from '../../config/PagePalette';
-import RPSAvatar from './RPSAvatar';
-import PlayButton from './PlayButton';
-import RPSComponent from './RPSComponent';
-import ScoreBoard from './ScoreBoard';
-import { FaRegHandRock } from 'react-icons/fa';
-import { FaRegHandPaper } from 'react-icons/fa';
-import { FaRegHandScissors } from 'react-icons/fa';
+import PagePalette from "../../config/PagePalette";
+import RPSAvatar from "./RPSAvatar";
+import PlayButton from "./PlayButton";
+import RPSComponent from "./RPSComponent";
+import ScoreBoard from "./ScoreBoard";
+import { FaRegHandRock } from "react-icons/fa";
+import { FaRegHandPaper } from "react-icons/fa";
+import { FaRegHandScissors } from "react-icons/fa";
 
-import colors from '../../config/colors';
+import colors from "../../config/colors";
 
 export default function WelcomeBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
@@ -62,9 +62,9 @@ export default function WelcomeBanner({ props }) {
 
   const stopTimer = () => {
     const robotChoice = [
-      { name: 'Rock', avatar: <FaRegHandRock /> },
-      { name: 'Paper', avatar: <FaRegHandPaper /> },
-      { name: 'Scissors', avatar: <FaRegHandScissors /> },
+      { name: "Rock", avatar: <FaRegHandRock /> },
+      { name: "Paper", avatar: <FaRegHandPaper /> },
+      { name: "Scissors", avatar: <FaRegHandScissors /> },
     ];
     clearInterval(rainbowColors);
     manageRPSContext.setR2D2Choice(robotChoice[Math.floor(Math.random() * 3)]);
@@ -82,10 +82,10 @@ export default function WelcomeBanner({ props }) {
   return (
     <div
       style={{
-        display: 'grid',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
+        display: "grid",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
         color: PagePalette[manageAppContext.page].secondary,
       }}
     >
@@ -97,14 +97,14 @@ export default function WelcomeBanner({ props }) {
         <RPSAvatar
           name="Player"
           avatar={<GiGingerbreadMan size="10vh" />}
-          RPS={playerChoice['avatar']}
+          RPS={playerChoice["avatar"]}
         />
         <ScoreBoard />
         <div style={{ color: manageRPSContext.robotColor }}>
           <RPSAvatar
             name="R2-D2"
             avatar={<FaRobot size="10vh" />}
-            RPS={R2D2Choice['avatar']}
+            RPS={R2D2Choice["avatar"]}
           />
         </div>
       </div>
@@ -125,18 +125,18 @@ export default function WelcomeBanner({ props }) {
 
 const styles = {
   title: {
-    fontSize: '5vh',
+    fontSize: "5vh",
   },
   content: {
-    display: 'grid',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gridGap: '5vh',
-    gridTemplateColumns: 'auto auto auto',
-    margin: '2vh',
+    display: "grid",
+    justifyContent: "center",
+    alignItems: "center",
+    gridGap: "5vh",
+    gridTemplateColumns: "auto auto auto",
+    margin: "2vh",
   },
   playButton: {
-    display: 'grid',
-    justifyContent: 'center',
+    display: "grid",
+    justifyContent: "center",
   },
 };

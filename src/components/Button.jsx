@@ -1,9 +1,9 @@
-import React, { useState, useContext } from 'react';
-import { AppContext } from '../App';
+import React, { useState, useContext } from "react";
+import { AppContext } from "../App";
 
-import pagePalette from '../config/PagePalette';
+import pagePalette from "../config/PagePalette";
 
-export default function Button({ title = 'Title', solid = true, onClick }) {
+export default function Button({ title = "Title", solid = true, onClick }) {
   const [hover, setHover] = useState(false);
   const { manageAppContext } = useContext(AppContext);
 
@@ -17,10 +17,10 @@ export default function Button({ title = 'Title', solid = true, onClick }) {
   return (
     <div
       style={{
-        display: 'grid',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
+        display: "grid",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
         color: hover ? btnBackgroundColor : btnTextColor,
         backgroundColor: hover ? btnTextColor : btnBackgroundColor,
         borderRadius: 20,
@@ -30,7 +30,7 @@ export default function Button({ title = 'Title', solid = true, onClick }) {
         paddingLeft: 20,
         paddingRight: 20,
         margin: 10,
-        cursor: 'pointer',
+        cursor: "pointer",
       }}
       onClick={onClick}
       onMouseOver={() => setHover(!hover)}

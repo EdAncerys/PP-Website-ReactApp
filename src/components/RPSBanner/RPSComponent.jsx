@@ -1,19 +1,19 @@
-import React, { useContext } from 'react';
-import { RPSContext } from '../../pages/RPSPage';
-import RPSAvatar from './RPSAvatar';
+import React, { useContext } from "react";
+import { RPSContext } from "../../pages/RPSPage";
+import RPSAvatar from "./RPSAvatar";
 
-import { FaRegHandRock } from 'react-icons/fa';
-import { FaRegHandPaper } from 'react-icons/fa';
-import { FaRegHandScissors } from 'react-icons/fa';
-import PlayButton from './PlayButton';
+import { FaRegHandRock } from "react-icons/fa";
+import { FaRegHandPaper } from "react-icons/fa";
+import { FaRegHandScissors } from "react-icons/fa";
+import PlayButton from "./PlayButton";
 
-import colors from '../../config/colors';
+import colors from "../../config/colors";
 
 export default function RPSComponent({ props }) {
   const { manageRPSContext } = useContext(RPSContext);
 
   const playerChoice = manageRPSContext.playerChoice
-    ? manageRPSContext.playerChoice['name']
+    ? manageRPSContext.playerChoice["name"]
     : false;
   const fade = playerChoice ? 0.2 : 1;
 
@@ -25,25 +25,25 @@ export default function RPSComponent({ props }) {
     <div style={styles.container}>
       <div style={styles.wrapper}>
         <div
-          style={{ opacity: playerChoice === 'Rock' ? 1 : fade }}
+          style={{ opacity: playerChoice === "Rock" ? 1 : fade }}
           onClick={() =>
-            handleClick({ name: 'Rock', avatar: <FaRegHandRock /> })
+            handleClick({ name: "Rock", avatar: <FaRegHandRock /> })
           }
         >
           <RPSAvatar name="Rock" avatar={<FaRegHandRock size="6vh" />} />
         </div>
         <div
-          style={{ opacity: playerChoice === 'Paper' ? 1 : fade }}
+          style={{ opacity: playerChoice === "Paper" ? 1 : fade }}
           onClick={() =>
-            handleClick({ name: 'Paper', avatar: <FaRegHandPaper /> })
+            handleClick({ name: "Paper", avatar: <FaRegHandPaper /> })
           }
         >
           <RPSAvatar name="Paper" avatar={<FaRegHandPaper size="6vh" />} />
         </div>
         <div
-          style={{ opacity: playerChoice === 'Scissors' ? 1 : fade }}
+          style={{ opacity: playerChoice === "Scissors" ? 1 : fade }}
           onClick={() =>
-            handleClick({ name: 'Scissors', avatar: <FaRegHandScissors /> })
+            handleClick({ name: "Scissors", avatar: <FaRegHandScissors /> })
           }
         >
           <RPSAvatar
@@ -83,10 +83,10 @@ export default function RPSComponent({ props }) {
 
 const styles = {
   wrapper: {
-    display: 'grid',
-    gridTemplateColumns: 'auto auto auto',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gridGap: '5vw',
+    display: "grid",
+    gridTemplateColumns: "auto auto auto",
+    justifyContent: "center",
+    alignItems: "center",
+    gridGap: "5vw",
   },
 };

@@ -1,8 +1,8 @@
-import React from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import React from "react";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
-import colors from '../config/colors';
+import colors from "../config/colors";
 
 export default function AboutMePage({ props }) {
   return (
@@ -53,36 +53,36 @@ export default function AboutMePage({ props }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    width: '100vw',
-    height: '100vh',
-    gridTemplateColumns: 'repeat(5, 1fr)',
-    gridTemplateRows: 'repeat(5, 1fr)',
+    display: "grid",
+    width: "100vw",
+    height: "100vh",
+    gridTemplateColumns: "repeat(5, 1fr)",
+    gridTemplateRows: "repeat(5, 1fr)",
 
-    userSelect: 'none',
-    cursor: 'default',
+    userSelect: "none",
+    cursor: "default",
   },
   content: {
-    display: 'grid',
-    justifyContent: 'center',
-    gridColumn: 'span 6',
-    gridRow: '1 / 6',
-    marginTop: '10vh',
-    textAlign: 'justify',
+    display: "grid",
+    justifyContent: "center",
+    gridColumn: "span 6",
+    gridRow: "1 / 6",
+    marginTop: "10vh",
+    textAlign: "justify",
   },
   wrapper: {
     width: 600,
-    maxWidth: '95vw',
+    maxWidth: "95vw",
   },
   paragraph: {
-    marginTop: '2vh',
+    marginTop: "2vh",
   },
   footer: {
-    gridRow: '6 / 6',
-    gridColumn: 'span 6',
+    gridRow: "6 / 6",
+    gridColumn: "span 6",
   },
   link: {
     color: colors.darkBlue,
-    textDecoration: 'none',
+    textDecoration: "none",
   },
 };

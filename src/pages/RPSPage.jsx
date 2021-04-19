@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { AppContext } from '../App';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import WelcomeBanner from '../components/RPSBanner/WelcomeBanner';
+import React, { useState, useEffect, useContext } from "react";
+import { AppContext } from "../App";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import WelcomeBanner from "../components/RPSBanner/WelcomeBanner";
 
-import colors from '../config/colors';
-import PagePalette from '../config/PagePalette';
+import colors from "../config/colors";
+import PagePalette from "../config/PagePalette";
 
 export const RPSContext = React.createContext();
 
@@ -23,7 +23,7 @@ export default function RPSPage({ props }) {
     PagePalette[manageAppContext.page].secondary
   );
 
-  const SESSION_STORAGE_KEY = 'EdAncerysPortfolioWebSiteRPS.App';
+  const SESSION_STORAGE_KEY = "EdAncerysPortfolioWebSiteRPS.App";
 
   const manageRPSContext = {
     game: game,
@@ -64,16 +64,16 @@ export default function RPSPage({ props }) {
     );
   }, [manageRPSContext]);
 
-  const playerCall = playerChoice ? playerChoice['name'] : false;
-  const R2D2Call = R2D2Choice ? R2D2Choice['name'] : false;
+  const playerCall = playerChoice ? playerChoice["name"] : false;
+  const R2D2Call = R2D2Choice ? R2D2Choice["name"] : false;
   const evenGame = playerCall === R2D2Call && playerChoice;
 
   const _handlePlayerScore = () => {
     let addScore;
     if (
-      (playerCall === 'Rock' && R2D2Call !== 'Paper' && !evenGame) ||
-      (playerCall === 'Paper' && R2D2Call !== 'Scissors' && !evenGame) ||
-      (playerCall === 'Scissors' && R2D2Call !== 'Rock' && !evenGame)
+      (playerCall === "Rock" && R2D2Call !== "Paper" && !evenGame) ||
+      (playerCall === "Paper" && R2D2Call !== "Scissors" && !evenGame) ||
+      (playerCall === "Scissors" && R2D2Call !== "Rock" && !evenGame)
     )
       addScore = true;
     return addScore;
@@ -82,9 +82,9 @@ export default function RPSPage({ props }) {
   const _handleR2D2Score = () => {
     let addScore;
     if (
-      (R2D2Call === 'Rock' && playerCall !== 'Paper' && !evenGame) ||
-      (R2D2Call === 'Paper' && playerCall !== 'Scissors' && !evenGame) ||
-      (R2D2Call === 'Scissors' && playerCall !== 'Rock' && !evenGame)
+      (R2D2Call === "Rock" && playerCall !== "Paper" && !evenGame) ||
+      (R2D2Call === "Paper" && playerCall !== "Scissors" && !evenGame) ||
+      (R2D2Call === "Scissors" && playerCall !== "Rock" && !evenGame)
     )
       addScore = true;
     return addScore;
@@ -122,34 +122,34 @@ export default function RPSPage({ props }) {
 
 const styles = {
   container: {
-    display: 'grid',
-    width: '100vw',
-    height: '100vh',
-    gridTemplateColumns: 'repeat(5, 1fr)',
-    gridTemplateRows: 'repeat(5, 1fr)',
+    display: "grid",
+    width: "100vw",
+    height: "100vh",
+    gridTemplateColumns: "repeat(5, 1fr)",
+    gridTemplateRows: "repeat(5, 1fr)",
 
-    userSelect: 'none',
-    cursor: 'default',
+    userSelect: "none",
+    cursor: "default",
   },
   content: {
-    display: 'grid',
-    justifyContent: 'center',
-    gridColumn: 'span 6',
+    display: "grid",
+    justifyContent: "center",
+    gridColumn: "span 6",
     marginBottom: 50,
-    gridRow: '1 / 6',
-    marginTop: '10vh',
-    textAlign: 'justify',
+    gridRow: "1 / 6",
+    marginTop: "10vh",
+    textAlign: "justify",
   },
   wrapper: {
     // width: 600,
-    maxWidth: '95vw',
+    maxWidth: "95vw",
   },
   title: {
     fontSize: 30,
     marginTop: 30,
   },
   footer: {
-    gridRow: '6 / 6',
-    gridColumn: 'span 6',
+    gridRow: "6 / 6",
+    gridColumn: "span 6",
   },
 };
