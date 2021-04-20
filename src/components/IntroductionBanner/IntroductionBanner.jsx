@@ -13,7 +13,9 @@ export default function IntroductionBanner({ props }) {
   const [lineTwoHover, setLineTwoHover] = useState(false);
   const [lineThreeHover, setLineThreeHover] = useState(false);
 
-  const handleClick = () => {};
+  const handleLineOneClick = () => {
+    document.location = "mailto: lookatemail@gmail.com";
+  };
 
   const pageNumber = 1;
   const lineOneColor = lineOneHover ? colors.danger : colors.white;
@@ -21,10 +23,10 @@ export default function IntroductionBanner({ props }) {
   const lineThreeColor = lineThreeHover ? colors.danger : colors.white;
 
   const lineOne = lineOneHover ? "Get In Touch" : "Hello.";
-  const lineTwo = lineTwoHover ? "Find Out More" : "I'm Ed";
+  const lineTwo = lineTwoHover ? "Find Out More" : "I'm Ed.";
   const lineThree = lineThreeHover
-    ? "Projects I'm Working On"
-    : "Learn More About Me";
+    ? "What I'm Working On"
+    : "Learn More About Me.";
 
   return (
     <div
@@ -35,21 +37,17 @@ export default function IntroductionBanner({ props }) {
       <div className="features teko">
         <div className="flex-container-90">
           <div
-            className="banner"
+            className="banner-main"
             style={{
               backgroundColor: PagePalette[pageNumber].primary,
             }}
           >
-            <HeaderForBanner
-              color={PagePalette[pageNumber].secondary}
-              page={pageNumber}
-            />
             <div style={styles.textWrapper}>
               <div
                 style={{ color: lineOneColor }}
                 onMouseOver={() => setLineOneHover(true)}
                 onMouseLeave={() => setLineOneHover(false)}
-                onClick={() => handleClick()}
+                onClick={() => handleLineOneClick()}
               >
                 {lineOne}
               </div>
@@ -57,7 +55,7 @@ export default function IntroductionBanner({ props }) {
                 style={{ color: lineTwoColor }}
                 onMouseOver={() => setLineTwoHover(true)}
                 onMouseLeave={() => setLineTwoHover(false)}
-                onClick={() => handleClick()}
+                onClick={() => handleLineOneClick()}
               >
                 {lineTwo}
               </div>
@@ -65,7 +63,7 @@ export default function IntroductionBanner({ props }) {
                 style={{ color: lineThreeColor }}
                 onMouseOver={() => setLineThreeHover(true)}
                 onMouseLeave={() => setLineThreeHover(false)}
-                onClick={() => handleClick()}
+                onClick={() => handleLineOneClick()}
               >
                 {lineThree}
               </div>
