@@ -4,6 +4,36 @@ body {
   margin: 0;
   padding: 0;
 }
+/* .animate {
+  transition: all 1.6s cubic-bezier(0.2, 0.6, 0.2, 1);
+} */
+:root {
+  --mainColor: #eabb56;
+}
+.animate {
+  transition: all 1.6s cubic-bezier(0.2, 0.6, 0.2, 1);
+
+  background: linear-gradient(
+    to right,
+    var(--mainColor) 0%,
+    var(--mainColor) 5px,
+    transparent 5px
+  );
+  background-repeat: repeat-x;
+  background-size: 100%;
+  color: #000;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.animate:hover {
+  background: linear-gradient(
+    to right,
+    var(--mainColor) 0%,
+    var(--mainColor) 5px,
+    transparent
+  );
+}
 .banner,
 .banner-main {
   display: grid;

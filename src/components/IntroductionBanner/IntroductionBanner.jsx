@@ -16,6 +16,9 @@ export default function IntroductionBanner({ props }) {
   const handleLineOneClick = () => {
     document.location = "mailto: lookatemail@gmail.com";
   };
+  const handleLineTwoClick = () => {
+    manageAppContext.setPage(1);
+  };
 
   const pageNumber = 1;
   const lineOneColor = lineOneHover ? colors.danger : colors.white;
@@ -27,6 +30,8 @@ export default function IntroductionBanner({ props }) {
   const lineThree = lineThreeHover
     ? "What I'm Working On"
     : "Learn More About Me.";
+
+  // const animate = lineOneHover ? "animate" : "";
 
   return (
     <div
@@ -44,6 +49,7 @@ export default function IntroductionBanner({ props }) {
           >
             <div style={styles.textWrapper}>
               <div
+                className="animate"
                 style={{ color: lineOneColor }}
                 onMouseOver={() => setLineOneHover(true)}
                 onMouseLeave={() => setLineOneHover(false)}
@@ -55,7 +61,7 @@ export default function IntroductionBanner({ props }) {
                 style={{ color: lineTwoColor }}
                 onMouseOver={() => setLineTwoHover(true)}
                 onMouseLeave={() => setLineTwoHover(false)}
-                onClick={() => handleLineOneClick()}
+                onClick={() => handleLineTwoClick()}
               >
                 {lineTwo}
               </div>
