@@ -17,7 +17,14 @@ export default function IntroductionBanner({ props }) {
     document.location = "mailto: lookatemail@gmail.com";
   };
   const handleLineTwoClick = () => {
-    manageAppContext.setPage(1);
+    setTimeout(() => {
+      manageAppContext.setPage(1);
+    }, 500)
+  };
+  const handleLineThreeClick = () => {
+    setTimeout(() => {
+      manageAppContext.setPage(2);
+    }, 500)
   };
 
   const pageNumber = 1;
@@ -58,6 +65,7 @@ export default function IntroductionBanner({ props }) {
                 {lineOne}
               </div>
               <div
+                className="animate"
                 style={{ color: lineTwoColor }}
                 onMouseOver={() => setLineTwoHover(true)}
                 onMouseLeave={() => setLineTwoHover(false)}
@@ -66,10 +74,11 @@ export default function IntroductionBanner({ props }) {
                 {lineTwo}
               </div>
               <div
+                className="animate"
                 style={{ color: lineThreeColor }}
                 onMouseOver={() => setLineThreeHover(true)}
                 onMouseLeave={() => setLineThreeHover(false)}
-                onClick={() => handleLineOneClick()}
+                onClick={() => handleLineThreeClick()}
               >
                 {lineThree}
               </div>
@@ -90,11 +99,10 @@ export default function IntroductionBanner({ props }) {
 const styles = {
   textWrapper: {
     display: "grid",
-    gridTemplateRows: "70px 70px 70px",
-    gap: "5px",
+    gap: "10px",
     alignItems: "center",
     justifyContent: "start",
-    fontSize: "70px",
+    fontSize: "clamp(32px, 70px, 12vw)",
     color: colors.white,
     cursor: "pointer",
   },

@@ -12,7 +12,6 @@ body {
 }
 .animate {
   transition: all 1.6s cubic-bezier(0.2, 0.6, 0.2, 1);
-
   background: linear-gradient(
     to right,
     var(--mainColor) 0%,
