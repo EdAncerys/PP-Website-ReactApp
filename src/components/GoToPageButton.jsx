@@ -27,24 +27,31 @@ export default function GoToPageButton({ icon, color, hoverColor, page }) {
         justifyContent: "center",
         color: iconColor,
         cursor: "pointer",
-        transform: clickEffect ? "scale(0.90)" : "scale(1)",
+        transform: hover ? "scale(0.90)" : "scale(1)",
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => handleClick()}
     >
-      <div style={styles.goToIcon}>
-        <div>go</div>
-        <div>{icon}</div>
+      <div style={styles.goToContainer}>
+        <div>click me</div>
+        <div style={styles.goToIcon}>{icon}</div>
       </div>
     </div>
   );
 }
 
 const styles = {
+  goToContainer: {
+    display: "grid",
+    gridTemplateColumns: "1fr auto",
+    alignContent: "center",
+    justifyContent: "center",
+    gap: "5px"
+  },
   goToIcon: {
     display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "5px",
+    alignContent: "center",
+    justifyContent: "center"
   },
 };
