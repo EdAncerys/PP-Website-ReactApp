@@ -13,6 +13,7 @@ export default function ContentBanner({ props }) {
           <IntroductionBanner />
         </div>
       </div>
+
       <div className="features">
         <div className="flex-container-100">
           <PPBanner />
@@ -20,10 +21,13 @@ export default function ContentBanner({ props }) {
       </div>
 
       <div className="features">
-        <div className="flex-container-50">
+        <div className="flex-container-100">
           <TickTackToeBanner />
         </div>
-        <div className="flex-container-50">
+      </div>
+
+      <div className="features">
+        <div className="flex-container-100">
           <RPSBanner />
         </div>
       </div>

@@ -16,36 +16,34 @@ export default function TickTackToeBanner({ props }) {
 
   return (
     <div
-    style={{
-      backgroundColor: PagePalette[pageNumber].primary,
-    }}
-  >
-    <div className="features teko">
-    <div className="flex-container-90">
-      <div
-        className="banner"
-      >
-        <HeaderForBanner
-          color={PagePalette[pageNumber].secondary}
-          page={pageNumber}
-        />
-        <div style={styles.imageContainer}>
-          <ImageContainer
-            img={LegoManImg}
-            altText="Personal-Portfolio"
-            text={textDescription.PP}
-            color={PagePalette[pageNumber].secondary}
-          />
+      style={{
+        backgroundColor: PagePalette[pageNumber].primary,
+      }}
+    >
+      <div className="features teko">
+        <div className="flex-container-90">
+          <div className="banner">
+            <HeaderForBanner
+              color={PagePalette[pageNumber].secondary}
+              page={pageNumber}
+            />
+            <div style={styles.imageContainer}>
+              <ImageContainer
+                img={LegoManImg}
+                altText="Personal-Portfolio"
+                text={textDescription.PP}
+                color={PagePalette[pageNumber].secondary}
+              />
+            </div>
+            <FooterForBanner
+              name="Personal Portfolio. See What I'm Working On"
+              type="Informational"
+              color={PagePalette[pageNumber].secondary}
+              page={pageNumber}
+            />
+          </div>
         </div>
-        <FooterForBanner
-          name="Personal Portfolio. See What I Can Do"
-          type="Informational"
-          color={PagePalette[pageNumber].secondary}
-          page={pageNumber}
-        />
       </div>
-    </div>
-    </div>
     </div>
   );
 }

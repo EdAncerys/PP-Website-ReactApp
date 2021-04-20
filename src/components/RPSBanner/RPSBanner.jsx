@@ -17,39 +17,34 @@ export default function TickTackToeBanner({ props }) {
 
   return (
     <div
-      className="bangers"
       style={{
-        ...styles.container,
-        ...{ backgroundColor: PagePalette[pageNumber].primary },
+        backgroundColor: PagePalette[pageNumber].primary,
       }}
     >
-      <div
-        style={{
-          display: "grid",
-          gridTemplateRows: "50px auto 100px",
-          height: 550,
-          width: mediaQuery ? "95vw" : 600,
-        }}
-      >
-        <HeaderForBanner
-          color={PagePalette[pageNumber].secondary}
-          page={pageNumber}
-        />
-        <div style={styles.imageContainer}>
-          <ImageContainer
-            img={RPS}
-            altText="RPS"
-            text={textDescription.RPS}
-            color={PagePalette[pageNumber].secondary}
-            backgroundColor={colors.white}
-          />
+      <div className="features teko">
+        <div className="flex-container-90">
+          <div className="banner">
+            <HeaderForBanner
+              color={PagePalette[pageNumber].secondary}
+              page={pageNumber}
+            />
+            <div style={styles.imageContainer}>
+              <ImageContainer
+                img={RPS}
+                altText="RPS"
+                text={textDescription.RPS}
+                color={PagePalette[pageNumber].secondary}
+                backgroundColor={colors.white}
+              />
+            </div>
+            <FooterForBanner
+              name="Rock Paper Scissors"
+              type="Game"
+              color={PagePalette[pageNumber].secondary}
+              page={pageNumber}
+            />
+          </div>
         </div>
-        <FooterForBanner
-          name="Rock Paper Scissors"
-          type="Game"
-          color={PagePalette[pageNumber].secondary}
-          page={pageNumber}
-        />
       </div>
     </div>
   );

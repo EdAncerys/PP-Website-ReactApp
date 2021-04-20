@@ -9,7 +9,7 @@ export default function FooterForBanner({ color, page, name, type }) {
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
+        gridTemplateColumns: "1fr auto",
         alignItems: "center",
         fontSize: 20,
         color: color,
@@ -17,8 +17,8 @@ export default function FooterForBanner({ color, page, name, type }) {
     >
       <div style={styles.footerText}>
         <div>&#123;</div>
-        <div>Name : {name} ,</div>
-        <div>Type : {type}</div>
+        <div style={styles.keyValue}>Name : {name} ,</div>
+        <div style={styles.keyValue}>Type : {type}</div>
         <div>&#125;</div>
       </div>
       <div style={styles.goToBtn}>
@@ -35,6 +35,10 @@ export default function FooterForBanner({ color, page, name, type }) {
 const styles = {
   footerText: {
     display: "grid",
+    width: "100%",
+  },
+  keyValue: {
+    paddingLeft: "10px",
   },
   goToBtn: {
     display: "grid",
