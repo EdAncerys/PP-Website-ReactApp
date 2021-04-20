@@ -4,9 +4,6 @@ body {
   margin: 0;
   padding: 0;
 }
-/* .animate {
-  transition: all 1.6s cubic-bezier(0.2, 0.6, 0.2, 1);
-} */
 :root {
   --mainColor: #eabb56;
 }
@@ -37,7 +34,7 @@ body {
 .banner-main {
   display: grid;
   align-items: center;
-  grid-template-rows: 50px 400px 100px;
+  grid-template-rows: auto 450px auto;
   padding: 20px 0;
 }
 .banner-main {
@@ -51,14 +48,11 @@ body {
 }
 .flex-container-50 {
   flex-basis: 50%;
-  overflow: auto;
 }
 .flex-container-90 {
   flex-basis: 90%;
   max-width: 500px;
-  overflow: auto;
 }
 .flex-container-100 {
   flex-basis: 100%;
-  overflow: auto;
 }

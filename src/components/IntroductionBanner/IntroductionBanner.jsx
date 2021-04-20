@@ -50,9 +50,6 @@ export default function IntroductionBanner({ props }) {
         <div className="flex-container-90">
           <div
             className="banner-main"
-            style={{
-              backgroundColor: PagePalette[pageNumber].primary,
-            }}
           >
             <div style={styles.textWrapper}>
               <div

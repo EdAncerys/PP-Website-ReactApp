@@ -16,19 +16,14 @@ export default function TickTackToeBanner({ props }) {
 
   return (
     <div
-      className="bangers"
-      style={{
-        ...styles.container,
-        ...{ backgroundColor: PagePalette[pageNumber].primary },
-      }}
-    >
+    style={{
+      backgroundColor: PagePalette[pageNumber].primary,
+    }}
+  >
+    <div className="features teko">
+    <div className="flex-container-90">
       <div
-        style={{
-          display: "grid",
-          gridTemplateRows: "50px auto 100px",
-          height: 550,
-          width: mediaQuery ? "95vw" : "auto",
-        }}
+        className="banner"
       >
         <HeaderForBanner
           color={PagePalette[pageNumber].secondary}
@@ -49,6 +44,8 @@ export default function TickTackToeBanner({ props }) {
           page={pageNumber}
         />
       </div>
+    </div>
+    </div>
     </div>
   );
 }
