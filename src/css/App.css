@@ -4,11 +4,15 @@ body {
   margin: 0;
   padding: 0;
 }
-.banner {
+.banner,
+.banner-main {
   display: grid;
   align-items: center;
   grid-template-rows: 50px 400px 100px;
   padding: 20px 0;
+}
+.banner-main {
+  grid-template-rows: 450px 100px;
 }
 .features {
   width: 100%;
@@ -20,8 +24,8 @@ body {
   flex-basis: 50%;
   overflow: auto;
 }
-.flex-container-80 {
-  flex-basis: 80%;
+.flex-container-90 {
+  flex-basis: 90%;
   max-width: 500px;
   overflow: auto;
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { AppContext } from "../../App";
 
 import colors from "../../config/colors";
@@ -7,13 +7,24 @@ import HeaderForBanner from "../HeaderForBanner";
 
 import PagePalette from "../../config/PagePalette";
 
-export default function TickTackToeBanner({ props }) {
+export default function IntroductionBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
+  const [lineOneHover, setLineOneHover] = useState(false);
+  const [lineTwoHover, setLineTwoHover] = useState(false);
+  const [lineThreeHover, setLineThreeHover] = useState(false);
+
+  const handleClick = () => {};
 
   const pageNumber = 1;
-  const lineOne = "Hello.";
-  const lineTwo = "I'm Ed";
-  const lineThree = "And This is My Personal Portfolio Website!";
+  const lineOneColor = lineOneHover ? colors.danger : colors.white;
+  const lineTwoColor = lineTwoHover ? colors.danger : colors.white;
+  const lineThreeColor = lineThreeHover ? colors.danger : colors.white;
+
+  const lineOne = lineOneHover ? "Get In Touch" : "Hello.";
+  const lineTwo = lineTwoHover ? "Find Out More" : "I'm Ed";
+  const lineThree = lineThreeHover
+    ? "Projects I'm Working On"
+    : "Learn More About Me";
 
   return (
     <div
@@ -21,8 +32,8 @@ export default function TickTackToeBanner({ props }) {
         backgroundColor: PagePalette[pageNumber].primary,
       }}
     >
-      <div className="features">
-        <div className="flex-container-80">
+      <div className="features teko">
+        <div className="flex-container-90">
           <div
             className="banner"
             style={{
@@ -34,9 +45,30 @@ export default function TickTackToeBanner({ props }) {
               page={pageNumber}
             />
             <div style={styles.textWrapper}>
-              <div>Text To Change</div>
-              <div>Text To Change</div>
-              <div>Text To Change</div>
+              <div
+                style={{ color: lineOneColor }}
+                onMouseOver={() => setLineOneHover(true)}
+                onMouseLeave={() => setLineOneHover(false)}
+                onClick={() => handleClick()}
+              >
+                {lineOne}
+              </div>
+              <div
+                style={{ color: lineTwoColor }}
+                onMouseOver={() => setLineTwoHover(true)}
+                onMouseLeave={() => setLineTwoHover(false)}
+                onClick={() => handleClick()}
+              >
+                {lineTwo}
+              </div>
+              <div
+                style={{ color: lineThreeColor }}
+                onMouseOver={() => setLineThreeHover(true)}
+                onMouseLeave={() => setLineThreeHover(false)}
+                onClick={() => handleClick()}
+              >
+                {lineThree}
+              </div>
             </div>
             <FooterForBanner
               name="About"
@@ -54,11 +86,11 @@ export default function TickTackToeBanner({ props }) {
 const styles = {
   textWrapper: {
     display: "grid",
-    gridTemplateRows: "60px 60px 60px",
+    gridTemplateRows: "70px 70px 70px",
     gap: "5px",
     alignItems: "center",
     justifyContent: "start",
-    fontSize: "60px",
+    fontSize: "70px",
     color: colors.white,
     cursor: "pointer",
   },

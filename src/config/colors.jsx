@@ -16,4 +16,5 @@ export default {
   electric: "#80E4C9",
   pink: "#E2BCD6",
   red: "#D95E5A",
+  danger: "#D2042D",
 };
