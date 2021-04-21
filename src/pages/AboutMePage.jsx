@@ -7,7 +7,7 @@ import colors from "../config/colors";
 export default function AboutMePage({ props }) {
   return (
     <div className="bodyContainer">
-        <Header color={colors.white} />
+      <Header color={colors.white} />
       <div className="bodyWrapper">
         <div className="features teko">
           <div className="flex-container-90">
@@ -51,17 +51,18 @@ export default function AboutMePage({ props }) {
           </div>
         </div>
       </div>
-        <Footer />
+      <Footer />
     </div>
   );
 }
 
 const styles = {
   paragraph: {
-    marginTop: "2vh",
+    marginTop: "20px",
   },
   link: {
     color: colors.darkBlue,
+    paddingRight: "4px",
     textDecoration: "none",
   },
 };

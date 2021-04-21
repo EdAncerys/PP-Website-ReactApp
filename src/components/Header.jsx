@@ -10,26 +10,20 @@ export default function Header({ color }) {
   const { manageAppContext } = useContext(AppContext);
 
   const pageNumber = manageAppContext.page;
-  const textColor = colors.black;
+  const backgroundColor = color ? color : colors.black;
+  const textColor = color ? colors.black : colors.white;
 
   return (
     <div
       style={{
-        position: "absolute",
-        top: 0,
         width: "100%",
-        display: "grid",
-        alignContent: "center",
-        gridTemplateColumns: "auto auto",
-        height: "80px",
         borderTop: `1px solid ${color}`,
         color: textColor,
-        fontSize: "4vh",
-        userSelect: "none",
-        cursor: "default",
-        zIndex: 1,
+        fontSize: "20px",
+        backgroundColor: backgroundColor,
       }}
     >
+      <div  style={styles.wrapper}>
       <div
         className="logo"
         style={{
@@ -37,7 +31,7 @@ export default function Header({ color }) {
           justifyItems: "start",
           paddingLeft: "20px",
           fontSize: "32px",
-          fontWeight: "800",
+          fontWeight: "600",
           cursor: "pointer",
         }}
         onClick={() => manageAppContext.setPage(false)}
@@ -48,7 +42,7 @@ export default function Header({ color }) {
         style={{
           display: "grid",
           justifyItems: "end",
-          paddingRight: "2vh",
+          paddingRight: "20px",
           cursor: "pointer",
         }}
       >
@@ -59,6 +53,15 @@ export default function Header({ color }) {
           page={false}
         />
       </div>
+      </div>
     </div>
   );
 }
+
+const styles = {
+  wrapper: {
+    display: "grid",
+    gridTemplateColumns: "auto auto",
+    padding: "10px 20px",
+  }
+};

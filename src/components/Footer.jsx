@@ -21,11 +21,9 @@ export default function Footer({ color }) {
     <div
       className="teko"
       style={{
-        display: "grid",
-        alignContent: "center",
-        justifyItems: "center",
+        position: "absolute",
+        bottom: 0,
         width: "100%",
-        padding: "10px 20px",
         borderTop: `1px solid ${color}`,
         color: textColor,
         fontSize: "20px",
@@ -34,12 +32,12 @@ export default function Footer({ color }) {
     >
       <div  style={styles.wrapper}>
         <div
-          style={{ display: "grid", justifyItems: "start", paddingLeft: "20px" }}
+          style={{ display: "grid", justifyItems: "start" }}
         >
           &copy; Copyright {year}. All Rights Reserved
         </div>
         <div
-          style={{ display: "grid", justifyItems: "end", paddingRight: "20px" }}
+          style={{ display: "grid", justifyItems: "end" }}
         >
           {date}
         </div>
@@ -51,9 +49,7 @@ export default function Footer({ color }) {
 const styles = {
   wrapper: {
     display: "grid",
-    alignContent: "center",
-    justifyItems: "center",
     gridTemplateColumns: "auto auto",
-    width: "1000px",
+    padding: "10px 20px",
   }
 };
