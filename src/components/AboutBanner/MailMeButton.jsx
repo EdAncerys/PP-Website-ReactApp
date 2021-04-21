@@ -38,6 +38,7 @@ export default function MailMeButton({
         cursor: "pointer",
         fontSize: 20,
         transform: clickEffect ? "scale(0.99)" : "scale(1)",
+        transition: "all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1)",
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}

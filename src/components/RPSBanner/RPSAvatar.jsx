@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 import colors from "../../config/colors";
 
-export default function RPSAvatar({ name, avatar, RPS }) {
+export default function RPSAvatar({ name, avatar, RPS, avatarColor }) {
   const [click, setClick] = useState(false);
 
-  const color = click ? colors.red : "";
+  const backgroundColor = avatarColor ? avatarColor : "";
+  const color = click ? colors.danger : backgroundColor;
   const transform = click ? "scale(0.95)" : "scale(1)";
 
   const handleClick = () => {
@@ -34,13 +35,13 @@ const styles = {
     alignItems: "center",
     textAlign: "center",
     cursor: "pointer",
-    transition: "0.15s",
+    transition: "all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1)",
   },
   name: {
-    fontSize: "2.5vh",
+    fontSize: "25px",
   },
   RPS: {
-    height: "4vh",
-    fontSize: "3vh",
+    height: "80px",
+    fontSize: "20px",
   },
 };

@@ -50,23 +50,22 @@ const styles = {
   container: {
     display: "grid",
     gridTemplateColumns: "auto auto auto",
-    gridGap: "3vh",
+    gridGap: "30px",
   },
   vs: {
-    fontSize: "5vh",
+    fontSize: "30px",
   },
   wrapper: {
     display: "grid",
     color: colors.red,
   },
   title: {
-    // gridColumn: '1 / 2',
     alignSelf: "end",
-    fontSize: "3vh",
+    fontSize: "20px",
   },
   score: {
     display: "grid",
     alignContent: "start",
-    fontSize: "5vh",
+    fontSize: "30px",
   },
 };

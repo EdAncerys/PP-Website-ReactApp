@@ -87,7 +87,7 @@ const styles = {
   container: {
     display: "grid",
     justifyItems: "center",
-    rowGap: "5vh",
+    gap: "20px",
   },
   wrapper: {
     display: "grid",
@@ -101,15 +101,15 @@ const styles = {
     alignContent: "center",
     justifyItems: "center",
     textAlign: "center",
-    fontSize: "3vh",
-    maxWidth: 200,
+    fontSize: "20px",
+    maxWidth: "250px",
   },
   message: {
     display: "grid",
     gridTemplateColumns: "auto auto auto",
-    gridGap: 30,
+    gap: "30px",
     textAlign: "center",
-    minWidth: "15vh",
+    minWidth: "50px",
   },
   scoreNumber: {
     display: "grid",
@@ -134,11 +134,11 @@ const styles = {
   },
   title: {
     alignSelf: "end",
-    fontSize: "3vh",
+    fontSize: "25px",
   },
   score: {
     display: "grid",
     alignContent: "start",
-    fontSize: "5vh",
+    fontSize: "25px",
   },
 };

@@ -148,42 +148,20 @@ export default function TickTackToePage({ props }) {
         manageTickTackToeContext,
       }}
     >
-      <div style={styles.container}>
-        <div>
-          <Header color={colors.white} />
+      <div className="bodyContainer">
+        <Header color={colors.white} />
+        <div className="bodyWrapper">
+          <div className="features OrelegaOne">
+            <div className="flex-container-90 family">
+              <div>
+                {!playerTwo && <FamilyGuyCharacters />}
+                {playerTwo && <PlayerVPlayerBanner />}
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="family" style={styles.content}>
-          {!playerTwo && <FamilyGuyCharacters />}
-          {playerTwo && <PlayerVPlayerBanner />}
-        </div>
-        <div style={styles.footer}>
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </TickTackToeContext.Provider>
   );
 }
-
-const styles = {
-  container: {
-    display: "grid",
-    width: "100vw",
-    height: "100vh",
-    gridTemplateColumns: "repeat(5, 1fr)",
-    gridTemplateRows: "repeat(5, 1fr)",
-    userSelect: "none",
-    cursor: "default",
-  },
-  content: {
-    display: "grid",
-    gridColumn: "span 6",
-    gridRow: "1 / 4",
-    marginTop: "12vh",
-    gridGap: "1vh",
-    textAlign: "justify",
-  },
-  footer: {
-    gridRow: "6 / 6",
-    gridColumn: "span 6",
-  },
-};

@@ -96,14 +96,15 @@ export default function WelcomeBanner({ props }) {
       <div style={styles.content}>
         <RPSAvatar
           name="Player"
-          avatar={<GiGingerbreadMan size="10vh" />}
+          avatarColor={colors.yellow}
+          avatar={<GiGingerbreadMan size="100px" />}
           RPS={playerChoice["avatar"]}
         />
         <ScoreBoard />
         <div style={{ color: manageRPSContext.robotColor }}>
           <RPSAvatar
             name="R2-D2"
-            avatar={<FaRobot size="10vh" />}
+            avatar={<FaRobot size="100px" />}
             RPS={R2D2Choice["avatar"]}
           />
         </div>
@@ -125,15 +126,15 @@ export default function WelcomeBanner({ props }) {
 
 const styles = {
   title: {
-    fontSize: "5vh",
+    fontSize: "36px",
   },
   content: {
     display: "grid",
     justifyContent: "center",
     alignItems: "center",
-    gridGap: "5vh",
+    gap: "30px",
     gridTemplateColumns: "auto auto auto",
-    margin: "2vh",
+    margin: "20px",
   },
   playButton: {
     display: "grid",

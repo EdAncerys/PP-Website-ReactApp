@@ -9,7 +9,7 @@ export default function GoToPageButton({ icon, color, hoverColor, page }) {
   const [hover, setHover] = useState(false);
   const [clickEffect, setClickEffect] = useState(false);
 
-  const iconColor = hover ? hoverColor : color;
+  const iconColor = !hover ? hoverColor : color;
 
   const handleClick = () => {
     setClickEffect(true);

@@ -60,9 +60,8 @@ const styles = {
   wrapper: {
     display: "grid",
     gridTemplateColumns: "repeat(4, auto)",
-    rowGap: "8vh",
+    gap: "50px",
     justifyContent: "space-around",
-    width: 600,
     maxWidth: "95vw",
     cursor: "pointer",
   },
@@ -70,19 +69,17 @@ const styles = {
     display: "grid",
     gridColumn: "1 / 5",
     justifyContent: "center",
-    height: "15vh",
   },
   img: {
     display: "grid",
     justifyContent: "center",
-    height: "15vh",
   },
   name: {
     display: "grid",
     justifyContent: "center",
   },
   title: {
-    fontSize: "4vh",
-    marginBottom: "4vh",
+    fontSize: "28px",
+    padding: "20px 0",
   },
 };

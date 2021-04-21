@@ -6,8 +6,9 @@ import { BsPlayFill } from "react-icons/bs";
 
 export default function PlayButton({ title = "title", onClick, btnColor }) {
   const [click, setClick] = useState(false);
+  const [hover, setHover] = useState(false);
 
-  const color = click ? colors.red : btnColor;
+  const color = hover ? colors.danger : btnColor;
   const transform = click ? "scale(0.95)" : "scale(1)";
 
   const handleClick = () => {
@@ -19,14 +20,23 @@ export default function PlayButton({ title = "title", onClick, btnColor }) {
 
   return (
     <div
-      style={{ ...styles.container, ...{ color: color, transform: transform } }}
+      style={{
+        ...styles.container,
+        ...{
+          color: color,
+          transform: transform,
+          transform: hover ? "scale(0.98)" : "scale(1)",
+        },
+      }}
+      onMouseOver={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       onClick={() => {
         handleClick();
         onClick();
       }}
     >
       <div style={styles.btnText}>{title}</div>
-      <BsPlayFill size="5vh" />
+      <BsPlayFill size="40px" />
     </div>
   );
 }
@@ -41,10 +51,10 @@ const styles = {
     border: "1px solid",
     borderRadius: 20,
     marginTop: 20,
-    transition: "0.15s",
+    transition: "all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1)",
   },
   btnText: {
-    fontSize: "3vh",
-    marginLeft: "2vh",
+    fontSize: "30px",
+    marginLeft: "20px",
   },
 };
