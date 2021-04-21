@@ -31,12 +31,6 @@ export default function ContentBanner({ props }) {
           <RPSBanner />
         </div>
       </div>
-
-      <div className="features">
-        <div className="flex-container-100">
-          <Footer />
-        </div>
-      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ export default function AboutMePage({ props }) {
     <div className="bodyContainer">
       <Header color={colors.white} />
       <div className="bodyWrapper">
-        <div className="features teko">
+        <div className="features OrelegaOne">
           <div className="flex-container-90">
             <div>
               <div style={styles.paragraph}>

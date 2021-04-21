@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  src: url(../fonts/OrelegaOne-Regular.ttf);
+  font-family: OrelegaOne;
+}
+
+.OrelegaOne {
+  font-family: OrelegaOne, sans-serif;
+}
+
+@font-face {
   src: url(../fonts/Bangers-Regular.ttf);
   font-family: Bangers;
 }
