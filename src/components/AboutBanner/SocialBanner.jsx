@@ -31,7 +31,7 @@ export default function SocialBanner({ props }) {
       />
       <IconComponent
         icon={<AiFillMediumSquare size={36} />}
-        hoverColor={colors.white}
+        hoverColor={colors.mediumGrey}
         onClick={() =>
           window.open("https://medium.com/@lookatemail/", "_blank")
         }
