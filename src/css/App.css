@@ -4,6 +4,16 @@ body {
   margin: 0;
   padding: 0;
 }
+.bodyContainer {
+  height: 100%;
+  overflow: auto;
+}
+.bodyWrapper {
+  display: grid;
+  justify-content: center;
+  padding-top: 80px;
+  text-align: center;
+}
 :root {
   --mainColor: #eabb56;
 }

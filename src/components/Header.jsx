@@ -10,7 +10,7 @@ export default function Header({ color }) {
   const { manageAppContext } = useContext(AppContext);
 
   const pageNumber = manageAppContext.page;
-  const textColor = PagePalette[pageNumber].primary;
+  const textColor = colors.black;
 
   return (
     <div
@@ -21,7 +21,7 @@ export default function Header({ color }) {
         display: "grid",
         alignContent: "center",
         gridTemplateColumns: "auto auto",
-        height: "10vh",
+        height: "80px",
         borderTop: `1px solid ${color}`,
         color: textColor,
         fontSize: "4vh",
