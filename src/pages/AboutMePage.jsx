@@ -7,13 +7,11 @@ import colors from "../config/colors";
 export default function AboutMePage({ props }) {
   return (
     <div className="bodyContainer">
+        <Header color={colors.white} />
       <div className="bodyWrapper">
-        <div>
-          <Header color={colors.white} />
-        </div>
         <div className="features teko">
           <div className="flex-container-90">
-            <div style={styles.wrapper}>
+            <div>
               <div style={styles.paragraph}>
                 I am a Retail Manager turned Software Engineer. My new-found
                 passion for programming has stemmed from a desire to turn ideas
@@ -52,44 +50,15 @@ export default function AboutMePage({ props }) {
             </div>
           </div>
         </div>
-        <div style={styles.footer}>
-          <Footer />
-        </div>
       </div>
+        <Footer />
     </div>
   );
 }
 
 const styles = {
-  container: {
-    display: "grid",
-    width: "100vw",
-    height: "100vh",
-    gridTemplateColumns: "repeat(5, 1fr)",
-    gridTemplateRows: "repeat(5, 1fr)",
-
-    userSelect: "none",
-    cursor: "default",
-  },
-  content: {
-    display: "grid",
-    justifyContent: "center",
-    gridColumn: "span 6",
-    gridRow: "1 / 6",
-    marginTop: "10vh",
-    textAlign: "justify",
-  },
-  wrapper: {
-    width: 600,
-    maxWidth: "95vw",
-  },
   paragraph: {
     marginTop: "2vh",
-  },
-  footer: {
-    display: "absolute",
-    width: "100vw",
-    bottom: "0",
   },
   link: {
     color: colors.darkBlue,

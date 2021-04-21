@@ -7,9 +7,9 @@ import GoToPageButton from "../components/GoToPageButton";
 import PagePalette from "../config/PagePalette";
 import colors from "../config/colors";
 
-export default function FooterForBanner({ page, name, type }) {
+export default function FooterForBanner({ color, page, name, type }) {
   const pageNumber = page;
-  const colorPrimary = PagePalette[pageNumber].secondary;
+  const colorPrimary = color ? color : PagePalette[pageNumber].secondary;
   const colorSecondary = colors.white;
 
   return (
