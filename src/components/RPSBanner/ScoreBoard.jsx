@@ -50,7 +50,7 @@ const styles = {
   container: {
     display: "grid",
     gridTemplateColumns: "auto auto auto",
-    gridGap: "30px",
+    gap: "10px",
   },
   vs: {
     fontSize: "30px",

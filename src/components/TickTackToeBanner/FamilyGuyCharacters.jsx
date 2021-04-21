@@ -60,7 +60,7 @@ const styles = {
   wrapper: {
     display: "grid",
     gridTemplateColumns: "repeat(4, auto)",
-    gap: "50px",
+    gap: "20px",
     justifyContent: "space-around",
     maxWidth: "95vw",
     cursor: "pointer",

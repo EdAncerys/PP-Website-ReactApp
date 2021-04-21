@@ -52,31 +52,33 @@ export default function RPSComponent({ props }) {
           />
         </div>
       </div>
-      <PlayButton
-        title="Play Again"
-        btnColor={colors.yellow}
-        onClick={() => {
-          if (manageRPSContext.R2D2Choice) {
-            manageRPSContext.setPlayerChoice();
-            manageRPSContext.setR2D2Choice();
-          }
-        }}
-      />
-      <PlayButton
-        title="New Game"
-        btnColor={colors.darkBlue}
-        onClick={() => {
-          if (manageRPSContext.R2D2Choice || !manageRPSContext.playerChoice) {
-            manageRPSContext.setPlayerChoice();
-            manageRPSContext.setR2D2Choice();
-            manageRPSContext.setRound(0);
-            manageRPSContext.setPlayerScore(0);
-            manageRPSContext.setTiesScore(0);
-            manageRPSContext.setRobotScore(0);
-            manageRPSContext.setR2D2Choice(false);
-          }
-        }}
-      />
+      <div style={styles.btnWrapper}>
+        <PlayButton
+          title="Play Again"
+          btnColor={colors.yellow}
+          onClick={() => {
+            if (manageRPSContext.R2D2Choice) {
+              manageRPSContext.setPlayerChoice();
+              manageRPSContext.setR2D2Choice();
+            }
+          }}
+        />
+        <PlayButton
+          title="New Game"
+          btnColor={colors.darkBlue}
+          onClick={() => {
+            if (manageRPSContext.R2D2Choice || !manageRPSContext.playerChoice) {
+              manageRPSContext.setPlayerChoice();
+              manageRPSContext.setR2D2Choice();
+              manageRPSContext.setRound(0);
+              manageRPSContext.setPlayerScore(0);
+              manageRPSContext.setTiesScore(0);
+              manageRPSContext.setRobotScore(0);
+              manageRPSContext.setR2D2Choice(false);
+            }
+          }}
+        />
+      </div>
     </div>
   );
 }
@@ -88,5 +90,9 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     gridGap: "30px",
+  },
+  btnWrapper: {
+    display: "grid",
+    justifyContent: "center",
   },
 };

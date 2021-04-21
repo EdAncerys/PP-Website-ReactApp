@@ -35,7 +35,7 @@ export default function GoToPageButton({ icon, color, hoverColor, page }) {
       onClick={() => handleClick()}
     >
       <div style={styles.goToContainer}>
-        <div>click me</div>
+        <div></div>
         <div style={styles.goToIcon}>{icon}</div>
       </div>
     </div>
