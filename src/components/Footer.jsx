@@ -37,12 +37,12 @@ export default function Footer({ color }) {
       }}
     >
       <div
-        style={{ display: "grid", justifyItems: "start", paddingLeft: "2vh" }}
+        style={{ display: "grid", justifyItems: "start", paddingLeft: "20px" }}
       >
         &copy; Copyright {year}. All Rights Reserved
       </div>
       <div
-        style={{ display: "grid", justifyItems: "end", paddingRight: "2vh" }}
+        style={{ display: "grid", justifyItems: "end", paddingRight: "20px" }}
       >
         {date}
       </div>

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TiBackspaceOutline } from "react-icons/ti";
+import { IoMdFingerPrint } from "react-icons/io";
 import { AppContext } from "../App";
 import GoToPageButton from "./GoToPageButton";
 
@@ -9,8 +9,8 @@ import PagePalette from "../config/PagePalette";
 export default function Header({ color }) {
   const { manageAppContext } = useContext(AppContext);
 
-  const backgroundColor = color ? color : colors.black;
-  const textColor = color ? colors.black : colors.white;
+  const pageNumber = manageAppContext.page;
+  const textColor = PagePalette[pageNumber].primary;
 
   return (
     <div
@@ -25,7 +25,6 @@ export default function Header({ color }) {
         borderTop: `1px solid ${color}`,
         color: textColor,
         fontSize: "4vh",
-        backgroundColor: backgroundColor,
         userSelect: "none",
         cursor: "default",
         zIndex: 1,
@@ -36,8 +35,9 @@ export default function Header({ color }) {
         style={{
           display: "grid",
           justifyItems: "start",
-          paddingLeft: "2vh",
-          fontSize: "4vh",
+          paddingLeft: "20px",
+          fontSize: "32px",
+          fontWeight: "800",
           cursor: "pointer",
         }}
         onClick={() => manageAppContext.setPage(false)}
@@ -53,9 +53,9 @@ export default function Header({ color }) {
         }}
       >
         <GoToPageButton
-          icon={<TiBackspaceOutline size="4vh" />}
-          color={PagePalette[manageAppContext.page].primary}
-          hoverColor={PagePalette[manageAppContext.page].secondary}
+          icon={<IoMdFingerPrint size="4vh" />}
+          color={PagePalette[pageNumber].primary}
+          hoverColor={PagePalette[pageNumber].secondary}
           page={false}
         />
       </div>

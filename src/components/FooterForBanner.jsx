@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../App";
+
 import { IoMdFingerPrint } from "react-icons/io";
 import GoToPageButton from "../components/GoToPageButton";
 
+import PagePalette from "../config/PagePalette";
 import colors from "../config/colors";
 
-export default function FooterForBanner({ color, page, name, type }) {
+export default function FooterForBanner({ page, name, type }) {
+  const pageNumber = page;
+  const colorPrimary = PagePalette[pageNumber].secondary;
+  const colorSecondary = colors.white;
+
   return (
     <div
       style={{
@@ -12,7 +19,7 @@ export default function FooterForBanner({ color, page, name, type }) {
         gridTemplateColumns: "1fr auto",
         alignItems: "center",
         fontSize: 20,
-        color: color,
+        color: colorPrimary,
       }}
     >
       <div style={styles.footerText}>
@@ -23,9 +30,9 @@ export default function FooterForBanner({ color, page, name, type }) {
       </div>
       <div style={styles.goToBtn}>
         <GoToPageButton
-          icon={<IoMdFingerPrint />}
-          hoverColor={colors.red}
-          page={page}
+          icon={<IoMdFingerPrint size="4vh" />}
+          hoverColor={colorSecondary}
+          page={pageNumber}
         />
       </div>
     </div>

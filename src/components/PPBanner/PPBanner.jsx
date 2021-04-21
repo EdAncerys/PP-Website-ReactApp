@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { AppContext } from "../../App";
+import React from "react";
 import ImageContainer from "../ImageContainer";
 import LegoManImg from "../../img/Lego-Man.png";
 import textDescription from "../../text/ProjectDescription";
@@ -9,9 +8,6 @@ import FooterForBanner from "../FooterForBanner";
 import PagePalette from "../../config/PagePalette";
 
 export default function TickTackToeBanner({ props }) {
-  const { manageAppContext } = useContext(AppContext);
-  const mediaQuery = manageAppContext.mediaQuery;
-
   const pageNumber = 2;
 
   return (

@@ -27,7 +27,8 @@ export default function GoToPageButton({ icon, color, hoverColor, page }) {
         justifyContent: "center",
         color: iconColor,
         cursor: "pointer",
-        transform: hover ? "scale(0.90)" : "scale(1)",
+        transform: hover ? "scale(0.95)" : "scale(1)",
+        transition: "all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1)",
       }}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -47,11 +48,11 @@ const styles = {
     gridTemplateColumns: "1fr auto",
     alignContent: "center",
     justifyContent: "center",
-    gap: "5px"
+    gap: "5px",
   },
   goToIcon: {
     display: "grid",
     alignContent: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
 };

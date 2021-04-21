@@ -19,12 +19,12 @@ export default function IntroductionBanner({ props }) {
   const handleLineTwoClick = () => {
     setTimeout(() => {
       manageAppContext.setPage(1);
-    }, 500)
+    }, 500);
   };
   const handleLineThreeClick = () => {
     setTimeout(() => {
       manageAppContext.setPage(2);
-    }, 500)
+    }, 500);
   };
 
   const pageNumber = 1;
@@ -48,9 +48,7 @@ export default function IntroductionBanner({ props }) {
     >
       <div className="features teko">
         <div className="flex-container-90">
-          <div
-            className="banner-main"
-          >
+          <div className="banner-main">
             <div style={styles.textWrapper}>
               <div
                 className="animate"
@@ -83,7 +81,7 @@ export default function IntroductionBanner({ props }) {
             <FooterForBanner
               name="About"
               type="Introduction"
-              color={PagePalette[pageNumber].secondary}
+              color={colors.white}
               page={pageNumber}
             />
           </div>
