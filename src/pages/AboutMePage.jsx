@@ -7,8 +7,8 @@ import colors from "../config/colors";
 export default function AboutMePage({ props }) {
   return (
     <div className="bodyContainer">
+      <Header color={colors.white} />
       <div className="bodyWrapper">
-        <Header color={colors.white} />
         <div className="features OrelegaOne">
           <div className="flex-container-90">
             <div style={styles.paragraph}>

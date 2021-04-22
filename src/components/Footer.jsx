@@ -21,8 +21,6 @@ export default function Footer({ color }) {
     <div
       className="teko"
       style={{
-        position: "absolute",
-        bottom: 0,
         width: "100%",
         borderTop: `1px solid ${color}`,
         color: textColor,

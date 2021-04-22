@@ -15,8 +15,6 @@ export default function Header({ color }) {
   return (
     <div
       style={{
-        position: "absolute",
-        top: "0",
         width: "100%",
         borderTop: `1px solid ${color}`,
         color: textColor,
@@ -48,7 +46,7 @@ export default function Header({ color }) {
           }}
         >
           <GoToPageButton
-            icon={<IoMdFingerPrint size="4vh" />}
+            icon={<IoMdFingerPrint size="30px" />}
             color={PagePalette[pageNumber].primary}
             hoverColor={PagePalette[pageNumber].secondary}
             page={false}

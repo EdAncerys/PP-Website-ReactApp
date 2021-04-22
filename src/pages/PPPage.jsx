@@ -6,8 +6,8 @@ import colors from "../config/colors";
 export default function PPPage({ props }) {
   return (
     <div className="bodyContainer">
+      <Header color={colors.white} />
       <div className="bodyWrapper">
-        <Header color={colors.white} />
         <div className="features OrelegaOne">
           <div className="flex-container-90">
             <div style={styles.title}>About</div>
@@ -20,7 +20,7 @@ export default function PPPage({ props }) {
               projects, and it's the best place to see what I'm learning day by
               day.
             </div>
-            <div className="link" style={styles.paragraph}>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
@@ -45,7 +45,7 @@ export default function PPPage({ props }) {
               be saved in My Routes and can be viewed on the map, or they can be
               removed from the list.
             </div>
-            <div className="link" style={styles.paragraph}>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
@@ -84,7 +84,7 @@ export default function PPPage({ props }) {
               post, add friends, update a user profile, change password,
               username, etc.
             </div>
-            <div className="link" style={styles.paragraph}>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
@@ -111,7 +111,7 @@ export default function PPPage({ props }) {
               create a space or book one. As part of our implementation, we can
               add a name to renting space, a price, and a description.
             </div>
-            <div className="link" style={styles.paragraph}>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
@@ -150,7 +150,7 @@ export default function PPPage({ props }) {
               occasions it may be stormy). In tests, I use a stub to override
               random weather to ensure consistent test behavior.
             </div>
-            <div className="link" style={styles.paragraph}>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
@@ -196,7 +196,7 @@ export default function PPPage({ props }) {
               satisfy all the user stories above and deliver working product to
               the client.
             </div>
-            <div className="link" style={styles.paragraph}>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
@@ -226,7 +226,7 @@ export default function PPPage({ props }) {
               Given a client makes a deposit of 1000 on 10-01-2012 And a deposit
               of 2000 on 13-01-2012 and a withdrawal of 500 on 14-01-2012.
             </div>
-            <div className="link" style={styles.paragraph}>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
@@ -280,7 +280,7 @@ export default function PPPage({ props }) {
               drops to 0 after the concert "Conjured" items degrade in Quality
               twice as fast as normal items.
             </div>
-            <div className="link" style={styles.paragraph}>
+            <div style={styles.paragraph}>
               <a
                 style={styles.link}
                 target="blank"
@@ -291,14 +291,16 @@ export default function PPPage({ props }) {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
 
 const styles = {
-  paragraph: {},
+  paragraph: {
+    padding: "10px 0",
+  },
   title: {
     fontSize: 30,
     marginTop: 30,
