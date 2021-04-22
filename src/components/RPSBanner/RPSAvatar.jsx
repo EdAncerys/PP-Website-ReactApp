@@ -18,7 +18,13 @@ export default function RPSAvatar({ name, avatar, RPS, avatarColor }) {
 
   return (
     <div
-      style={{ ...styles.container, ...{ color: color, transform: transform } }}
+      style={{
+        ...styles.container,
+        ...{
+          color: color,
+          transform: transform,
+        },
+      }}
       onClick={() => handleClick()}
     >
       <div style={styles.name}>{name}</div>

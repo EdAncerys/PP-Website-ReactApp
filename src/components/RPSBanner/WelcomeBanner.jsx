@@ -127,6 +127,7 @@ export default function WelcomeBanner({ props }) {
 const styles = {
   title: {
     fontSize: "36px",
+    marginTop: "50px",
   },
   content: {
     display: "grid",

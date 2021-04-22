@@ -18,26 +18,27 @@ export default function Footer({ color }) {
   const textColor = color ? colors.mediumGrey : colors.white;
 
   return (
-    <div   
-    className="features teko"  
-    style={{
-      backgroundColor: backgroundColor,
-  }}>
-  <div
-    className="flex-container"
+    <div
+      className="features teko"
       style={{
-        maxWidth: "800px",
-        color: textColor,
-        fontSize: "20px",
+        backgroundColor: backgroundColor,
       }}
     >
-      <div style={styles.wrapper}>
-        <div style={{ display: "grid", justifyItems: "start" }}>
-          &copy; Copyright {year}. All Rights Reserved
+      <div
+        className="flex-container"
+        style={{
+          maxWidth: "800px",
+          color: textColor,
+          fontSize: "20px",
+        }}
+      >
+        <div style={styles.wrapper}>
+          <div style={{ display: "grid", justifyItems: "start" }}>
+            &copy; Copyright {year}. All Rights Reserved
+          </div>
+          <div style={{ display: "grid", justifyItems: "end" }}>{date}</div>
         </div>
-        <div style={{ display: "grid", justifyItems: "end" }}>{date}</div>
       </div>
-    </div>
     </div>
   );
 }

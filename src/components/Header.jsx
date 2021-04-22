@@ -13,51 +13,51 @@ export default function Header({ color }) {
   const textColor = color ? colors.black : colors.white;
 
   return (
-    <div   
-      className="features"  
+    <div
+      className="features"
       style={{
         backgroundColor: "rgba(248, 248, 248, 0.85)",
-    }}>
-    <div
-      className="flex-container"
-      style={{
-        maxWidth: "800px",
-        color: textColor,
-        fontSize: "20px",
       }}
     >
-      <div style={styles.wrapper}>
-        <div
-          className="logo"
-          style={{
-            display: "grid",
-            justifyItems: "start",
-            fontSize: "32px",
-            fontWeight: "600",
-            cursor: "pointer",
-          }}
-          onClick={() => manageAppContext.setPage(false)}
-        >
-          Ed Ancerys
-        </div>
-        <div
-          style={{
-            display: "grid",
-            justifyItems: "end",
-            cursor: "pointer",
-          }}
-        >
-          <GoToPageButton
-            icon={<IoMdFingerPrint size="30px" />}
-            color={PagePalette[pageNumber].primary}
-            hoverColor={PagePalette[pageNumber].secondary}
-            page={false}
-          />
+      <div
+        className="flex-container"
+        style={{
+          maxWidth: "800px",
+          color: textColor,
+          fontSize: "20px",
+        }}
+      >
+        <div style={styles.wrapper}>
+          <div
+            className="logo"
+            style={{
+              display: "grid",
+              justifyItems: "start",
+              fontSize: "32px",
+              fontWeight: "600",
+              cursor: "pointer",
+            }}
+            onClick={() => manageAppContext.setPage(false)}
+          >
+            Ed Ancerys
+          </div>
+          <div
+            style={{
+              display: "grid",
+              justifyItems: "end",
+              cursor: "pointer",
+            }}
+          >
+            <GoToPageButton
+              icon={<IoMdFingerPrint size="30px" />}
+              color={PagePalette[pageNumber].primary}
+              hoverColor={PagePalette[pageNumber].secondary}
+              page={false}
+            />
+          </div>
         </div>
       </div>
     </div>
-    </div>
-
   );
 }
 

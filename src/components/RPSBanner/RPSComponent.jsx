@@ -30,7 +30,7 @@ export default function RPSComponent({ props }) {
             handleClick({ name: "Rock", avatar: <FaRegHandRock /> })
           }
         >
-          <RPSAvatar name="Rock" avatar={<FaRegHandRock size="6vh" />} />
+          <RPSAvatar name="Rock" avatar={<FaRegHandRock size="40px" />} />
         </div>
         <div
           style={{ opacity: playerChoice === "Paper" ? 1 : fade }}
@@ -38,7 +38,7 @@ export default function RPSComponent({ props }) {
             handleClick({ name: "Paper", avatar: <FaRegHandPaper /> })
           }
         >
-          <RPSAvatar name="Paper" avatar={<FaRegHandPaper size="6vh" />} />
+          <RPSAvatar name="Paper" avatar={<FaRegHandPaper size="40px" />} />
         </div>
         <div
           style={{ opacity: playerChoice === "Scissors" ? 1 : fade }}
@@ -48,7 +48,7 @@ export default function RPSComponent({ props }) {
         >
           <RPSAvatar
             name="Scissors"
-            avatar={<FaRegHandScissors size="6vh" />}
+            avatar={<FaRegHandScissors size="40px" />}
           />
         </div>
       </div>
@@ -84,6 +84,9 @@ export default function RPSComponent({ props }) {
 }
 
 const styles = {
+  container: {
+    marginTop: "-50px",
+  },
   wrapper: {
     display: "grid",
     gridTemplateColumns: "auto auto auto",
@@ -94,5 +97,6 @@ const styles = {
   btnWrapper: {
     display: "grid",
     justifyContent: "center",
+    marginTop: "-50px",
   },
 };
