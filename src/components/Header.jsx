@@ -28,7 +28,6 @@ export default function Header({ color }) {
           style={{
             display: "grid",
             justifyItems: "start",
-            paddingLeft: "20px",
             fontSize: "32px",
             fontWeight: "600",
             cursor: "pointer",
@@ -41,7 +40,6 @@ export default function Header({ color }) {
           style={{
             display: "grid",
             justifyItems: "end",
-            paddingRight: "20px",
             cursor: "pointer",
           }}
         >

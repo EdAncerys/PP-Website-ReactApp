@@ -5,7 +5,7 @@ import colors from "../config/colors";
 
 export default function PPPage({ props }) {
   return (
-    <div className="bodyContainer">
+    <div style={styles.bodyWrapper} className="bodyContainer">
       <Header color={colors.white} />
       <div className="bodyWrapper">
         <div className="features OrelegaOne">
@@ -308,5 +308,13 @@ const styles = {
   link: {
     color: colors.darkBlue,
     textDecoration: "none",
+  },
+  footer: {
+    position: "absolute",
+    bottom: 0,
+  },
+  bodyWrapper: {
+    height: "100vh",
+    overflow: "auto",
   },
 };
