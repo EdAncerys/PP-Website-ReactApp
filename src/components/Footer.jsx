@@ -30,17 +30,11 @@ export default function Footer({ color }) {
         backgroundColor: backgroundColor,
       }}
     >
-      <div  style={styles.wrapper}>
-        <div
-          style={{ display: "grid", justifyItems: "start" }}
-        >
+      <div style={styles.wrapper}>
+        <div style={{ display: "grid", justifyItems: "start" }}>
           &copy; Copyright {year}. All Rights Reserved
         </div>
-        <div
-          style={{ display: "grid", justifyItems: "end" }}
-        >
-          {date}
-        </div>
+        <div style={{ display: "grid", justifyItems: "end" }}>{date}</div>
       </div>
     </div>
   );
@@ -51,5 +45,5 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "auto auto",
     padding: "10px 20px",
-  }
+  },
 };

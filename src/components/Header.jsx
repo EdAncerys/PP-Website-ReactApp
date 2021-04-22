@@ -16,7 +16,7 @@ export default function Header({ color }) {
     <div
       style={{
         position: "absolute",
-        top: 0,
+        top: "0",
         width: "100%",
         borderTop: `1px solid ${color}`,
         color: textColor,
