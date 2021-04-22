@@ -63,8 +63,12 @@ body {
 .flex-container-90 {
   flex-basis: 90%;
   max-width: 500px;
-  padding-bottom: 80px;
+  padding-bottom: "50px";
 }
 .flex-container-100 {
   flex-basis: 100%;
+}
+.flex-container {
+  flex-basis: 90%;
+  max-width: 800px;
 }

@@ -44,7 +44,7 @@ export default function AboutMePage({ props }) {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -309,12 +309,8 @@ const styles = {
     color: colors.darkBlue,
     textDecoration: "none",
   },
-  footer: {
-    position: "absolute",
-    bottom: 0,
-  },
   bodyWrapper: {
-    height: "100vh",
+    height: "100%",
     overflow: "auto",
   },
 };

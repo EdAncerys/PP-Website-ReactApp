@@ -160,8 +160,9 @@ export default function TickTackToePage({ props }) {
             </div>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </TickTackToeContext.Provider>
   );
 }
+

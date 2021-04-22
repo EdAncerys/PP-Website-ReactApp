@@ -114,7 +114,7 @@ export default function RPSPage({ props }) {
             </div>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </RPSContext.Provider>
   );

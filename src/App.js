@@ -42,19 +42,12 @@ export default function App({ props }) {
       }}
     >
       {!page && (
-        <div
-          style={{
-            display: "grid",
-            height: mediaQuery ? "" : "100vh",
-            gridTemplateColumns: mediaQuery ? "" : "500px auto",
-            overflow: "auto",
-          }}
-        >
+        <div>
           <AboutBanner />
           <ContentBanner />
         </div>
       )}
-      <div style={{ overflow: "auto" }}>
+      <div>
         {page === 1 && <AboutMePage />}
         {page === 2 && <PPPage />}
         {page === 3 && <TickTackToePage />}

@@ -30,7 +30,7 @@ export default function FooterForBanner({ color, page, name, type }) {
       </div>
       <div style={styles.goToBtn}>
         <GoToPageButton
-          icon={<IoMdFingerPrint size="4vh" />}
+          icon={<IoMdFingerPrint size="35px" />}
           hoverColor={colorSecondary}
           page={pageNumber}
         />

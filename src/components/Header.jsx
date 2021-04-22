@@ -13,13 +13,17 @@ export default function Header({ color }) {
   const textColor = color ? colors.black : colors.white;
 
   return (
-    <div
+    <div   
+      className="features"  
       style={{
-        width: "100%",
-        borderTop: `1px solid ${color}`,
+        backgroundColor: "rgba(248, 248, 248, 0.85)",
+    }}>
+    <div
+      className="flex-container"
+      style={{
+        maxWidth: "800px",
         color: textColor,
         fontSize: "20px",
-        backgroundColor: "rgba(248, 248, 248, 0.85)",
       }}
     >
       <div style={styles.wrapper}>
@@ -52,6 +56,8 @@ export default function Header({ color }) {
         </div>
       </div>
     </div>
+    </div>
+
   );
 }
 

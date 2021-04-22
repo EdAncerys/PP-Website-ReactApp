@@ -18,16 +18,17 @@ export default function Footer({ color }) {
   const textColor = color ? colors.mediumGrey : colors.white;
 
   return (
-    <div
-      className="teko"
+    <div   
+    className="features teko"  
+    style={{
+      backgroundColor: backgroundColor,
+  }}>
+  <div
+    className="flex-container"
       style={{
-        position: "absolute",
-        bottom: 0,
-        width: "100%",
-        borderTop: `1px solid ${color}`,
+        maxWidth: "800px",
         color: textColor,
         fontSize: "20px",
-        backgroundColor: backgroundColor,
       }}
     >
       <div style={styles.wrapper}>
@@ -37,13 +38,15 @@ export default function Footer({ color }) {
         <div style={{ display: "grid", justifyItems: "end" }}>{date}</div>
       </div>
     </div>
+    </div>
   );
 }
 
 const styles = {
   wrapper: {
     display: "grid",
+    width: "100%",
     gridTemplateColumns: "auto auto",
-    padding: "10px 20px",
+    padding: "10px 0",
   },
 };
