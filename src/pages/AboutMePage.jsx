@@ -5,6 +5,15 @@ import Header from "../components/Header";
 import colors from "../config/colors";
 
 export default function AboutMePage({ props }) {
+  const year = new Date().getFullYear();
+  const date = `${
+    new Date().getFullYear() +
+    "-" +
+    (new Date().getMonth() + 1) +
+    "-" +
+    new Date().getDate()
+  }`;
+
   return (
     <div className="bodyContainer">
       <Header color={colors.white} />
@@ -44,7 +53,6 @@ export default function AboutMePage({ props }) {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

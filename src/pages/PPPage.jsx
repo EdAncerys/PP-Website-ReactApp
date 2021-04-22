@@ -292,7 +292,7 @@ export default function PPPage({ props }) {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
