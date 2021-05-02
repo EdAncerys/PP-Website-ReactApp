@@ -42,7 +42,14 @@ export default function App({ props }) {
       }}
     >
       {!page && (
-        <div>
+        <div
+          style={{
+            display: "grid",
+            height: mediaQuery ? "" : "100vh",
+            gridTemplateColumns: mediaQuery ? "" : "600px auto",
+            overflow: "auto",
+          }}
+        >
           <AboutBanner />
           <ContentBanner />
         </div>

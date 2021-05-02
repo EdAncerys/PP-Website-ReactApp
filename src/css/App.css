@@ -44,12 +44,12 @@ body {
 .banner,
 .banner-main {
   display: grid;
-  align-items: center;
+  /* align-items: center; */
   grid-template-rows: auto 450px auto;
   padding: 20px 0;
 }
 .banner-main {
-  grid-template-rows: 450px 100px;
+  grid-template-rows: 400px 150px;
 }
 .features {
   width: 100%;

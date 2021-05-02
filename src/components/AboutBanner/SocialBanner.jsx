@@ -26,7 +26,7 @@ export default function SocialBanner({ props }) {
         icon={<AiOutlineInstagram size={36} />}
         hoverColor={colors.danger}
         onClick={() =>
-          window.open("https://www.instagram.com/ed.the.anchor", "_blank")
+          window.open("https://www.instagram.com/edtheanchor", "_blank")
         }
       />
       <IconComponent
