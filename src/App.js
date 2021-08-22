@@ -17,9 +17,9 @@ export default function App({ props }) {
   const mediaQuery = !useMediaQuery("(min-width: 1000px)");
 
   const manageAppContext = {
-    page: page,
-    setPage: setPage,
-    mediaQuery: mediaQuery,
+    page,
+    setPage,
+    mediaQuery,
   };
 
   useEffect(() => {
@@ -35,26 +35,30 @@ export default function App({ props }) {
     );
   }, [manageAppContext]);
 
+  const HandleHomePage = () => {
+    return (
+      <div
+        style={{
+          display: "grid",
+          height: mediaQuery ? "" : "100vh",
+          gridTemplateColumns: mediaQuery ? "" : "600px auto",
+          overflow: "auto",
+        }}
+      >
+        <AboutBanner />
+        <ContentBanner />
+      </div>
+    );
+  };
+
   return (
     <AppContext.Provider
       value={{
         manageAppContext,
       }}
     >
-      {!page && (
-        <div
-          style={{
-            display: "grid",
-            height: mediaQuery ? "" : "100vh",
-            gridTemplateColumns: mediaQuery ? "" : "600px auto",
-            overflow: "auto",
-          }}
-        >
-          <AboutBanner />
-          <ContentBanner />
-        </div>
-      )}
       <div>
+        {!page && <HandleHomePage />}
         {page === 1 && <AboutMePage />}
         {page === 2 && <PPPage />}
         {page === 3 && <TickTackToePage />}

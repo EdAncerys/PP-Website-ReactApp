@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import { GiMailbox } from "react-icons/gi";
 
 import colors from "../../config/colors";
+import { GiMailbox } from "react-icons/gi";
 
 export default function MailMeButton({
-  text,
-  color = colors.black,
-  backgroundColor = colors.white,
-  hoverColor = colors.darkBlue,
+  title,
+  color = colors.white,
+  backgroundColor = colors.darkBlue,
 }) {
   const [hover, setHover] = useState(false);
   const [clickEffect, setClickEffect] = useState(false);
-
-  const iconColor = hover ? hoverColor : backgroundColor;
-  const textColor = hover ? backgroundColor : color;
 
   const handleClick = () => {
     setClickEffect(true);
@@ -31,8 +27,9 @@ export default function MailMeButton({
         columnGap: 10,
         alignContent: "center",
         justifyContent: "center",
-        color: textColor,
-        backgroundColor: iconColor,
+        color: color,
+        backgroundColor: backgroundColor,
+        opacity: hover ? 0.75 : 1,
         borderRadius: 10,
         padding: 10,
         cursor: "pointer",
@@ -44,8 +41,10 @@ export default function MailMeButton({
       onMouseLeave={() => setHover(false)}
       onClick={() => handleClick()}
     >
-      {text}
-      <GiMailbox />
+      <div>{title}</div>
+      <div>
+        <GiMailbox />
+      </div>
     </div>
   );
 }

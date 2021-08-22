@@ -14,13 +14,12 @@ export default function AboutBanner({ props }) {
         & EXPLORER. <br />
       </div>
       <div style={styles.textSlide}>
-        Currently, self-employed @TC&D. Formerly Experience Manager for some of
-        the well known retail brands & as architect at engineering &
-        architectural companies. Find out more about me, follow my work, words &
-        photos below.
+        Software developer. Formerly Experience Manager for some of the well
+        known retail brands & as architect at engineering & architectural
+        companies. Find out more about me, follow my work, words & photos below.
       </div>
       <SocialBanner />
-      <MailMeButton text="Say Hello!" />
+      <MailMeButton title="Say Hello!" />
     </div>
   );
 }
