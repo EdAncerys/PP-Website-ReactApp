@@ -13,16 +13,13 @@ export default function TickTackToeBanner({ props }) {
   return (
     <div
       style={{
+        ...styles.container,
         backgroundColor: PagePalette[pageNumber].primary,
       }}
     >
       <div className="features teko">
         <div className="flex-container-90">
           <div className="banner">
-            <HeaderForBanner
-              color={PagePalette[pageNumber].secondary}
-              page={pageNumber}
-            />
             <div style={styles.imageContainer}>
               <ImageContainer
                 img={LegoManImg}
@@ -52,6 +49,7 @@ const styles = {
   },
   imageContainer: {
     display: "grid",
+    height: "40vh",
     alignItems: "center",
     justifyContent: "center",
   },

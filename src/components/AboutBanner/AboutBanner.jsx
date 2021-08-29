@@ -4,19 +4,48 @@ import MailMeButton from "./MailMeButton";
 
 import colors from "../../config/colors";
 
-export default function AboutBanner({ props }) {
+export default function AboutBanner({ mediaQuery }) {
   return (
-    <div className="teko" style={styles.container}>
-      <div style={styles.about}>
-        ENGINEER. <br />
+    <div
+      className="teko"
+      style={{
+        display: "grid",
+        justifyContent: mediaQuery === false ? "start" : "center",
+        alignContent: "center",
+        backgroundColor: colors.yellow,
+        padding: 50,
+        userSelect: "none",
+        cursor: "default",
+        width: "100%",
+      }}
+    >
+      <div>
+        {/* ENGINEER. <br />
         THINKER. <br />
         DEVELOPER <br />
-        & EXPLORER. <br />
+        & EXPLORER. <br /> */}
+        <svg>
+          {/* <text x="50%" y="50%" text-anchor="end">
+            ENGINEER.
+          </text> */}
+          <text text-anchor="start" x="0" y="30">
+            ENGINEER.
+          </text>
+          <text text-anchor="start" x="40" y="60">
+            THINKER.
+          </text>
+          <text text-anchor="start" x="20" y="90">
+            DEVELOPER.
+          </text>
+          <text text-anchor="start" x="30" y="120">
+            & EXPLORER.
+          </text>
+        </svg>
       </div>
-      <div style={styles.textSlide}>
-        Software developer. Formerly Experience Manager for some of the well
-        known retail brands & as architect at engineering & architectural
-        companies. Find out more about me, follow my work, words & photos below.
+      <div style={styles.aboutText}>
+        Software developer. Formerly a Manager for some of the well known retail
+        brands & as architect at engineering & architectural companies. Find out
+        more about me, follow my work, words & photos below.
       </div>
       <SocialBanner />
       <MailMeButton title="Say Hello!" />
@@ -25,20 +54,7 @@ export default function AboutBanner({ props }) {
 }
 
 const styles = {
-  container: {
-    display: "grid",
-    alignContent: "center",
-    backgroundColor: colors.yellow,
-    padding: 50,
-    userSelect: "none",
-    cursor: "default",
-  },
-  about: {
-    fontSize: 40,
-    fontWeight: 600,
-    lineHeight: 1.2,
-  },
-  textSlide: {
+  aboutText: {
     maxWidth: 300,
     fontSize: 20,
   },

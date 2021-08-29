@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import "./css/App.css";
-import { useMediaQuery } from "../src/hooks/useMediaQuery.jsx";
 import ContentBanner from "./components/ContentBanner.jsx";
 import AboutBanner from "./components/AboutBanner/AboutBanner";
 import AboutMePage from "./pages/AboutMePage";
@@ -10,16 +10,17 @@ import RPSPage from "./pages/RPSPage";
 
 export const AppContext = React.createContext();
 
-export default function App({ props }) {
+export default function App({}) {
   const [page, setPage] = useState(false);
   const SESSION_STORAGE_KEY = "EdAncerysPortfolioWebSite.App";
-
-  const mediaQuery = !useMediaQuery("(min-width: 1000px)");
+  const mediaQuery = useMediaQuery("(max-width: 1000px)");
+  const SLIDE_OVERLAP = "20vh";
 
   const manageAppContext = {
     page,
     setPage,
     mediaQuery,
+    SLIDE_OVERLAP,
   };
 
   useEffect(() => {
@@ -40,13 +41,13 @@ export default function App({ props }) {
       <div
         style={{
           display: "grid",
-          height: mediaQuery ? "" : "100vh",
-          gridTemplateColumns: mediaQuery ? "" : "600px auto",
+          height: mediaQuery ? "100vh" : "",
+          gridTemplateColumns: mediaQuery ? "" : "500px auto",
           overflow: "auto",
         }}
       >
-        <AboutBanner />
-        <ContentBanner />
+        {!mediaQuery && <AboutBanner mediaQuery={mediaQuery} />}
+        <ContentBanner mediaQuery={mediaQuery} SLIDE_OVERLAP={SLIDE_OVERLAP} />
       </div>
     );
   };

@@ -15,32 +15,7 @@ body {
   text-align: justify;
   color: #8592a6;
 }
-:root {
-  --mainColor: #eabb56;
-}
-.animate {
-  transition: all 1.6s cubic-bezier(0.2, 0.6, 0.2, 1);
-  background: linear-gradient(
-    to right,
-    var(--mainColor) 0%,
-    var(--mainColor) 5px,
-    transparent 5px
-  );
-  background-repeat: repeat-x;
-  background-size: 100%;
-  color: #000;
-  padding-left: 10px;
-  text-decoration: none;
-}
 
-.animate:hover {
-  background: linear-gradient(
-    to right,
-    var(--mainColor) 0%,
-    var(--mainColor) 5px,
-    transparent
-  );
-}
 .banner,
 .banner-main {
   display: grid;
@@ -71,4 +46,90 @@ body {
 .flex-container {
   flex-basis: 90%;
   max-width: 800px;
+}
+
+/* snap animation for main containers */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+section {
+  height: 100vh;
+  display: flex;
+  scroll-snap-align: start;
+}
+/* introduction banner text animation */
+h1 {
+  color: #484848;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+}
+h1 span {
+  transition: 0.5s linear;
+}
+h1:hover span:nth-child(1) {
+  margin-right: 5px;
+}
+h1:hover span:nth-child(1):after {
+  content: "'";
+}
+h1:hover span:nth-child(2) {
+  margin-left: 30px;
+}
+h1:hover span {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+.animate {
+  transition: all 1.5s cubic-bezier(0.2, 0.6, 0.4, 5);
+  background: linear-gradient(
+    to right,
+    var(--mainColor) 0%,
+    var(--mainColor) 5px,
+    transparent 10px
+  );
+  background-repeat: repeat-x;
+  background-size: 100%;
+  color: #000;
+  padding-left: 20px;
+  text-decoration: none;
+}
+:root {
+  --mainColor: #eabb56;
+}
+.animate:hover {
+  background: linear-gradient(
+    to right,
+    var(--mainColor) 0%,
+    var(--mainColor) 5px,
+    transparent
+  );
+}
+
+/* about banner text animation */
+svg text {
+  letter-spacing: 5px;
+  stroke: #255aa4;
+  font-size: 36px;
+  font-weight: 700;
+  stroke-width: 0.05;
+
+  animation: textAnimate 9s infinite alternate;
+}
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 80%;
+    stroke-dashoffset: 50%;
+    fill: hsl(0, 0%, 100%);
+  }
+  100% {
+    stroke-dasharray: 10% 0;
+    stroke-dashoffstet: -20%;
+    fill: hsla(189, 68%, 75%, 10%);
+  }
 }

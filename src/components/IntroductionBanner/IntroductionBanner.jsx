@@ -3,12 +3,13 @@ import { AppContext } from "../../App";
 
 import colors from "../../config/colors";
 import FooterForBanner from "../FooterForBanner";
-import HeaderForBanner from "../HeaderForBanner";
 
 import PagePalette from "../../config/PagePalette";
 
 export default function IntroductionBanner({ props }) {
   const { manageAppContext } = useContext(AppContext);
+  const SLIDE_OVERLAP = manageAppContext.SLIDE_OVERLAP;
+  const mediaQuery = manageAppContext.mediaQuery;
   const [lineOneHover, setLineOneHover] = useState(false);
   const [lineTwoHover, setLineTwoHover] = useState(false);
   const [lineThreeHover, setLineThreeHover] = useState(false);
@@ -38,15 +39,15 @@ export default function IntroductionBanner({ props }) {
     ? "What I'm Working On"
     : "Learn More About Me.";
 
-  // const animate = lineOneHover ? "animate" : "";
-
   return (
     <div
       style={{
+        ...styles.container,
+        paddingTop: mediaQuery ? SLIDE_OVERLAP : "",
         backgroundColor: PagePalette[pageNumber].primary,
       }}
     >
-      <div className="features teko">
+      {/* <div className="features teko">
         <div className="flex-container-90">
           <div className="banner-main">
             <div style={styles.textWrapper}>
@@ -78,20 +79,31 @@ export default function IntroductionBanner({ props }) {
                 {lineThree}
               </div>
             </div>
-            <FooterForBanner
-              name="About"
-              type="Introduction"
-              color={colors.white}
-              page={pageNumber}
-            />
           </div>
         </div>
+      </div> */}
+      <div className="animate">
+        <h1>
+          <span>I</span>M<span>POSSIBLE</span>
+        </h1>
+      </div>
+      <div>
+        <svg width="100%" height="100%">
+          <text x="50%" y="60%" text-anchor="middle">
+            Gracias
+          </text>
+        </svg>
       </div>
     </div>
   );
 }
 
 const styles = {
+  container: {
+    display: "grid",
+    alignItems: "center",
+    width: "100%",
+  },
   textWrapper: {
     display: "grid",
     gap: "10px",
