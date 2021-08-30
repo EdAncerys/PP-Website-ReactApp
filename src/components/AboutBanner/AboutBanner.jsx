@@ -20,31 +20,24 @@ export default function AboutBanner({ mediaQuery }) {
       }}
     >
       <div>
-        {/* ENGINEER. <br />
-        THINKER. <br />
-        DEVELOPER <br />
-        & EXPLORER. <br /> */}
         <svg>
-          {/* <text x="50%" y="50%" text-anchor="end">
-            ENGINEER.
-          </text> */}
-          <text text-anchor="start" x="0" y="30">
+          <text textAnchor="start" x="0" y="30">
             ENGINEER.
           </text>
-          <text text-anchor="start" x="40" y="60">
+          <text textAnchor="start" x="40" y="60">
             THINKER.
           </text>
-          <text text-anchor="start" x="20" y="90">
+          <text textAnchor="start" x="20" y="90">
             DEVELOPER.
           </text>
-          <text text-anchor="start" x="30" y="120">
+          <text textAnchor="start" x="30" y="120">
             & EXPLORER.
           </text>
         </svg>
       </div>
       <div style={styles.aboutText}>
         Software developer. Formerly a Manager for some of the well known retail
-        brands & as architect at engineering & architectural companies. Find out
+        brands & architect at engineering & architectural companies. Find out
         more about me, follow my work, words & photos below.
       </div>
       <SocialBanner />

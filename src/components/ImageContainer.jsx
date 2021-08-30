@@ -71,7 +71,7 @@ export default function ImageContainer({
           transition: "all 0.8s ease-in-out",
         }}
       >
-        {!hover && <img style={styles.img} src={img} alt={altText} />}
+        {!hover && <img style={styles.imgContainer} src={img} alt={altText} />}
         {hover && (
           <div style={{ color: color, padding: 10, overflow: "hidden" }}>
             {text}
@@ -100,7 +100,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
   },
-  img: {
+  imgContainer: {
     width: 200,
   },
 };

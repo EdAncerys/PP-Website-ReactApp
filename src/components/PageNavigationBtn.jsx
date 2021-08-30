@@ -3,7 +3,7 @@ import { AppContext } from "../App";
 
 import colors from "../config/colors";
 
-export default function GoToPageButton({ icon, color, hoverColor, page }) {
+export default function PageNavigationBtn({ icon, color, hoverColor, page }) {
   const { manageAppContext } = useContext(AppContext);
 
   const [hover, setHover] = useState(false);
@@ -27,7 +27,7 @@ export default function GoToPageButton({ icon, color, hoverColor, page }) {
         justifyContent: "center",
         color: iconColor,
         cursor: "pointer",
-        transform: hover ? "scale(0.95)" : "scale(1)",
+        transform: hover ? "scale(0.9)" : "scale(1)",
         transition: "all 0.5s cubic-bezier(0.2, 0.6, 0.2, 1)",
       }}
       onMouseOver={() => setHover(true)}
@@ -35,7 +35,6 @@ export default function GoToPageButton({ icon, color, hoverColor, page }) {
       onClick={() => handleClick()}
     >
       <div style={styles.goToContainer}>
-        <div></div>
         <div style={styles.goToIcon}>{icon}</div>
       </div>
     </div>
@@ -44,11 +43,12 @@ export default function GoToPageButton({ icon, color, hoverColor, page }) {
 
 const styles = {
   goToContainer: {
-    display: "grid",
-    gridTemplateColumns: "1fr auto",
+    display: "flex",
     alignContent: "center",
     justifyContent: "center",
-    gap: "5px",
+    padding: 5,
+    backgroundColor: colors.white,
+    borderRadius: "50%",
   },
   goToIcon: {
     display: "grid",

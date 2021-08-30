@@ -11,42 +11,23 @@ export default function ContentBanner({}) {
   const { manageAppContext } = React.useContext(AppContext);
   const mediaQuery = manageAppContext.mediaQuery;
   const SLIDE_OVERLAP = manageAppContext.SLIDE_OVERLAP;
-
+  console.log(SLIDE_OVERLAP);
   const cardStyling = {
-    marginTop: -SLIDE_OVERLAP,
+    marginTop: `-${SLIDE_OVERLAP}px`,
   };
+  const cardStylingSlideOne = {
+    marginTop: `${SLIDE_OVERLAP * 1.5}px`,
+  };
+
   return (
     <div className="bangers" style={styles.container}>
-      {/* <div className="features">
-        <div className="flex-container-100">
-          <IntroductionBanner />
-        </div>
-      </div>
-
-      <div className="features">
-        <div className="flex-container-100">
-          <PPBanner />
-        </div>
-      </div>
-
-      <div className="features">
-        <div className="flex-container-100">
-          <TickTackToeBanner />
-        </div>
-      </div>
-
-      <div className="features">
-        <div className="flex-container-100">
-          <RPSBanner />
-        </div>
-      </div> */}
       <div className="snap-container">
         {mediaQuery && (
           <section style={cardStyling}>
             <AboutBanner />
           </section>
         )}
-        <section style={cardStyling}>
+        <section style={mediaQuery ? cardStyling : cardStylingSlideOne}>
           <IntroductionBanner />
         </section>
         <section style={cardStyling}>
@@ -56,7 +37,7 @@ export default function ContentBanner({}) {
           <TickTackToeBanner />
         </section>
         <section style={cardStyling}>
-          <TickTackToeBanner />
+          <RPSBanner />
         </section>
       </div>
     </div>
@@ -68,6 +49,5 @@ const styles = {
     userSelect: "none",
     cursor: "default",
     overflow: "auto",
-    height: "100%",
   },
 };

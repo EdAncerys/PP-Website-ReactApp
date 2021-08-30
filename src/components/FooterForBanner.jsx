@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { AppContext } from "../App";
 
-import { IoMdFingerPrint } from "react-icons/io";
-import GoToPageButton from "../components/GoToPageButton";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import PageNavigationBtn from "./PageNavigationBtn";
 
 import PagePalette from "../config/PagePalette";
 import colors from "../config/colors";
@@ -15,9 +15,9 @@ export default function FooterForBanner({ color, page, name, type }) {
   return (
     <div
       style={{
-        display: "grid",
-        gridTemplateColumns: "1fr auto",
-        alignItems: "center",
+        display: "flex",
+        flex: 1,
+        padding: "0 10%",
         fontSize: 20,
         color: colorPrimary,
       }}
@@ -28,9 +28,9 @@ export default function FooterForBanner({ color, page, name, type }) {
         <div style={styles.keyValue}>Type : {type}</div>
         <div>&#125;</div>
       </div>
-      <div style={styles.goToBtn}>
-        <GoToPageButton
-          icon={<IoMdFingerPrint size="35px" />}
+      <div style={styles.actions}>
+        <PageNavigationBtn
+          icon={<AiOutlineArrowRight size="35px" color={colorPrimary} />}
           hoverColor={colorSecondary}
           page={pageNumber}
         />
@@ -41,14 +41,15 @@ export default function FooterForBanner({ color, page, name, type }) {
 
 const styles = {
   footerText: {
-    display: "grid",
-    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    flex: 1,
   },
   keyValue: {
     paddingLeft: "10px",
   },
-  goToBtn: {
-    display: "grid",
-    justifyContent: "end",
+  actions: {
+    display: "flex",
   },
 };

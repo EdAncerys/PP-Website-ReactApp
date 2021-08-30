@@ -1,5 +1,9 @@
 @import "./fonts.css";
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400");
 
+::-webkit-scrollbar {
+  display: none;
+}
 body {
   margin: 0;
   padding: 0;
@@ -15,16 +19,16 @@ body {
   text-align: justify;
   color: #8592a6;
 }
-
-.banner,
-.banner-main {
-  display: grid;
-  /* align-items: center; */
-  grid-template-rows: auto 450px auto;
-  padding: 20px 0;
+.banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-.banner-main {
-  grid-template-rows: 400px 150px;
+.banner-content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 .features {
   width: 100%;
@@ -60,57 +64,100 @@ section {
   scroll-snap-align: start;
 }
 /* introduction banner text animation */
-h1 {
-  color: #484848;
-  font-size: 50px;
-  font-weight: bold;
-  font-family: monospace;
-  letter-spacing: 7px;
+
+div .animationOne,
+div .animationTwo,
+div .animationThree {
+  font-family: "Fira Mono", monospace;
+  animation: glitch 1s linear infinite;
   cursor: pointer;
 }
-h1 span {
-  transition: 0.5s linear;
-}
-h1:hover span:nth-child(1) {
-  margin-right: 5px;
-}
-h1:hover span:nth-child(1):after {
-  content: "'";
-}
-h1:hover span:nth-child(2) {
-  margin-left: 30px;
-}
-h1:hover span {
-  color: #fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+
+/*Keyframes*/
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-0px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
 }
 
-.animate {
-  transition: all 1.5s cubic-bezier(0.2, 0.6, 0.4, 5);
-  background: linear-gradient(
-    to right,
-    var(--mainColor) 0%,
-    var(--mainColor) 5px,
-    transparent 10px
-  );
-  background-repeat: repeat-x;
-  background-size: 100%;
-  color: #000;
-  padding-left: 20px;
-  text-decoration: none;
-}
-:root {
-  --mainColor: #eabb56;
-}
-.animate:hover {
-  background: linear-gradient(
-    to right,
-    var(--mainColor) 0%,
-    var(--mainColor) 5px,
-    transparent
-  );
+div .animationOne:before,
+div .animationOne:after,
+div .animationTwo:before,
+div .animationTwo:after,
+div .animationThree:before,
+div .animationThree:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
 }
 
+div .animationOne:before {
+  animation: glitchTop 0.5s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+div .animationTwo:before {
+  animation: glitchTop 1.5s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+div .animationThree:before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(2px, -2px);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+div .animationOne:after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+div .animationTwo:after {
+  animation: glitchBotom 2.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+div .animationThree:after {
+  animation: glitchBotom 3.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+  2%,
+  64% {
+    transform: translate(-2px, 0);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
+}
 /* about banner text animation */
 svg text {
   letter-spacing: 5px;

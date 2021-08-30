@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { IoMdFingerPrint } from "react-icons/io";
 import { AppContext } from "../App";
-import GoToPageButton from "./GoToPageButton";
+import PageNavigationBtn from "./PageNavigationBtn";
 
 import colors from "../config/colors";
 import PagePalette from "../config/PagePalette";
@@ -48,7 +48,7 @@ export default function Header({ color }) {
               cursor: "pointer",
             }}
           >
-            <GoToPageButton
+            <PageNavigationBtn
               icon={<IoMdFingerPrint size="30px" />}
               color={PagePalette[pageNumber].primary}
               hoverColor={PagePalette[pageNumber].secondary}
