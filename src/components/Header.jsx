@@ -1,70 +1,49 @@
-import React, { useContext } from "react";
-import { IoMdFingerPrint } from "react-icons/io";
+import * as React from "react";
 import { AppContext } from "../App";
+
 import PageNavigationBtn from "./PageNavigationBtn";
 
-import colors from "../config/colors";
 import PagePalette from "../config/PagePalette";
+import colors from "../config/colors";
 
-export default function Header({ color }) {
-  const { manageAppContext } = useContext(AppContext);
-
-  const pageNumber = manageAppContext.page;
-  const textColor = color ? colors.black : colors.white;
+export default function FooterForBanner({}) {
+  const pageNumber = 0;
+  const colorPrimary = colors.black;
+  const colorSecondary = colors.yellow;
 
   return (
     <div
-      className="features"
       style={{
-        backgroundColor: "rgba(248, 248, 248, 0.85)",
+        display: "flex",
+        flex: 1,
+        padding: "5% 8% 0 8%",
+        fontSize: 20,
+        color: colorPrimary,
       }}
     >
-      <div
-        className="flex-container"
-        style={{
-          maxWidth: "800px",
-          color: textColor,
-          fontSize: "20px",
-        }}
-      >
-        <div style={styles.wrapper}>
-          <div
-            className="logo"
-            style={{
-              display: "grid",
-              justifyItems: "start",
-              fontSize: "32px",
-              fontWeight: "600",
-              cursor: "pointer",
-            }}
-            onClick={() => manageAppContext.setPage(false)}
-          >
-            Ed Ancerys
-          </div>
-          <div
-            style={{
-              display: "grid",
-              justifyItems: "end",
-              cursor: "pointer",
-            }}
-          >
-            <PageNavigationBtn
-              icon={<IoMdFingerPrint size="30px" />}
-              color={PagePalette[pageNumber].primary}
-              hoverColor={PagePalette[pageNumber].secondary}
-              page={false}
-            />
-          </div>
-        </div>
+      <div style={styles.actions}>
+        <PageNavigationBtn
+          icon="left"
+          color={colorPrimary}
+          hoverColor={colorSecondary}
+          page={pageNumber}
+        />
       </div>
     </div>
   );
 }
 
 const styles = {
-  wrapper: {
-    display: "grid",
-    gridTemplateColumns: "auto auto",
-    padding: "10px 20px",
+  footerText: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    flex: 1,
+  },
+  keyValue: {
+    paddingLeft: "10px",
+  },
+  actions: {
+    display: "flex",
   },
 };

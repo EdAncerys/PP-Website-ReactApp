@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import * as React from "react";
 import { AppContext } from "../App";
 
-import { AiOutlineArrowRight } from "react-icons/ai";
 import PageNavigationBtn from "./PageNavigationBtn";
 
 import PagePalette from "../config/PagePalette";
@@ -30,7 +29,8 @@ export default function FooterForBanner({ color, page, name, type }) {
       </div>
       <div style={styles.actions}>
         <PageNavigationBtn
-          icon={<AiOutlineArrowRight size="35px" color={colorPrimary} />}
+          icon="right"
+          color={colorPrimary}
           hoverColor={colorSecondary}
           page={pageNumber}
         />

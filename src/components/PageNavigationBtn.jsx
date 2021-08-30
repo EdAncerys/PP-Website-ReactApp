@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import { AppContext } from "../App";
 
 import colors from "../config/colors";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function PageNavigationBtn({ icon, color, hoverColor, page }) {
   const { manageAppContext } = useContext(AppContext);
@@ -9,7 +11,8 @@ export default function PageNavigationBtn({ icon, color, hoverColor, page }) {
   const [hover, setHover] = useState(false);
   const [clickEffect, setClickEffect] = useState(false);
 
-  const iconColor = !hover ? hoverColor : color;
+  const iconColor = hover ? hoverColor : color;
+  const bgColor = !hover ? hoverColor : color;
 
   const handleClick = () => {
     setClickEffect(true);
@@ -34,22 +37,30 @@ export default function PageNavigationBtn({ icon, color, hoverColor, page }) {
       onMouseLeave={() => setHover(false)}
       onClick={() => handleClick()}
     >
-      <div style={styles.goToContainer}>
-        <div style={styles.goToIcon}>{icon}</div>
+      <div
+        style={{
+          display: "flex",
+          alignContent: "center",
+          justifyContent: "center",
+          padding: 5,
+          backgroundColor: bgColor,
+          borderRadius: "50%",
+        }}
+      >
+        <div style={styles.goToIcon}>
+          {icon === "left" && (
+            <AiOutlineArrowLeft size="35px" color={iconColor} />
+          )}
+            {icon === "right" && (
+            <AiOutlineArrowRight size="35px" color={iconColor} />
+          )}
+        </div>
       </div>
     </div>
   );
 }
 
 const styles = {
-  goToContainer: {
-    display: "flex",
-    alignContent: "center",
-    justifyContent: "center",
-    padding: 5,
-    backgroundColor: colors.white,
-    borderRadius: "50%",
-  },
   goToIcon: {
     display: "grid",
     alignContent: "center",

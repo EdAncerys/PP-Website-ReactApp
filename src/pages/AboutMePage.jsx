@@ -1,10 +1,9 @@
 import React from "react";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 import colors from "../config/colors";
 
-export default function AboutMePage({ props }) {
+export default function AboutMePage({}) {
   const year = new Date().getFullYear();
   const date = `${
     new Date().getFullYear() +
@@ -16,10 +15,10 @@ export default function AboutMePage({ props }) {
 
   return (
     <div className="bodyContainer">
-      <Header color={colors.white} />
+      <Header />
       <div className="bodyWrapper">
-        <div className="features OrelegaOne">
-          <div className="flex-container-90">
+        <div className="banner OrelegaOne">
+          <div className="page-content">
             <div style={styles.paragraph}>
               I am a Retail Manager turned Software Engineer. My new-found
               passion for programming has stemmed from a desire to turn ideas

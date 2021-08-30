@@ -24,11 +24,16 @@ body {
   flex-direction: column;
   width: 100%;
 }
-.banner-content {
+.banner-content,
+.page-content {
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: center;
+  padding: 0 10%;
+}
+.page-content {
+  flex-direction: column;
 }
 .features {
   width: 100%;
