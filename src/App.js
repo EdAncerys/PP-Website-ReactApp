@@ -41,7 +41,6 @@ export default function App({}) {
       <div
         style={{
           display: "grid",
-          height: mediaQuery ? "100vh" : "",
           gridTemplateColumns: mediaQuery ? "" : "500px auto",
           overflow: "auto",
         }}

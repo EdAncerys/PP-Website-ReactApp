@@ -1,6 +1,7 @@
 import * as React from "react";
 import { AppContext } from "../App";
 
+import colors from "../config/colors";
 import IntroductionBanner from "../components/IntroductionBanner/IntroductionBanner";
 import PPBanner from "../components/PPBanner/PPBanner";
 import TickTackToeBanner from "./TickTackToeBanner/TickTackToeBanner";
@@ -11,7 +12,7 @@ export default function ContentBanner({}) {
   const { manageAppContext } = React.useContext(AppContext);
   const mediaQuery = manageAppContext.mediaQuery;
   const SLIDE_OVERLAP = manageAppContext.SLIDE_OVERLAP;
-  console.log(SLIDE_OVERLAP);
+
   const cardStyling = {
     marginTop: `-${SLIDE_OVERLAP}px`,
   };
@@ -20,7 +21,16 @@ export default function ContentBanner({}) {
   };
 
   return (
-    <div className="bangers" style={styles.container}>
+    <div
+      className="bangers"
+      style={{
+        userSelect: "none",
+        cursor: "default",
+        overflow: "auto",
+        marginLeft: mediaQuery ? 0 : 100,
+        backgroundColor: colors.black,
+      }}
+    >
       <div className="snap-container">
         {mediaQuery && (
           <section style={cardStyling}>
@@ -43,11 +53,3 @@ export default function ContentBanner({}) {
     </div>
   );
 }
-
-const styles = {
-  container: {
-    userSelect: "none",
-    cursor: "default",
-    overflow: "auto",
-  },
-};

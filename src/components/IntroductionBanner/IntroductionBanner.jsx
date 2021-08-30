@@ -41,7 +41,6 @@ export default function IntroductionBanner({ props }) {
         display: "flex",
         alignItems: "center",
         flex: 1,
-        // margin: `${SLIDE_OVERLAP * 2}px 0 0 0`,
         fontSize: mediaQuery ? "5vw" : "3vw",
         backgroundColor: PagePalette[pageNumber].primary,
       }}
