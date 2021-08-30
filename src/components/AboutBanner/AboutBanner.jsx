@@ -9,46 +9,54 @@ export default function AboutBanner({ mediaQuery }) {
     <div
       className="teko"
       style={{
-        display: "grid",
-        justifyContent: mediaQuery === false ? "start" : "center",
+        display: "flex",
+        flex: 1,
+        flexDirection: "column",
+        justifyContent: "center",
         alignContent: "center",
         backgroundColor: colors.yellow,
-        padding: 50,
         userSelect: "none",
         cursor: "default",
         width: "100%",
       }}
     >
-      <div>
-        <svg>
-          <text textAnchor="start" x="0" y="30">
-            ENGINEER.
-          </text>
-          <text textAnchor="start" x="40" y="60">
-            THINKER.
-          </text>
-          <text textAnchor="start" x="20" y="90">
-            DEVELOPER.
-          </text>
-          <text textAnchor="start" x="30" y="120">
-            & EXPLORER.
-          </text>
-        </svg>
+      <div
+        style={{
+          maxWidth: 350,
+          paddingLeft: 50,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "start",
+          }}
+        >
+          <svg>
+            <text textAnchor="start" x="0" y="30">
+              ENGINEER.
+            </text>
+            <text textAnchor="start" x="40" y="60">
+              THINKER.
+            </text>
+            <text textAnchor="start" x="20" y="90">
+              DEVELOPER.
+            </text>
+            <text textAnchor="start" x="30" y="120">
+              & EXPLORER.
+            </text>
+          </svg>
+        </div>
+        <div style={{ fontSize: 20 }}>
+          Software developer. Formerly a Manager for some of the well known
+          retail brands & architect at engineering & architectural companies.
+          Find out more about me, follow my work, words & photos below.
+        </div>
+        <div className="bodyWrapper">
+          <SocialBanner />
+        </div>
+        <MailMeButton title="Say Hello!" />
       </div>
-      <div style={styles.aboutText}>
-        Software developer. Formerly a Manager for some of the well known retail
-        brands & architect at engineering & architectural companies. Find out
-        more about me, follow my work, words & photos below.
-      </div>
-      <SocialBanner />
-      <MailMeButton title="Say Hello!" />
     </div>
   );
 }
-
-const styles = {
-  aboutText: {
-    maxWidth: 300,
-    fontSize: 20,
-  },
-};

@@ -19,7 +19,7 @@ export default function SocialBanner({ props }) {
       />
       <IconComponent
         icon={<AiFillGithub size={36} />}
-        hoverColor={colors.white}
+        hoverColor={colors.black}
         onClick={() => window.open("https://github.com/EdAncerys/", "_blank")}
       />
       <IconComponent
@@ -31,7 +31,7 @@ export default function SocialBanner({ props }) {
       />
       <IconComponent
         icon={<AiFillMediumSquare size={36} />}
-        hoverColor={colors.mediumGrey}
+        hoverColor={colors.black}
         onClick={() =>
           window.open("https://medium.com/@lookatemail/", "_blank")
         }
@@ -42,11 +42,9 @@ export default function SocialBanner({ props }) {
 
 const styles = {
   container: {
-    display: "grid",
-    gridTemplateColumns: "repeat(4, auto)",
-    columnGap: 10,
-    marginTop: 50,
-    marginBottom: 50,
-    maxWidth: 200,
+    display: "flex",
+    flex: 1,
+    justifyContent: "space-around",
+    padding: "20px 0",
   },
 };

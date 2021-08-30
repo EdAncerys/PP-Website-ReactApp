@@ -27,7 +27,6 @@ export default function ContentBanner({}) {
         userSelect: "none",
         cursor: "default",
         overflow: "auto",
-        marginLeft: mediaQuery ? 0 : 100,
         backgroundColor: colors.black,
       }}
     >

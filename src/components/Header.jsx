@@ -34,15 +34,6 @@ export default function FooterForBanner({}) {
 }
 
 const styles = {
-  footerText: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    flex: 1,
-  },
-  keyValue: {
-    paddingLeft: "10px",
-  },
   actions: {
     display: "flex",
   },
