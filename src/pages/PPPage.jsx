@@ -13,7 +13,8 @@ export default function AboutMePage({}) {
       try {
         const url = "https://api.github.com/users/edancerys/repos";
         const response = await fetch(url);
-        const data = await response.json();
+        const responseData = await response.json();
+        const data = responseData.filter((repo) => !repo.name.includes("CV"));
 
         setRepoData(data);
       } catch (error) {
@@ -26,7 +27,7 @@ export default function AboutMePage({}) {
   }, []);
 
   const HandleRepoData = ({ repo, index }) => {
-    const { name, language, html_url, updated_at } = repo;
+    const { name, description, language, html_url, updated_at } = repo;
     const lastUpdate = new Date(updated_at).toLocaleDateString("en-US");
 
     return (
@@ -38,6 +39,15 @@ export default function AboutMePage({}) {
           }}
         >
           {name}
+        </div>
+        <div
+          style={{
+            fontSize: 16,
+            paddingTop: 10,
+            color: colors.darkGrey,
+          }}
+        >
+          {description}
         </div>
         <div
           style={{

@@ -25,13 +25,15 @@ export default function TickTackToeBanner({}) {
     >
       <div className="banner teko">
         <div className="banner-content">
-          <ImageContainer
-            img={Image}
-            altText="RPS"
-            text={textDescription.RPS}
-            color={PagePalette[pageNumber].secondary}
-            backgroundColor={colors.white}
-          />
+          <div className="image-container">
+            <ImageContainer
+              img={Image}
+              altText="RPS"
+              text={textDescription.RPS}
+              color={PagePalette[pageNumber].secondary}
+              backgroundColor={colors.white}
+            />
+          </div>
         </div>
         <div className="banner-content">
           <FooterForBanner

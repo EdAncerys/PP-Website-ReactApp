@@ -17,6 +17,7 @@ export default function FooterForBanner({ color, page, name, type }) {
         display: "flex",
         flex: 1,
         padding: "0 10%",
+        marginBottom: 50,
         fontSize: 20,
         color: colorPrimary,
       }}

@@ -20,6 +20,37 @@ export default function ImageContainer({
     setHover(!hover);
   };
 
+  const ServePhoneContent = ({}) => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: hover ? 220 : "40vh",
+          maxWidth: 400,
+          overflow: "hidden",
+          transition: "all 0.8s ease-in-out",
+        }}
+      >
+        {!hover && (
+          <img
+            style={{
+              width: "25vh",
+            }}
+            src={img}
+            alt={altText}
+          />
+        )}
+        {hover && (
+          <div style={{ color: color, padding: 10, overflow: "hidden" }}>
+            {text}
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div
       style={{
@@ -58,26 +89,7 @@ export default function ImageContainer({
           ></div>
         </div>
       </div>
-      <div
-        style={{
-          display: "grid",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          height: hover ? 220 : 330,
-          width: hover ? "auto" : 200,
-          maxWidth: 400,
-          overflow: "hidden",
-          transition: "all 0.8s ease-in-out",
-        }}
-      >
-        {!hover && <img style={styles.imgContainer} src={img} alt={altText} />}
-        {hover && (
-          <div style={{ color: color, padding: 10, overflow: "hidden" }}>
-            {text}
-          </div>
-        )}
-      </div>
+      <ServePhoneContent />
       <div style={styles.wrapper}>
         <div
           style={{
@@ -99,8 +111,5 @@ const styles = {
     display: "grid",
     justifyContent: "center",
     alignItems: "center",
-  },
-  imgContainer: {
-    width: 200,
   },
 };

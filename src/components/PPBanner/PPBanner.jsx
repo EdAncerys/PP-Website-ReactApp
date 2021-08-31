@@ -71,13 +71,15 @@ export default function TickTackToeBanner({}) {
     >
       <div className="banner teko">
         <div className="banner-content">
-          <ImageContainer
-            img={Image}
-            altText="Personal-Portfolio"
-            text={textDescription.PP}
-            color={PagePalette[pageNumber].secondary}
-            backgroundColor={colors.white}
-          />
+          <div className="image-container">
+            <ImageContainer
+              img={Image}
+              altText="Personal-Portfolio"
+              text={textDescription.PP}
+              color={PagePalette[pageNumber].secondary}
+              backgroundColor={colors.white}
+            />
+          </div>
         </div>
         <div className="banner-content">
           <FooterForBanner
