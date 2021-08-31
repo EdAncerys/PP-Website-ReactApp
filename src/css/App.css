@@ -15,7 +15,7 @@ body {
 }
 .bodyWrapper {
   text-align: justify;
-  color: #8592a6;
+  color: #333;
 }
 .banner {
   display: flex;
@@ -27,13 +27,11 @@ body {
   display: flex;
   flex: 1;
   justify-content: center;
-  align-items: center;
-  padding: 0 10% 10% 10%;
+  padding: 5% 10%;
 }
 .page-content {
   flex-direction: column;
   max-width: 800px;
-  background-color: "pink";
 }
 .features {
   width: 100%;
@@ -183,5 +181,18 @@ svg text {
     stroke-dasharray: 10% 0;
     stroke-dashoffstet: -20%;
     fill: hsla(189, 68%, 75%, 10%);
+  }
+}
+
+/* spinner animation */
+.spinner {
+  animation: spin infinite 3s linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -5,27 +5,6 @@ import SocialBanner from "../components/AboutBanner/SocialBanner";
 import colors from "../config/colors";
 
 export default function AboutMePage({}) {
-  const [profile, setProfile] = React.useState(false);
-  console.log(profile);
-
-  React.useEffect(() => {
-    const abortController = new AbortController();
-    void (async function fetchData() {
-      try {
-        const url = "https://jsonplaceholder.typicode.com/todos/1";
-        const response = await fetch(url, { signal: abortController.signal });
-        const data = await response.json();
-
-        setProfile(data);
-      } catch (error) {
-        console.log("error ", error);
-      }
-    })();
-    return () => {
-      abortController.abort(); // cancel pending fetch request on component unmount
-    };
-  }, []);
-
   return (
     <div className="bodyContainer">
       <Header />
