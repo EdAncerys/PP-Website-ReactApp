@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 
 import { ImSpinner9 } from "react-icons/im";
+import SocialBanner from "../components/AboutBanner/SocialBanner";
 import colors from "../config/colors";
 
 export default function AboutMePage({}) {
@@ -31,23 +32,19 @@ export default function AboutMePage({}) {
     const lastUpdate = new Date(updated_at).toLocaleDateString("en-US");
 
     return (
-      <div style={styles.container} key={index}>
-        <div style={{ fontSize: 24, textTransform: "uppercase" }}>{name}</div>
-        <div
-          style={{
-            fontSize: 16,
-            paddingTop: 10,
-            color: colors.darkGrey,
-          }}
-        >
-          {description}
+      <div style={{ paddingBottom: "15px" }}>
+        <div style={styles.paragraph}>
+          <div style={styles.title}>{name}</div>
         </div>
-        <div style={{ fontSize: 16, paddingTop: 10 }}>
-          Coded in <span style={{ color: "#D95E5A" }}>{language}</span>{" "}
+        <div style={styles.paragraph}>
+          <span style={{ color: colors.darkGrey }}>{description} </span>
+        </div>
+        <div style={styles.paragraph}>
+          Coded in <span style={{ color: "#D95E5A" }}>{language} </span>
           language. Last push & code update been on: {lastUpdate}
         </div>
-        <div style={{ fontSize: 16, paddingTop: 10 }}>
-          Find out more about the project by following the link:{" "}
+        <div style={styles.paragraph}>
+          Find out more about the project by following the link to
           <a style={styles.link} target="blank" href={html_url}>
             Project Git Repository
           </a>
@@ -80,6 +77,7 @@ export default function AboutMePage({}) {
             {repoData.map((repo, index) => (
               <HandleRepoData repo={repo} index={index} key={index} />
             ))}
+            <SocialBanner />
           </div>
         </div>
       </div>
@@ -88,17 +86,18 @@ export default function AboutMePage({}) {
 }
 
 const styles = {
-  container: {
-    display: "flex",
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "center",
-    textAlign: "start",
-    paddingBottom: "5%",
+  paragraph: {
+    marginTop: "10px",
+  },
+  title: {
+    textTransform: "uppercase",
+    // backgroundColor: "pink",
+    padding: "5px 0",
   },
   link: {
     color: colors.darkBlue,
-    paddingRight: "4px",
+    paddingLeft: "4px",
     textDecoration: "none",
   },
+  contentText: { display: "flex", fontSize: 16, paddingTop: 10 },
 };
