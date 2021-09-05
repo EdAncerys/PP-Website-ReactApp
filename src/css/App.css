@@ -20,24 +20,24 @@ body {
 .banner {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 .banner-content,
 .page-content {
   display: flex;
   flex: 1;
-  justify-content: center;
-  padding: 5% 10%;
+  padding: 0 50px;
 }
 .page-content {
   flex-direction: column;
-  max-width: 800px;
+  max-width: 700px;
 }
 .image-container {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 40vh;
 }
 .features {
@@ -171,10 +171,10 @@ div .animationThree:after {
 /* about banner text animation */
 svg text {
   letter-spacing: 5px;
-  stroke: #255aa4;
+  stroke: #222;
   font-size: 36px;
   font-weight: 700;
-  stroke-width: 0.05;
+  stroke-width: 0.5;
 
   animation: textAnimate 9s infinite alternate;
 }
@@ -182,12 +182,12 @@ svg text {
   0% {
     stroke-dasharray: 0 80%;
     stroke-dashoffset: 50%;
-    fill: hsl(0, 0%, 100%);
+    fill: #255aa4;
   }
   100% {
     stroke-dasharray: 10% 0;
     stroke-dashoffstet: -20%;
-    fill: hsla(189, 68%, 75%, 10%);
+    fill: #fff;
   }
 }
 

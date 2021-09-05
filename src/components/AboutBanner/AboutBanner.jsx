@@ -48,9 +48,13 @@ export default function AboutBanner({ mediaQuery }) {
           </svg>
         </div>
         <div style={{ fontSize: 20 }}>
-          Software developer. Formerly a Manager for some of the well known
-          retail brands & architect at engineering & architectural companies.
-          Find out more about me, follow my work, words & photos below.
+          <div>
+            Software developer. Formerly a Manager for some of the well known
+            retail brands & architect at engineering & architectural companies.
+          </div>
+          <div>
+            Find out more about me, follow my work, words & photos below.
+          </div>
         </div>
         <div className="bodyWrapper">
           <SocialBanner />

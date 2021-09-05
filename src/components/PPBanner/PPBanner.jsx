@@ -1,49 +1,3 @@
-// import * as React from "react";
-// import { AppContext } from "../../App";
-// import ImageContainer from "../ImageContainer";
-// import LegoManImg from "../../img/Lego-Man.png";
-// import textDescription from "../../text/ProjectDescription";
-// import FooterForBanner from "../FooterForBanner";
-
-// import PagePalette from "../../config/PagePalette";
-
-// export default function TickTackToeBanner({}) {
-//   const { manageAppContext } = React.useContext(AppContext);
-//   const SLIDE_OVERLAP = manageAppContext.SLIDE_OVERLAP;
-//   const mediaQuery = manageAppContext.mediaQuery;
-//   const pageNumber = 2;
-
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         flex: 1,
-//         padding: mediaQuery ? `${SLIDE_OVERLAP * 1.5}px 0` : "",
-//         backgroundColor: PagePalette[pageNumber].primary,
-//       }}
-//     >
-//       <div className="banner teko">
-//         <div className="banner-content">
-//           <ImageContainer
-//             img={LegoManImg}
-//             altText="Personal-Portfolio"
-//             text={textDescription.PP}
-//             color={PagePalette[pageNumber].secondary}
-//           />
-//         </div>
-//         <div className="banner-content">
-//           <FooterForBanner
-//             name="Personal Portfolio. See What I'm Working On"
-//             type="Informational"
-//             color={PagePalette[pageNumber].secondary}
-//             page={pageNumber}
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 import * as React from "react";
 import { AppContext } from "../../App";
 import ImageContainer from "../ImageContainer";
@@ -81,7 +35,7 @@ export default function TickTackToeBanner({}) {
             />
           </div>
         </div>
-        <div className="banner-content">
+        <div style={styles.footerContainer}>
           <FooterForBanner
             name="Informational"
             type="Game"
@@ -93,3 +47,11 @@ export default function TickTackToeBanner({}) {
     </div>
   );
 }
+
+const styles = {
+  footerContainer: {
+    display: "flex",
+    flex: 1,
+    width: "100%",
+  },
+};

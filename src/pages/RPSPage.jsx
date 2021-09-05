@@ -104,17 +104,14 @@ export default function RPSPage({ props }) {
       }}
     >
       <div className="bodyContainer">
-        <Header color={colors.white} />
         <div className="bodyWrapper">
-          <div className="features OrelegaOne">
-            <div className="flex-container-90">
-              <div>
-                <WelcomeBanner />
-              </div>
+          <div className="banner OrelegaOne">
+            <div className="page-content">
+              <Header />
+              <WelcomeBanner />
             </div>
           </div>
         </div>
-        {/* <Footer /> */}
       </div>
     </RPSContext.Provider>
   );

@@ -7,10 +7,10 @@ import colors from "../config/colors";
 export default function AboutMePage({}) {
   return (
     <div className="bodyContainer">
-      <Header />
       <div className="bodyWrapper">
         <div className="banner OrelegaOne">
           <div className="page-content">
+            <Header />
             <div style={styles.paragraph}>
               <SocialBanner />
               <div style={styles.paragraph}>

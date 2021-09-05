@@ -77,7 +77,6 @@ const styles = {
     alignItems: "center",
     gridTemplateColumns: "auto auto",
     gridGap: 10,
-    fontSize: "2vh",
   },
   avatar: {
     color: colors.red,

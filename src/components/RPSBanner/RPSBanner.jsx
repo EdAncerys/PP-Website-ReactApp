@@ -35,7 +35,7 @@ export default function TickTackToeBanner({}) {
             />
           </div>
         </div>
-        <div className="banner-content">
+        <div style={styles.footerContainer}>
           <FooterForBanner
             name="Rock Paper Scissors"
             type="Game"
@@ -47,3 +47,11 @@ export default function TickTackToeBanner({}) {
     </div>
   );
 }
+
+const styles = {
+  footerContainer: {
+    display: "flex",
+    flex: 1,
+    width: "100%",
+  },
+};

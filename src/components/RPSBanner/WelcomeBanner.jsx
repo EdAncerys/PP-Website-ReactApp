@@ -40,7 +40,6 @@ export default function WelcomeBanner({ props }) {
     colors.lightBlue,
     colors.darkGrey,
     colors.mediumGrey,
-    // colors.lightGrey,
     colors.electric,
     colors.pink,
     colors.red,
@@ -127,7 +126,6 @@ export default function WelcomeBanner({ props }) {
 const styles = {
   title: {
     fontSize: "36px",
-    marginTop: "50px",
   },
   content: {
     display: "grid",

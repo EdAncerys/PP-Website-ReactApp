@@ -88,7 +88,6 @@ const styles = {
     display: "grid",
     justifyItems: "center",
     gap: "20px",
-    marginTop: "100px",
   },
   wrapper: {
     display: "grid",

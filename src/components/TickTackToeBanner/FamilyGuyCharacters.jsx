@@ -80,7 +80,5 @@ const styles = {
   },
   title: {
     fontSize: "28px",
-    padding: "20px 0",
-    marginTop: "50px",
   },
 };

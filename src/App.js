@@ -14,7 +14,7 @@ export default function App({}) {
   const [page, setPage] = useState(false);
   const SESSION_STORAGE_KEY = "EdAncerysPortfolioWebSite.App";
   const mediaQuery = useMediaQuery("(max-width: 1000px)");
-  const SLIDE_OVERLAP = 60;
+  const SLIDE_OVERLAP = 80;
 
   const manageAppContext = {
     page,

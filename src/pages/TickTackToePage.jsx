@@ -114,7 +114,7 @@ export default function TickTackToePage({ props }) {
 
   useEffect(() => {
     handleWinner();
-    // console.log(playerOneTiles, playerTwoTiles);
+    // console.log(playerOneTiles, playerTwoTiles); // debug
   }, [takenTiles]);
 
   const SESSION_STORAGE_KEY = "EdAncerysPortfolioWebSite.TickTackToe";
@@ -149,20 +149,16 @@ export default function TickTackToePage({ props }) {
       }}
     >
       <div className="bodyContainer">
-        <Header color={colors.white} />
         <div className="bodyWrapper">
-          <div className="features OrelegaOne">
-            <div className="flex-container-90 family">
-              <div>
-                {!playerTwo && <FamilyGuyCharacters />}
-                {playerTwo && <PlayerVPlayerBanner />}
-              </div>
+          <div className="banner OrelegaOne">
+            <div className="page-content">
+              <Header />
+              {!playerTwo && <FamilyGuyCharacters />}
+              {playerTwo && <PlayerVPlayerBanner />}
             </div>
           </div>
         </div>
-        {/* <Footer /> */}
       </div>
     </TickTackToeContext.Provider>
   );
 }
-

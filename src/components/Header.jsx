@@ -16,9 +16,8 @@ export default function FooterForBanner({}) {
       style={{
         display: "flex",
         flex: 1,
-        padding: "5% 8% 0 8%",
-        fontSize: 20,
-        color: colorPrimary,
+        alignSelf: "flex-start",
+        padding: "50px 0",
       }}
     >
       <div style={styles.actions}>

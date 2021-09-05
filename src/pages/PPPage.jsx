@@ -32,14 +32,7 @@ export default function AboutMePage({}) {
 
     return (
       <div style={styles.container} key={index}>
-        <div
-          style={{
-            fontSize: 24,
-            textTransform: "uppercase",
-          }}
-        >
-          {name}
-        </div>
+        <div style={{ fontSize: 24, textTransform: "uppercase" }}>{name}</div>
         <div
           style={{
             fontSize: 16,
@@ -49,21 +42,11 @@ export default function AboutMePage({}) {
         >
           {description}
         </div>
-        <div
-          style={{
-            fontSize: 16,
-            paddingTop: 10,
-          }}
-        >
+        <div style={{ fontSize: 16, paddingTop: 10 }}>
           Coded in <span style={{ color: "#D95E5A" }}>{language}</span>{" "}
           language. Last push & code update been on: {lastUpdate}
         </div>
-        <div
-          style={{
-            fontSize: 16,
-            paddingTop: 10,
-          }}
-        >
+        <div style={{ fontSize: 16, paddingTop: 10 }}>
           Find out more about the project by following the link:{" "}
           <a style={styles.link} target="blank" href={html_url}>
             Project Git Repository
@@ -90,11 +73,10 @@ export default function AboutMePage({}) {
 
   return (
     <div className="bodyContainer">
-      <Header />
-
       <div className="bodyWrapper">
         <div className="banner OrelegaOne">
           <div className="page-content">
+            <Header />
             {repoData.map((repo, index) => (
               <HandleRepoData repo={repo} index={index} key={index} />
             ))}
@@ -111,8 +93,8 @@ const styles = {
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
-    marginTop: "20px",
     textAlign: "start",
+    paddingBottom: "5%",
   },
   link: {
     color: colors.darkBlue,
