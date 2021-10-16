@@ -7,6 +7,7 @@ import AboutMePage from "./pages/AboutMePage";
 import TickTackToePage from "./pages/TickTackToePage";
 import PPPage from "./pages/PPPage";
 import RPSPage from "./pages/RPSPage";
+import BackgroundImage from "../src/img/bg.jpg";
 
 export const AppContext = React.createContext();
 
@@ -51,19 +52,60 @@ export default function App({}) {
     );
   };
 
+  const PlaceHolder = () => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          height: "100vh",
+          backgroundImage: `url(${BackgroundImage})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <h1
+            style={{ color: "#FF9292", fontSize: "8rem", lineHeight: "6.5rem" }}
+            className="teko"
+          >
+            Coming Soon
+          </h1>
+          <h1
+            style={{ color: "#FF9292", fontSize: "2rem" }}
+            className="OrelegaOne"
+          >
+            ...We still working on it...
+          </h1>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <AppContext.Provider
       value={{
         manageAppContext,
       }}
     >
-      <div>
+      <PlaceHolder />
+      {/* <div>
         {!page && <HandleHomePage />}
         {page === 1 && <AboutMePage />}
         {page === 2 && <PPPage />}
         {page === 3 && <TickTackToePage />}
         {page === 4 && <RPSPage />}
-      </div>
+      </div> */}
     </AppContext.Provider>
   );
 }
